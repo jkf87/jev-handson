@@ -1,0 +1,14 @@
+{
+  "name": "openclaw-jev-router",
+  "version": "1.0.0",
+  "description": "들어온 메시지를 Jev로 한 번 판정해 스팸은 조용히, 애매하면 되묻고, 대화는 가벼운 모델로 보내는 OpenClaw 플러그인",
+  "type": "module",
+  "license": "MIT",
+  "main": "index.js",
+  "openclaw": {
+    "extensions": ["./index.js"]
+  },
+  "scripts": {
+    "test": "node --test test/*.test.js"
+  }
+}

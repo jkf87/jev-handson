@@ -1,0 +1,18 @@
+{
+  "at": "2026-09-22T20:11:26.434Z",
+  "jevModel": "jev-1.13.0",
+  "jevCached": true,
+  "policy": {
+    "minScore": 2.3,
+    "maxInsufficientMass": 0.2,
+    "provider": "claude"
+  },
+  "records": [
+    {
+      "taskId": "complex_design",
+      "selected": "claude/claude-opus-5",
+      "result": "task-complex_design.result.json",
+      "executionStatus": "COMPLETED"
+    }
+  ]
+}

@@ -1,0 +1,4 @@
+{
+ "docs":{"description":"문서 프로젝트(docs): Jev 강의 설명 문서와 실습 안내 README","path":"../workspaces/docs"},
+ "app":{"description":"앱 프로젝트(app): 분석 연습용 작은 JavaScript 앱(mean.mjs)","path":"../workspaces/app"}
+}

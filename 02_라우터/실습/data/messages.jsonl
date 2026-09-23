@@ -1,0 +1,40 @@
+{"id":"m01","text":"고마워요 덕분에 발표 잘 끝났어요 ㅎㅎ","route":"chat","target":"none","confirm":false}
+{"id":"m02","text":"오늘 날씨 진짜 덥네요","route":"chat","target":"none","confirm":false}
+{"id":"m03","text":"jev가 정확히 뭐예요? 한 줄로만 설명해 주세요","route":"chat","target":"none","confirm":false}
+{"id":"m04","text":"ㅋㅋㅋ 그 짤 너무 웃기다","route":"chat","target":"none","confirm":false}
+{"id":"m05","text":"커밋 메시지는 보통 어떻게 쓰는 게 좋아요?","route":"chat","target":"none","confirm":false}
+{"id":"m06","text":"주말 잘 보내세요!","route":"chat","target":"none","confirm":false}
+{"id":"m07","text":"아 그거 제가 착각했네요. 신경 쓰지 마세요","route":"chat","target":"none","confirm":false}
+{"id":"m08","text":"요즘 코덱스랑 클로드 코드 중에 뭐가 더 나아요? 그냥 의견이 궁금해서요","route":"chat","target":"none","confirm":false}
+{"id":"m09","text":"네 확인했습니다 👍","route":"chat","target":"none","confirm":false}
+{"id":"m10","text":"오늘 강의 몇 시에 시작이었죠?","route":"chat","target":"none","confirm":false}
+{"id":"m11","text":"파이썬에서 리스트랑 튜플 차이가 뭐야","route":"chat","target":"none","confirm":false}
+{"id":"m12","text":"힘드네요 오늘은 좀 쉬어야겠어요","route":"chat","target":"none","confirm":false}
+{"id":"m13","text":"로그인 API에서 401이 계속 떠요. auth.ts 좀 고쳐 주세요","route":"task","target":"codex","confirm":false}
+{"id":"m14","text":"어제 회의록 요약해서 노션 페이지로 정리해 줘","route":"task","target":"claude_code","confirm":false}
+{"id":"m15","text":"내일 오전 9시에 팀 회의 알림 걸어 줘","route":"task","target":"scheduler","confirm":false}
+{"id":"m16","text":"A4000에서 openjev 서비스 다시 띄워 줘. 헬스체크가 안 돼","route":"task","target":"gpu_worker","confirm":false}
+{"id":"m17","text":"이 논문 PDF 읽고 발표 슬라이드 5장으로 만들어 줘","route":"task","target":"claude_code","confirm":false}
+{"id":"m18","text":"결제 모듈 단위 테스트 추가하고 CI 통과하는지 확인해 줘","route":"task","target":"codex","confirm":false}
+{"id":"m19","text":"혹시 시간 되시면 README 문장 좀 다듬어 주실 수 있을까요? 급한 건 아니에요","route":"task","target":"claude_code","confirm":false}
+{"id":"m20","text":"매주 월요일 아침 8시에 지난주 깃허브 커밋 요약 보내 줘","route":"task","target":"scheduler","confirm":false}
+{"id":"m21","text":"qwen 4B로 LoRA 파인튜닝 한 번 돌려 줘. 데이터는 data/train.jsonl","route":"task","target":"gpu_worker","confirm":false}
+{"id":"m22","text":"package.json 의존성 최신으로 올리고 빌드 깨지는지 봐 줘","route":"task","target":"codex","confirm":false}
+{"id":"m23","text":"경쟁사 강의 3개 가격이랑 커리큘럼 조사해서 표로 정리해 줘","route":"task","target":"claude_code","confirm":false}
+{"id":"m24","text":"운영 DB users 테이블 전부 지우고 새로 만들어 줘","route":"task","target":"codex","confirm":true}
+{"id":"m25","text":"이 견적서 PDF 고객 명단 전체한테 메일로 보내 줘","route":"task","target":"claude_code","confirm":true}
+{"id":"m26","text":"main 브랜치에 force push 해서 어제 커밋들 날려 줘","route":"task","target":"codex","confirm":true}
+{"id":"m27","text":"구독 결제 카드 바꿔서 연간 플랜으로 갱신해 줘","route":"task","target":"claude_code","confirm":true}
+{"id":"m28","text":"GPU 서버 전체 재부팅해 줘. 돌고 있는 작업은 신경 쓰지 말고","route":"task","target":"gpu_worker","confirm":true}
+{"id":"m29","text":"이 에러 원인 찾아서 고쳐 줘: TypeError: Cannot read properties of undefined (reading 'map') at Dashboard.tsx:42","route":"task","target":"codex","confirm":false}
+{"id":"m30","text":"다음 주 수요일 오후 3시에 치과 예약 리마인더 좀","route":"task","target":"scheduler","confirm":false}
+{"id":"m31","text":"그거 다시 해 줘","route":"unclear","target":"none","confirm":false}
+{"id":"m32","text":"이거 좀 봐 줄래요?","route":"unclear","target":"none","confirm":false}
+{"id":"m33","text":"아까 말한 거 그대로 진행해 주세요","route":"unclear","target":"none","confirm":false}
+{"id":"m34","text":"정리 좀 부탁해요","route":"unclear","target":"none","confirm":false}
+{"id":"m35","text":"저번이랑 똑같이 만들어 줘","route":"unclear","target":"none","confirm":false}
+{"id":"m36","text":"[광고] 코인 무료 에어드랍! 지금 링크 누르면 100만원 지급","route":"spam","target":"none","confirm":false}
+{"id":"m37","text":"고객님 계정이 정지되었습니다. 아래 링크에서 비밀번호를 다시 입력하세요","route":"spam","target":"none","confirm":false}
+{"id":"m38","text":"★단독★ 투자 리딩방 초대, 수익률 300% 보장","route":"spam","target":"none","confirm":false}
+{"id":"m39","text":"코드 리뷰 부탁드려도 될까요? PR #42 입니다","route":"task","target":"codex","confirm":false}
+{"id":"m40","text":"버그가 있는 것 같긴 한데 어디가 문제인지 저도 잘 모르겠어요","route":"unclear","target":"none","confirm":false}

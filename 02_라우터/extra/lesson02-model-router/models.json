@@ -1,0 +1,18 @@
+{
+ "checked_at": "2026-09-23",
+ "aai_index_version": "4.3.2",
+ "aai_note": "codex 행은 lesson02-model-score-router/models.json(2026-09-22 확인)을 그대로 옮겼고 모두 high 추론 강도 측정값이다. claude 행은 2026-09-23 artificialanalysis.ai 모델 페이지에서 읽었으며 측정 조건이 다르다(aai_effort 참조). 두 계열의 점수를 같은 조건으로 비교한 값이 아니다.",
+ "price_use": "공개 API 단가 기준 비교값. Claude Code·Codex 구독의 사용량 차감이나 실제 요청 비용이 아니다.",
+ "availability_note": "codex는 로컬 models_cache.json에 표시된 모델, claude는 claude --model 이 받는 이름(별칭 fable/opus/sonnet/haiku 또는 전체 이름). 실제 호출 권한은 실행으로만 확인된다.",
+ "models": [
+  {"provider": "codex", "id": "gpt-5.6-luna", "effort": "high", "aai_effort": "high", "description": "Fast and affordable agentic coding model.", "aai_score": 32, "input_usd_per_million": 0.2, "output_usd_per_million": 1.2, "source": "https://artificialanalysis.ai/models/gpt-5-6-luna-high", "available_in_local_catalog": true},
+  {"provider": "codex", "id": "gpt-5.6-terra", "effort": "high", "aai_effort": "high", "description": "Balanced agentic coding model for everyday work.", "aai_score": 34, "input_usd_per_million": 2, "output_usd_per_million": 12, "source": "https://artificialanalysis.ai/models/gpt-5-6-terra-high", "available_in_local_catalog": true},
+  {"provider": "codex", "id": "gpt-5.5", "effort": "high", "aai_effort": "high", "description": "Proven previous-generation model for coding and general work.", "aai_score": 37, "input_usd_per_million": 5, "output_usd_per_million": 30, "source": "https://artificialanalysis.ai/models/gpt-5-5-high", "available_in_local_catalog": true},
+  {"provider": "codex", "id": "gpt-5.6-sol", "effort": "high", "aai_effort": "high", "description": "Reliable agentic workhorse for everyday tasks.", "aai_score": 42, "input_usd_per_million": 4, "output_usd_per_million": 20, "source": "https://artificialanalysis.ai/models/gpt-5-6-sol-high", "available_in_local_catalog": true},
+  {"provider": "codex", "id": "gpt-6-astra", "effort": "high", "aai_effort": "high", "description": "Our most capable model for complex, demanding work.", "aai_score": 51, "input_usd_per_million": 10, "output_usd_per_million": 50, "source": "https://artificialanalysis.ai/models/gpt-6-astra-high", "available_in_local_catalog": true},
+  {"provider": "claude", "id": "claude-haiku-4-5", "effort": "high", "aai_effort": "reasoning", "description": "Small, fast Claude model for simple, high-volume tasks; the least capable current Claude model.", "aai_score": 17, "input_usd_per_million": 1, "output_usd_per_million": 5, "source": "https://artificialanalysis.ai/models/claude-4-5-haiku-reasoning", "available_in_local_catalog": true},
+  {"provider": "claude", "id": "claude-sonnet-5", "effort": "high", "aai_effort": "max", "description": "Mid-tier Claude model balancing capability and cost for everyday coding and writing.", "aai_score": 38, "input_usd_per_million": 2, "output_usd_per_million": 10, "source": "https://artificialanalysis.ai/models/claude-sonnet-5", "available_in_local_catalog": true},
+  {"provider": "claude", "id": "claude-opus-5", "effort": "high", "aai_effort": "max", "description": "Frontier Claude model for complex reasoning, long-horizon agentic work and demanding code changes.", "aai_score": 51, "input_usd_per_million": 5, "output_usd_per_million": 25, "source": "https://artificialanalysis.ai/models/claude-opus-5", "available_in_local_catalog": true},
+  {"provider": "claude", "id": "claude-fable-5-1", "effort": "high", "aai_effort": "max, default fallback", "description": "Most capable Claude model, above Opus, for the hardest reasoning and long agentic tasks; priced above Opus.", "aai_score": 53, "input_usd_per_million": 10, "output_usd_per_million": 50, "source": "https://artificialanalysis.ai/models/claude-fable-5-1", "available_in_local_catalog": true}
+ ]
+}

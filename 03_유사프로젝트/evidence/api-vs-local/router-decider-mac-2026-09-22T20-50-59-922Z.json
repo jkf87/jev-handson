@@ -1,0 +1,2368 @@
+{
+ "policy": {
+  "minRouteP": 0.6,
+  "minTargetP": 0.6,
+  "confirmAt": 0.5,
+  "minSpamP": 0.8,
+  "riskFirst": false
+ },
+ "model": "decider-v10",
+ "results": [
+  {
+   "id": "m01",
+   "text": "고마워요 덕분에 발표 잘 끝났어요 ㅎㅎ",
+   "expected": "reply",
+   "got": "reply",
+   "ok": true,
+   "decision": {
+    "action": "reply",
+    "reason": "chat",
+    "route": {
+     "choice": "chat",
+     "p": 0.9874,
+     "probabilities": {
+      "chat": 0.9874,
+      "task": 0.0031,
+      "unclear": 0.0086,
+      "spam": 0.001
+     }
+    },
+    "answers": {
+     "route": {
+      "type": "choice",
+      "choice": "chat",
+      "confidence": 0.9874,
+      "certainty": 0.9438,
+      "probabilities": {
+       "chat": 0.9874,
+       "task": 0.0031,
+       "unclear": 0.0086,
+       "spam": 0.001
+      }
+     },
+     "target": {
+      "type": "choice",
+      "choice": "none",
+      "confidence": 0.821,
+      "certainty": 0.6458,
+      "probabilities": {
+       "codex": 0.0103,
+       "claude_code": 0.1535,
+       "scheduler": 0.0097,
+       "gpu_worker": 0.0054,
+       "none": 0.821
+      }
+     },
+     "confirm": {
+      "type": "noul",
+      "noul": 0.0431
+     }
+    },
+    "usage": {
+     "input_tokens": 478,
+     "output_tokens": 0
+    },
+    "model": "decider-v10",
+    "latencyMs": 6330
+   }
+  },
+  {
+   "id": "m02",
+   "text": "오늘 날씨 진짜 덥네요",
+   "expected": "reply",
+   "got": "reply",
+   "ok": true,
+   "decision": {
+    "action": "reply",
+    "reason": "chat",
+    "route": {
+     "choice": "chat",
+     "p": 0.9672,
+     "probabilities": {
+      "chat": 0.9672,
+      "task": 0.0028,
+      "unclear": 0.0289,
+      "spam": 0.0011
+     }
+    },
+    "answers": {
+     "route": {
+      "type": "choice",
+      "choice": "chat",
+      "confidence": 0.9672,
+      "certainty": 0.8857,
+      "probabilities": {
+       "chat": 0.9672,
+       "task": 0.0028,
+       "unclear": 0.0289,
+       "spam": 0.0011
+      }
+     },
+     "target": {
+      "type": "choice",
+      "choice": "none",
+      "confidence": 0.926,
+      "certainty": 0.7936,
+      "probabilities": {
+       "codex": 0.0072,
+       "claude_code": 0.0521,
+       "scheduler": 0.0099,
+       "gpu_worker": 0.0048,
+       "none": 0.926
+      }
+     },
+     "confirm": {
+      "type": "noul",
+      "noul": 0.0483
+     }
+    },
+    "usage": {
+     "input_tokens": 473,
+     "output_tokens": 0
+    },
+    "model": "decider-v10",
+    "latencyMs": 1529
+   }
+  },
+  {
+   "id": "m03",
+   "text": "jev가 정확히 뭐예요? 한 줄로만 설명해 주세요",
+   "expected": "reply",
+   "got": "reply",
+   "ok": true,
+   "decision": {
+    "action": "reply",
+    "reason": "chat",
+    "route": {
+     "choice": "chat",
+     "p": 0.9272,
+     "probabilities": {
+      "chat": 0.9272,
+      "task": 0.007,
+      "unclear": 0.0636,
+      "spam": 0.0022
+     }
+    },
+    "answers": {
+     "route": {
+      "type": "choice",
+      "choice": "chat",
+      "confidence": 0.9272,
+      "certainty": 0.7882,
+      "probabilities": {
+       "chat": 0.9272,
+       "task": 0.007,
+       "unclear": 0.0636,
+       "spam": 0.0022
+      }
+     },
+     "target": {
+      "type": "choice",
+      "choice": "none",
+      "confidence": 0.8421,
+      "certainty": 0.6447,
+      "probabilities": {
+       "codex": 0.0191,
+       "claude_code": 0.1159,
+       "scheduler": 0.0137,
+       "gpu_worker": 0.0091,
+       "none": 0.8421
+      }
+     },
+     "confirm": {
+      "type": "noul",
+      "noul": 0.2036
+     }
+    },
+    "usage": {
+     "input_tokens": 481,
+     "output_tokens": 0
+    },
+    "model": "decider-v10",
+    "latencyMs": 1408
+   }
+  },
+  {
+   "id": "m04",
+   "text": "ㅋㅋㅋ 그 짤 너무 웃기다",
+   "expected": "reply",
+   "got": "reply",
+   "ok": true,
+   "decision": {
+    "action": "reply",
+    "reason": "chat",
+    "route": {
+     "choice": "chat",
+     "p": 0.9885,
+     "probabilities": {
+      "chat": 0.9885,
+      "task": 0.0024,
+      "unclear": 0.0079,
+      "spam": 0.0012
+     }
+    },
+    "answers": {
+     "route": {
+      "type": "choice",
+      "choice": "chat",
+      "confidence": 0.9885,
+      "certainty": 0.948,
+      "probabilities": {
+       "chat": 0.9885,
+       "task": 0.0024,
+       "unclear": 0.0079,
+       "spam": 0.0012
+      }
+     },
+     "target": {
+      "type": "choice",
+      "choice": "none",
+      "confidence": 0.8865,
+      "certainty": 0.7268,
+      "probabilities": {
+       "codex": 0.011,
+       "claude_code": 0.0887,
+       "scheduler": 0.0084,
+       "gpu_worker": 0.0055,
+       "none": 0.8865
+      }
+     },
+     "confirm": {
+      "type": "noul",
+      "noul": 0.0811
+     }
+    },
+    "usage": {
+     "input_tokens": 476,
+     "output_tokens": 0
+    },
+    "model": "decider-v10",
+    "latencyMs": 1824
+   }
+  },
+  {
+   "id": "m05",
+   "text": "커밋 메시지는 보통 어떻게 쓰는 게 좋아요?",
+   "expected": "reply",
+   "got": "reply",
+   "ok": true,
+   "decision": {
+    "action": "reply",
+    "reason": "chat",
+    "route": {
+     "choice": "chat",
+     "p": 0.8157,
+     "probabilities": {
+      "chat": 0.8157,
+      "task": 0.0076,
+      "unclear": 0.1751,
+      "spam": 0.0015
+     }
+    },
+    "answers": {
+     "route": {
+      "type": "choice",
+      "choice": "chat",
+      "confidence": 0.8157,
+      "certainty": 0.6261,
+      "probabilities": {
+       "chat": 0.8157,
+       "task": 0.0076,
+       "unclear": 0.1751,
+       "spam": 0.0015
+      }
+     },
+     "target": {
+      "type": "choice",
+      "choice": "none",
+      "confidence": 0.8079,
+      "certainty": 0.5924,
+      "probabilities": {
+       "codex": 0.0497,
+       "claude_code": 0.1277,
+       "scheduler": 0.0094,
+       "gpu_worker": 0.0053,
+       "none": 0.8079
+      }
+     },
+     "confirm": {
+      "type": "noul",
+      "noul": 0.2217
+     }
+    },
+    "usage": {
+     "input_tokens": 477,
+     "output_tokens": 0
+    },
+    "model": "decider-v10",
+    "latencyMs": 2236
+   }
+  },
+  {
+   "id": "m06",
+   "text": "주말 잘 보내세요!",
+   "expected": "reply",
+   "got": "reply",
+   "ok": true,
+   "decision": {
+    "action": "reply",
+    "reason": "chat",
+    "route": {
+     "choice": "chat",
+     "p": 0.9948,
+     "probabilities": {
+      "chat": 0.9948,
+      "task": 0.001,
+      "unclear": 0.0036,
+      "spam": 0.0005
+     }
+    },
+    "answers": {
+     "route": {
+      "type": "choice",
+      "choice": "chat",
+      "confidence": 0.9948,
+      "certainty": 0.9737,
+      "probabilities": {
+       "chat": 0.9948,
+       "task": 0.001,
+       "unclear": 0.0036,
+       "spam": 0.0005
+      }
+     },
+     "target": {
+      "type": "choice",
+      "choice": "none",
+      "confidence": 0.9486,
+      "certainty": 0.8457,
+      "probabilities": {
+       "codex": 0.0051,
+       "claude_code": 0.0367,
+       "scheduler": 0.0071,
+       "gpu_worker": 0.0024,
+       "none": 0.9486
+      }
+     },
+     "confirm": {
+      "type": "noul",
+      "noul": 0.0208
+     }
+    },
+    "usage": {
+     "input_tokens": 472,
+     "output_tokens": 0
+    },
+    "model": "decider-v10",
+    "latencyMs": 1799
+   }
+  },
+  {
+   "id": "m07",
+   "text": "아 그거 제가 착각했네요. 신경 쓰지 마세요",
+   "expected": "reply",
+   "got": "reply",
+   "ok": true,
+   "decision": {
+    "action": "reply",
+    "reason": "chat",
+    "route": {
+     "choice": "chat",
+     "p": 0.9584,
+     "probabilities": {
+      "chat": 0.9584,
+      "task": 0.0067,
+      "unclear": 0.0321,
+      "spam": 0.0028
+     }
+    },
+    "answers": {
+     "route": {
+      "type": "choice",
+      "choice": "chat",
+      "confidence": 0.9584,
+      "certainty": 0.8549,
+      "probabilities": {
+       "chat": 0.9584,
+       "task": 0.0067,
+       "unclear": 0.0321,
+       "spam": 0.0028
+      }
+     },
+     "target": {
+      "type": "choice",
+      "choice": "none",
+      "confidence": 0.8896,
+      "certainty": 0.727,
+      "probabilities": {
+       "codex": 0.0112,
+       "claude_code": 0.0823,
+       "scheduler": 0.0116,
+       "gpu_worker": 0.0053,
+       "none": 0.8896
+      }
+     },
+     "confirm": {
+      "type": "noul",
+      "noul": 0.0857
+     }
+    },
+    "usage": {
+     "input_tokens": 481,
+     "output_tokens": 0
+    },
+    "model": "decider-v10",
+    "latencyMs": 1943
+   }
+  },
+  {
+   "id": "m08",
+   "text": "요즘 코덱스랑 클로드 코드 중에 뭐가 더 나아요? 그냥 의견이 궁금해서요",
+   "expected": "reply",
+   "got": "reply",
+   "ok": true,
+   "decision": {
+    "action": "reply",
+    "reason": "chat",
+    "route": {
+     "choice": "chat",
+     "p": 0.8722,
+     "probabilities": {
+      "chat": 0.8722,
+      "task": 0.0042,
+      "unclear": 0.1222,
+      "spam": 0.0014
+     }
+    },
+    "answers": {
+     "route": {
+      "type": "choice",
+      "choice": "chat",
+      "confidence": 0.8722,
+      "certainty": 0.7053,
+      "probabilities": {
+       "chat": 0.8722,
+       "task": 0.0042,
+       "unclear": 0.1222,
+       "spam": 0.0014
+      }
+     },
+     "target": {
+      "type": "choice",
+      "choice": "none",
+      "confidence": 0.8606,
+      "certainty": 0.6728,
+      "probabilities": {
+       "codex": 0.0329,
+       "claude_code": 0.0943,
+       "scheduler": 0.006,
+       "gpu_worker": 0.0063,
+       "none": 0.8606
+      }
+     },
+     "confirm": {
+      "type": "noul",
+      "noul": 0.0876
+     }
+    },
+    "usage": {
+     "input_tokens": 490,
+     "output_tokens": 0
+    },
+    "model": "decider-v10",
+    "latencyMs": 1917
+   }
+  },
+  {
+   "id": "m09",
+   "text": "네 확인했습니다 👍",
+   "expected": "reply",
+   "got": "reply",
+   "ok": true,
+   "decision": {
+    "action": "reply",
+    "reason": "chat",
+    "route": {
+     "choice": "chat",
+     "p": 0.9727,
+     "probabilities": {
+      "chat": 0.9727,
+      "task": 0.0055,
+      "unclear": 0.0202,
+      "spam": 0.0017
+     }
+    },
+    "answers": {
+     "route": {
+      "type": "choice",
+      "choice": "chat",
+      "confidence": 0.9727,
+      "certainty": 0.8956,
+      "probabilities": {
+       "chat": 0.9727,
+       "task": 0.0055,
+       "unclear": 0.0202,
+       "spam": 0.0017
+      }
+     },
+     "target": {
+      "type": "choice",
+      "choice": "none",
+      "confidence": 0.9209,
+      "certainty": 0.7755,
+      "probabilities": {
+       "codex": 0.0161,
+       "claude_code": 0.0479,
+       "scheduler": 0.0096,
+       "gpu_worker": 0.0056,
+       "none": 0.9209
+      }
+     },
+     "confirm": {
+      "type": "noul",
+      "noul": 0.1978
+     }
+    },
+    "usage": {
+     "input_tokens": 472,
+     "output_tokens": 0
+    },
+    "model": "decider-v10",
+    "latencyMs": 1899
+   }
+  },
+  {
+   "id": "m10",
+   "text": "오늘 강의 몇 시에 시작이었죠?",
+   "expected": "reply",
+   "got": "reply",
+   "ok": true,
+   "decision": {
+    "action": "reply",
+    "reason": "chat",
+    "route": {
+     "choice": "chat",
+     "p": 0.9047,
+     "probabilities": {
+      "chat": 0.9047,
+      "task": 0.0027,
+      "unclear": 0.0916,
+      "spam": 0.0009
+     }
+    },
+    "answers": {
+     "route": {
+      "type": "choice",
+      "choice": "chat",
+      "confidence": 0.9047,
+      "certainty": 0.7604,
+      "probabilities": {
+       "chat": 0.9047,
+       "task": 0.0027,
+       "unclear": 0.0916,
+       "spam": 0.0009
+      }
+     },
+     "target": {
+      "type": "choice",
+      "choice": "none",
+      "confidence": 0.8341,
+      "certainty": 0.6566,
+      "probabilities": {
+       "codex": 0.0036,
+       "claude_code": 0.0257,
+       "scheduler": 0.1334,
+       "gpu_worker": 0.0031,
+       "none": 0.8341
+      }
+     },
+     "confirm": {
+      "type": "noul",
+      "noul": 0.0323
+     }
+    },
+    "usage": {
+     "input_tokens": 475,
+     "output_tokens": 0
+    },
+    "model": "decider-v10",
+    "latencyMs": 1845
+   }
+  },
+  {
+   "id": "m11",
+   "text": "파이썬에서 리스트랑 튜플 차이가 뭐야",
+   "expected": "reply",
+   "got": "reply",
+   "ok": true,
+   "decision": {
+    "action": "reply",
+    "reason": "chat",
+    "route": {
+     "choice": "chat",
+     "p": 0.8798,
+     "probabilities": {
+      "chat": 0.8798,
+      "task": 0.0208,
+      "unclear": 0.0981,
+      "spam": 0.0013
+     }
+    },
+    "answers": {
+     "route": {
+      "type": "choice",
+      "choice": "chat",
+      "confidence": 0.8798,
+      "certainty": 0.6902,
+      "probabilities": {
+       "chat": 0.8798,
+       "task": 0.0208,
+       "unclear": 0.0981,
+       "spam": 0.0013
+      }
+     },
+     "target": {
+      "type": "choice",
+      "choice": "none",
+      "confidence": 0.7601,
+      "certainty": 0.533,
+      "probabilities": {
+       "codex": 0.15,
+       "claude_code": 0.0784,
+       "scheduler": 0.0058,
+       "gpu_worker": 0.0056,
+       "none": 0.7601
+      }
+     },
+     "confirm": {
+      "type": "noul",
+      "noul": 0.1733
+     }
+    },
+    "usage": {
+     "input_tokens": 480,
+     "output_tokens": 0
+    },
+    "model": "decider-v10",
+    "latencyMs": 2114
+   }
+  },
+  {
+   "id": "m12",
+   "text": "힘드네요 오늘은 좀 쉬어야겠어요",
+   "expected": "reply",
+   "got": "reply",
+   "ok": true,
+   "decision": {
+    "action": "reply",
+    "reason": "chat",
+    "route": {
+     "choice": "chat",
+     "p": 0.9178,
+     "probabilities": {
+      "chat": 0.9178,
+      "task": 0.0067,
+      "unclear": 0.0735,
+      "spam": 0.002
+     }
+    },
+    "answers": {
+     "route": {
+      "type": "choice",
+      "choice": "chat",
+      "confidence": 0.9178,
+      "certainty": 0.7718,
+      "probabilities": {
+       "chat": 0.9178,
+       "task": 0.0067,
+       "unclear": 0.0735,
+       "spam": 0.002
+      }
+     },
+     "target": {
+      "type": "choice",
+      "choice": "none",
+      "confidence": 0.9209,
+      "certainty": 0.7747,
+      "probabilities": {
+       "codex": 0.0089,
+       "claude_code": 0.0465,
+       "scheduler": 0.0178,
+       "gpu_worker": 0.0059,
+       "none": 0.9209
+      }
+     },
+     "confirm": {
+      "type": "noul",
+      "noul": 0.102
+     }
+    },
+    "usage": {
+     "input_tokens": 476,
+     "output_tokens": 0
+    },
+    "model": "decider-v10",
+    "latencyMs": 2080
+   }
+  },
+  {
+   "id": "m13",
+   "text": "로그인 API에서 401이 계속 떠요. auth.ts 좀 고쳐 주세요",
+   "expected": "dispatch:codex",
+   "got": "dispatch:codex",
+   "ok": true,
+   "decision": {
+    "action": "dispatch",
+    "reason": "task",
+    "route": {
+     "choice": "task",
+     "p": 0.9127,
+     "probabilities": {
+      "chat": 0.0106,
+      "task": 0.9127,
+      "unclear": 0.0758,
+      "spam": 0.0009
+     }
+    },
+    "target": "codex",
+    "confirmP": 0.1893,
+    "answers": {
+     "route": {
+      "type": "choice",
+      "choice": "task",
+      "confidence": 0.9127,
+      "certainty": 0.7596,
+      "probabilities": {
+       "chat": 0.0106,
+       "task": 0.9127,
+       "unclear": 0.0758,
+       "spam": 0.0009
+      }
+     },
+     "target": {
+      "type": "choice",
+      "choice": "codex",
+      "confidence": 0.9189,
+      "certainty": 0.7772,
+      "probabilities": {
+       "codex": 0.9189,
+       "claude_code": 0.031,
+       "scheduler": 0.0027,
+       "gpu_worker": 0.0035,
+       "none": 0.0439
+      }
+     },
+     "confirm": {
+      "type": "noul",
+      "noul": 0.1893
+     }
+    },
+    "usage": {
+     "input_tokens": 486,
+     "output_tokens": 0
+    },
+    "model": "decider-v10",
+    "latencyMs": 2109
+   }
+  },
+  {
+   "id": "m14",
+   "text": "어제 회의록 요약해서 노션 페이지로 정리해 줘",
+   "expected": "dispatch:claude_code",
+   "got": "dispatch:claude_code",
+   "ok": true,
+   "decision": {
+    "action": "dispatch",
+    "reason": "task",
+    "route": {
+     "choice": "task",
+     "p": 0.8137,
+     "probabilities": {
+      "chat": 0.041,
+      "task": 0.8137,
+      "unclear": 0.1441,
+      "spam": 0.0012
+     }
+    },
+    "target": "claude_code",
+    "confirmP": 0.1172,
+    "answers": {
+     "route": {
+      "type": "choice",
+      "choice": "task",
+      "confidence": 0.8137,
+      "certainty": 0.5774,
+      "probabilities": {
+       "chat": 0.041,
+       "task": 0.8137,
+       "unclear": 0.1441,
+       "spam": 0.0012
+      }
+     },
+     "target": {
+      "type": "choice",
+      "choice": "claude_code",
+      "confidence": 0.8793,
+      "certainty": 0.7237,
+      "probabilities": {
+       "codex": 0.0085,
+       "claude_code": 0.8793,
+       "scheduler": 0.0056,
+       "gpu_worker": 0.0061,
+       "none": 0.1005
+      }
+     },
+     "confirm": {
+      "type": "noul",
+      "noul": 0.1172
+     }
+    },
+    "usage": {
+     "input_tokens": 481,
+     "output_tokens": 0
+    },
+    "model": "decider-v10",
+    "latencyMs": 2135
+   }
+  },
+  {
+   "id": "m15",
+   "text": "내일 오전 9시에 팀 회의 알림 걸어 줘",
+   "expected": "dispatch:scheduler",
+   "got": "dispatch:scheduler",
+   "ok": true,
+   "decision": {
+    "action": "dispatch",
+    "reason": "task",
+    "route": {
+     "choice": "task",
+     "p": 0.875,
+     "probabilities": {
+      "chat": 0.0745,
+      "task": 0.875,
+      "unclear": 0.0489,
+      "spam": 0.0016
+     }
+    },
+    "target": "scheduler",
+    "confirmP": 0.0388,
+    "answers": {
+     "route": {
+      "type": "choice",
+      "choice": "task",
+      "confidence": 0.875,
+      "certainty": 0.6624,
+      "probabilities": {
+       "chat": 0.0745,
+       "task": 0.875,
+       "unclear": 0.0489,
+       "spam": 0.0016
+      }
+     },
+     "target": {
+      "type": "choice",
+      "choice": "scheduler",
+      "confidence": 0.8371,
+      "certainty": 0.681,
+      "probabilities": {
+       "codex": 0.0038,
+       "claude_code": 0.0095,
+       "scheduler": 0.8371,
+       "gpu_worker": 0.0031,
+       "none": 0.1465
+      }
+     },
+     "confirm": {
+      "type": "noul",
+      "noul": 0.0388
+     }
+    },
+    "usage": {
+     "input_tokens": 479,
+     "output_tokens": 0
+    },
+    "model": "decider-v10",
+    "latencyMs": 2127
+   }
+  },
+  {
+   "id": "m16",
+   "text": "A4000에서 openjev 서비스 다시 띄워 줘. 헬스체크가 안 돼",
+   "expected": "dispatch:gpu_worker",
+   "got": "dispatch:gpu_worker",
+   "ok": true,
+   "decision": {
+    "action": "dispatch",
+    "reason": "task",
+    "route": {
+     "choice": "task",
+     "p": 0.8132,
+     "probabilities": {
+      "chat": 0.0809,
+      "task": 0.8132,
+      "unclear": 0.1035,
+      "spam": 0.0023
+     }
+    },
+    "target": "gpu_worker",
+    "confirmP": 0.2365,
+    "answers": {
+     "route": {
+      "type": "choice",
+      "choice": "task",
+      "confidence": 0.8132,
+      "certainty": 0.5524,
+      "probabilities": {
+       "chat": 0.0809,
+       "task": 0.8132,
+       "unclear": 0.1035,
+       "spam": 0.0023
+      }
+     },
+     "target": {
+      "type": "choice",
+      "choice": "gpu_worker",
+      "confidence": 0.8279,
+      "certainty": 0.6055,
+      "probabilities": {
+       "codex": 0.0293,
+       "claude_code": 0.0138,
+       "scheduler": 0.0178,
+       "gpu_worker": 0.8279,
+       "none": 0.1112
+      }
+     },
+     "confirm": {
+      "type": "noul",
+      "noul": 0.2365
+     }
+    },
+    "usage": {
+     "input_tokens": 488,
+     "output_tokens": 0
+    },
+    "model": "decider-v10",
+    "latencyMs": 2045
+   }
+  },
+  {
+   "id": "m17",
+   "text": "이 논문 PDF 읽고 발표 슬라이드 5장으로 만들어 줘",
+   "expected": "dispatch:claude_code",
+   "got": "dispatch:claude_code",
+   "ok": true,
+   "decision": {
+    "action": "dispatch",
+    "reason": "task",
+    "route": {
+     "choice": "task",
+     "p": 0.7995,
+     "probabilities": {
+      "chat": 0.0306,
+      "task": 0.7995,
+      "unclear": 0.1686,
+      "spam": 0.0013
+     }
+    },
+    "target": "claude_code",
+    "confirmP": 0.1262,
+    "answers": {
+     "route": {
+      "type": "choice",
+      "choice": "task",
+      "confidence": 0.7995,
+      "certainty": 0.5713,
+      "probabilities": {
+       "chat": 0.0306,
+       "task": 0.7995,
+       "unclear": 0.1686,
+       "spam": 0.0013
+      }
+     },
+     "target": {
+      "type": "choice",
+      "choice": "claude_code",
+      "confidence": 0.9531,
+      "certainty": 0.8613,
+      "probabilities": {
+       "codex": 0.0028,
+       "claude_code": 0.9531,
+       "scheduler": 0.0024,
+       "gpu_worker": 0.0043,
+       "none": 0.0374
+      }
+     },
+     "confirm": {
+      "type": "noul",
+      "noul": 0.1262
+     }
+    },
+    "usage": {
+     "input_tokens": 480,
+     "output_tokens": 0
+    },
+    "model": "decider-v10",
+    "latencyMs": 2117
+   }
+  },
+  {
+   "id": "m18",
+   "text": "결제 모듈 단위 테스트 추가하고 CI 통과하는지 확인해 줘",
+   "expected": "dispatch:codex",
+   "got": "dispatch:codex",
+   "ok": true,
+   "decision": {
+    "action": "dispatch",
+    "reason": "task",
+    "route": {
+     "choice": "task",
+     "p": 0.8724,
+     "probabilities": {
+      "chat": 0.0181,
+      "task": 0.8724,
+      "unclear": 0.1084,
+      "spam": 0.0011
+     }
+    },
+    "target": "codex",
+    "confirmP": 0.2754,
+    "answers": {
+     "route": {
+      "type": "choice",
+      "choice": "task",
+      "confidence": 0.8724,
+      "certainty": 0.6828,
+      "probabilities": {
+       "chat": 0.0181,
+       "task": 0.8724,
+       "unclear": 0.1084,
+       "spam": 0.0011
+      }
+     },
+     "target": {
+      "type": "choice",
+      "choice": "codex",
+      "confidence": 0.9498,
+      "certainty": 0.851,
+      "probabilities": {
+       "codex": 0.9498,
+       "claude_code": 0.0032,
+       "scheduler": 0.0033,
+       "gpu_worker": 0.0058,
+       "none": 0.0379
+      }
+     },
+     "confirm": {
+      "type": "noul",
+      "noul": 0.2754
+     }
+    },
+    "usage": {
+     "input_tokens": 481,
+     "output_tokens": 0
+    },
+    "model": "decider-v10",
+    "latencyMs": 1894
+   }
+  },
+  {
+   "id": "m19",
+   "text": "혹시 시간 되시면 README 문장 좀 다듬어 주실 수 있을까요? 급한 건 아니에요",
+   "expected": "dispatch:claude_code",
+   "got": "reply",
+   "ok": false,
+   "decision": {
+    "action": "reply",
+    "reason": "chat",
+    "route": {
+     "choice": "chat",
+     "p": 0.7213,
+     "probabilities": {
+      "chat": 0.7213,
+      "task": 0.0513,
+      "unclear": 0.2261,
+      "spam": 0.0013
+     }
+    },
+    "answers": {
+     "route": {
+      "type": "choice",
+      "choice": "chat",
+      "confidence": 0.7213,
+      "certainty": 0.4714,
+      "probabilities": {
+       "chat": 0.7213,
+       "task": 0.0513,
+       "unclear": 0.2261,
+       "spam": 0.0013
+      }
+     },
+     "target": {
+      "type": "choice",
+      "choice": "claude_code",
+      "confidence": 0.9028,
+      "certainty": 0.7446,
+      "probabilities": {
+       "codex": 0.0421,
+       "claude_code": 0.9028,
+       "scheduler": 0.0041,
+       "gpu_worker": 0.0029,
+       "none": 0.0481
+      }
+     },
+     "confirm": {
+      "type": "noul",
+      "noul": 0.0557
+     }
+    },
+    "usage": {
+     "input_tokens": 490,
+     "output_tokens": 0
+    },
+    "model": "decider-v10",
+    "latencyMs": 1603
+   }
+  },
+  {
+   "id": "m20",
+   "text": "매주 월요일 아침 8시에 지난주 깃허브 커밋 요약 보내 줘",
+   "expected": "dispatch:scheduler",
+   "got": "clarify",
+   "ok": false,
+   "decision": {
+    "action": "clarify",
+    "reason": "uncertain_route",
+    "route": {
+     "choice": "task",
+     "p": 0.4328,
+     "probabilities": {
+      "chat": 0.197,
+      "task": 0.4328,
+      "unclear": 0.368,
+      "spam": 0.0022
+     }
+    },
+    "answers": {
+     "route": {
+      "type": "choice",
+      "choice": "task",
+      "confidence": 0.4328,
+      "certainty": 0.2327,
+      "probabilities": {
+       "chat": 0.197,
+       "task": 0.4328,
+       "unclear": 0.368,
+       "spam": 0.0022
+      }
+     },
+     "target": {
+      "type": "choice",
+      "choice": "claude_code",
+      "confidence": 0.6132,
+      "certainty": 0.3109,
+      "probabilities": {
+       "codex": 0.1432,
+       "claude_code": 0.6132,
+       "scheduler": 0.0625,
+       "gpu_worker": 0.0136,
+       "none": 0.1675
+      }
+     },
+     "confirm": {
+      "type": "noul",
+      "noul": 0.121
+     }
+    },
+    "usage": {
+     "input_tokens": 488,
+     "output_tokens": 0
+    },
+    "model": "decider-v10",
+    "latencyMs": 1819
+   }
+  },
+  {
+   "id": "m21",
+   "text": "qwen 4B로 LoRA 파인튜닝 한 번 돌려 줘. 데이터는 data/train.jsonl",
+   "expected": "dispatch:gpu_worker",
+   "got": "clarify",
+   "ok": false,
+   "decision": {
+    "action": "clarify",
+    "reason": "uncertain_route",
+    "route": {
+     "choice": "chat",
+     "p": 0.3856,
+     "probabilities": {
+      "chat": 0.3856,
+      "task": 0.3697,
+      "unclear": 0.2413,
+      "spam": 0.0033
+     }
+    },
+    "answers": {
+     "route": {
+      "type": "choice",
+      "choice": "chat",
+      "confidence": 0.3856,
+      "certainty": 0.2085,
+      "probabilities": {
+       "chat": 0.3856,
+       "task": 0.3697,
+       "unclear": 0.2413,
+       "spam": 0.0033
+      }
+     },
+     "target": {
+      "type": "choice",
+      "choice": "none",
+      "confidence": 0.5106,
+      "certainty": 0.2881,
+      "probabilities": {
+       "codex": 0.194,
+       "claude_code": 0.0284,
+       "scheduler": 0.0065,
+       "gpu_worker": 0.2605,
+       "none": 0.5106
+      }
+     },
+     "confirm": {
+      "type": "noul",
+      "noul": 0.1513
+     }
+    },
+    "usage": {
+     "input_tokens": 491,
+     "output_tokens": 0
+    },
+    "model": "decider-v10",
+    "latencyMs": 1954
+   }
+  },
+  {
+   "id": "m22",
+   "text": "package.json 의존성 최신으로 올리고 빌드 깨지는지 봐 줘",
+   "expected": "dispatch:codex",
+   "got": "dispatch:codex",
+   "ok": true,
+   "decision": {
+    "action": "dispatch",
+    "reason": "task",
+    "route": {
+     "choice": "task",
+     "p": 0.6904,
+     "probabilities": {
+      "chat": 0.0496,
+      "task": 0.6904,
+      "unclear": 0.2577,
+      "spam": 0.0023
+     }
+    },
+    "target": "codex",
+    "confirmP": 0.1415,
+    "answers": {
+     "route": {
+      "type": "choice",
+      "choice": "task",
+      "confidence": 0.6904,
+      "certainty": 0.4457,
+      "probabilities": {
+       "chat": 0.0496,
+       "task": 0.6904,
+       "unclear": 0.2577,
+       "spam": 0.0023
+      }
+     },
+     "target": {
+      "type": "choice",
+      "choice": "codex",
+      "confidence": 0.9399,
+      "certainty": 0.8286,
+      "probabilities": {
+       "codex": 0.9399,
+       "claude_code": 0.0033,
+       "scheduler": 0.0026,
+       "gpu_worker": 0.0096,
+       "none": 0.0447
+      }
+     },
+     "confirm": {
+      "type": "noul",
+      "noul": 0.1415
+     }
+    },
+    "usage": {
+     "input_tokens": 483,
+     "output_tokens": 0
+    },
+    "model": "decider-v10",
+    "latencyMs": 1716
+   }
+  },
+  {
+   "id": "m23",
+   "text": "경쟁사 강의 3개 가격이랑 커리큘럼 조사해서 표로 정리해 줘",
+   "expected": "dispatch:claude_code",
+   "got": "dispatch:claude_code",
+   "ok": true,
+   "decision": {
+    "action": "dispatch",
+    "reason": "task",
+    "route": {
+     "choice": "task",
+     "p": 0.6578,
+     "probabilities": {
+      "chat": 0.0584,
+      "task": 0.6578,
+      "unclear": 0.2819,
+      "spam": 0.0019
+     }
+    },
+    "target": "claude_code",
+    "confirmP": 0.0824,
+    "answers": {
+     "route": {
+      "type": "choice",
+      "choice": "task",
+      "confidence": 0.6578,
+      "certainty": 0.4156,
+      "probabilities": {
+       "chat": 0.0584,
+       "task": 0.6578,
+       "unclear": 0.2819,
+       "spam": 0.0019
+      }
+     },
+     "target": {
+      "type": "choice",
+      "choice": "claude_code",
+      "confidence": 0.6496,
+      "certainty": 0.4946,
+      "probabilities": {
+       "codex": 0.021,
+       "claude_code": 0.6496,
+       "scheduler": 0.0086,
+       "gpu_worker": 0.0105,
+       "none": 0.3102
+      }
+     },
+     "confirm": {
+      "type": "noul",
+      "noul": 0.0824
+     }
+    },
+    "usage": {
+     "input_tokens": 489,
+     "output_tokens": 0
+    },
+    "model": "decider-v10",
+    "latencyMs": 1953
+   }
+  },
+  {
+   "id": "m24",
+   "text": "운영 DB users 테이블 전부 지우고 새로 만들어 줘",
+   "expected": "confirm",
+   "got": "clarify",
+   "ok": false,
+   "decision": {
+    "action": "clarify",
+    "reason": "which_worker",
+    "route": {
+     "choice": "task",
+     "p": 0.7484,
+     "probabilities": {
+      "chat": 0.0693,
+      "task": 0.7484,
+      "unclear": 0.1801,
+      "spam": 0.0023
+     }
+    },
+    "targetAnswer": {
+     "choice": "none",
+     "p": 0.6673,
+     "probabilities": {
+      "codex": 0.2018,
+      "claude_code": 0.0319,
+      "scheduler": 0.0186,
+      "gpu_worker": 0.0805,
+      "none": 0.6673
+     }
+    },
+    "confirmP": 0.8293,
+    "answers": {
+     "route": {
+      "type": "choice",
+      "choice": "task",
+      "confidence": 0.7484,
+      "certainty": 0.4775,
+      "probabilities": {
+       "chat": 0.0693,
+       "task": 0.7484,
+       "unclear": 0.1801,
+       "spam": 0.0023
+      }
+     },
+     "target": {
+      "type": "choice",
+      "choice": "none",
+      "confidence": 0.6673,
+      "certainty": 0.3913,
+      "probabilities": {
+       "codex": 0.2018,
+       "claude_code": 0.0319,
+       "scheduler": 0.0186,
+       "gpu_worker": 0.0805,
+       "none": 0.6673
+      }
+     },
+     "confirm": {
+      "type": "noul",
+      "noul": 0.8293
+     }
+    },
+    "usage": {
+     "input_tokens": 478,
+     "output_tokens": 0
+    },
+    "model": "decider-v10",
+    "latencyMs": 1663
+   }
+  },
+  {
+   "id": "m25",
+   "text": "이 견적서 PDF 고객 명단 전체한테 메일로 보내 줘",
+   "expected": "confirm",
+   "got": "dispatch:claude_code",
+   "ok": false,
+   "decision": {
+    "action": "dispatch",
+    "reason": "task",
+    "route": {
+     "choice": "task",
+     "p": 0.7053,
+     "probabilities": {
+      "chat": 0.0685,
+      "task": 0.7053,
+      "unclear": 0.2238,
+      "spam": 0.0024
+     }
+    },
+    "target": "claude_code",
+    "confirmP": 0.1673,
+    "answers": {
+     "route": {
+      "type": "choice",
+      "choice": "task",
+      "confidence": 0.7053,
+      "certainty": 0.4378,
+      "probabilities": {
+       "chat": 0.0685,
+       "task": 0.7053,
+       "unclear": 0.2238,
+       "spam": 0.0024
+      }
+     },
+     "target": {
+      "type": "choice",
+      "choice": "claude_code",
+      "confidence": 0.9078,
+      "certainty": 0.7768,
+      "probabilities": {
+       "codex": 0.0049,
+       "claude_code": 0.9078,
+       "scheduler": 0.0053,
+       "gpu_worker": 0.0029,
+       "none": 0.0791
+      }
+     },
+     "confirm": {
+      "type": "noul",
+      "noul": 0.1673
+     }
+    },
+    "usage": {
+     "input_tokens": 482,
+     "output_tokens": 0
+    },
+    "model": "decider-v10",
+    "latencyMs": 1498
+   }
+  },
+  {
+   "id": "m26",
+   "text": "main 브랜치에 force push 해서 어제 커밋들 날려 줘",
+   "expected": "confirm",
+   "got": "clarify",
+   "ok": false,
+   "decision": {
+    "action": "clarify",
+    "reason": "uncertain_route",
+    "route": {
+     "choice": "unclear",
+     "p": 0.4647,
+     "probabilities": {
+      "chat": 0.2979,
+      "task": 0.2342,
+      "unclear": 0.4647,
+      "spam": 0.0033
+     }
+    },
+    "answers": {
+     "route": {
+      "type": "choice",
+      "choice": "unclear",
+      "confidence": 0.4647,
+      "certainty": 0.2241,
+      "probabilities": {
+       "chat": 0.2979,
+       "task": 0.2342,
+       "unclear": 0.4647,
+       "spam": 0.0033
+      }
+     },
+     "target": {
+      "type": "choice",
+      "choice": "codex",
+      "confidence": 0.5527,
+      "certainty": 0.4428,
+      "probabilities": {
+       "codex": 0.5527,
+       "claude_code": 0.0184,
+       "scheduler": 0.0092,
+       "gpu_worker": 0.0226,
+       "none": 0.3971
+      }
+     },
+     "confirm": {
+      "type": "noul",
+      "noul": 0.5255
+     }
+    },
+    "usage": {
+     "input_tokens": 484,
+     "output_tokens": 0
+    },
+    "model": "decider-v10",
+    "latencyMs": 2076
+   }
+  },
+  {
+   "id": "m27",
+   "text": "구독 결제 카드 바꿔서 연간 플랜으로 갱신해 줘",
+   "expected": "confirm",
+   "got": "clarify",
+   "ok": false,
+   "decision": {
+    "action": "clarify",
+    "reason": "uncertain_route",
+    "route": {
+     "choice": "unclear",
+     "p": 0.496,
+     "probabilities": {
+      "chat": 0.2075,
+      "task": 0.2923,
+      "unclear": 0.496,
+      "spam": 0.0042
+     }
+    },
+    "answers": {
+     "route": {
+      "type": "choice",
+      "choice": "unclear",
+      "confidence": 0.496,
+      "certainty": 0.2378,
+      "probabilities": {
+       "chat": 0.2075,
+       "task": 0.2923,
+       "unclear": 0.496,
+       "spam": 0.0042
+      }
+     },
+     "target": {
+      "type": "choice",
+      "choice": "claude_code",
+      "confidence": 0.8303,
+      "certainty": 0.6533,
+      "probabilities": {
+       "codex": 0.0051,
+       "claude_code": 0.8303,
+       "scheduler": 0.0116,
+       "gpu_worker": 0.0102,
+       "none": 0.1427
+      }
+     },
+     "confirm": {
+      "type": "noul",
+      "noul": 0.8777
+     }
+    },
+    "usage": {
+     "input_tokens": 483,
+     "output_tokens": 0
+    },
+    "model": "decider-v10",
+    "latencyMs": 1958
+   }
+  },
+  {
+   "id": "m28",
+   "text": "GPU 서버 전체 재부팅해 줘. 돌고 있는 작업은 신경 쓰지 말고",
+   "expected": "confirm",
+   "got": "dispatch:gpu_worker",
+   "ok": false,
+   "decision": {
+    "action": "dispatch",
+    "reason": "task",
+    "route": {
+     "choice": "task",
+     "p": 0.8283,
+     "probabilities": {
+      "chat": 0.1485,
+      "task": 0.8283,
+      "unclear": 0.0212,
+      "spam": 0.002
+     }
+    },
+    "target": "gpu_worker",
+    "confirmP": 0.473,
+    "answers": {
+     "route": {
+      "type": "choice",
+      "choice": "task",
+      "confidence": 0.8283,
+      "certainty": 0.6153,
+      "probabilities": {
+       "chat": 0.1485,
+       "task": 0.8283,
+       "unclear": 0.0212,
+       "spam": 0.002
+      }
+     },
+     "target": {
+      "type": "choice",
+      "choice": "gpu_worker",
+      "confidence": 0.9691,
+      "certainty": 0.8976,
+      "probabilities": {
+       "codex": 0.0041,
+       "claude_code": 0.0021,
+       "scheduler": 0.0023,
+       "gpu_worker": 0.9691,
+       "none": 0.0224
+      }
+     },
+     "confirm": {
+      "type": "noul",
+      "noul": 0.473
+     }
+    },
+    "usage": {
+     "input_tokens": 486,
+     "output_tokens": 0
+    },
+    "model": "decider-v10",
+    "latencyMs": 1332
+   }
+  },
+  {
+   "id": "m29",
+   "text": "이 에러 원인 찾아서 고쳐 줘: TypeError: Cannot read properties of undefined (reading 'map') at Dashboard.tsx:42",
+   "expected": "dispatch:codex",
+   "got": "dispatch:codex",
+   "ok": true,
+   "decision": {
+    "action": "dispatch",
+    "reason": "task",
+    "route": {
+     "choice": "task",
+     "p": 0.9082,
+     "probabilities": {
+      "chat": 0.0283,
+      "task": 0.9082,
+      "unclear": 0.0623,
+      "spam": 0.0012
+     }
+    },
+    "target": "codex",
+    "confirmP": 0.1794,
+    "answers": {
+     "route": {
+      "type": "choice",
+      "choice": "task",
+      "confidence": 0.9082,
+      "certainty": 0.7334,
+      "probabilities": {
+       "chat": 0.0283,
+       "task": 0.9082,
+       "unclear": 0.0623,
+       "spam": 0.0012
+      }
+     },
+     "target": {
+      "type": "choice",
+      "choice": "codex",
+      "confidence": 0.9505,
+      "certainty": 0.8562,
+      "probabilities": {
+       "codex": 0.9505,
+       "claude_code": 0.003,
+       "scheduler": 0.0017,
+       "gpu_worker": 0.005,
+       "none": 0.0398
+      }
+     },
+     "confirm": {
+      "type": "noul",
+      "noul": 0.1794
+     }
+    },
+    "usage": {
+     "input_tokens": 497,
+     "output_tokens": 0
+    },
+    "model": "decider-v10",
+    "latencyMs": 1294
+   }
+  },
+  {
+   "id": "m30",
+   "text": "다음 주 수요일 오후 3시에 치과 예약 리마인더 좀",
+   "expected": "dispatch:scheduler",
+   "got": "dispatch:scheduler",
+   "ok": true,
+   "decision": {
+    "action": "dispatch",
+    "reason": "task",
+    "route": {
+     "choice": "task",
+     "p": 0.885,
+     "probabilities": {
+      "chat": 0.0758,
+      "task": 0.885,
+      "unclear": 0.038,
+      "spam": 0.0013
+     }
+    },
+    "target": "scheduler",
+    "confirmP": 0.0207,
+    "answers": {
+     "route": {
+      "type": "choice",
+      "choice": "task",
+      "confidence": 0.885,
+      "certainty": 0.6851,
+      "probabilities": {
+       "chat": 0.0758,
+       "task": 0.885,
+       "unclear": 0.038,
+       "spam": 0.0013
+      }
+     },
+     "target": {
+      "type": "choice",
+      "choice": "scheduler",
+      "confidence": 0.9192,
+      "certainty": 0.8073,
+      "probabilities": {
+       "codex": 0.0011,
+       "claude_code": 0.0043,
+       "scheduler": 0.9192,
+       "gpu_worker": 0.0013,
+       "none": 0.0741
+      }
+     },
+     "confirm": {
+      "type": "noul",
+      "noul": 0.0207
+     }
+    },
+    "usage": {
+     "input_tokens": 485,
+     "output_tokens": 0
+    },
+    "model": "decider-v10",
+    "latencyMs": 1369
+   }
+  },
+  {
+   "id": "m31",
+   "text": "그거 다시 해 줘",
+   "expected": "clarify",
+   "got": "clarify",
+   "ok": true,
+   "decision": {
+    "action": "clarify",
+    "reason": "uncertain_route",
+    "route": {
+     "choice": "unclear",
+     "p": 0.5372,
+     "probabilities": {
+      "chat": 0.2372,
+      "task": 0.2221,
+      "unclear": 0.5372,
+      "spam": 0.0035
+     }
+    },
+    "answers": {
+     "route": {
+      "type": "choice",
+      "choice": "unclear",
+      "confidence": 0.5372,
+      "certainty": 0.2576,
+      "probabilities": {
+       "chat": 0.2372,
+       "task": 0.2221,
+       "unclear": 0.5372,
+       "spam": 0.0035
+      }
+     },
+     "target": {
+      "type": "choice",
+      "choice": "none",
+      "confidence": 0.7636,
+      "certainty": 0.5184,
+      "probabilities": {
+       "codex": 0.1516,
+       "claude_code": 0.0553,
+       "scheduler": 0.0108,
+       "gpu_worker": 0.0186,
+       "none": 0.7636
+      }
+     },
+     "confirm": {
+      "type": "noul",
+      "noul": 0.2754
+     }
+    },
+    "usage": {
+     "input_tokens": 473,
+     "output_tokens": 0
+    },
+    "model": "decider-v10",
+    "latencyMs": 1545
+   }
+  },
+  {
+   "id": "m32",
+   "text": "이거 좀 봐 줄래요?",
+   "expected": "clarify",
+   "got": "reply",
+   "ok": false,
+   "decision": {
+    "action": "reply",
+    "reason": "chat",
+    "route": {
+     "choice": "chat",
+     "p": 0.6248,
+     "probabilities": {
+      "chat": 0.6248,
+      "task": 0.0144,
+      "unclear": 0.3573,
+      "spam": 0.0035
+     }
+    },
+    "answers": {
+     "route": {
+      "type": "choice",
+      "choice": "chat",
+      "confidence": 0.6248,
+      "certainty": 0.4645,
+      "probabilities": {
+       "chat": 0.6248,
+       "task": 0.0144,
+       "unclear": 0.3573,
+       "spam": 0.0035
+      }
+     },
+     "target": {
+      "type": "choice",
+      "choice": "none",
+      "confidence": 0.9066,
+      "certainty": 0.7477,
+      "probabilities": {
+       "codex": 0.0181,
+       "claude_code": 0.0592,
+       "scheduler": 0.0088,
+       "gpu_worker": 0.0072,
+       "none": 0.9066
+      }
+     },
+     "confirm": {
+      "type": "noul",
+      "noul": 0.1505
+     }
+    },
+    "usage": {
+     "input_tokens": 474,
+     "output_tokens": 0
+    },
+    "model": "decider-v10",
+    "latencyMs": 1413
+   }
+  },
+  {
+   "id": "m33",
+   "text": "아까 말한 거 그대로 진행해 주세요",
+   "expected": "clarify",
+   "got": "clarify",
+   "ok": true,
+   "decision": {
+    "action": "clarify",
+    "reason": "uncertain_route",
+    "route": {
+     "choice": "chat",
+     "p": 0.5237,
+     "probabilities": {
+      "chat": 0.5237,
+      "task": 0.1059,
+      "unclear": 0.3674,
+      "spam": 0.003
+     }
+    },
+    "answers": {
+     "route": {
+      "type": "choice",
+      "choice": "chat",
+      "confidence": 0.5237,
+      "certainty": 0.3063,
+      "probabilities": {
+       "chat": 0.5237,
+       "task": 0.1059,
+       "unclear": 0.3674,
+       "spam": 0.003
+      }
+     },
+     "target": {
+      "type": "choice",
+      "choice": "none",
+      "confidence": 0.8446,
+      "certainty": 0.625,
+      "probabilities": {
+       "codex": 0.0801,
+       "claude_code": 0.0507,
+       "scheduler": 0.0157,
+       "gpu_worker": 0.0089,
+       "none": 0.8446
+      }
+     },
+     "confirm": {
+      "type": "noul",
+      "noul": 0.1088
+     }
+    },
+    "usage": {
+     "input_tokens": 476,
+     "output_tokens": 0
+    },
+    "model": "decider-v10",
+    "latencyMs": 2152
+   }
+  },
+  {
+   "id": "m34",
+   "text": "정리 좀 부탁해요",
+   "expected": "clarify",
+   "got": "clarify",
+   "ok": true,
+   "decision": {
+    "action": "clarify",
+    "reason": "unclear",
+    "route": {
+     "choice": "unclear",
+     "p": 0.6679,
+     "probabilities": {
+      "chat": 0.2569,
+      "task": 0.0727,
+      "unclear": 0.6679,
+      "spam": 0.0025
+     }
+    },
+    "answers": {
+     "route": {
+      "type": "choice",
+      "choice": "unclear",
+      "confidence": 0.6679,
+      "certainty": 0.4054,
+      "probabilities": {
+       "chat": 0.2569,
+       "task": 0.0727,
+       "unclear": 0.6679,
+       "spam": 0.0025
+      }
+     },
+     "target": {
+      "type": "choice",
+      "choice": "none",
+      "confidence": 0.8227,
+      "certainty": 0.6196,
+      "probabilities": {
+       "codex": 0.0205,
+       "claude_code": 0.1332,
+       "scheduler": 0.0159,
+       "gpu_worker": 0.0077,
+       "none": 0.8227
+      }
+     },
+     "confirm": {
+      "type": "noul",
+      "noul": 0.1803
+     }
+    },
+    "usage": {
+     "input_tokens": 472,
+     "output_tokens": 0
+    },
+    "model": "decider-v10",
+    "latencyMs": 1406
+   }
+  },
+  {
+   "id": "m35",
+   "text": "저번이랑 똑같이 만들어 줘",
+   "expected": "clarify",
+   "got": "clarify",
+   "ok": true,
+   "decision": {
+    "action": "clarify",
+    "reason": "unclear",
+    "route": {
+     "choice": "unclear",
+     "p": 0.7168,
+     "probabilities": {
+      "chat": 0.1255,
+      "task": 0.1548,
+      "unclear": 0.7168,
+      "spam": 0.0029
+     }
+    },
+    "answers": {
+     "route": {
+      "type": "choice",
+      "choice": "unclear",
+      "confidence": 0.7168,
+      "certainty": 0.4195,
+      "probabilities": {
+       "chat": 0.1255,
+       "task": 0.1548,
+       "unclear": 0.7168,
+       "spam": 0.0029
+      }
+     },
+     "target": {
+      "type": "choice",
+      "choice": "none",
+      "confidence": 0.5467,
+      "certainty": 0.4055,
+      "probabilities": {
+       "codex": 0.3766,
+       "claude_code": 0.0541,
+       "scheduler": 0.01,
+       "gpu_worker": 0.0126,
+       "none": 0.5467
+      }
+     },
+     "confirm": {
+      "type": "noul",
+      "noul": 0.1997
+     }
+    },
+    "usage": {
+     "input_tokens": 476,
+     "output_tokens": 0
+    },
+    "model": "decider-v10",
+    "latencyMs": 2314
+   }
+  },
+  {
+   "id": "m36",
+   "text": "[광고] 코인 무료 에어드랍! 지금 링크 누르면 100만원 지급",
+   "expected": "block",
+   "got": "block",
+   "ok": true,
+   "decision": {
+    "action": "block",
+    "reason": "spam",
+    "route": {
+     "choice": "spam",
+     "p": 0.9631,
+     "probabilities": {
+      "chat": 0.0243,
+      "task": 0.0059,
+      "unclear": 0.0066,
+      "spam": 0.9631
+     }
+    },
+    "answers": {
+     "route": {
+      "type": "choice",
+      "choice": "spam",
+      "confidence": 0.9631,
+      "certainty": 0.8628,
+      "probabilities": {
+       "chat": 0.0243,
+       "task": 0.0059,
+       "unclear": 0.0066,
+       "spam": 0.9631
+      }
+     },
+     "target": {
+      "type": "choice",
+      "choice": "none",
+      "confidence": 0.9365,
+      "certainty": 0.8102,
+      "probabilities": {
+       "codex": 0.0112,
+       "claude_code": 0.0387,
+       "scheduler": 0.0064,
+       "gpu_worker": 0.0072,
+       "none": 0.9365
+      }
+     },
+     "confirm": {
+      "type": "noul",
+      "noul": 0.2671
+     }
+    },
+    "usage": {
+     "input_tokens": 486,
+     "output_tokens": 0
+    },
+    "model": "decider-v10",
+    "latencyMs": 1862
+   }
+  },
+  {
+   "id": "m37",
+   "text": "고객님 계정이 정지되었습니다. 아래 링크에서 비밀번호를 다시 입력하세요",
+   "expected": "block",
+   "got": "clarify",
+   "ok": false,
+   "decision": {
+    "action": "clarify",
+    "reason": "uncertain_route",
+    "route": {
+     "choice": "chat",
+     "p": 0.4713,
+     "probabilities": {
+      "chat": 0.4713,
+      "task": 0.0245,
+      "unclear": 0.1948,
+      "spam": 0.3094
+     }
+    },
+    "answers": {
+     "route": {
+      "type": "choice",
+      "choice": "chat",
+      "confidence": 0.4713,
+      "certainty": 0.187,
+      "probabilities": {
+       "chat": 0.4713,
+       "task": 0.0245,
+       "unclear": 0.1948,
+       "spam": 0.3094
+      }
+     },
+     "target": {
+      "type": "choice",
+      "choice": "none",
+      "confidence": 0.7552,
+      "certainty": 0.5883,
+      "probabilities": {
+       "codex": 0.0085,
+       "claude_code": 0.2203,
+       "scheduler": 0.0095,
+       "gpu_worker": 0.0065,
+       "none": 0.7552
+      }
+     },
+     "confirm": {
+      "type": "noul",
+      "noul": 0.1632
+     }
+    },
+    "usage": {
+     "input_tokens": 483,
+     "output_tokens": 0
+    },
+    "model": "decider-v10",
+    "latencyMs": 1880
+   }
+  },
+  {
+   "id": "m38",
+   "text": "★단독★ 투자 리딩방 초대, 수익률 300% 보장",
+   "expected": "block",
+   "got": "block",
+   "ok": true,
+   "decision": {
+    "action": "block",
+    "reason": "spam",
+    "route": {
+     "choice": "spam",
+     "p": 0.958,
+     "probabilities": {
+      "chat": 0.0248,
+      "task": 0.0072,
+      "unclear": 0.01,
+      "spam": 0.958
+     }
+    },
+    "answers": {
+     "route": {
+      "type": "choice",
+      "choice": "spam",
+      "confidence": 0.958,
+      "certainty": 0.8454,
+      "probabilities": {
+       "chat": 0.0248,
+       "task": 0.0072,
+       "unclear": 0.01,
+       "spam": 0.958
+      }
+     },
+     "target": {
+      "type": "choice",
+      "choice": "none",
+      "confidence": 0.9252,
+      "certainty": 0.7796,
+      "probabilities": {
+       "codex": 0.0136,
+       "claude_code": 0.0406,
+       "scheduler": 0.0093,
+       "gpu_worker": 0.0113,
+       "none": 0.9252
+      }
+     },
+     "confirm": {
+      "type": "noul",
+      "noul": 0.2322
+     }
+    },
+    "usage": {
+     "input_tokens": 485,
+     "output_tokens": 0
+    },
+    "model": "decider-v10",
+    "latencyMs": 1833
+   }
+  },
+  {
+   "id": "m39",
+   "text": "코드 리뷰 부탁드려도 될까요? PR #42 입니다",
+   "expected": "dispatch:codex",
+   "got": "clarify",
+   "ok": false,
+   "decision": {
+    "action": "clarify",
+    "reason": "unclear",
+    "route": {
+     "choice": "unclear",
+     "p": 0.7332,
+     "probabilities": {
+      "chat": 0.1528,
+      "task": 0.1124,
+      "unclear": 0.7332,
+      "spam": 0.0016
+     }
+    },
+    "answers": {
+     "route": {
+      "type": "choice",
+      "choice": "unclear",
+      "confidence": 0.7332,
+      "certainty": 0.4442,
+      "probabilities": {
+       "chat": 0.1528,
+       "task": 0.1124,
+       "unclear": 0.7332,
+       "spam": 0.0016
+      }
+     },
+     "target": {
+      "type": "choice",
+      "choice": "codex",
+      "confidence": 0.9617,
+      "certainty": 0.8873,
+      "probabilities": {
+       "codex": 0.9617,
+       "claude_code": 0.0026,
+       "scheduler": 0.001,
+       "gpu_worker": 0.001,
+       "none": 0.0336
+      }
+     },
+     "confirm": {
+      "type": "noul",
+      "noul": 0.0885
+     }
+    },
+    "usage": {
+     "input_tokens": 481,
+     "output_tokens": 0
+    },
+    "model": "decider-v10",
+    "latencyMs": 1703
+   }
+  },
+  {
+   "id": "m40",
+   "text": "버그가 있는 것 같긴 한데 어디가 문제인지 저도 잘 모르겠어요",
+   "expected": "clarify",
+   "got": "clarify",
+   "ok": true,
+   "decision": {
+    "action": "clarify",
+    "reason": "uncertain_route",
+    "route": {
+     "choice": "chat",
+     "p": 0.566,
+     "probabilities": {
+      "chat": 0.566,
+      "task": 0.0076,
+      "unclear": 0.4242,
+      "spam": 0.0023
+     }
+    },
+    "answers": {
+     "route": {
+      "type": "choice",
+      "choice": "chat",
+      "confidence": 0.566,
+      "certainty": 0.4686,
+      "probabilities": {
+       "chat": 0.566,
+       "task": 0.0076,
+       "unclear": 0.4242,
+       "spam": 0.0023
+      }
+     },
+     "target": {
+      "type": "choice",
+      "choice": "none",
+      "confidence": 0.9178,
+      "certainty": 0.7671,
+      "probabilities": {
+       "codex": 0.0323,
+       "claude_code": 0.038,
+       "scheduler": 0.0066,
+       "gpu_worker": 0.0053,
+       "none": 0.9178
+      }
+     },
+     "confirm": {
+      "type": "noul",
+      "noul": 0.1178
+     }
+    },
+    "usage": {
+     "input_tokens": 484,
+     "output_tokens": 0
+    },
+    "model": "decider-v10",
+    "latencyMs": 1571
+   }
+  }
+ ]
+}

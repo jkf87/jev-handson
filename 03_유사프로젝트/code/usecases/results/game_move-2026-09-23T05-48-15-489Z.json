@@ -1,0 +1,115 @@
+{
+ "name": "game_move",
+ "at": "2026-09-23T05:48:15.490Z",
+ "rows": [
+  {
+   "id": "win_first",
+   "response": {
+    "answers": {
+     "move": {
+      "type": "choice",
+      "choice": "c3",
+      "confidence": 0.47,
+      "probabilities": {
+       "c3": 0.57,
+       "c6": 0.36,
+       "c8": 0.02,
+       "c9": 0.04,
+       "c7": 0.01
+      }
+     }
+    },
+    "model": "jev-1.13.0",
+    "usage": {
+     "input_tokens": 521,
+     "output_tokens": 58
+    },
+    "latencyMs": 454
+   },
+   "decision": {
+    "key": "play:c3",
+    "reason": "ok",
+    "cell": "c3",
+    "p": 0.57
+   },
+   "expect": "play:c3",
+   "pass": true
+  },
+  {
+   "id": "block",
+   "response": {
+    "answers": {
+     "move": {
+      "type": "choice",
+      "choice": "c3",
+      "confidence": 0.43,
+      "probabilities": {
+       "c3": 0.54,
+       "c5": 0.32,
+       "c8": 0.05,
+       "c6": 0.06,
+       "c7": 0.03
+      }
+     }
+    },
+    "model": "jev-1.13.0",
+    "usage": {
+     "input_tokens": 519,
+     "output_tokens": 58
+    },
+    "latencyMs": 272
+   },
+   "decision": {
+    "key": "play:c3",
+    "reason": "ok",
+    "cell": "c3",
+    "p": 0.54
+   },
+   "expect": "play:c3",
+   "pass": true
+  },
+  {
+   "id": "opening",
+   "response": {
+    "answers": {
+     "move": {
+      "type": "choice",
+      "choice": "c5",
+      "confidence": 0.99,
+      "probabilities": {
+       "c8": 0,
+       "c5": 1,
+       "c1": 0,
+       "c3": 0,
+       "c6": 0,
+       "c7": 0,
+       "c2": 0,
+       "c9": 0,
+       "c4": 0
+      }
+     }
+    },
+    "model": "jev-1.13.0",
+    "usage": {
+     "input_tokens": 593,
+     "output_tokens": 90
+    },
+    "latencyMs": 279
+   },
+   "decision": {
+    "key": "play:c5",
+    "reason": "ok",
+    "cell": "c5",
+    "p": 1
+   },
+   "expect": [
+    "play:c5",
+    "play:c1",
+    "play:c3",
+    "play:c7",
+    "play:c9"
+   ],
+   "pass": true
+  }
+ ]
+}

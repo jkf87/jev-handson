@@ -1,0 +1,1 @@
+{"name":"jev-message-task-router","version":"1.0.0","private":true,"type":"module","engines":{"node":">=20"},"scripts":{"route":"node router.mjs","all":"node router.mjs --all","compare":"node compare.mjs","test":"node --test"}}

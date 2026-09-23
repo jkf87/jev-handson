@@ -1,0 +1,2296 @@
+{
+ "policy": {
+  "minRouteP": 0.6,
+  "minTargetP": 0.6,
+  "confirmAt": 0.5,
+  "minSpamP": 0.8
+ },
+ "model": "jev-1.13.0",
+ "results": [
+  {
+   "id": "m01",
+   "text": "고마워요 덕분에 발표 잘 끝났어요 ㅎㅎ",
+   "expected": "reply",
+   "got": "reply",
+   "ok": true,
+   "decision": {
+    "action": "reply",
+    "reason": "chat",
+    "route": {
+     "choice": "chat",
+     "p": 1,
+     "probabilities": {
+      "spam": 0,
+      "task": 0,
+      "chat": 1,
+      "unclear": 0
+     }
+    },
+    "answers": {
+     "route": {
+      "type": "choice",
+      "choice": "chat",
+      "confidence": 1,
+      "probabilities": {
+       "spam": 0,
+       "task": 0,
+       "chat": 1,
+       "unclear": 0
+      }
+     },
+     "target": {
+      "type": "choice",
+      "choice": "none",
+      "confidence": 1,
+      "probabilities": {
+       "gpu_worker": 0,
+       "scheduler": 0,
+       "none": 1,
+       "codex": 0,
+       "claude_code": 0
+      }
+     },
+     "confirm": {
+      "type": "noul",
+      "noul": 0.03
+     }
+    },
+    "usage": {
+     "input_tokens": 827,
+     "output_tokens": 116
+    },
+    "model": "jev-1.13.0",
+    "latencyMs": 596
+   }
+  },
+  {
+   "id": "m02",
+   "text": "오늘 날씨 진짜 덥네요",
+   "expected": "reply",
+   "got": "reply",
+   "ok": true,
+   "decision": {
+    "action": "reply",
+    "reason": "chat",
+    "route": {
+     "choice": "chat",
+     "p": 1,
+     "probabilities": {
+      "unclear": 0,
+      "chat": 1,
+      "spam": 0,
+      "task": 0
+     }
+    },
+    "answers": {
+     "route": {
+      "type": "choice",
+      "choice": "chat",
+      "confidence": 1,
+      "probabilities": {
+       "unclear": 0,
+       "chat": 1,
+       "spam": 0,
+       "task": 0
+      }
+     },
+     "target": {
+      "type": "choice",
+      "choice": "none",
+      "confidence": 1,
+      "probabilities": {
+       "claude_code": 0,
+       "codex": 0,
+       "scheduler": 0,
+       "none": 1,
+       "gpu_worker": 0
+      }
+     },
+     "confirm": {
+      "type": "noul",
+      "noul": 0.02
+     }
+    },
+    "usage": {
+     "input_tokens": 819,
+     "output_tokens": 116
+    },
+    "model": "jev-1.13.0",
+    "latencyMs": 559
+   }
+  },
+  {
+   "id": "m03",
+   "text": "jev가 정확히 뭐예요? 한 줄로만 설명해 주세요",
+   "expected": "reply",
+   "got": "reply",
+   "ok": true,
+   "decision": {
+    "action": "reply",
+    "reason": "chat",
+    "route": {
+     "choice": "chat",
+     "p": 1,
+     "probabilities": {
+      "spam": 0,
+      "chat": 1,
+      "unclear": 0,
+      "task": 0
+     }
+    },
+    "answers": {
+     "route": {
+      "type": "choice",
+      "choice": "chat",
+      "confidence": 1,
+      "probabilities": {
+       "spam": 0,
+       "chat": 1,
+       "unclear": 0,
+       "task": 0
+      }
+     },
+     "target": {
+      "type": "choice",
+      "choice": "none",
+      "confidence": 0.51,
+      "probabilities": {
+       "scheduler": 0,
+       "codex": 0,
+       "gpu_worker": 0,
+       "none": 0.61,
+       "claude_code": 0.39
+      }
+     },
+     "confirm": {
+      "type": "noul",
+      "noul": 0.02
+     }
+    },
+    "usage": {
+     "input_tokens": 828,
+     "output_tokens": 116
+    },
+    "model": "jev-1.13.0",
+    "latencyMs": 220
+   }
+  },
+  {
+   "id": "m04",
+   "text": "ㅋㅋㅋ 그 짤 너무 웃기다",
+   "expected": "reply",
+   "got": "reply",
+   "ok": true,
+   "decision": {
+    "action": "reply",
+    "reason": "chat",
+    "route": {
+     "choice": "chat",
+     "p": 1,
+     "probabilities": {
+      "chat": 1,
+      "task": 0,
+      "unclear": 0,
+      "spam": 0
+     }
+    },
+    "answers": {
+     "route": {
+      "type": "choice",
+      "choice": "chat",
+      "confidence": 1,
+      "probabilities": {
+       "chat": 1,
+       "task": 0,
+       "unclear": 0,
+       "spam": 0
+      }
+     },
+     "target": {
+      "type": "choice",
+      "choice": "none",
+      "confidence": 1,
+      "probabilities": {
+       "scheduler": 0,
+       "gpu_worker": 0,
+       "none": 1,
+       "claude_code": 0,
+       "codex": 0
+      }
+     },
+     "confirm": {
+      "type": "noul",
+      "noul": 0.03
+     }
+    },
+    "usage": {
+     "input_tokens": 820,
+     "output_tokens": 116
+    },
+    "model": "jev-1.13.0",
+    "latencyMs": 288
+   }
+  },
+  {
+   "id": "m05",
+   "text": "커밋 메시지는 보통 어떻게 쓰는 게 좋아요?",
+   "expected": "reply",
+   "got": "reply",
+   "ok": true,
+   "decision": {
+    "action": "reply",
+    "reason": "chat",
+    "route": {
+     "choice": "chat",
+     "p": 1,
+     "probabilities": {
+      "chat": 1,
+      "unclear": 0,
+      "task": 0,
+      "spam": 0
+     }
+    },
+    "answers": {
+     "route": {
+      "type": "choice",
+      "choice": "chat",
+      "confidence": 1,
+      "probabilities": {
+       "chat": 1,
+       "unclear": 0,
+       "task": 0,
+       "spam": 0
+      }
+     },
+     "target": {
+      "type": "choice",
+      "choice": "none",
+      "confidence": 0.65,
+      "probabilities": {
+       "gpu_worker": 0,
+       "none": 0.72,
+       "codex": 0.04,
+       "claude_code": 0.24,
+       "scheduler": 0
+      }
+     },
+     "confirm": {
+      "type": "noul",
+      "noul": 0.02
+     }
+    },
+    "usage": {
+     "input_tokens": 827,
+     "output_tokens": 116
+    },
+    "model": "jev-1.13.0",
+    "latencyMs": 219
+   }
+  },
+  {
+   "id": "m06",
+   "text": "주말 잘 보내세요!",
+   "expected": "reply",
+   "got": "reply",
+   "ok": true,
+   "decision": {
+    "action": "reply",
+    "reason": "chat",
+    "route": {
+     "choice": "chat",
+     "p": 1,
+     "probabilities": {
+      "unclear": 0,
+      "spam": 0,
+      "chat": 1,
+      "task": 0
+     }
+    },
+    "answers": {
+     "route": {
+      "type": "choice",
+      "choice": "chat",
+      "confidence": 1,
+      "probabilities": {
+       "unclear": 0,
+       "spam": 0,
+       "chat": 1,
+       "task": 0
+      }
+     },
+     "target": {
+      "type": "choice",
+      "choice": "none",
+      "confidence": 1,
+      "probabilities": {
+       "scheduler": 0,
+       "claude_code": 0,
+       "gpu_worker": 0,
+       "none": 1,
+       "codex": 0
+      }
+     },
+     "confirm": {
+      "type": "noul",
+      "noul": 0.03
+     }
+    },
+    "usage": {
+     "input_tokens": 818,
+     "output_tokens": 116
+    },
+    "model": "jev-1.13.0",
+    "latencyMs": 225
+   }
+  },
+  {
+   "id": "m07",
+   "text": "아 그거 제가 착각했네요. 신경 쓰지 마세요",
+   "expected": "reply",
+   "got": "reply",
+   "ok": true,
+   "decision": {
+    "action": "reply",
+    "reason": "chat",
+    "route": {
+     "choice": "chat",
+     "p": 1,
+     "probabilities": {
+      "chat": 1,
+      "unclear": 0,
+      "spam": 0,
+      "task": 0
+     }
+    },
+    "answers": {
+     "route": {
+      "type": "choice",
+      "choice": "chat",
+      "confidence": 1,
+      "probabilities": {
+       "chat": 1,
+       "unclear": 0,
+       "spam": 0,
+       "task": 0
+      }
+     },
+     "target": {
+      "type": "choice",
+      "choice": "none",
+      "confidence": 1,
+      "probabilities": {
+       "none": 1,
+       "gpu_worker": 0,
+       "codex": 0,
+       "claude_code": 0,
+       "scheduler": 0
+      }
+     },
+     "confirm": {
+      "type": "noul",
+      "noul": 0.03
+     }
+    },
+    "usage": {
+     "input_tokens": 827,
+     "output_tokens": 116
+    },
+    "model": "jev-1.13.0",
+    "latencyMs": 249
+   }
+  },
+  {
+   "id": "m08",
+   "text": "요즘 코덱스랑 클로드 코드 중에 뭐가 더 나아요? 그냥 의견이 궁금해서요",
+   "expected": "reply",
+   "got": "reply",
+   "ok": true,
+   "decision": {
+    "action": "reply",
+    "reason": "chat",
+    "route": {
+     "choice": "chat",
+     "p": 1,
+     "probabilities": {
+      "spam": 0,
+      "chat": 1,
+      "task": 0,
+      "unclear": 0
+     }
+    },
+    "answers": {
+     "route": {
+      "type": "choice",
+      "choice": "chat",
+      "confidence": 1,
+      "probabilities": {
+       "spam": 0,
+       "chat": 1,
+       "task": 0,
+       "unclear": 0
+      }
+     },
+     "target": {
+      "type": "choice",
+      "choice": "none",
+      "confidence": 0.98,
+      "probabilities": {
+       "scheduler": 0,
+       "codex": 0,
+       "gpu_worker": 0,
+       "none": 0.99,
+       "claude_code": 0.01
+      }
+     },
+     "confirm": {
+      "type": "noul",
+      "noul": 0.03
+     }
+    },
+    "usage": {
+     "input_tokens": 841,
+     "output_tokens": 116
+    },
+    "model": "jev-1.13.0",
+    "latencyMs": 233
+   }
+  },
+  {
+   "id": "m09",
+   "text": "네 확인했습니다 👍",
+   "expected": "reply",
+   "got": "reply",
+   "ok": true,
+   "decision": {
+    "action": "reply",
+    "reason": "chat",
+    "route": {
+     "choice": "chat",
+     "p": 1,
+     "probabilities": {
+      "task": 0,
+      "chat": 1,
+      "unclear": 0,
+      "spam": 0
+     }
+    },
+    "answers": {
+     "route": {
+      "type": "choice",
+      "choice": "chat",
+      "confidence": 1,
+      "probabilities": {
+       "task": 0,
+       "chat": 1,
+       "unclear": 0,
+       "spam": 0
+      }
+     },
+     "target": {
+      "type": "choice",
+      "choice": "none",
+      "confidence": 1,
+      "probabilities": {
+       "scheduler": 0,
+       "gpu_worker": 0,
+       "none": 1,
+       "claude_code": 0,
+       "codex": 0
+      }
+     },
+     "confirm": {
+      "type": "noul",
+      "noul": 0.03
+     }
+    },
+    "usage": {
+     "input_tokens": 820,
+     "output_tokens": 116
+    },
+    "model": "jev-1.13.0",
+    "latencyMs": 222
+   }
+  },
+  {
+   "id": "m10",
+   "text": "오늘 강의 몇 시에 시작이었죠?",
+   "expected": "reply",
+   "got": "reply",
+   "ok": true,
+   "decision": {
+    "action": "reply",
+    "reason": "chat",
+    "route": {
+     "choice": "chat",
+     "p": 1,
+     "probabilities": {
+      "unclear": 0,
+      "spam": 0,
+      "chat": 1,
+      "task": 0
+     }
+    },
+    "answers": {
+     "route": {
+      "type": "choice",
+      "choice": "chat",
+      "confidence": 0.99,
+      "probabilities": {
+       "unclear": 0,
+       "spam": 0,
+       "chat": 1,
+       "task": 0
+      }
+     },
+     "target": {
+      "type": "choice",
+      "choice": "none",
+      "confidence": 0.81,
+      "probabilities": {
+       "scheduler": 0.15,
+       "claude_code": 0.01,
+       "gpu_worker": 0,
+       "none": 0.84,
+       "codex": 0
+      }
+     },
+     "confirm": {
+      "type": "noul",
+      "noul": 0.03
+     }
+    },
+    "usage": {
+     "input_tokens": 822,
+     "output_tokens": 116
+    },
+    "model": "jev-1.13.0",
+    "latencyMs": 212
+   }
+  },
+  {
+   "id": "m11",
+   "text": "파이썬에서 리스트랑 튜플 차이가 뭐야",
+   "expected": "reply",
+   "got": "reply",
+   "ok": true,
+   "decision": {
+    "action": "reply",
+    "reason": "chat",
+    "route": {
+     "choice": "chat",
+     "p": 1,
+     "probabilities": {
+      "unclear": 0,
+      "spam": 0,
+      "chat": 1,
+      "task": 0
+     }
+    },
+    "answers": {
+     "route": {
+      "type": "choice",
+      "choice": "chat",
+      "confidence": 1,
+      "probabilities": {
+       "unclear": 0,
+       "spam": 0,
+       "chat": 1,
+       "task": 0
+      }
+     },
+     "target": {
+      "type": "choice",
+      "choice": "none",
+      "confidence": 0.75,
+      "probabilities": {
+       "scheduler": 0,
+       "claude_code": 0.18,
+       "gpu_worker": 0,
+       "none": 0.79,
+       "codex": 0.03
+      }
+     },
+     "confirm": {
+      "type": "noul",
+      "noul": 0.01
+     }
+    },
+    "usage": {
+     "input_tokens": 829,
+     "output_tokens": 116
+    },
+    "model": "jev-1.13.0",
+    "latencyMs": 285
+   }
+  },
+  {
+   "id": "m12",
+   "text": "힘드네요 오늘은 좀 쉬어야겠어요",
+   "expected": "reply",
+   "got": "reply",
+   "ok": true,
+   "decision": {
+    "action": "reply",
+    "reason": "chat",
+    "route": {
+     "choice": "chat",
+     "p": 1,
+     "probabilities": {
+      "unclear": 0,
+      "task": 0,
+      "chat": 1,
+      "spam": 0
+     }
+    },
+    "answers": {
+     "route": {
+      "type": "choice",
+      "choice": "chat",
+      "confidence": 1,
+      "probabilities": {
+       "unclear": 0,
+       "task": 0,
+       "chat": 1,
+       "spam": 0
+      }
+     },
+     "target": {
+      "type": "choice",
+      "choice": "none",
+      "confidence": 1,
+      "probabilities": {
+       "scheduler": 0,
+       "codex": 0,
+       "claude_code": 0,
+       "gpu_worker": 0,
+       "none": 1
+      }
+     },
+     "confirm": {
+      "type": "noul",
+      "noul": 0.04
+     }
+    },
+    "usage": {
+     "input_tokens": 825,
+     "output_tokens": 116
+    },
+    "model": "jev-1.13.0",
+    "latencyMs": 243
+   }
+  },
+  {
+   "id": "m13",
+   "text": "로그인 API에서 401이 계속 떠요. auth.ts 좀 고쳐 주세요",
+   "expected": "dispatch:codex",
+   "got": "dispatch:codex",
+   "ok": true,
+   "decision": {
+    "action": "dispatch",
+    "reason": "task",
+    "route": {
+     "choice": "task",
+     "p": 0.94,
+     "probabilities": {
+      "unclear": 0.04,
+      "task": 0.94,
+      "chat": 0.02,
+      "spam": 0
+     }
+    },
+    "target": "codex",
+    "confirmP": 0.1,
+    "answers": {
+     "route": {
+      "type": "choice",
+      "choice": "task",
+      "confidence": 0.92,
+      "probabilities": {
+       "unclear": 0.04,
+       "task": 0.94,
+       "chat": 0.02,
+       "spam": 0
+      }
+     },
+     "target": {
+      "type": "choice",
+      "choice": "codex",
+      "confidence": 0.87,
+      "probabilities": {
+       "scheduler": 0,
+       "codex": 0.9,
+       "claude_code": 0,
+       "gpu_worker": 0,
+       "none": 0.1
+      }
+     },
+     "confirm": {
+      "type": "noul",
+      "noul": 0.1
+     }
+    },
+    "usage": {
+     "input_tokens": 831,
+     "output_tokens": 117
+    },
+    "model": "jev-1.13.0",
+    "latencyMs": 220
+   }
+  },
+  {
+   "id": "m14",
+   "text": "어제 회의록 요약해서 노션 페이지로 정리해 줘",
+   "expected": "dispatch:claude_code",
+   "got": "dispatch:claude_code",
+   "ok": true,
+   "decision": {
+    "action": "dispatch",
+    "reason": "task",
+    "route": {
+     "choice": "task",
+     "p": 0.79,
+     "probabilities": {
+      "spam": 0,
+      "task": 0.79,
+      "chat": 0.02,
+      "unclear": 0.19
+     }
+    },
+    "target": "claude_code",
+    "confirmP": 0.09,
+    "answers": {
+     "route": {
+      "type": "choice",
+      "choice": "task",
+      "confidence": 0.72,
+      "probabilities": {
+       "spam": 0,
+       "task": 0.79,
+       "chat": 0.02,
+       "unclear": 0.19
+      }
+     },
+     "target": {
+      "type": "choice",
+      "choice": "claude_code",
+      "confidence": 0.8,
+      "probabilities": {
+       "codex": 0,
+       "gpu_worker": 0,
+       "scheduler": 0,
+       "none": 0.16,
+       "claude_code": 0.84
+      }
+     },
+     "confirm": {
+      "type": "noul",
+      "noul": 0.09
+     }
+    },
+    "usage": {
+     "input_tokens": 830,
+     "output_tokens": 118
+    },
+    "model": "jev-1.13.0",
+    "latencyMs": 222
+   }
+  },
+  {
+   "id": "m15",
+   "text": "내일 오전 9시에 팀 회의 알림 걸어 줘",
+   "expected": "dispatch:scheduler",
+   "got": "dispatch:scheduler",
+   "ok": true,
+   "decision": {
+    "action": "dispatch",
+    "reason": "task",
+    "route": {
+     "choice": "task",
+     "p": 0.93,
+     "probabilities": {
+      "chat": 0.05,
+      "unclear": 0.02,
+      "task": 0.93,
+      "spam": 0
+     }
+    },
+    "target": "scheduler",
+    "confirmP": 0.32,
+    "answers": {
+     "route": {
+      "type": "choice",
+      "choice": "task",
+      "confidence": 0.9,
+      "probabilities": {
+       "chat": 0.05,
+       "unclear": 0.02,
+       "task": 0.93,
+       "spam": 0
+      }
+     },
+     "target": {
+      "type": "choice",
+      "choice": "scheduler",
+      "confidence": 0.76,
+      "probabilities": {
+       "gpu_worker": 0,
+       "codex": 0,
+       "claude_code": 0,
+       "scheduler": 0.81,
+       "none": 0.19
+      }
+     },
+     "confirm": {
+      "type": "noul",
+      "noul": 0.32
+     }
+    },
+    "usage": {
+     "input_tokens": 825,
+     "output_tokens": 116
+    },
+    "model": "jev-1.13.0",
+    "latencyMs": 220
+   }
+  },
+  {
+   "id": "m16",
+   "text": "A4000에서 openjev 서비스 다시 띄워 줘. 헬스체크가 안 돼",
+   "expected": "dispatch:gpu_worker",
+   "got": "dispatch:gpu_worker",
+   "ok": true,
+   "decision": {
+    "action": "dispatch",
+    "reason": "task",
+    "route": {
+     "choice": "task",
+     "p": 0.98,
+     "probabilities": {
+      "unclear": 0.01,
+      "chat": 0.01,
+      "task": 0.98,
+      "spam": 0
+     }
+    },
+    "target": "gpu_worker",
+    "confirmP": 0.28,
+    "answers": {
+     "route": {
+      "type": "choice",
+      "choice": "task",
+      "confidence": 0.97,
+      "probabilities": {
+       "unclear": 0.01,
+       "chat": 0.01,
+       "task": 0.98,
+       "spam": 0
+      }
+     },
+     "target": {
+      "type": "choice",
+      "choice": "gpu_worker",
+      "confidence": 0.96,
+      "probabilities": {
+       "gpu_worker": 0.97,
+       "codex": 0,
+       "claude_code": 0,
+       "none": 0.03,
+       "scheduler": 0
+      }
+     },
+     "confirm": {
+      "type": "noul",
+      "noul": 0.28
+     }
+    },
+    "usage": {
+     "input_tokens": 836,
+     "output_tokens": 117
+    },
+    "model": "jev-1.13.0",
+    "latencyMs": 223
+   }
+  },
+  {
+   "id": "m17",
+   "text": "이 논문 PDF 읽고 발표 슬라이드 5장으로 만들어 줘",
+   "expected": "dispatch:claude_code",
+   "got": "dispatch:claude_code",
+   "ok": true,
+   "decision": {
+    "action": "dispatch",
+    "reason": "task",
+    "route": {
+     "choice": "task",
+     "p": 0.84,
+     "probabilities": {
+      "spam": 0,
+      "task": 0.84,
+      "chat": 0.01,
+      "unclear": 0.15
+     }
+    },
+    "target": "claude_code",
+    "confirmP": 0.05,
+    "answers": {
+     "route": {
+      "type": "choice",
+      "choice": "task",
+      "confidence": 0.78,
+      "probabilities": {
+       "spam": 0,
+       "task": 0.84,
+       "chat": 0.01,
+       "unclear": 0.15
+      }
+     },
+     "target": {
+      "type": "choice",
+      "choice": "claude_code",
+      "confidence": 0.88,
+      "probabilities": {
+       "claude_code": 0.9,
+       "gpu_worker": 0,
+       "codex": 0,
+       "none": 0.1,
+       "scheduler": 0
+      }
+     },
+     "confirm": {
+      "type": "noul",
+      "noul": 0.05
+     }
+    },
+    "usage": {
+     "input_tokens": 829,
+     "output_tokens": 118
+    },
+    "model": "jev-1.13.0",
+    "latencyMs": 289
+   }
+  },
+  {
+   "id": "m18",
+   "text": "결제 모듈 단위 테스트 추가하고 CI 통과하는지 확인해 줘",
+   "expected": "dispatch:codex",
+   "got": "dispatch:codex",
+   "ok": true,
+   "decision": {
+    "action": "dispatch",
+    "reason": "task",
+    "route": {
+     "choice": "task",
+     "p": 0.96,
+     "probabilities": {
+      "unclear": 0.03,
+      "spam": 0,
+      "chat": 0.01,
+      "task": 0.96
+     }
+    },
+    "target": "codex",
+    "confirmP": 0.05,
+    "answers": {
+     "route": {
+      "type": "choice",
+      "choice": "task",
+      "confidence": 0.95,
+      "probabilities": {
+       "unclear": 0.03,
+       "spam": 0,
+       "chat": 0.01,
+       "task": 0.96
+      }
+     },
+     "target": {
+      "type": "choice",
+      "choice": "codex",
+      "confidence": 0.92,
+      "probabilities": {
+       "scheduler": 0,
+       "claude_code": 0,
+       "gpu_worker": 0,
+       "none": 0.06,
+       "codex": 0.9400000000000001
+      }
+     },
+     "confirm": {
+      "type": "noul",
+      "noul": 0.05
+     }
+    },
+    "usage": {
+     "input_tokens": 834,
+     "output_tokens": 117
+    },
+    "model": "jev-1.13.0",
+    "latencyMs": 256
+   }
+  },
+  {
+   "id": "m19",
+   "text": "혹시 시간 되시면 README 문장 좀 다듬어 주실 수 있을까요? 급한 건 아니에요",
+   "expected": "dispatch:claude_code",
+   "got": "dispatch:claude_code",
+   "ok": true,
+   "decision": {
+    "action": "dispatch",
+    "reason": "task",
+    "route": {
+     "choice": "task",
+     "p": 0.8,
+     "probabilities": {
+      "chat": 0.03,
+      "unclear": 0.17,
+      "task": 0.8,
+      "spam": 0
+     }
+    },
+    "target": "claude_code",
+    "confirmP": 0.03,
+    "answers": {
+     "route": {
+      "type": "choice",
+      "choice": "task",
+      "confidence": 0.73,
+      "probabilities": {
+       "chat": 0.03,
+       "unclear": 0.17,
+       "task": 0.8,
+       "spam": 0
+      }
+     },
+     "target": {
+      "type": "choice",
+      "choice": "claude_code",
+      "confidence": 0.98,
+      "probabilities": {
+       "claude_code": 0.99,
+       "codex": 0,
+       "gpu_worker": 0,
+       "scheduler": 0,
+       "none": 0.01
+      }
+     },
+     "confirm": {
+      "type": "noul",
+      "noul": 0.03
+     }
+    },
+    "usage": {
+     "input_tokens": 839,
+     "output_tokens": 118
+    },
+    "model": "jev-1.13.0",
+    "latencyMs": 252
+   }
+  },
+  {
+   "id": "m20",
+   "text": "매주 월요일 아침 8시에 지난주 깃허브 커밋 요약 보내 줘",
+   "expected": "dispatch:scheduler",
+   "got": "confirm",
+   "ok": false,
+   "decision": {
+    "action": "confirm",
+    "reason": "risky",
+    "route": {
+     "choice": "task",
+     "p": 0.93,
+     "probabilities": {
+      "chat": 0.05,
+      "unclear": 0.02,
+      "spam": 0,
+      "task": 0.93
+     }
+    },
+    "target": "claude_code",
+    "confirmP": 0.51,
+    "answers": {
+     "route": {
+      "type": "choice",
+      "choice": "task",
+      "confidence": 0.9,
+      "probabilities": {
+       "chat": 0.05,
+       "unclear": 0.02,
+       "spam": 0,
+       "task": 0.93
+      }
+     },
+     "target": {
+      "type": "choice",
+      "choice": "claude_code",
+      "confidence": 0.49,
+      "probabilities": {
+       "scheduler": 0.19,
+       "codex": 0.05,
+       "none": 0.16,
+       "claude_code": 0.6,
+       "gpu_worker": 0
+      }
+     },
+     "confirm": {
+      "type": "noul",
+      "noul": 0.51
+     }
+    },
+    "usage": {
+     "input_tokens": 835,
+     "output_tokens": 118
+    },
+    "model": "jev-1.13.0",
+    "latencyMs": 274
+   }
+  },
+  {
+   "id": "m21",
+   "text": "qwen 4B로 LoRA 파인튜닝 한 번 돌려 줘. 데이터는 data/train.jsonl",
+   "expected": "dispatch:gpu_worker",
+   "got": "dispatch:gpu_worker",
+   "ok": true,
+   "decision": {
+    "action": "dispatch",
+    "reason": "task",
+    "route": {
+     "choice": "task",
+     "p": 0.94,
+     "probabilities": {
+      "task": 0.94,
+      "chat": 0.04,
+      "spam": 0,
+      "unclear": 0.02
+     }
+    },
+    "target": "gpu_worker",
+    "confirmP": 0.25,
+    "answers": {
+     "route": {
+      "type": "choice",
+      "choice": "task",
+      "confidence": 0.92,
+      "probabilities": {
+       "task": 0.94,
+       "chat": 0.04,
+       "spam": 0,
+       "unclear": 0.02
+      }
+     },
+     "target": {
+      "type": "choice",
+      "choice": "gpu_worker",
+      "confidence": 0.93,
+      "probabilities": {
+       "gpu_worker": 0.94,
+       "claude_code": 0,
+       "codex": 0,
+       "scheduler": 0,
+       "none": 0.06
+      }
+     },
+     "confirm": {
+      "type": "noul",
+      "noul": 0.25
+     }
+    },
+    "usage": {
+     "input_tokens": 838,
+     "output_tokens": 117
+    },
+    "model": "jev-1.13.0",
+    "latencyMs": 216
+   }
+  },
+  {
+   "id": "m22",
+   "text": "package.json 의존성 최신으로 올리고 빌드 깨지는지 봐 줘",
+   "expected": "dispatch:codex",
+   "got": "dispatch:codex",
+   "ok": true,
+   "decision": {
+    "action": "dispatch",
+    "reason": "task",
+    "route": {
+     "choice": "task",
+     "p": 0.96,
+     "probabilities": {
+      "unclear": 0.03,
+      "chat": 0.01,
+      "spam": 0,
+      "task": 0.96
+     }
+    },
+    "target": "codex",
+    "confirmP": 0.17,
+    "answers": {
+     "route": {
+      "type": "choice",
+      "choice": "task",
+      "confidence": 0.95,
+      "probabilities": {
+       "unclear": 0.03,
+       "chat": 0.01,
+       "spam": 0,
+       "task": 0.96
+      }
+     },
+     "target": {
+      "type": "choice",
+      "choice": "codex",
+      "confidence": 0.91,
+      "probabilities": {
+       "scheduler": 0,
+       "codex": 0.93,
+       "claude_code": 0,
+       "gpu_worker": 0,
+       "none": 0.07
+      }
+     },
+     "confirm": {
+      "type": "noul",
+      "noul": 0.17
+     }
+    },
+    "usage": {
+     "input_tokens": 834,
+     "output_tokens": 117
+    },
+    "model": "jev-1.13.0",
+    "latencyMs": 263
+   }
+  },
+  {
+   "id": "m23",
+   "text": "경쟁사 강의 3개 가격이랑 커리큘럼 조사해서 표로 정리해 줘",
+   "expected": "dispatch:claude_code",
+   "got": "dispatch:claude_code",
+   "ok": true,
+   "decision": {
+    "action": "dispatch",
+    "reason": "task",
+    "route": {
+     "choice": "task",
+     "p": 0.96,
+     "probabilities": {
+      "spam": 0,
+      "unclear": 0.03,
+      "chat": 0.01,
+      "task": 0.96
+     }
+    },
+    "target": "claude_code",
+    "confirmP": 0.04,
+    "answers": {
+     "route": {
+      "type": "choice",
+      "choice": "task",
+      "confidence": 0.95,
+      "probabilities": {
+       "spam": 0,
+       "unclear": 0.03,
+       "chat": 0.01,
+       "task": 0.96
+      }
+     },
+     "target": {
+      "type": "choice",
+      "choice": "claude_code",
+      "confidence": 0.93,
+      "probabilities": {
+       "none": 0.05,
+       "codex": 0,
+       "claude_code": 0.95,
+       "gpu_worker": 0,
+       "scheduler": 0
+      }
+     },
+     "confirm": {
+      "type": "noul",
+      "noul": 0.04
+     }
+    },
+    "usage": {
+     "input_tokens": 839,
+     "output_tokens": 118
+    },
+    "model": "jev-1.13.0",
+    "latencyMs": 265
+   }
+  },
+  {
+   "id": "m24",
+   "text": "운영 DB users 테이블 전부 지우고 새로 만들어 줘",
+   "expected": "confirm",
+   "got": "clarify",
+   "ok": false,
+   "decision": {
+    "action": "clarify",
+    "reason": "which_worker",
+    "route": {
+     "choice": "task",
+     "p": 0.8,
+     "probabilities": {
+      "task": 0.8,
+      "unclear": 0.07,
+      "spam": 0.01,
+      "chat": 0.12
+     }
+    },
+    "target": {
+     "choice": "none",
+     "p": 0.54,
+     "probabilities": {
+      "none": 0.54,
+      "codex": 0.46,
+      "scheduler": 0,
+      "claude_code": 0,
+      "gpu_worker": 0
+     }
+    },
+    "answers": {
+     "route": {
+      "type": "choice",
+      "choice": "task",
+      "confidence": 0.74,
+      "probabilities": {
+       "task": 0.8,
+       "unclear": 0.07,
+       "spam": 0.01,
+       "chat": 0.12
+      }
+     },
+     "target": {
+      "type": "choice",
+      "choice": "none",
+      "confidence": 0.42,
+      "probabilities": {
+       "none": 0.54,
+       "codex": 0.46,
+       "scheduler": 0,
+       "claude_code": 0,
+       "gpu_worker": 0
+      }
+     },
+     "confirm": {
+      "type": "noul",
+      "noul": 0.96
+     }
+    },
+    "usage": {
+     "input_tokens": 827,
+     "output_tokens": 116
+    },
+    "model": "jev-1.13.0",
+    "latencyMs": 259
+   }
+  },
+  {
+   "id": "m25",
+   "text": "이 견적서 PDF 고객 명단 전체한테 메일로 보내 줘",
+   "expected": "confirm",
+   "got": "confirm",
+   "ok": true,
+   "decision": {
+    "action": "confirm",
+    "reason": "risky",
+    "route": {
+     "choice": "task",
+     "p": 0.73,
+     "probabilities": {
+      "chat": 0.07,
+      "unclear": 0.18,
+      "spam": 0.02,
+      "task": 0.73
+     }
+    },
+    "target": "claude_code",
+    "confirmP": 0.9,
+    "answers": {
+     "route": {
+      "type": "choice",
+      "choice": "task",
+      "confidence": 0.64,
+      "probabilities": {
+       "chat": 0.07,
+       "unclear": 0.18,
+       "spam": 0.02,
+       "task": 0.73
+      }
+     },
+     "target": {
+      "type": "choice",
+      "choice": "claude_code",
+      "confidence": 0.74,
+      "probabilities": {
+       "none": 0.21,
+       "gpu_worker": 0,
+       "codex": 0,
+       "claude_code": 0.79,
+       "scheduler": 0
+      }
+     },
+     "confirm": {
+      "type": "noul",
+      "noul": 0.9
+     }
+    },
+    "usage": {
+     "input_tokens": 828,
+     "output_tokens": 118
+    },
+    "model": "jev-1.13.0",
+    "latencyMs": 268
+   }
+  },
+  {
+   "id": "m26",
+   "text": "main 브랜치에 force push 해서 어제 커밋들 날려 줘",
+   "expected": "confirm",
+   "got": "clarify",
+   "ok": false,
+   "decision": {
+    "action": "clarify",
+    "reason": "uncertain_route",
+    "route": {
+     "choice": "chat",
+     "p": 0.53,
+     "probabilities": {
+      "task": 0.32,
+      "spam": 0.02,
+      "chat": 0.53,
+      "unclear": 0.13
+     }
+    },
+    "answers": {
+     "route": {
+      "type": "choice",
+      "choice": "chat",
+      "confidence": 0.37,
+      "probabilities": {
+       "task": 0.32,
+       "spam": 0.02,
+       "chat": 0.53,
+       "unclear": 0.13
+      }
+     },
+     "target": {
+      "type": "choice",
+      "choice": "none",
+      "confidence": 0.54,
+      "probabilities": {
+       "codex": 0.36,
+       "gpu_worker": 0,
+       "claude_code": 0,
+       "none": 0.64,
+       "scheduler": 0
+      }
+     },
+     "confirm": {
+      "type": "noul",
+      "noul": 0.86
+     }
+    },
+    "usage": {
+     "input_tokens": 828,
+     "output_tokens": 116
+    },
+    "model": "jev-1.13.0",
+    "latencyMs": 267
+   }
+  },
+  {
+   "id": "m27",
+   "text": "구독 결제 카드 바꿔서 연간 플랜으로 갱신해 줘",
+   "expected": "confirm",
+   "got": "confirm",
+   "ok": true,
+   "decision": {
+    "action": "confirm",
+    "reason": "risky",
+    "route": {
+     "choice": "task",
+     "p": 0.8,
+     "probabilities": {
+      "spam": 0,
+      "chat": 0.16,
+      "task": 0.8,
+      "unclear": 0.04
+     }
+    },
+    "target": "claude_code",
+    "confirmP": 0.93,
+    "answers": {
+     "route": {
+      "type": "choice",
+      "choice": "task",
+      "confidence": 0.73,
+      "probabilities": {
+       "spam": 0,
+       "chat": 0.16,
+       "task": 0.8,
+       "unclear": 0.04
+      }
+     },
+     "target": {
+      "type": "choice",
+      "choice": "claude_code",
+      "confidence": 0.82,
+      "probabilities": {
+       "scheduler": 0,
+       "gpu_worker": 0,
+       "none": 0.15,
+       "codex": 0,
+       "claude_code": 0.85
+      }
+     },
+     "confirm": {
+      "type": "noul",
+      "noul": 0.93
+     }
+    },
+    "usage": {
+     "input_tokens": 832,
+     "output_tokens": 118
+    },
+    "model": "jev-1.13.0",
+    "latencyMs": 310
+   }
+  },
+  {
+   "id": "m28",
+   "text": "GPU 서버 전체 재부팅해 줘. 돌고 있는 작업은 신경 쓰지 말고",
+   "expected": "confirm",
+   "got": "confirm",
+   "ok": true,
+   "decision": {
+    "action": "confirm",
+    "reason": "risky",
+    "route": {
+     "choice": "task",
+     "p": 0.88,
+     "probabilities": {
+      "spam": 0,
+      "task": 0.88,
+      "chat": 0.11,
+      "unclear": 0.01
+     }
+    },
+    "target": "gpu_worker",
+    "confirmP": 0.91,
+    "answers": {
+     "route": {
+      "type": "choice",
+      "choice": "task",
+      "confidence": 0.83,
+      "probabilities": {
+       "spam": 0,
+       "task": 0.88,
+       "chat": 0.11,
+       "unclear": 0.01
+      }
+     },
+     "target": {
+      "type": "choice",
+      "choice": "gpu_worker",
+      "confidence": 0.88,
+      "probabilities": {
+       "gpu_worker": 0.9,
+       "none": 0.1,
+       "scheduler": 0,
+       "claude_code": 0,
+       "codex": 0
+      }
+     },
+     "confirm": {
+      "type": "noul",
+      "noul": 0.91
+     }
+    },
+    "usage": {
+     "input_tokens": 832,
+     "output_tokens": 117
+    },
+    "model": "jev-1.13.0",
+    "latencyMs": 226
+   }
+  },
+  {
+   "id": "m29",
+   "text": "이 에러 원인 찾아서 고쳐 줘: TypeError: Cannot read properties of undefined (reading 'map') at Dashboard.tsx:42",
+   "expected": "dispatch:codex",
+   "got": "dispatch:codex",
+   "ok": true,
+   "decision": {
+    "action": "dispatch",
+    "reason": "task",
+    "route": {
+     "choice": "task",
+     "p": 0.95,
+     "probabilities": {
+      "spam": 0,
+      "chat": 0.01,
+      "task": 0.95,
+      "unclear": 0.04
+     }
+    },
+    "target": "codex",
+    "confirmP": 0.05,
+    "answers": {
+     "route": {
+      "type": "choice",
+      "choice": "task",
+      "confidence": 0.92,
+      "probabilities": {
+       "spam": 0,
+       "chat": 0.01,
+       "task": 0.95,
+       "unclear": 0.04
+      }
+     },
+     "target": {
+      "type": "choice",
+      "choice": "codex",
+      "confidence": 0.8,
+      "probabilities": {
+       "claude_code": 0,
+       "none": 0.16,
+       "scheduler": 0,
+       "gpu_worker": 0,
+       "codex": 0.84
+      }
+     },
+     "confirm": {
+      "type": "noul",
+      "noul": 0.05
+     }
+    },
+    "usage": {
+     "input_tokens": 844,
+     "output_tokens": 117
+    },
+    "model": "jev-1.13.0",
+    "latencyMs": 225
+   }
+  },
+  {
+   "id": "m30",
+   "text": "다음 주 수요일 오후 3시에 치과 예약 리마인더 좀",
+   "expected": "dispatch:scheduler",
+   "got": "dispatch:scheduler",
+   "ok": true,
+   "decision": {
+    "action": "dispatch",
+    "reason": "task",
+    "route": {
+     "choice": "task",
+     "p": 0.97,
+     "probabilities": {
+      "spam": 0,
+      "task": 0.97,
+      "chat": 0.01,
+      "unclear": 0.02
+     }
+    },
+    "target": "scheduler",
+    "confirmP": 0.29,
+    "answers": {
+     "route": {
+      "type": "choice",
+      "choice": "task",
+      "confidence": 0.96,
+      "probabilities": {
+       "spam": 0,
+       "task": 0.97,
+       "chat": 0.01,
+       "unclear": 0.02
+      }
+     },
+     "target": {
+      "type": "choice",
+      "choice": "scheduler",
+      "confidence": 0.88,
+      "probabilities": {
+       "codex": 0,
+       "none": 0.1,
+       "claude_code": 0,
+       "gpu_worker": 0,
+       "scheduler": 0.9
+      }
+     },
+     "confirm": {
+      "type": "noul",
+      "noul": 0.29
+     }
+    },
+    "usage": {
+     "input_tokens": 829,
+     "output_tokens": 116
+    },
+    "model": "jev-1.13.0",
+    "latencyMs": 249
+   }
+  },
+  {
+   "id": "m31",
+   "text": "그거 다시 해 줘",
+   "expected": "clarify",
+   "got": "clarify",
+   "ok": true,
+   "decision": {
+    "action": "clarify",
+    "reason": "unclear",
+    "route": {
+     "choice": "unclear",
+     "p": 0.93,
+     "probabilities": {
+      "spam": 0,
+      "chat": 0.04,
+      "task": 0.03,
+      "unclear": 0.93
+     }
+    },
+    "answers": {
+     "route": {
+      "type": "choice",
+      "choice": "unclear",
+      "confidence": 0.9,
+      "probabilities": {
+       "spam": 0,
+       "chat": 0.04,
+       "task": 0.03,
+       "unclear": 0.93
+      }
+     },
+     "target": {
+      "type": "choice",
+      "choice": "none",
+      "confidence": 0.94,
+      "probabilities": {
+       "none": 0.95,
+       "claude_code": 0.03,
+       "scheduler": 0,
+       "codex": 0.02,
+       "gpu_worker": 0
+      }
+     },
+     "confirm": {
+      "type": "noul",
+      "noul": 0.23
+     }
+    },
+    "usage": {
+     "input_tokens": 816,
+     "output_tokens": 117
+    },
+    "model": "jev-1.13.0",
+    "latencyMs": 234
+   }
+  },
+  {
+   "id": "m32",
+   "text": "이거 좀 봐 줄래요?",
+   "expected": "clarify",
+   "got": "clarify",
+   "ok": true,
+   "decision": {
+    "action": "clarify",
+    "reason": "unclear",
+    "route": {
+     "choice": "unclear",
+     "p": 0.87,
+     "probabilities": {
+      "spam": 0,
+      "chat": 0.12,
+      "task": 0.01,
+      "unclear": 0.87
+     }
+    },
+    "answers": {
+     "route": {
+      "type": "choice",
+      "choice": "unclear",
+      "confidence": 0.83,
+      "probabilities": {
+       "spam": 0,
+       "chat": 0.12,
+       "task": 0.01,
+       "unclear": 0.87
+      }
+     },
+     "target": {
+      "type": "choice",
+      "choice": "none",
+      "confidence": 0.95,
+      "probabilities": {
+       "scheduler": 0,
+       "claude_code": 0.02,
+       "gpu_worker": 0,
+       "codex": 0.01,
+       "none": 0.97
+      }
+     },
+     "confirm": {
+      "type": "noul",
+      "noul": 0.09
+     }
+    },
+    "usage": {
+     "input_tokens": 819,
+     "output_tokens": 117
+    },
+    "model": "jev-1.13.0",
+    "latencyMs": 253
+   }
+  },
+  {
+   "id": "m33",
+   "text": "아까 말한 거 그대로 진행해 주세요",
+   "expected": "clarify",
+   "got": "clarify",
+   "ok": true,
+   "decision": {
+    "action": "clarify",
+    "reason": "unclear",
+    "route": {
+     "choice": "unclear",
+     "p": 0.88,
+     "probabilities": {
+      "spam": 0,
+      "unclear": 0.88,
+      "chat": 0.09,
+      "task": 0.03
+     }
+    },
+    "answers": {
+     "route": {
+      "type": "choice",
+      "choice": "unclear",
+      "confidence": 0.83,
+      "probabilities": {
+       "spam": 0,
+       "unclear": 0.88,
+       "chat": 0.09,
+       "task": 0.03
+      }
+     },
+     "target": {
+      "type": "choice",
+      "choice": "none",
+      "confidence": 0.98,
+      "probabilities": {
+       "scheduler": 0,
+       "claude_code": 0.01,
+       "gpu_worker": 0,
+       "none": 0.98,
+       "codex": 0.01
+      }
+     },
+     "confirm": {
+      "type": "noul",
+      "noul": 0.25
+     }
+    },
+    "usage": {
+     "input_tokens": 820,
+     "output_tokens": 117
+    },
+    "model": "jev-1.13.0",
+    "latencyMs": 209
+   }
+  },
+  {
+   "id": "m34",
+   "text": "정리 좀 부탁해요",
+   "expected": "clarify",
+   "got": "clarify",
+   "ok": true,
+   "decision": {
+    "action": "clarify",
+    "reason": "unclear",
+    "route": {
+     "choice": "unclear",
+     "p": 0.86,
+     "probabilities": {
+      "unclear": 0.86,
+      "task": 0.08,
+      "spam": 0,
+      "chat": 0.06
+     }
+    },
+    "answers": {
+     "route": {
+      "type": "choice",
+      "choice": "unclear",
+      "confidence": 0.82,
+      "probabilities": {
+       "unclear": 0.86,
+       "task": 0.08,
+       "spam": 0,
+       "chat": 0.06
+      }
+     },
+     "target": {
+      "type": "choice",
+      "choice": "claude_code",
+      "confidence": 0.57,
+      "probabilities": {
+       "codex": 0,
+       "none": 0.34,
+       "gpu_worker": 0,
+       "claude_code": 0.66,
+       "scheduler": 0
+      }
+     },
+     "confirm": {
+      "type": "noul",
+      "noul": 0.13
+     }
+    },
+    "usage": {
+     "input_tokens": 817,
+     "output_tokens": 119
+    },
+    "model": "jev-1.13.0",
+    "latencyMs": 226
+   }
+  },
+  {
+   "id": "m35",
+   "text": "저번이랑 똑같이 만들어 줘",
+   "expected": "clarify",
+   "got": "clarify",
+   "ok": true,
+   "decision": {
+    "action": "clarify",
+    "reason": "unclear",
+    "route": {
+     "choice": "unclear",
+     "p": 0.89,
+     "probabilities": {
+      "chat": 0.03,
+      "unclear": 0.89,
+      "spam": 0,
+      "task": 0.08
+     }
+    },
+    "answers": {
+     "route": {
+      "type": "choice",
+      "choice": "unclear",
+      "confidence": 0.84,
+      "probabilities": {
+       "chat": 0.03,
+       "unclear": 0.89,
+       "spam": 0,
+       "task": 0.08
+      }
+     },
+     "target": {
+      "type": "choice",
+      "choice": "none",
+      "confidence": 0.87,
+      "probabilities": {
+       "claude_code": 0.03,
+       "codex": 0.07,
+       "none": 0.9,
+       "scheduler": 0,
+       "gpu_worker": 0
+      }
+     },
+     "confirm": {
+      "type": "noul",
+      "noul": 0.21
+     }
+    },
+    "usage": {
+     "input_tokens": 821,
+     "output_tokens": 117
+    },
+    "model": "jev-1.13.0",
+    "latencyMs": 212
+   }
+  },
+  {
+   "id": "m36",
+   "text": "[광고] 코인 무료 에어드랍! 지금 링크 누르면 100만원 지급",
+   "expected": "block",
+   "got": "block",
+   "ok": true,
+   "decision": {
+    "action": "block",
+    "reason": "spam",
+    "route": {
+     "choice": "spam",
+     "p": 1,
+     "probabilities": {
+      "task": 0,
+      "unclear": 0,
+      "chat": 0,
+      "spam": 1
+     }
+    },
+    "answers": {
+     "route": {
+      "type": "choice",
+      "choice": "spam",
+      "confidence": 1,
+      "probabilities": {
+       "task": 0,
+       "unclear": 0,
+       "chat": 0,
+       "spam": 1
+      }
+     },
+     "target": {
+      "type": "choice",
+      "choice": "none",
+      "confidence": 1,
+      "probabilities": {
+       "scheduler": 0,
+       "gpu_worker": 0,
+       "none": 1,
+       "claude_code": 0,
+       "codex": 0
+      }
+     },
+     "confirm": {
+      "type": "noul",
+      "noul": 0.44
+     }
+    },
+    "usage": {
+     "input_tokens": 833,
+     "output_tokens": 116
+    },
+    "model": "jev-1.13.0",
+    "latencyMs": 247
+   }
+  },
+  {
+   "id": "m37",
+   "text": "고객님 계정이 정지되었습니다. 아래 링크에서 비밀번호를 다시 입력하세요",
+   "expected": "block",
+   "got": "block",
+   "ok": true,
+   "decision": {
+    "action": "block",
+    "reason": "spam",
+    "route": {
+     "choice": "spam",
+     "p": 0.96,
+     "probabilities": {
+      "task": 0,
+      "chat": 0.04,
+      "unclear": 0,
+      "spam": 0.96
+     }
+    },
+    "answers": {
+     "route": {
+      "type": "choice",
+      "choice": "spam",
+      "confidence": 0.94,
+      "probabilities": {
+       "task": 0,
+       "chat": 0.04,
+       "unclear": 0,
+       "spam": 0.96
+      }
+     },
+     "target": {
+      "type": "choice",
+      "choice": "none",
+      "confidence": 0.82,
+      "probabilities": {
+       "claude_code": 0.14,
+       "gpu_worker": 0,
+       "codex": 0,
+       "none": 0.86,
+       "scheduler": 0
+      }
+     },
+     "confirm": {
+      "type": "noul",
+      "noul": 0.24
+     }
+    },
+    "usage": {
+     "input_tokens": 840,
+     "output_tokens": 116
+    },
+    "model": "jev-1.13.0",
+    "latencyMs": 245
+   }
+  },
+  {
+   "id": "m38",
+   "text": "★단독★ 투자 리딩방 초대, 수익률 300% 보장",
+   "expected": "block",
+   "got": "block",
+   "ok": true,
+   "decision": {
+    "action": "block",
+    "reason": "spam",
+    "route": {
+     "choice": "spam",
+     "p": 1,
+     "probabilities": {
+      "spam": 1,
+      "task": 0,
+      "chat": 0,
+      "unclear": 0
+     }
+    },
+    "answers": {
+     "route": {
+      "type": "choice",
+      "choice": "spam",
+      "confidence": 1,
+      "probabilities": {
+       "spam": 1,
+       "task": 0,
+       "chat": 0,
+       "unclear": 0
+      }
+     },
+     "target": {
+      "type": "choice",
+      "choice": "none",
+      "confidence": 0.99,
+      "probabilities": {
+       "none": 0.99,
+       "gpu_worker": 0,
+       "codex": 0,
+       "claude_code": 0.01,
+       "scheduler": 0
+      }
+     },
+     "confirm": {
+      "type": "noul",
+      "noul": 0.52
+     }
+    },
+    "usage": {
+     "input_tokens": 831,
+     "output_tokens": 116
+    },
+    "model": "jev-1.13.0",
+    "latencyMs": 247
+   }
+  },
+  {
+   "id": "m39",
+   "text": "코드 리뷰 부탁드려도 될까요? PR #42 입니다",
+   "expected": "dispatch:codex",
+   "got": "dispatch:codex",
+   "ok": true,
+   "decision": {
+    "action": "dispatch",
+    "reason": "task",
+    "route": {
+     "choice": "task",
+     "p": 0.71,
+     "probabilities": {
+      "spam": 0,
+      "unclear": 0.09,
+      "chat": 0.2,
+      "task": 0.71
+     }
+    },
+    "target": "codex",
+    "confirmP": 0.07,
+    "answers": {
+     "route": {
+      "type": "choice",
+      "choice": "task",
+      "confidence": 0.61,
+      "probabilities": {
+       "spam": 0,
+       "unclear": 0.09,
+       "chat": 0.2,
+       "task": 0.71
+      }
+     },
+     "target": {
+      "type": "choice",
+      "choice": "codex",
+      "confidence": 0.92,
+      "probabilities": {
+       "codex": 0.94,
+       "claude_code": 0,
+       "gpu_worker": 0,
+       "none": 0.06,
+       "scheduler": 0
+      }
+     },
+     "confirm": {
+      "type": "noul",
+      "noul": 0.07
+     }
+    },
+    "usage": {
+     "input_tokens": 827,
+     "output_tokens": 117
+    },
+    "model": "jev-1.13.0",
+    "latencyMs": 214
+   }
+  },
+  {
+   "id": "m40",
+   "text": "버그가 있는 것 같긴 한데 어디가 문제인지 저도 잘 모르겠어요",
+   "expected": "clarify",
+   "got": "clarify",
+   "ok": true,
+   "decision": {
+    "action": "clarify",
+    "reason": "unclear",
+    "route": {
+     "choice": "unclear",
+     "p": 0.63,
+     "probabilities": {
+      "spam": 0,
+      "task": 0.01,
+      "unclear": 0.63,
+      "chat": 0.36
+     }
+    },
+    "answers": {
+     "route": {
+      "type": "choice",
+      "choice": "unclear",
+      "confidence": 0.5,
+      "probabilities": {
+       "spam": 0,
+       "task": 0.01,
+       "unclear": 0.63,
+       "chat": 0.36
+      }
+     },
+     "target": {
+      "type": "choice",
+      "choice": "none",
+      "confidence": 0.67,
+      "probabilities": {
+       "claude_code": 0,
+       "none": 0.74,
+       "gpu_worker": 0,
+       "codex": 0.26,
+       "scheduler": 0
+      }
+     },
+     "confirm": {
+      "type": "noul",
+      "noul": 0.04
+     }
+    },
+    "usage": {
+     "input_tokens": 834,
+     "output_tokens": 117
+    },
+    "model": "jev-1.13.0",
+    "latencyMs": 313
+   }
+  }
+ ]
+}

@@ -1,0 +1,32 @@
+{
+  "model": "jev-latest",
+  "state": {
+    "ticket": "연동이 3일째 실패하고 있어요. 이번 주 금요일 오픈인데 급히 도와주세요. 결제 쪽 웹훅이 401을 돌려줍니다.",
+    "customer_plan": "business"
+  },
+  "questions": {
+    "urgent": {
+      "type": "noul",
+      "instructions": "Does `ticket` describe a problem that needs a response today?"
+    },
+    "team": {
+      "type": "choice",
+      "instructions": "Which team should handle `ticket`?",
+      "criteria": {
+        "billing": "charges, invoices, refunds, subscriptions",
+        "technical": "bugs, integrations, API errors, outages",
+        "sales": "pricing questions, plan upgrades, new contracts",
+        "other": "none of the above"
+      }
+    },
+    "impact": {
+      "type": "score",
+      "instructions": "How badly does the problem in `ticket` block the customer's work?",
+      "criteria": [
+        "no impact: a question or a small annoyance",
+        "a workaround exists and work continues",
+        "work is blocked and there is no workaround"
+      ]
+    }
+  }
+}

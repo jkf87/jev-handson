@@ -1,0 +1,1 @@
+{"name":"jev-codex-router-lab","version":"1.0.0","private":true,"type":"module","engines":{"node":">=22"},"scripts":{"start":"node --env-file=.env service.mjs","demo":"node cli.mjs --all","test":"node --test tests/*.test.mjs"}}

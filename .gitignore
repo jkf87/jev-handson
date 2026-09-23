@@ -1,0 +1,24 @@
+# 키 — 절대 커밋하지 않기 (.env.example만 올림)
+.env
+.env.*
+!.env.example
+
+# 설치물
+node_modules/
+.venv*/
+__pycache__/
+*.pyc
+.DS_Store
+
+# 실행하면 생기는 기록 (개인 스킬 이름·프롬프트가 들어갈 수 있음)
+.jev-guard.log
+hook.log
+jev-router.log
+decider-*.log
+my_requests.json
+json_cache.json
+**/results/mini-*
+
+# 3강에서 따로 받는 저장소·실행 결과
+jev-ultrafast/
+runs/

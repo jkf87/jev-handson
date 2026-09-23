@@ -1,0 +1,18 @@
+{
+  "at": "2026-09-22T20:11:13.610Z",
+  "jevModel": "jev-1.13.0",
+  "jevCached": true,
+  "policy": {
+    "minScore": 2.3,
+    "maxInsufficientMass": 0.2,
+    "provider": "claude"
+  },
+  "records": [
+    {
+      "taskId": "standard_code",
+      "selected": "claude/claude-sonnet-5",
+      "result": "task-standard_code.result.json",
+      "executionStatus": "COMPLETED"
+    }
+  ]
+}

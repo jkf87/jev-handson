@@ -1,0 +1,42 @@
+{
+  "at": "2026-09-22T20:09:44.200Z",
+  "jevModel": "jev-1.13.0",
+  "jevCached": true,
+  "policy": {
+    "minScore": 2.3,
+    "maxInsufficientMass": 0.2,
+    "provider": "claude"
+  },
+  "records": [
+    {
+      "taskId": "copy",
+      "selected": "claude/claude-haiku-4-5",
+      "result": "task-copy.result.json",
+      "executionStatus": "ERROR"
+    },
+    {
+      "taskId": "standard_code",
+      "selected": "claude/claude-sonnet-5",
+      "result": "task-standard_code.result.json",
+      "executionStatus": "ERROR"
+    },
+    {
+      "taskId": "complex_design",
+      "selected": "claude/claude-opus-5",
+      "result": "task-complex_design.result.json",
+      "executionStatus": "ERROR"
+    },
+    {
+      "taskId": "summary",
+      "selected": "claude/claude-haiku-4-5",
+      "result": "task-summary.result.json",
+      "executionStatus": "ERROR"
+    },
+    {
+      "taskId": "refactor_module",
+      "selected": "claude/claude-opus-5",
+      "result": "task-refactor_module.result.json",
+      "executionStatus": "ERROR"
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "at": "2026-09-22T20:11:19.274Z",
+  "jevModel": "jev-1.13.0",
+  "jevCached": true,
+  "policy": {
+    "minScore": 2.3,
+    "maxInsufficientMass": 0.2,
+    "provider": "claude"
+  },
+  "records": [
+    {
+      "taskId": "summary",
+      "selected": "claude/claude-haiku-4-5",
+      "result": "task-summary.result.json",
+      "executionStatus": "COMPLETED"
+    }
+  ]
+}

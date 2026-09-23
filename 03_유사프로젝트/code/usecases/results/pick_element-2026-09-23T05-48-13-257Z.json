@@ -1,0 +1,131 @@
+{
+ "name": "pick_element",
+ "at": "2026-09-23T05:48:13.259Z",
+ "rows": [
+  {
+   "id": "search",
+   "response": {
+    "answers": {
+     "element": {
+      "type": "choice",
+      "choice": "e5",
+      "confidence": 0.99,
+      "probabilities": {
+       "e1": 0,
+       "e8": 0,
+       "e7": 0,
+       "e2": 0,
+       "e4": 0,
+       "none": 0,
+       "e6": 0,
+       "e3": 0,
+       "e5": 1
+      }
+     },
+     "irreversible": {
+      "type": "noul",
+      "noul": 0.14
+     }
+    },
+    "model": "jev-1.13.0",
+    "usage": {
+     "input_tokens": 744,
+     "output_tokens": 108
+    },
+    "latencyMs": 516
+   },
+   "decision": {
+    "key": "click:e5",
+    "reason": "ok",
+    "element": "e5",
+    "p": 1,
+    "risk": 0.14
+   },
+   "expect": "click:e5",
+   "pass": true
+  },
+  {
+   "id": "close_ad",
+   "response": {
+    "answers": {
+     "element": {
+      "type": "choice",
+      "choice": "none",
+      "confidence": 0.62,
+      "probabilities": {
+       "e1": 0,
+       "e2": 0,
+       "e7": 0,
+       "e8": 0.33,
+       "none": 0.67,
+       "e5": 0,
+       "e4": 0,
+       "e3": 0,
+       "e6": 0
+      }
+     },
+     "irreversible": {
+      "type": "noul",
+      "noul": 0.06
+     }
+    },
+    "model": "jev-1.13.0",
+    "usage": {
+     "input_tokens": 737,
+     "output_tokens": 107
+    },
+    "latencyMs": 308
+   },
+   "decision": {
+    "key": "ask",
+    "reason": "no_element",
+    "p": 0.67,
+    "risk": 0.06
+   },
+   "expect": "ask",
+   "pass": true
+  },
+  {
+   "id": "pay",
+   "response": {
+    "answers": {
+     "element": {
+      "type": "choice",
+      "choice": "e6",
+      "confidence": 0.78,
+      "probabilities": {
+       "none": 0.02,
+       "e7": 0.01,
+       "e6": 0.81,
+       "e3": 0,
+       "e1": 0,
+       "e5": 0.16,
+       "e4": 0,
+       "e8": 0,
+       "e2": 0
+      }
+     },
+     "irreversible": {
+      "type": "noul",
+      "noul": 0.68
+     }
+    },
+    "model": "jev-1.13.0",
+    "usage": {
+     "input_tokens": 738,
+     "output_tokens": 108
+    },
+    "latencyMs": 344
+   },
+   "decision": {
+    "key": "confirm:e6",
+    "reason": "irreversible",
+    "element": "e6",
+    "p": 0.81,
+    "risk": 0.68
+   },
+   "expect": "confirm:e6",
+   "pass": true
+  }
+ ]
+}

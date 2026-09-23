@@ -1,0 +1,16 @@
+{
+  "hooks": {
+    "PreToolUse": [
+      {
+        "matcher": "Bash",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "JEV_GUARD_DECISION=deny python3 /절대경로/01_jev개념과연결/code/03_연결/claude-code/.claude/hooks/jev_guard.py",
+            "timeout": 15
+          }
+        ]
+      }
+    ]
+  }
+}

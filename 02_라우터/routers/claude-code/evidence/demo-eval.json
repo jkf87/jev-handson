@@ -1,0 +1,1679 @@
+{
+ "at": "2026-09-23T01:45:42.099Z",
+ "label": "demo",
+ "roster": {
+  "count": 26,
+  "found": 27,
+  "merged_duplicates": 1,
+  "wide_requests": 1
+ },
+ "policy": {
+  "gateThreshold": 0.3,
+  "fitsThreshold": 0.3
+ },
+ "jevModels": [
+  "jev-1.13.0"
+ ],
+ "liveCalls": 46,
+ "cachedCalls": 6,
+ "inputTokens": 64519,
+ "medianSecondsPerLiveCall": 0.274,
+ "summary": {
+  "covered": 18,
+  "uncovered": 8,
+  "skipped": 0,
+  "wrong_suggestion": 0.1111111111111111,
+  "needless_suggestion": 0,
+  "wrong": [
+   {
+    "id": "hwpx_letter",
+    "gold": [
+     "hwpx-docs"
+    ],
+    "got": [],
+    "top1": "hwpx-docs",
+    "reason": "gate_below_threshold"
+   },
+   {
+    "id": "kakao_notice",
+    "gold": [
+     "kakao-notice-style"
+    ],
+    "got": [],
+    "top1": "kakao-notice-style",
+    "reason": "gate_below_threshold"
+   }
+  ],
+  "needless": []
+ },
+ "rows": [
+  {
+   "id": "pdf_table",
+   "text": "이 PDF 계약서에서 표만 뽑아서 엑셀로 줘",
+   "gold": [
+    "pdf-toolkit"
+   ],
+   "gate": 0.793,
+   "gateValues": {
+    "acts_on_user_system": 0.9,
+    "would_follow_documented_procedure": 0.52,
+    "prose_suffices": 0.04
+   },
+   "top3": [
+    {
+     "name": "pdf-toolkit",
+     "p": 1
+    },
+    {
+     "name": "calendar-assistant",
+     "p": 0
+    },
+    {
+     "name": "code-review",
+     "p": 0
+    }
+   ],
+   "shortlist": [
+    "pdf-toolkit",
+    "calendar-assistant",
+    "code-review"
+   ],
+   "fits": {
+    "pdf-toolkit": 0.86,
+    "calendar-assistant": 0.01,
+    "code-review": 0.02
+   },
+   "rerankWinner": "pdf-toolkit",
+   "suggestion": [
+    "pdf-toolkit"
+   ],
+   "reason": "winner",
+   "calls": [
+    {
+     "stage": "wide",
+     "model": "jev-1.13.0",
+     "usage": {
+      "input_tokens": 1635,
+      "output_tokens": 342
+     },
+     "seconds": 0.492,
+     "cached": false
+    },
+    {
+     "stage": "rerank",
+     "model": "jev-1.13.0",
+     "usage": {
+      "input_tokens": 821,
+      "output_tokens": 105
+     },
+     "seconds": 0.227,
+     "cached": false
+    }
+   ]
+  },
+  {
+   "id": "xlsx_pivot",
+   "text": "분기 매출 엑셀에서 지역별 피벗이랑 요약 통계 만들어 줘",
+   "gold": [
+    "xlsx-analyst"
+   ],
+   "gate": 0.78,
+   "gateValues": {
+    "acts_on_user_system": 0.82,
+    "would_follow_documented_procedure": 0.63,
+    "prose_suffices": 0.11
+   },
+   "top3": [
+    {
+     "name": "xlsx-analyst",
+     "p": 1
+    },
+    {
+     "name": "channel-shorts",
+     "p": 0
+    },
+    {
+     "name": "영수증-정리",
+     "p": 0
+    }
+   ],
+   "shortlist": [
+    "xlsx-analyst",
+    "channel-shorts",
+    "영수증-정리"
+   ],
+   "fits": {
+    "xlsx-analyst": 0.94,
+    "channel-shorts": 0.01,
+    "영수증-정리": 0.04
+   },
+   "rerankWinner": "xlsx-analyst",
+   "suggestion": [
+    "xlsx-analyst"
+   ],
+   "reason": "winner",
+   "calls": [
+    {
+     "stage": "wide",
+     "model": "jev-1.13.0",
+     "usage": {
+      "input_tokens": 1639,
+      "output_tokens": 343
+     },
+     "seconds": 0.282,
+     "cached": false
+    },
+    {
+     "stage": "rerank",
+     "model": "jev-1.13.0",
+     "usage": {
+      "input_tokens": 899,
+      "output_tokens": 116
+     },
+     "seconds": 0.244,
+     "cached": false
+    }
+   ]
+  },
+  {
+   "id": "hwpx_letter",
+   "text": "협조 요청 공문 하나 한글 파일로 만들어 줘",
+   "gold": [
+    "hwpx-docs"
+   ],
+   "gate": 0.237,
+   "gateValues": {
+    "acts_on_user_system": 0.25,
+    "would_follow_documented_procedure": 0.26,
+    "prose_suffices": 0.8
+   },
+   "top3": [
+    {
+     "name": "hwpx-docs",
+     "p": 1
+    },
+    {
+     "name": "rfp-proposal",
+     "p": 0
+    },
+    {
+     "name": "meeting-minutes",
+     "p": 0
+    }
+   ],
+   "shortlist": [
+    "hwpx-docs",
+    "rfp-proposal",
+    "meeting-minutes"
+   ],
+   "fits": {
+    "hwpx-docs": 0.94,
+    "rfp-proposal": 0.07,
+    "meeting-minutes": 0.03
+   },
+   "rerankWinner": "hwpx-docs",
+   "suggestion": [],
+   "reason": "gate_below_threshold",
+   "calls": [
+    {
+     "stage": "wide",
+     "model": "jev-1.13.0",
+     "usage": {
+      "input_tokens": 1628,
+      "output_tokens": 343
+     },
+     "seconds": 0.241,
+     "cached": false
+    },
+    {
+     "stage": "rerank",
+     "model": "jev-1.13.0",
+     "usage": {
+      "input_tokens": 861,
+      "output_tokens": 114
+     },
+     "seconds": 0.328,
+     "cached": false
+    }
+   ]
+  },
+  {
+   "id": "minutes",
+   "text": "오늘 회의 녹취 메모를 회의록 양식으로 정리해 줘",
+   "gold": [
+    "meeting-minutes"
+   ],
+   "gate": 0.523,
+   "gateValues": {
+    "acts_on_user_system": 0.41,
+    "would_follow_documented_procedure": 0.31,
+    "prose_suffices": 0.15
+   },
+   "top3": [
+    {
+     "name": "meeting-minutes",
+     "p": 1
+    },
+    {
+     "name": "usage-quota",
+     "p": 0
+    },
+    {
+     "name": "screenshot-annotate",
+     "p": 0
+    }
+   ],
+   "shortlist": [
+    "meeting-minutes",
+    "usage-quota",
+    "screenshot-annotate"
+   ],
+   "fits": {
+    "meeting-minutes": 0.98,
+    "usage-quota": 0.02,
+    "screenshot-annotate": 0.02
+   },
+   "rerankWinner": "meeting-minutes",
+   "suggestion": [
+    "meeting-minutes"
+   ],
+   "reason": "winner",
+   "calls": [
+    {
+     "stage": "wide",
+     "model": "jev-1.13.0",
+     "usage": {
+      "input_tokens": 1636,
+      "output_tokens": 343
+     },
+     "seconds": 0.218,
+     "cached": false
+    },
+    {
+     "stage": "rerank",
+     "model": "jev-1.13.0",
+     "usage": {
+      "input_tokens": 851,
+      "output_tokens": 118
+     },
+     "seconds": 0.224,
+     "cached": false
+    }
+   ]
+  },
+  {
+   "id": "kakao_notice",
+   "text": "다음 주 세미나 안내문을 카톡 단톡방 공지체로 써 줘",
+   "gold": [
+    "kakao-notice-style"
+   ],
+   "gate": 0.257,
+   "gateValues": {
+    "acts_on_user_system": 0.11,
+    "would_follow_documented_procedure": 0.18,
+    "prose_suffices": 0.52
+   },
+   "top3": [
+    {
+     "name": "kakao-notice-style",
+     "p": 1
+    },
+    {
+     "name": "api-tester",
+     "p": 0
+    },
+    {
+     "name": "pptx-deck",
+     "p": 0
+    }
+   ],
+   "shortlist": [
+    "kakao-notice-style",
+    "api-tester",
+    "pptx-deck"
+   ],
+   "fits": {
+    "kakao-notice-style": 0.96,
+    "api-tester": 0.02,
+    "pptx-deck": 0.03
+   },
+   "rerankWinner": "kakao-notice-style",
+   "suggestion": [],
+   "reason": "gate_below_threshold",
+   "calls": [
+    {
+     "stage": "wide",
+     "model": "jev-1.13.0",
+     "usage": {
+      "input_tokens": 1637,
+      "output_tokens": 344
+     },
+     "seconds": 0.271,
+     "cached": false
+    },
+    {
+     "stage": "rerank",
+     "model": "jev-1.13.0",
+     "usage": {
+      "input_tokens": 908,
+      "output_tokens": 115
+     },
+     "seconds": 0.973,
+     "cached": false
+    }
+   ]
+  },
+  {
+   "id": "blog_rewrite",
+   "text": "AI가 쓴 블로그 초안을 내 블로그 문체로 윤문하고 문체 지표까지 확인해 줘",
+   "gold": [
+    "blog-rewrite"
+   ],
+   "gate": 0.503,
+   "gateValues": {
+    "acts_on_user_system": 0.33,
+    "would_follow_documented_procedure": 0.33,
+    "prose_suffices": 0.15
+   },
+   "top3": [
+    {
+     "name": "blog-rewrite",
+     "p": 1
+    },
+    {
+     "name": "db-migrate",
+     "p": 0
+    },
+    {
+     "name": "shorts-cutter",
+     "p": 0
+    }
+   ],
+   "shortlist": [
+    "blog-rewrite",
+    "db-migrate",
+    "shorts-cutter"
+   ],
+   "fits": {
+    "blog-rewrite": 0.94,
+    "db-migrate": 0.01,
+    "shorts-cutter": 0.01
+   },
+   "rerankWinner": "blog-rewrite",
+   "suggestion": [
+    "blog-rewrite"
+   ],
+   "reason": "winner",
+   "calls": [
+    {
+     "stage": "wide",
+     "model": "jev-1.13.0",
+     "usage": {
+      "input_tokens": 1647,
+      "output_tokens": 343
+     },
+     "seconds": 0.277,
+     "cached": false
+    },
+    {
+     "stage": "rerank",
+     "model": "jev-1.13.0",
+     "usage": {
+      "input_tokens": 902,
+      "output_tokens": 114
+     },
+     "seconds": 0.226,
+     "cached": false
+    }
+   ]
+  },
+  {
+   "id": "shorts_c",
+   "text": "지난주 강의 녹화본에서 쇼츠 5개 뽑아 줘. 채널 스타일 C타입으로.",
+   "gold": [
+    "channel-shorts"
+   ],
+   "gate": 0.787,
+   "gateValues": {
+    "acts_on_user_system": 0.84,
+    "would_follow_documented_procedure": 0.57,
+    "prose_suffices": 0.05
+   },
+   "top3": [
+    {
+     "name": "channel-shorts",
+     "p": 0.93
+    },
+    {
+     "name": "shorts-cutter",
+     "p": 0.07
+    },
+    {
+     "name": "translate-docs",
+     "p": 0
+    }
+   ],
+   "shortlist": [
+    "channel-shorts",
+    "shorts-cutter",
+    "translate-docs"
+   ],
+   "fits": {
+    "channel-shorts": 0.78,
+    "shorts-cutter": 0.75,
+    "translate-docs": 0.02
+   },
+   "rerankWinner": "channel-shorts",
+   "suggestion": [
+    "channel-shorts"
+   ],
+   "reason": "winner",
+   "calls": [
+    {
+     "stage": "wide",
+     "model": "jev-1.13.0",
+     "usage": {
+      "input_tokens": 1648,
+      "output_tokens": 342
+     },
+     "seconds": 0.436,
+     "cached": false
+    },
+    {
+     "stage": "rerank",
+     "model": "jev-1.13.0",
+     "usage": {
+      "input_tokens": 925,
+      "output_tokens": 109
+     },
+     "seconds": 0.206,
+     "cached": false
+    }
+   ]
+  },
+  {
+   "id": "shorts_generic",
+   "text": "이 긴 인터뷰 영상에서 재밌는 구간 찾아서 쇼츠로 잘라 주고 자막 넣어 줘",
+   "gold": [
+    "shorts-cutter"
+   ],
+   "gate": 0.7,
+   "gateValues": {
+    "acts_on_user_system": 0.81,
+    "would_follow_documented_procedure": 0.34,
+    "prose_suffices": 0.05
+   },
+   "top3": [
+    {
+     "name": "shorts-cutter",
+     "p": 0.91
+    },
+    {
+     "name": "channel-shorts",
+     "p": 0.09
+    },
+    {
+     "name": "api-tester",
+     "p": 0
+    }
+   ],
+   "shortlist": [
+    "shorts-cutter",
+    "channel-shorts",
+    "api-tester"
+   ],
+   "fits": {
+    "shorts-cutter": 0.96,
+    "channel-shorts": 0.93,
+    "api-tester": 0.01
+   },
+   "rerankWinner": "shorts-cutter",
+   "suggestion": [
+    "shorts-cutter"
+   ],
+   "reason": "winner",
+   "calls": [
+    {
+     "stage": "wide",
+     "model": "jev-1.13.0",
+     "usage": {
+      "input_tokens": 1645,
+      "output_tokens": 343
+     },
+     "seconds": 0.273,
+     "cached": false
+    },
+    {
+     "stage": "rerank",
+     "model": "jev-1.13.0",
+     "usage": {
+      "input_tokens": 904,
+      "output_tokens": 110
+     },
+     "seconds": 0.248,
+     "cached": false
+    }
+   ]
+  },
+  {
+   "id": "tts",
+   "text": "이 나레이션 대본을 내 목소리로 읽어 줘",
+   "gold": [
+    "tts-narration"
+   ],
+   "gate": 0.607,
+   "gateValues": {
+    "acts_on_user_system": 0.55,
+    "would_follow_documented_procedure": 0.41,
+    "prose_suffices": 0.14
+   },
+   "top3": [
+    {
+     "name": "tts-narration",
+     "p": 1
+    },
+    {
+     "name": "translate-docs",
+     "p": 0
+    },
+    {
+     "name": "code-review",
+     "p": 0
+    }
+   ],
+   "shortlist": [
+    "tts-narration",
+    "translate-docs",
+    "code-review"
+   ],
+   "fits": {
+    "tts-narration": 0.87,
+    "translate-docs": 0.02,
+    "code-review": 0.01
+   },
+   "rerankWinner": "tts-narration",
+   "suggestion": [
+    "tts-narration"
+   ],
+   "reason": "winner",
+   "calls": [
+    {
+     "stage": "wide",
+     "model": "jev-1.13.0",
+     "usage": {
+      "input_tokens": 1632,
+      "output_tokens": 343
+     },
+     "seconds": 0.327,
+     "cached": false
+    },
+    {
+     "stage": "rerank",
+     "model": "jev-1.13.0",
+     "usage": {
+      "input_tokens": 796,
+      "output_tokens": 108
+     },
+     "seconds": 0.229,
+     "cached": false
+    }
+   ]
+  },
+  {
+   "id": "git_squash",
+   "text": "어제 커밋 세 개를 하나로 합치고 메시지 정리해 줘",
+   "gold": [
+    "git-helper"
+   ],
+   "gate": 0.833,
+   "gateValues": {
+    "acts_on_user_system": 0.86,
+    "would_follow_documented_procedure": 0.74,
+    "prose_suffices": 0.1
+   },
+   "top3": [
+    {
+     "name": "git-helper",
+     "p": 1
+    },
+    {
+     "name": "meeting-minutes",
+     "p": 0
+    },
+    {
+     "name": "blog-rewrite",
+     "p": 0
+    }
+   ],
+   "shortlist": [
+    "git-helper",
+    "meeting-minutes",
+    "blog-rewrite"
+   ],
+   "fits": {
+    "git-helper": 0.92,
+    "meeting-minutes": 0.02,
+    "blog-rewrite": 0.02
+   },
+   "rerankWinner": "git-helper",
+   "suggestion": [
+    "git-helper"
+   ],
+   "reason": "winner",
+   "calls": [
+    {
+     "stage": "wide",
+     "model": "jev-1.13.0",
+     "usage": {
+      "input_tokens": 1636,
+      "output_tokens": 341
+     },
+     "seconds": 0.238,
+     "cached": false
+    },
+    {
+     "stage": "rerank",
+     "model": "jev-1.13.0",
+     "usage": {
+      "input_tokens": 918,
+      "output_tokens": 108
+     },
+     "seconds": 0.419,
+     "cached": false
+    }
+   ]
+  },
+  {
+   "id": "vercel",
+   "text": "이 Next.js 앱 Vercel에 배포하고 도메인 연결해 줘",
+   "gold": [
+    "deploy-vercel"
+   ],
+   "gate": 0.883,
+   "gateValues": {
+    "acts_on_user_system": 0.95,
+    "would_follow_documented_procedure": 0.85,
+    "prose_suffices": 0.15
+   },
+   "top3": [
+    {
+     "name": "deploy-vercel",
+     "p": 1
+    },
+    {
+     "name": "kakao-notice-style",
+     "p": 0
+    },
+    {
+     "name": "image-resize",
+     "p": 0
+    }
+   ],
+   "shortlist": [
+    "deploy-vercel",
+    "kakao-notice-style",
+    "image-resize"
+   ],
+   "fits": {
+    "deploy-vercel": 0.93,
+    "kakao-notice-style": 0.01,
+    "image-resize": 0.02
+   },
+   "rerankWinner": "deploy-vercel",
+   "suggestion": [
+    "deploy-vercel"
+   ],
+   "reason": "winner",
+   "calls": [
+    {
+     "stage": "wide",
+     "model": "jev-1.13.0",
+     "usage": {
+      "input_tokens": 1634,
+      "output_tokens": 343
+     },
+     "seconds": 0.321,
+     "cached": false
+    },
+    {
+     "stage": "rerank",
+     "model": "jev-1.13.0",
+     "usage": {
+      "input_tokens": 861,
+      "output_tokens": 114
+     },
+     "seconds": 0.266,
+     "cached": true
+    }
+   ]
+  },
+  {
+   "id": "migration",
+   "text": "users 테이블에 email_verified 컬럼 추가하는 마이그레이션 만들어서 실행해 줘",
+   "gold": [
+    "db-migrate"
+   ],
+   "gate": 0.793,
+   "gateValues": {
+    "acts_on_user_system": 0.84,
+    "would_follow_documented_procedure": 0.75,
+    "prose_suffices": 0.21
+   },
+   "top3": [
+    {
+     "name": "db-migrate",
+     "p": 1
+    },
+    {
+     "name": "tts-narration",
+     "p": 0
+    },
+    {
+     "name": "kakao-notice-style",
+     "p": 0
+    }
+   ],
+   "shortlist": [
+    "db-migrate",
+    "tts-narration",
+    "kakao-notice-style"
+   ],
+   "fits": {
+    "db-migrate": 0.95,
+    "tts-narration": 0.01,
+    "kakao-notice-style": 0.01
+   },
+   "rerankWinner": "db-migrate",
+   "suggestion": [
+    "db-migrate"
+   ],
+   "reason": "winner",
+   "calls": [
+    {
+     "stage": "wide",
+     "model": "jev-1.13.0",
+     "usage": {
+      "input_tokens": 1642,
+      "output_tokens": 343
+     },
+     "seconds": 0.248,
+     "cached": false
+    },
+    {
+     "stage": "rerank",
+     "model": "jev-1.13.0",
+     "usage": {
+      "input_tokens": 917,
+      "output_tokens": 116
+     },
+     "seconds": 0.282,
+     "cached": false
+    }
+   ]
+  },
+  {
+   "id": "calendar",
+   "text": "내일 오후 3시에 팀 회의 잡고 참석자한테 초대 보내 줘",
+   "gold": [
+    "calendar-assistant"
+   ],
+   "gate": 0.747,
+   "gateValues": {
+    "acts_on_user_system": 0.9,
+    "would_follow_documented_procedure": 0.49,
+    "prose_suffices": 0.15
+   },
+   "top3": [
+    {
+     "name": "calendar-assistant",
+     "p": 1
+    },
+    {
+     "name": "usage-quota",
+     "p": 0
+    },
+    {
+     "name": "git-helper",
+     "p": 0
+    }
+   ],
+   "shortlist": [
+    "calendar-assistant",
+    "usage-quota",
+    "git-helper"
+   ],
+   "fits": {
+    "calendar-assistant": 0.96,
+    "usage-quota": 0.01,
+    "git-helper": 0.01
+   },
+   "rerankWinner": "calendar-assistant",
+   "suggestion": [
+    "calendar-assistant"
+   ],
+   "reason": "winner",
+   "calls": [
+    {
+     "stage": "wide",
+     "model": "jev-1.13.0",
+     "usage": {
+      "input_tokens": 1636,
+      "output_tokens": 342
+     },
+     "seconds": 0.23,
+     "cached": false
+    },
+    {
+     "stage": "rerank",
+     "model": "jev-1.13.0",
+     "usage": {
+      "input_tokens": 805,
+      "output_tokens": 105
+     },
+     "seconds": 0.286,
+     "cached": false
+    }
+   ]
+  },
+  {
+   "id": "rfp",
+   "text": "이 RFP 분석해서 체크리스트랑 제안서 초안 만들어 줘",
+   "gold": [
+    "rfp-proposal"
+   ],
+   "gate": 0.51,
+   "gateValues": {
+    "acts_on_user_system": 0.27,
+    "would_follow_documented_procedure": 0.36,
+    "prose_suffices": 0.1
+   },
+   "top3": [
+    {
+     "name": "rfp-proposal",
+     "p": 1
+    },
+    {
+     "name": "영수증-정리",
+     "p": 0
+    },
+    {
+     "name": "translate-docs",
+     "p": 0
+    }
+   ],
+   "shortlist": [
+    "rfp-proposal",
+    "영수증-정리",
+    "translate-docs"
+   ],
+   "fits": {
+    "rfp-proposal": 0.98,
+    "영수증-정리": 0.02,
+    "translate-docs": 0.07
+   },
+   "rerankWinner": "rfp-proposal",
+   "suggestion": [
+    "rfp-proposal"
+   ],
+   "reason": "winner",
+   "calls": [
+    {
+     "stage": "wide",
+     "model": "jev-1.13.0",
+     "usage": {
+      "input_tokens": 1635,
+      "output_tokens": 343
+     },
+     "seconds": 0.445,
+     "cached": false
+    },
+    {
+     "stage": "rerank",
+     "model": "jev-1.13.0",
+     "usage": {
+      "input_tokens": 826,
+      "output_tokens": 116
+     },
+     "seconds": 0.399,
+     "cached": false
+    }
+   ]
+  },
+  {
+   "id": "interview",
+   "text": "요구사항이 애매한데 질문 주고받으면서 명세로 정리해 줘",
+   "gold": [
+    "interview-spec"
+   ],
+   "gate": 0.343,
+   "gateValues": {
+    "acts_on_user_system": 0.09,
+    "would_follow_documented_procedure": 0.31,
+    "prose_suffices": 0.37
+   },
+   "top3": [
+    {
+     "name": "interview-spec",
+     "p": 1
+    },
+    {
+     "name": "rfp-proposal",
+     "p": 0
+    },
+    {
+     "name": "blog-rewrite",
+     "p": 0
+    }
+   ],
+   "shortlist": [
+    "interview-spec",
+    "rfp-proposal",
+    "blog-rewrite"
+   ],
+   "fits": {
+    "interview-spec": 0.97,
+    "rfp-proposal": 0.21,
+    "blog-rewrite": 0.04
+   },
+   "rerankWinner": "interview-spec",
+   "suggestion": [
+    "interview-spec"
+   ],
+   "reason": "winner",
+   "calls": [
+    {
+     "stage": "wide",
+     "model": "jev-1.13.0",
+     "usage": {
+      "input_tokens": 1638,
+      "output_tokens": 342
+     },
+     "seconds": 0.546,
+     "cached": false
+    },
+    {
+     "stage": "rerank",
+     "model": "jev-1.13.0",
+     "usage": {
+      "input_tokens": 869,
+      "output_tokens": 111
+     },
+     "seconds": 0.5,
+     "cached": false
+    }
+   ]
+  },
+  {
+   "id": "quota",
+   "text": "이번 주 클로드 사용량 얼마나 남았어?",
+   "gold": [
+    "usage-quota"
+   ],
+   "gate": 0.783,
+   "gateValues": {
+    "acts_on_user_system": 0.68,
+    "would_follow_documented_procedure": 0.73,
+    "prose_suffices": 0.06
+   },
+   "top3": [
+    {
+     "name": "usage-quota",
+     "p": 1
+    },
+    {
+     "name": "web-scraper",
+     "p": 0
+    },
+    {
+     "name": "code-review",
+     "p": 0
+    }
+   ],
+   "shortlist": [
+    "usage-quota",
+    "web-scraper",
+    "code-review"
+   ],
+   "fits": {
+    "usage-quota": 0.91,
+    "web-scraper": 0.08,
+    "code-review": 0.02
+   },
+   "rerankWinner": "usage-quota",
+   "suggestion": [
+    "usage-quota"
+   ],
+   "reason": "winner",
+   "calls": [
+    {
+     "stage": "wide",
+     "model": "jev-1.13.0",
+     "usage": {
+      "input_tokens": 1627,
+      "output_tokens": 342
+     },
+     "seconds": 0.26,
+     "cached": false
+    },
+    {
+     "stage": "rerank",
+     "model": "jev-1.13.0",
+     "usage": {
+      "input_tokens": 742,
+      "output_tokens": 107
+     },
+     "seconds": 0.199,
+     "cached": false
+    }
+   ]
+  },
+  {
+   "id": "receipt",
+   "text": "영수증 사진 스무 장에서 금액이랑 날짜 뽑아서 경비 정리해 줘",
+   "gold": [
+    "영수증-정리"
+   ],
+   "gate": 0.77,
+   "gateValues": {
+    "acts_on_user_system": 0.88,
+    "would_follow_documented_procedure": 0.46,
+    "prose_suffices": 0.03
+   },
+   "top3": [
+    {
+     "name": "영수증-정리",
+     "p": 1
+    },
+    {
+     "name": "blog-rewrite",
+     "p": 0
+    },
+    {
+     "name": "tts-narration",
+     "p": 0
+    }
+   ],
+   "shortlist": [
+    "영수증-정리",
+    "blog-rewrite",
+    "tts-narration"
+   ],
+   "fits": {
+    "영수증-정리": 0.91,
+    "blog-rewrite": 0.01,
+    "tts-narration": 0.02
+   },
+   "rerankWinner": "영수증-정리",
+   "suggestion": [
+    "영수증-정리"
+   ],
+   "reason": "winner",
+   "calls": [
+    {
+     "stage": "wide",
+     "model": "jev-1.13.0",
+     "usage": {
+      "input_tokens": 1640,
+      "output_tokens": 345
+     },
+     "seconds": 0.257,
+     "cached": false
+    },
+    {
+     "stage": "rerank",
+     "model": "jev-1.13.0",
+     "usage": {
+      "input_tokens": 879,
+      "output_tokens": 120
+     },
+     "seconds": 0.229,
+     "cached": false
+    }
+   ]
+  },
+  {
+   "id": "screenshot",
+   "text": "이 스크린샷에 빨간 박스랑 화살표로 버튼 위치 표시해 줘",
+   "gold": [
+    "screenshot-annotate"
+   ],
+   "gate": 0.593,
+   "gateValues": {
+    "acts_on_user_system": 0.55,
+    "would_follow_documented_procedure": 0.3,
+    "prose_suffices": 0.07
+   },
+   "top3": [
+    {
+     "name": "screenshot-annotate",
+     "p": 1
+    },
+    {
+     "name": "pdf-toolkit",
+     "p": 0
+    },
+    {
+     "name": "api-tester",
+     "p": 0
+    }
+   ],
+   "shortlist": [
+    "screenshot-annotate",
+    "pdf-toolkit",
+    "api-tester"
+   ],
+   "fits": {
+    "screenshot-annotate": 0.97,
+    "pdf-toolkit": 0.02,
+    "api-tester": 0.02
+   },
+   "rerankWinner": "screenshot-annotate",
+   "suggestion": [
+    "screenshot-annotate"
+   ],
+   "reason": "winner",
+   "calls": [
+    {
+     "stage": "wide",
+     "model": "jev-1.13.0",
+     "usage": {
+      "input_tokens": 1639,
+      "output_tokens": 346
+     },
+     "seconds": 0.251,
+     "cached": false
+    },
+    {
+     "stage": "rerank",
+     "model": "jev-1.13.0",
+     "usage": {
+      "input_tokens": 861,
+      "output_tokens": 119
+     },
+     "seconds": 0.299,
+     "cached": false
+    }
+   ]
+  },
+  {
+   "id": "monad",
+   "text": "모나드가 뭔지 쉽게 설명해 줘",
+   "gold": [],
+   "gate": 0.057,
+   "gateValues": {
+    "acts_on_user_system": 0.02,
+    "would_follow_documented_procedure": 0.09,
+    "prose_suffices": 0.94
+   },
+   "top3": [
+    {
+     "name": "code-review",
+     "p": 0.3
+    },
+    {
+     "name": "interview-spec",
+     "p": 0.3
+    },
+    {
+     "name": "translate-docs",
+     "p": 0.27
+    }
+   ],
+   "shortlist": [
+    "code-review",
+    "interview-spec",
+    "translate-docs"
+   ],
+   "fits": {
+    "code-review": 0.03,
+    "interview-spec": 0.13,
+    "translate-docs": 0.05
+   },
+   "rerankWinner": "interview-spec",
+   "suggestion": [],
+   "reason": "gate_below_threshold",
+   "calls": [
+    {
+     "stage": "wide",
+     "model": "jev-1.13.0",
+     "usage": {
+      "input_tokens": 1627,
+      "output_tokens": 342
+     },
+     "seconds": 0.722,
+     "cached": false
+    },
+    {
+     "stage": "rerank",
+     "model": "jev-1.13.0",
+     "usage": {
+      "input_tokens": 774,
+      "output_tokens": 105
+     },
+     "seconds": 0.264,
+     "cached": true
+    }
+   ]
+  },
+  {
+   "id": "lunch",
+   "text": "오늘 점심 뭐 먹을까",
+   "gold": [],
+   "gate": 0.107,
+   "gateValues": {
+    "acts_on_user_system": 0.04,
+    "would_follow_documented_procedure": 0.08,
+    "prose_suffices": 0.8
+   },
+   "top3": [
+    {
+     "name": "web-scraper",
+     "p": 0.47
+    },
+    {
+     "name": "interview-spec",
+     "p": 0.39
+    },
+    {
+     "name": "calendar-assistant",
+     "p": 0.07
+    }
+   ],
+   "shortlist": [
+    "web-scraper",
+    "interview-spec",
+    "calendar-assistant"
+   ],
+   "fits": {
+    "web-scraper": 0.11,
+    "interview-spec": 0.36,
+    "calendar-assistant": 0.03
+   },
+   "rerankWinner": "interview-spec",
+   "suggestion": [],
+   "reason": "gate_below_threshold",
+   "calls": [
+    {
+     "stage": "wide",
+     "model": "jev-1.13.0",
+     "usage": {
+      "input_tokens": 1621,
+      "output_tokens": 343
+     },
+     "seconds": 0.207,
+     "cached": false
+    },
+    {
+     "stage": "rerank",
+     "model": "jev-1.13.0",
+     "usage": {
+      "input_tokens": 769,
+      "output_tokens": 109
+     },
+     "seconds": 0.214,
+     "cached": true
+    }
+   ]
+  },
+  {
+   "id": "translate_sentence",
+   "text": "이 문장 영어로 번역해 줘: 회의는 내일 오전 열 시입니다",
+   "gold": [],
+   "gate": 0.04,
+   "gateValues": {
+    "acts_on_user_system": 0.02,
+    "would_follow_documented_procedure": 0.08,
+    "prose_suffices": 0.98
+   },
+   "top3": [
+    {
+     "name": "translate-docs",
+     "p": 0.99
+    },
+    {
+     "name": "calendar-assistant",
+     "p": 0.01
+    },
+    {
+     "name": "usage-quota",
+     "p": 0
+    }
+   ],
+   "shortlist": [
+    "translate-docs",
+    "calendar-assistant",
+    "usage-quota"
+   ],
+   "fits": {
+    "translate-docs": 0.13,
+    "calendar-assistant": 0.04,
+    "usage-quota": 0.01
+   },
+   "rerankWinner": "translate-docs",
+   "suggestion": [],
+   "reason": "gate_below_threshold",
+   "calls": [
+    {
+     "stage": "wide",
+     "model": "jev-1.13.0",
+     "usage": {
+      "input_tokens": 1637,
+      "output_tokens": 342
+     },
+     "seconds": 0.32,
+     "cached": false
+    },
+    {
+     "stage": "rerank",
+     "model": "jev-1.13.0",
+     "usage": {
+      "input_tokens": 785,
+      "output_tokens": 107
+     },
+     "seconds": 0.234,
+     "cached": false
+    }
+   ]
+  },
+  {
+   "id": "listcomp",
+   "text": "파이썬 리스트 컴프리헨션 예시 세 개만 보여 줘",
+   "gold": [],
+   "gate": 0.06,
+   "gateValues": {
+    "acts_on_user_system": 0.02,
+    "would_follow_documented_procedure": 0.13,
+    "prose_suffices": 0.97
+   },
+   "top3": [
+    {
+     "name": "code-review",
+     "p": 0.9
+    },
+    {
+     "name": "usage-quota",
+     "p": 0.05
+    },
+    {
+     "name": "interview-spec",
+     "p": 0.02
+    }
+   ],
+   "shortlist": [
+    "code-review",
+    "usage-quota",
+    "interview-spec"
+   ],
+   "fits": {
+    "code-review": 0.03,
+    "usage-quota": 0.02,
+    "interview-spec": 0.09
+   },
+   "rerankWinner": "code-review",
+   "suggestion": [],
+   "reason": "gate_below_threshold",
+   "calls": [
+    {
+     "stage": "wide",
+     "model": "jev-1.13.0",
+     "usage": {
+      "input_tokens": 1633,
+      "output_tokens": 341
+     },
+     "seconds": 0.521,
+     "cached": false
+    },
+    {
+     "stage": "rerank",
+     "model": "jev-1.13.0",
+     "usage": {
+      "input_tokens": 760,
+      "output_tokens": 104
+     },
+     "seconds": 0.293,
+     "cached": true
+    }
+   ]
+  },
+  {
+   "id": "rebase",
+   "text": "git rebase랑 merge 차이가 뭐야",
+   "gold": [],
+   "gate": 0.117,
+   "gateValues": {
+    "acts_on_user_system": 0.02,
+    "would_follow_documented_procedure": 0.29,
+    "prose_suffices": 0.96
+   },
+   "top3": [
+    {
+     "name": "git-helper",
+     "p": 1
+    },
+    {
+     "name": "interview-spec",
+     "p": 0
+    },
+    {
+     "name": "pdf-toolkit",
+     "p": 0
+    }
+   ],
+   "shortlist": [
+    "git-helper",
+    "interview-spec",
+    "pdf-toolkit"
+   ],
+   "fits": {
+    "git-helper": 0.29,
+    "interview-spec": 0.16,
+    "pdf-toolkit": 0.01
+   },
+   "rerankWinner": "git-helper",
+   "suggestion": [],
+   "reason": "gate_below_threshold",
+   "calls": [
+    {
+     "stage": "wide",
+     "model": "jev-1.13.0",
+     "usage": {
+      "input_tokens": 1625,
+      "output_tokens": 341
+     },
+     "seconds": 0.287,
+     "cached": false
+    },
+    {
+     "stage": "rerank",
+     "model": "jev-1.13.0",
+     "usage": {
+      "input_tokens": 861,
+      "output_tokens": 104
+     },
+     "seconds": 0.219,
+     "cached": false
+    }
+   ]
+  },
+  {
+   "id": "typo",
+   "text": "README에 오타 하나 고쳐 줘",
+   "gold": [],
+   "gate": 0.64,
+   "gateValues": {
+    "acts_on_user_system": 0.72,
+    "would_follow_documented_procedure": 0.29,
+    "prose_suffices": 0.09
+   },
+   "top3": [
+    {
+     "name": "blog-rewrite",
+     "p": 0.62
+    },
+    {
+     "name": "code-review",
+     "p": 0.23
+    },
+    {
+     "name": "git-helper",
+     "p": 0.1
+    }
+   ],
+   "shortlist": [
+    "blog-rewrite",
+    "code-review",
+    "git-helper"
+   ],
+   "fits": {
+    "blog-rewrite": 0.1,
+    "code-review": 0.17,
+    "git-helper": 0.08
+   },
+   "rerankWinner": "blog-rewrite",
+   "suggestion": [],
+   "reason": "nothing_fits",
+   "calls": [
+    {
+     "stage": "wide",
+     "model": "jev-1.13.0",
+     "usage": {
+      "input_tokens": 1624,
+      "output_tokens": 343
+     },
+     "seconds": 0.303,
+     "cached": false
+    },
+    {
+     "stage": "rerank",
+     "model": "jev-1.13.0",
+     "usage": {
+      "input_tokens": 843,
+      "output_tokens": 106
+     },
+     "seconds": 0.279,
+     "cached": true
+    }
+   ]
+  },
+  {
+   "id": "notion",
+   "text": "노션에 새 페이지 만들고 이 메모 넣어 줘",
+   "gold": [],
+   "gate": 0.827,
+   "gateValues": {
+    "acts_on_user_system": 0.95,
+    "would_follow_documented_procedure": 0.63,
+    "prose_suffices": 0.1
+   },
+   "top3": [
+    {
+     "name": "meeting-minutes",
+     "p": 0.6
+    },
+    {
+     "name": "api-tester",
+     "p": 0.21
+    },
+    {
+     "name": "slack-bot",
+     "p": 0.08
+    }
+   ],
+   "shortlist": [
+    "meeting-minutes",
+    "api-tester",
+    "slack-bot"
+   ],
+   "fits": {
+    "meeting-minutes": 0.17,
+    "api-tester": 0.05,
+    "slack-bot": 0.02
+   },
+   "rerankWinner": "meeting-minutes",
+   "suggestion": [],
+   "reason": "nothing_fits",
+   "calls": [
+    {
+     "stage": "wide",
+     "model": "jev-1.13.0",
+     "usage": {
+      "input_tokens": 1629,
+      "output_tokens": 343
+     },
+     "seconds": 0.248,
+     "cached": false
+    },
+    {
+     "stage": "rerank",
+     "model": "jev-1.13.0",
+     "usage": {
+      "input_tokens": 820,
+      "output_tokens": 112
+     },
+     "seconds": 0.272,
+     "cached": true
+    }
+   ]
+  },
+  {
+   "id": "mastodon",
+   "text": "이 공지를 마스토돈 계정에 올려 줘",
+   "gold": [],
+   "gate": 0.837,
+   "gateValues": {
+    "acts_on_user_system": 0.95,
+    "would_follow_documented_procedure": 0.67,
+    "prose_suffices": 0.11
+   },
+   "top3": [
+    {
+     "name": "api-tester",
+     "p": 0.46
+    },
+    {
+     "name": "slack-bot",
+     "p": 0.4
+    },
+    {
+     "name": "kakao-notice-style",
+     "p": 0.11
+    }
+   ],
+   "shortlist": [
+    "api-tester",
+    "slack-bot",
+    "kakao-notice-style"
+   ],
+   "fits": {
+    "api-tester": 0.29,
+    "slack-bot": 0.02,
+    "kakao-notice-style": 0.05
+   },
+   "rerankWinner": "api-tester",
+   "suggestion": [],
+   "reason": "nothing_fits",
+   "calls": [
+    {
+     "stage": "wide",
+     "model": "jev-1.13.0",
+     "usage": {
+      "input_tokens": 1629,
+      "output_tokens": 342
+     },
+     "seconds": 0.274,
+     "cached": false
+    },
+    {
+     "stage": "rerank",
+     "model": "jev-1.13.0",
+     "usage": {
+      "input_tokens": 863,
+      "output_tokens": 113
+     },
+     "seconds": 0.411,
+     "cached": false
+    }
+   ]
+  }
+ ]
+}

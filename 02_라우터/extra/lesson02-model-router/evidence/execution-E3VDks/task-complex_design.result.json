@@ -1,0 +1,346 @@
+{
+  "task": {
+    "id": "complex_design",
+    "request": "결제 서비스의 여러 모듈에 걸친 간헐적 중복 결제 문제를 진단하는 계획을 세워줘. 네트워크 재시도, 웹훅 역순 도착, DB 트랜잭션 충돌을 함께 고려하고, 반례와 멱등성 설계 및 무중단 전환 검증 계획을 비교해줘.",
+    "context": "실제 시스템 변경 없이 설계 검토와 검증 계획만 요청. 여러 원인과 상충하는 조건을 함께 추론해야 함"
+  },
+  "selection": {
+    "status": "PLANNED",
+    "reason": "lowest_price_proxy_among_sufficient",
+    "policy": {
+      "minScore": 2.3,
+      "maxInsufficientMass": 0.2,
+      "provider": "claude"
+    },
+    "selected": {
+      "provider": "claude",
+      "id": "claude-opus-5",
+      "effort": "high",
+      "aaiScore": 51,
+      "source": "https://artificialanalysis.ai/models/claude-opus-5",
+      "score": 2.79,
+      "probabilities": {
+        "0": 0.01,
+        "1": 0.01,
+        "2": 0.16,
+        "3": 0.82
+      },
+      "confidence": 0.79,
+      "insufficientMass": 0.02,
+      "priceProxy": 0.03,
+      "valid": true,
+      "inScope": true,
+      "eligible": true
+    },
+    "candidates": [
+      {
+        "provider": "codex",
+        "id": "gpt-5.6-luna",
+        "effort": "high",
+        "aaiScore": 32,
+        "source": "https://artificialanalysis.ai/models/gpt-5-6-luna-high",
+        "score": 0.86,
+        "probabilities": {
+          "0": 0.28,
+          "1": 0.59,
+          "2": 0.11,
+          "3": 0.02
+        },
+        "confidence": 0.57,
+        "insufficientMass": 0.87,
+        "priceProxy": 0.0014,
+        "valid": true,
+        "inScope": false,
+        "eligible": false
+      },
+      {
+        "provider": "codex",
+        "id": "gpt-5.6-terra",
+        "effort": "high",
+        "aaiScore": 34,
+        "source": "https://artificialanalysis.ai/models/gpt-5-6-terra-high",
+        "score": 1.13,
+        "probabilities": {
+          "0": 0.14,
+          "1": 0.62,
+          "2": 0.21,
+          "3": 0.03
+        },
+        "confidence": 0.58,
+        "insufficientMass": 0.76,
+        "priceProxy": 0.014,
+        "valid": true,
+        "inScope": false,
+        "eligible": false
+      },
+      {
+        "provider": "codex",
+        "id": "gpt-5.5",
+        "effort": "high",
+        "aaiScore": 37,
+        "source": "https://artificialanalysis.ai/models/gpt-5-5-high",
+        "score": 1.6,
+        "probabilities": {
+          "0": 0.03,
+          "1": 0.44,
+          "2": 0.43,
+          "3": 0.1
+        },
+        "confidence": 0.41,
+        "insufficientMass": 0.47,
+        "priceProxy": 0.035,
+        "valid": true,
+        "inScope": false,
+        "eligible": false
+      },
+      {
+        "provider": "codex",
+        "id": "gpt-5.6-sol",
+        "effort": "high",
+        "aaiScore": 42,
+        "source": "https://artificialanalysis.ai/models/gpt-5-6-sol-high",
+        "score": 1.63,
+        "probabilities": {
+          "0": 0.03,
+          "1": 0.4,
+          "2": 0.48,
+          "3": 0.09
+        },
+        "confidence": 0.44,
+        "insufficientMass": 0.43000000000000005,
+        "priceProxy": 0.024,
+        "valid": true,
+        "inScope": false,
+        "eligible": false
+      },
+      {
+        "provider": "codex",
+        "id": "gpt-6-astra",
+        "effort": "high",
+        "aaiScore": 51,
+        "source": "https://artificialanalysis.ai/models/gpt-6-astra-high",
+        "score": 2.55,
+        "probabilities": {
+          "0": 0.01,
+          "1": 0.05,
+          "2": 0.33,
+          "3": 0.61
+        },
+        "confidence": 0.55,
+        "insufficientMass": 0.060000000000000005,
+        "priceProxy": 0.06,
+        "valid": true,
+        "inScope": false,
+        "eligible": false
+      },
+      {
+        "provider": "claude",
+        "id": "claude-haiku-4-5",
+        "effort": "high",
+        "aaiScore": 17,
+        "source": "https://artificialanalysis.ai/models/claude-4-5-haiku-reasoning",
+        "score": 0.5,
+        "probabilities": {
+          "0": 0.53,
+          "1": 0.44,
+          "2": 0.02,
+          "3": 0.01
+        },
+        "confidence": 0.5,
+        "insufficientMass": 0.97,
+        "priceProxy": 0.006,
+        "valid": true,
+        "inScope": true,
+        "eligible": false
+      },
+      {
+        "provider": "claude",
+        "id": "claude-sonnet-5",
+        "effort": "high",
+        "aaiScore": 38,
+        "source": "https://artificialanalysis.ai/models/claude-sonnet-5",
+        "score": 1.91,
+        "probabilities": {
+          "0": 0.02,
+          "1": 0.25,
+          "2": 0.53,
+          "3": 0.2
+        },
+        "confidence": 0.51,
+        "insufficientMass": 0.27,
+        "priceProxy": 0.012,
+        "valid": true,
+        "inScope": true,
+        "eligible": false
+      },
+      {
+        "provider": "claude",
+        "id": "claude-opus-5",
+        "effort": "high",
+        "aaiScore": 51,
+        "source": "https://artificialanalysis.ai/models/claude-opus-5",
+        "score": 2.79,
+        "probabilities": {
+          "0": 0.01,
+          "1": 0.01,
+          "2": 0.16,
+          "3": 0.82
+        },
+        "confidence": 0.79,
+        "insufficientMass": 0.02,
+        "priceProxy": 0.03,
+        "valid": true,
+        "inScope": true,
+        "eligible": true
+      },
+      {
+        "provider": "claude",
+        "id": "claude-fable-5-1",
+        "effort": "high",
+        "aaiScore": 53,
+        "source": "https://artificialanalysis.ai/models/claude-fable-5-1",
+        "score": 2.87,
+        "probabilities": {
+          "0": 0.01,
+          "1": 0.01,
+          "2": 0.09,
+          "3": 0.89
+        },
+        "confidence": 0.87,
+        "insufficientMass": 0.02,
+        "priceProxy": 0.06,
+        "valid": true,
+        "inScope": true,
+        "eligible": true
+      }
+    ]
+  },
+  "plan": {
+    "provider": "claude",
+    "program": "claude",
+    "args": [
+      "-p",
+      "--model",
+      "claude-opus-5",
+      "--effort",
+      "high",
+      "--output-format",
+      "json",
+      "--tools",
+      "",
+      "--setting-sources",
+      "",
+      "--strict-mcp-config",
+      "--disable-slash-commands",
+      "--no-session-persistence"
+    ],
+    "cwd": "$TMPDIR/jev-model-router-readonly-Il3NY7",
+    "stdin": "제공된 요청과 맥락만 사용해 한국어로 답하세요. 파일 읽기/쓰기, 명령 실행, 네트워크 요청, 외부 도구 호출은 하지 마세요.\n코드 수정 요청이면 수정된 함수와 테스트 코드를 답변에 제시하세요. 실제로 실행하지 않은 테스트를 통과했다고 말하지 마세요.\n다음 JSON의 request가 수행할 요청이고 context는 참고 자료입니다.\n{\"request\":\"결제 서비스의 여러 모듈에 걸친 간헐적 중복 결제 문제를 진단하는 계획을 세워줘. 네트워크 재시도, 웹훅 역순 도착, DB 트랜잭션 충돌을 함께 고려하고, 반례와 멱등성 설계 및 무중단 전환 검증 계획을 비교해줘.\",\"context\":\"실제 시스템 변경 없이 설계 검토와 검증 계획만 요청. 여러 원인과 상충하는 조건을 함께 추론해야 함\"}",
+    "executed": false
+  },
+  "invocation": {
+    "program": "claude",
+    "args": [
+      "-p",
+      "--model",
+      "claude-opus-5",
+      "--effort",
+      "high",
+      "--output-format",
+      "json",
+      "--tools",
+      "",
+      "--setting-sources",
+      "",
+      "--strict-mcp-config",
+      "--disable-slash-commands",
+      "--no-session-persistence"
+    ],
+    "stdin": "제공된 요청과 맥락만 사용해 한국어로 답하세요. 파일 읽기/쓰기, 명령 실행, 네트워크 요청, 외부 도구 호출은 하지 마세요.\n코드 수정 요청이면 수정된 함수와 테스트 코드를 답변에 제시하세요. 실제로 실행하지 않은 테스트를 통과했다고 말하지 마세요.\n다음 JSON의 request가 수행할 요청이고 context는 참고 자료입니다.\n{\"request\":\"결제 서비스의 여러 모듈에 걸친 간헐적 중복 결제 문제를 진단하는 계획을 세워줘. 네트워크 재시도, 웹훅 역순 도착, DB 트랜잭션 충돌을 함께 고려하고, 반례와 멱등성 설계 및 무중단 전환 검증 계획을 비교해줘.\",\"context\":\"실제 시스템 변경 없이 설계 검토와 검증 계획만 요청. 여러 원인과 상충하는 조건을 함께 추론해야 함\"}",
+    "cwd": "$TMPDIR/jev-model-router-readonly-Il3NY7"
+  },
+  "execution": {
+    "status": "COMPLETED",
+    "reasons": [],
+    "diagnostics": [],
+    "exitCode": 0,
+    "elapsedMs": 187161,
+    "requestedModel": "claude-opus-5",
+    "requestedEffort": "high",
+    "reportedModels": [
+      "claude-opus-5"
+    ],
+    "modelVerification": "modelUsage.canonicalModel",
+    "usage": {
+      "input_tokens": 2,
+      "cache_creation_input_tokens": 3434,
+      "cache_read_input_tokens": 531,
+      "output_tokens": 11899,
+      "output_tokens_details": {
+        "thinking_tokens": 5705
+      },
+      "server_tool_use": {
+        "web_search_requests": 0,
+        "web_fetch_requests": 0
+      },
+      "service_tier": "standard",
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 3434,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "inference_geo": "not_available",
+      "iterations": [
+        {
+          "input_tokens": 2,
+          "output_tokens": 11899,
+          "cache_read_input_tokens": 531,
+          "cache_creation_input_tokens": 3434,
+          "cache_creation": {
+            "ephemeral_5m_input_tokens": 0,
+            "ephemeral_1h_input_tokens": 3434
+          },
+          "type": "message"
+        }
+      ],
+      "speed": "standard"
+    },
+    "costUsd": 0.33209049999999996,
+    "durationApiMs": 183903,
+    "response": "# 간헐적 중복 결제 진단 계획\n\n실제 변경 없이 **증거 수집 → 가설 판별 → 설계 비교 → 전환 검증** 순으로 정리했습니다. 아래 내용은 제시된 맥락만으로 구성한 설계 문서이며, 코드 실행이나 테스트 수행은 하지 않았습니다.\n\n---\n\n## 0. 먼저 \"중복\"을 정의해야 합니다\n\n세 층위를 구분하지 않으면 진단이 엉킵니다. 대응 방법이 완전히 다릅니다.\n\n| 층위 | 증상 | 판별 |\n|---|---|---|\n| **L1 실제 이중 청구** | PSP에 승인/매입 2건 | PSP 정산 파일 기준 동일 주문 txn ≥ 2 |\n| **L2 내부 원장 중복** | PSP 1건, 내부 ledger 2건 | PSP 1건인데 내부 payment 레코드 2건 |\n| **L3 표시/알림 중복** | PSP 1, ledger 1, 사용자에겐 2번 | 알림·영수증 발송 로그 |\n\nL1은 네트워크 재시도 + DB 경합, L2는 웹훅 처리, L3는 발송 파이프라인에 주로 기인합니다. **첫 작업은 최근 90일 중복 건을 이 셋으로 분류하고 비율을 내는 것**입니다. 이후 분석은 비율이 큰 쪽에 집중합니다.\n\n---\n\n## 1. 증거 수집 (코드 변경 없이 가능한 범위)\n\n한 건의 중복마다 아래 타임라인을 재구성합니다. 샘플 20~30건이면 패턴이 드러납니다.\n\n**수집 필드**\n- 요청 계층: `trace_id`, 클라이언트 `request_id`/`Idempotency-Key`, 요청 수신 시각, 요청 본문 해시\n- **프록시/LB access log** (핵심): 애플리케이션 로그에 남지 않는 자동 재시도가 여기에만 있습니다 (`nginx proxy_next_upstream`, Envoy `retry_on: reset|gateway-error`, 서비스 메시 기본 재시도, 메시지 큐 redelivery)\n- PSP 계층: 호출 시각, 응답 시각, HTTP 상태/타임아웃 여부, PSP 측 `txn_id`, 전달한 멱등키\n- 웹훅 계층: `event_id`, **PSP가 찍은 `event_created_at`**, 내부 수신 시각, 처리 결과\n- DB 계층: INSERT 시각(ms), 격리 수준, deadlock/serialization failure 로그, 제약 위반 로그, 읽기가 primary였는지 replica였는지\n\n**파생 지표 3개**\n1. 중복 2건의 **시각 간격 분포** — 가설 판별의 1차 분류기\n2. 웹훅 `event_created_at` 순서 vs 수신 순서의 **역전율**\n3. 중복 발생 시점의 **DB 복제 지연·커넥션 풀 포화·PSP p99 지연** 상관\n\n---\n\n## 2. 세 가설의 시그니처와 반례\n\n### 가설 A — 네트워크 재시도\n\n| 항목 | 내용 |\n|---|---|\n| 시그니처 | 두 호출 간격이 타임아웃 값·백오프 스케줄과 일치(예: 3s, 9s). 첫 응답이 타임아웃/5xx. 두 요청의 payload 해시 동일. |\n| 결정적 질문 | **재시도할 때 멱등키가 재생성되는가?** 재시도 주체는 누구인가(앱/브라우저/LB/HTTP 클라이언트 라이브러리/큐)? |\n| 숨은 함정 | 타임아웃은 \"실패\"가 아니라 **결과 미상**입니다. PSP에서는 성공했는데 클라이언트가 재시도하는 경로가 가장 흔한 L1 원인입니다. |\n| **반례** | 두 건 간격이 백오프와 무관하게 분·시간 단위로 흩어져 있음 / **첫 요청이 200 OK를 받았는데도 두 번째가 발생** → 재시도만으로는 설명 불가. 사용자 더블클릭이나 웹훅 기인 재청구를 의심. |\n\n### 가설 B — 웹훅 역순/중복 도착\n\n| 항목 | 내용 |\n|---|---|\n| 시그니처 | `captured`가 `authorized`보다 먼저 도착. 동일 `event_id` 재전송(PSP는 보통 at-least-once). 상태가 후진한 흔적. |\n| 결정적 질문 | 웹훅 핸들러에 **\"상태가 X가 아니면 보정/재청구\"하는 self-heal 로직**이 있는가? 있다면 역순 도착이 곧 중복 결제 트리거입니다. |\n| **반례** | 역순이 관측되어도 상태 머신이 단조(monotonic)라면 중복으로 이어지지 않습니다. **역순 도착은 필요조건이지 충분조건이 아닙니다.** 역순 건수 대비 중복 건수 비율을 반드시 확인하세요. 역순은 많은데 중복이 드물다면, 역순은 단독 원인이 아니라 다른 요인과의 **결합 조건**입니다. |\n\n### 가설 C — DB 트랜잭션 충돌\n\n| 항목 | 내용 |\n|---|---|\n| 시그니처 | 두 INSERT가 수 ms 이내로 겹침. deadlock/serialization failure 로그. |\n| 전형적 결함 | ① `SELECT ... WHERE order_id=? → 없으면 INSERT`(check-then-act)를 READ COMMITTED에서 실행 ② UNIQUE 제약이 없거나 partial index 조건(`WHERE status='active'`) 때문에 회피됨 ③ **중복 체크를 읽기 복제본에서 수행** → 복제 지연으로 미탐지(매우 흔함) ④ 분산 락 TTL 만료 후 원 소유자가 계속 진행(fencing 부재) |\n| **반례** | 두 건의 시각 차가 초 단위 이상이면 경합이 아닙니다. A 또는 B로 무게를 옮기세요. |\n\n### 결합 시나리오 — \"간헐적\"인 이유\n\n단일 원인으로는 발생 빈도가 설명되지 않을 가능성이 높습니다. 가장 유력한 복합 경로:\n\n```\nPSP 응답 타임아웃(A) → 재시도가 다른 인스턴스로 라우팅\n  → 중복 체크가 replica/RC 격리에서 통과(C) → PSP에 2건 생성\n    → 두 웹훅이 역순 도착(B) → 두 번째를 \"새 결제\"로 취급 → ledger에도 2건\n```\n\n세 조건이 동시에 성립할 확률이 낮기 때문에 **간헐적으로만 발현**됩니다. 검증법은 단순합니다 — 재구성한 타임라인에서 세 요소의 동시 발생 여부를 건별로 체크하고, 단독 A·단독 B·단독 C·결합의 분포를 냅니다. 이 분포가 수정 우선순위를 결정합니다.\n\n---\n\n## 3. 멱등성 설계안 비교\n\n| # | 설계 | 강점 | **반례 / 깨지는 조건** |\n|---|---|---|---|\n| 1 | **클라이언트 멱등키 + 키 저장소**<br>(UNIQUE index, Stripe 방식) | 범용적. 재시도에 저장된 응답 재생 가능 | ⒜ 재시도마다 새 키를 만들면 완전 무력화 — 키는 **\"사용자 의도 1회\"**에 묶여야 함(주문 생성 시 발급) ⒝ 요청 fingerprint 불일치를 422로 거부하지 않으면 다른 금액이 같은 키를 덮어씀 ⒞ `in_progress` 레코드가 크래시로 고아가 되면 정상 재시도까지 영구 차단 → lease(TTL)+소유자 토큰 필요 ⒟ **키 TTL 만료 후 지각 재시도**는 다시 통과 → TTL은 (클라이언트 최대 재시도 창 + 웹훅 지연 상한)보다 커야 함 |\n| 2 | **도메인 자연키 UNIQUE**<br>`UNIQUE(order_id, purpose)` | 가장 단순하고 강력. DB가 보장 | 정당한 재결제(부분 취소 후 재청구, 분할 결제, 결제수단 변경 재시도)를 차단 → 차원 설계 필수. `order_id`를 클라이언트가 생성하면 #1의 문제로 환원 |\n| 3 | **상태 머신 + 조건부 UPDATE(CAS)**<br>`WHERE status='authorized' AND version=?` | 웹훅 역순에 강함. 단조 전진만 허용 | 동일 rank 이벤트가 복수인 경우(부분 capture 2회, refund·capture 병행)는 단조성만으로 부족 → `UNIQUE(event_id)` 처리 이력 테이블 병행 필요 |\n| 4 | **Outbox + 파티션 단일 writer**<br>(order_id 해시로 직렬화) | 경합 자체를 제거 | 리밸런싱 중 두 컨슈머가 겹치는 순간 존재(revoke 지연) → fencing token 필요. 핫 파티션·지연 트레이드오프 |\n| 5 | **분산 락(Redis 등)** | 구현 빠름, 경합 완화 | GC pause·네트워크 지연 조합에서 상호배제가 깨짐(Redlock 논쟁). **금전적 불변식을 락에만 의존하면 안 됨** — 락은 최적화, 정확성은 DB 제약이 보장 |\n\n### 권고: 다층 방어\n\n1. **최종 방어선 — DB UNIQUE 제약.** 정확성을 실제로 보장하는 건 이것뿐입니다. `INSERT ... ON CONFLICT DO NOTHING`으로 check-then-act를 원자적 연산으로 대체하세요.\n2. **PSP 호출에도 멱등키 전달** (PSP 지원 시). 이게 빠진 설계가 많은데, **\"내부 기록 커밋 전에 프로세스가 죽는 구간\"은 PSP 측 멱등키로만 막을 수 있습니다.** 내부 DB만으로는 이 구간이 원리적으로 열려 있습니다.\n3. **웹훅**: `UNIQUE(event_id)` + 단조 상태 전이. 순서 판정은 **PSP 제공 시퀀스/상태 rank 우선**, 타임스탬프는 보조 — 타임스탬프 기반 폐기는 클럭 스큐에 취약합니다.\n4. 락·파티셔닝은 경합 완화용 보조로만.\n5. **일별 정산 대조(reconciliation)** — 어떤 설계를 택하든 최종 안전망. PSP 정산 파일 vs 내부 ledger.\n\n---\n\n## 4. 적대적 테스트 케이스 (검증 계획의 입력)\n\n아래는 **작성할 테스트 목록**이며, 아직 실행하거나 통과를 확인하지 않았습니다.\n\n**동시성**\n- 동일 키 동시 2요청 — 같은 인스턴스 / 다른 인스턴스 각각\n- barrier/latch로 두 스레드를 INSERT 직전에 정렬시켜 경합을 결정적으로 재현\n\n**크래시·부분 실패**\n- PSP 호출 성공 직후 프로세스 kill → 재시도 도착\n- PSP 응답이 타임아웃이지만 실제로는 성공\n- DB failover 중 커밋 손실 → 키 레코드는 사라지고 PSP에는 남음\n\n**웹훅**\n- `captured`가 `authorized`보다 먼저 도착\n- 동일 `event_id` 3회 재전송\n- 수 시간 지연된 이벤트가 **키 TTL 초과 후** 도착\n- 서버 간 클럭 역전 시 정상 이벤트가 stale로 폐기되지 않는지\n\n**거짓 양성 (반드시 포함)**\n- 서로 다른 금액이 같은 키로 오면 422 거부\n- 정당한 2차 결제(같은 order, 다른 purpose)가 차단되지 **않는지**\n- 고아 `in_progress` 레코드가 정상 재시도를 영구 차단하지 않는지\n\n테스트 스켈레톤 예시:\n\n```python\ndef test_concurrent_same_key_creates_single_payment(barrier):\n    # 두 워커를 INSERT 직전에 정렬시켜 경합을 결정적으로 강제\n    results = run_parallel(\n        lambda: charge(idem_key=\"K1\", order_id=\"O1\", amount=1000, barrier=barrier),\n        lambda: charge(idem_key=\"K1\", order_id=\"O1\", amount=1000, barrier=barrier),\n    )\n    assert psp_stub.call_count(\"O1\") == 1\n    assert db.count(\"payments\", order_id=\"O1\") == 1\n    assert sorted(r.status for r in results) == [200, 200]  # 두 번째는 저장된 응답 재생\n\ndef test_different_amount_same_key_is_rejected():\n    charge(idem_key=\"K2\", order_id=\"O2\", amount=1000)\n    r = charge(idem_key=\"K2\", order_id=\"O2\", amount=9999)\n    assert r.status == 422 and psp_stub.call_count(\"O2\") == 1\n\ndef test_webhook_out_of_order_does_not_regress_state():\n    deliver_webhook(event_id=\"e2\", type=\"captured\",   created_at=t1)\n    deliver_webhook(event_id=\"e1\", type=\"authorized\", created_at=t0)  # 역순\n    assert db.get(\"payments\", \"O3\").status == \"captured\"\n    assert psp_stub.call_count(\"O3\") == 1  # self-heal 재청구가 없어야 함\n```\n\n---\n\n## 5. 무중단 전환 검증 계획\n\n| Phase | 내용 | 통과 기준 / 중단 조건 |\n|---|---|---|\n| **0. 관측** | 동작 변경 없이 키 생성·전파 로깅, 중복 후보 탐지기 가동 | 세 층위(L1/L2/L3) 분류 완료, 기준선 중복률 확정 |\n| **1. Shadow** | 새 멱등 레이어가 \"차단했을 것\"만 기록, 실제 차단은 안 함 | 차단 후보 중 실제 중복 비율 측정. **정당 요청 오탐 0건**이 아니면 진행 금지 |\n| **2. 스키마** | 컬럼은 nullable 추가, `CREATE UNIQUE INDEX CONCURRENTLY` 후 제약 validate | **기존 중복 데이터가 남아 있으면 인덱스 생성이 실패합니다** → 사전 백필·정리 필수 |\n| **3. Dual-write** | 구/신 경로 동시 기록, 읽기는 구 경로 | 정합성 diff율 < 임계치 |\n| **4. 카나리** | 1% → 5% → 25% → 100% | 결제 성공률 하락 < 0.05%p, p99 증가 < 목표치, 오탐 차단 0건 |\n| **5. 정리** | 구 경로 제거, 키 TTL 정리 잡 가동 | 정산 대조 이상 0건 유지 |\n\n**카나리 단계의 치명적 함정:** 트래픽 라우팅을 랜덤으로 하면 **같은 주문의 원 요청과 재시도가 구/신 경로로 갈라져 오히려 중복을 유발합니다.** 반드시 `order_id` 해시 기준 sticky 라우팅이어야 합니다. 이 항목 하나가 전환 계획 전체의 성패를 가릅니다.\n\n**롤백 설계:** 각 단계는 feature flag로 즉시 off. 단 UNIQUE 제약은 롤백해도 데이터가 남으므로 **가장 마지막에 넣고 되돌리지 않는 방향**으로 잡으세요. Phase 2 이후 롤백 시에는 \"신 경로가 쓴 키 레코드를 구 경로가 무시해도 안전한가\"를 별도 확인해야 합니다.\n\n**장애 주입 도구:** PSP 스텁(지연·타임아웃·중복 응답 주입), 웹훅 재생기(순서 셔플·중복 전송), DB 프록시(복제 지연·failover 시뮬레이션).\n\n---\n\n## 실행 순서 요약\n\n1. 중복 건 L1/L2/L3 분류 (1일)\n2. 샘플 20~30건 타임라인 재구성 → A/B/C/결합 분포 확정 (2~3일)\n3. 분포에 따라 설계 선택 — 다만 **DB UNIQUE + PSP 멱등키**는 어느 경우든 포함\n4. 적대적 테스트 작성 (거짓 양성 케이스 포함)\n5. Phase 0~5 순차 전환, 정산 대조는 상시 가동\n\n가장 흔히 누락되는 두 지점만 다시 강조하면, **프록시 계층의 보이지 않는 자동 재시도**와 **내부 커밋 전 크래시 구간(PSP 멱등키로만 막힘)**입니다. 2단계 타임라인 재구성 시 이 둘을 명시적으로 확인하세요.",
+    "stderrOmitted": true
+  },
+  "validation": {
+    "status": "RUN",
+    "kind": "coverage_only",
+    "passed": null,
+    "coverage": 1,
+    "checks": [
+      {
+        "name": "network_retry",
+        "passed": true
+      },
+      {
+        "name": "webhook_order",
+        "passed": true
+      },
+      {
+        "name": "db_transaction",
+        "passed": true
+      },
+      {
+        "name": "counterexample",
+        "passed": true
+      },
+      {
+        "name": "idempotency",
+        "passed": true
+      },
+      {
+        "name": "zero_downtime",
+        "passed": true
+      }
+    ],
+    "note": "요구 항목 언급 여부만 확인. 설계의 정확성·실제 시스템 안전성은 검증하지 않음.",
+    "modelSelfReportedTestsAreEvidence": false
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "id": "jev-router",
+  "name": "Jev Router",
+  "description": "메시지마다 Jev에 한 번 물어 스팸·되묻기·대화·작업으로 나누고, 모델 호출 전에 처리한다.",
+  "version": "1.0.0",
+  "activation": { "onStartup": true },
+  "configSchema": {
+    "type": "object",
+    "additionalProperties": false,
+    "properties": {
+      "lightModel": { "type": "string", "description": "대화(chat)로 판정된 턴에 쓸 가벼운 모델(provider/model). 비우면 모델을 바꾸지 않는다" },
+      "minRouteP": { "type": "number", "minimum": 0, "maximum": 1, "description": "route 확률이 이보다 낮으면 아무것도 하지 않고 원래대로(기본 0.6)" },
+      "minSpamP": { "type": "number", "minimum": 0, "maximum": 1, "description": "스팸으로 조용히 처리할 최소 확률(기본 0.8)" },
+      "silenceSpam": { "type": "boolean", "description": "스팸이면 답하지 않는다(기본 true)" },
+      "askWhenUnclear": { "type": "boolean", "description": "애매한 요청이면 모델 대신 되묻는다(기본 true)" },
+      "clarifyText": { "type": "string", "description": "되물을 때 보낼 문장" },
+      "keyFile": { "type": "string", "description": "TYPESAFE_API_KEY를 읽을 .env 경로. 게이트웨이 환경변수가 먼저, 상대 경로는 OpenClaw 상태 폴더 기준" },
+      "baseUrl": { "type": "string", "description": "Jev 호환 서버 주소(기본 https://api.typesafe.ai). 3강 로컬 서버로 바꿀 때" },
+      "logFile": { "type": "string", "description": "판정 기록 JSONL 경로(비우면 기록 안 함, 상대 경로는 OpenClaw 상태 폴더 기준). 메시지 본문은 남기지 않는다" }
+    }
+  }
+}

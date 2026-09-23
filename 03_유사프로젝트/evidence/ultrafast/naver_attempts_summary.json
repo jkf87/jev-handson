@@ -1,0 +1,354 @@
+{
+ "_about": "네이버 항공권 시도 13회의 숫자 요약. 원본(state.json·화면)은 사용자의 실제 Chrome에서 돌아 강의 폴더에서 뺐다.",
+ "runs": [
+  {
+   "run": "naver-mobile-run1",
+   "status": "done",
+   "jev_decisions": 7,
+   "executed_actions": 6,
+   "elapsed_ms": 6782,
+   "wall_seconds": 11.52,
+   "executed": [
+    "CLICK 도착지 도시, 공항 검색 p=0.92",
+    "CLICK 제주 p=0.65",
+    "CLICK 편도 p=0.72",
+    "CLICK 가는 날 p=0.93",
+    "CLICK 2026년 10월 20일 p=0.81",
+    "CLICK 검색 p=0.88"
+   ],
+   "verification": {
+    "passed": false,
+    "checks": {
+     "results_url": true,
+     "route": true,
+     "date": true,
+     "one_way": true,
+     "results_visible": false
+    }
+   },
+   "note": "모바일 화면으로 전환 → 동작 6회·6.8초에 검색까지 성공. 그러나 결과 로딩 전에 DONE(p=0.36)으로 조기 종료",
+   "done_gate_console": "DONE 게이트 없음: 검색 직후 DONE p=0.36으로 종료(결과 로딩 중, results_visible=false)"
+  },
+  {
+   "run": "naver-mobile-run2",
+   "status": "done",
+   "jev_decisions": 4,
+   "executed_actions": 3,
+   "elapsed_ms": 4384,
+   "wall_seconds": 6.49,
+   "executed": [
+    "CLICK 검색 p=0.48",
+    "WAIT Wait for the page to upd p=0.17",
+    "WAIT Wait for the page to upd p=0.09"
+   ],
+   "verification": {
+    "passed": true,
+    "checks": {
+     "results_url": true,
+     "route": true,
+     "date": true,
+     "one_way": true,
+     "results_visible": true
+    }
+   },
+   "note": "DONE 확률 0.6 미만이면 WAIT로 바꾸는 규칙 추가 → 통과(단, 직전 검색이 입력칸에 남아 있던 상태)",
+   "done_gate_console": "DONE p=0.44, 0.46 → WAIT 두 번 → 결과가 뜬 뒤 완료(검증 5/5)"
+  },
+  {
+   "run": "naver-mobile-run3",
+   "status": "done",
+   "jev_decisions": 6,
+   "executed_actions": 2,
+   "elapsed_ms": 4403,
+   "wall_seconds": 6.74,
+   "executed": [
+    "CLICK 검색 p=0.44",
+    "WAIT Wait for the page to upd p=0.17"
+   ],
+   "verification": {
+    "passed": true,
+    "checks": {
+     "results_url": true,
+     "route": true,
+     "date": true,
+     "one_way": true,
+     "results_visible": true
+    }
+   },
+   "note": "사이트 데이터 삭제 시도(실제 Chrome에 적용됨). 입력칸 미리 채워진 상태 그대로",
+   "done_gate_console": "DONE p=0.40, 0.44, 0.49 → WAIT 세 번 → 완료(검증 5/5)"
+  },
+  {
+   "run": "naver-mobile-run4-clean",
+   "status": "done",
+   "jev_decisions": 3,
+   "executed_actions": 2,
+   "elapsed_ms": 4429,
+   "wall_seconds": 8.47,
+   "executed": [
+    "CLICK 검색 p=0.47",
+    "WAIT Wait for the page to upd p=0.20"
+   ],
+   "verification": {
+    "passed": true,
+    "checks": {
+     "results_url": true,
+     "route": true,
+     "date": true,
+     "one_way": true,
+     "results_visible": true
+    }
+   },
+   "note": "새 프로필이라 여겼으나 기본 데몬이 실제 Chrome에 연결된 상태였음",
+   "done_gate_console": "DONE p=0.45 → WAIT 한 번 → 완료(검증 5/5)"
+  },
+  {
+   "run": "naver-run1",
+   "status": "predicted",
+   "jev_decisions": 94,
+   "executed_actions": 2,
+   "elapsed_ms": 29854,
+   "wall_seconds": 43.35,
+   "executed": [
+    "CLICK 편도 p=0.94",
+    "CLICK 도착지 도시, 공항 검색 p=0.95"
+   ],
+   "verification": {
+    "passed": false,
+    "checks": {
+     "results_url": false,
+     "route": false,
+     "date": false,
+     "one_way": true,
+     "results_visible": false
+    }
+   },
+   "note": "데스크톱, 영어 목표. 첫 화면이 계속 바뀌어 판단 무효화 반복 + 편도/다구간 사이에서 흔들림. 도착지 입력에서 글자 도우미 빈 값"
+  },
+  {
+   "run": "naver-run2",
+   "status": "blocked",
+   "jev_decisions": 101,
+   "executed_actions": 60,
+   "elapsed_ms": 153140,
+   "wall_seconds": 154.72,
+   "executed": [
+    "CLICK 도착지 도시, 공항 검색 p=0.91",
+    "TYPE_TEXT 국가, 도시, 공항명 검색 p=1.00",
+    "CLICK 편도 p=0.74",
+    "CLICK 가는 날 p=0.86",
+    "CLICK 가는 날 p=0.52",
+    "CLICK 가는 날 p=0.57",
+    "CLICK 가는 날 p=0.61",
+    "CLICK 가는 날 p=0.62",
+    "CLICK 가는 날 p=0.57",
+    "CLICK 가는 날 p=0.60",
+    "CLICK 가는 날 p=0.59",
+    "CLICK 도착지 도시, 공항 검색 p=0.45"
+   ],
+   "verification": {
+    "passed": false,
+    "checks": {
+     "results_url": false,
+     "route": false,
+     "date": false,
+     "one_way": true,
+     "results_visible": false
+    }
+   },
+   "note": "한글 병기 목표. 자동완성(0.6초 뒤 표시)을 못 기다려 '가는 날'로 넘어가는 루프, 60단계 예산 초과"
+  },
+  {
+   "run": "naver-run3",
+   "status": "blocked",
+   "jev_decisions": 64,
+   "executed_actions": 60,
+   "elapsed_ms": 42195,
+   "wall_seconds": 48.65,
+   "executed": [
+    "CLICK 도착지 도시, 공항 검색 p=0.92",
+    "TYPE_TEXT 국가, 도시, 공항명 검색 p=1.00",
+    "CLICK 제주 국제공항   CJU p=0.83",
+    "CLICK 편도 p=0.93",
+    "CLICK 가는 날 p=0.93",
+    "CLICK 가는 날 p=0.38",
+    "CLICK 가는 날 p=0.52",
+    "CLICK 가는 날 p=0.58",
+    "CLICK 가는 날 p=0.58",
+    "CLICK 가는 날 p=0.55",
+    "CLICK 가는 날 p=0.57",
+    "CLICK 가는 날 p=0.59"
+   ],
+   "verification": {
+    "passed": false,
+    "checks": {
+     "results_url": false,
+     "route": false,
+     "date": false,
+     "one_way": true,
+     "results_visible": false
+    }
+   },
+   "note": "입력 뒤 0.8초 대기 추가 → 제주 CJU 선택 성공. 달력 날짜가 요소 표에 없어 '가는 날' 반복"
+  },
+  {
+   "run": "naver-run4",
+   "status": "predicted",
+   "jev_decisions": 2,
+   "executed_actions": 1,
+   "elapsed_ms": 1640,
+   "wall_seconds": 7.78,
+   "executed": [
+    "CLICK 도착지 도시, 공항 검색 p=0.88"
+   ],
+   "verification": {
+    "passed": false,
+    "checks": {
+     "results_url": false,
+     "route": false,
+     "date": false,
+     "one_way": true,
+     "results_visible": false
+    }
+   },
+   "note": "9/30로 날짜 변경. 글자 도우미가 빈 값(온도 기본값)"
+  },
+  {
+   "run": "naver-run5",
+   "status": "blocked",
+   "jev_decisions": 61,
+   "executed_actions": 60,
+   "elapsed_ms": 36887,
+   "wall_seconds": 41.98,
+   "executed": [
+    "CLICK 도착지 도시, 공항 검색 p=0.89",
+    "TYPE_TEXT 국가, 도시, 공항명 검색 p=1.00",
+    "CLICK 제주 국제공항   CJU p=0.86",
+    "CLICK 편도 p=0.87",
+    "CLICK 가는 날 p=0.95",
+    "CLICK 가는 날 p=0.54",
+    "CLICK 가는 날 p=0.61",
+    "CLICK 가는 날 p=0.57",
+    "CLICK 가는 날 p=0.60",
+    "CLICK 가는 날 p=0.57",
+    "CLICK 가는 날 p=0.54",
+    "CLICK 가는 날 p=0.57"
+   ],
+   "verification": {
+    "passed": false,
+    "checks": {
+     "results_url": false,
+     "route": false,
+     "date": false,
+     "one_way": true,
+     "results_visible": false
+    }
+   },
+   "note": "온도 0. 여전히 '가는 날' 반복 — 창 높이 780px라 달력 첫 줄만 요소 표에 들어옴"
+  },
+  {
+   "run": "naver-run6",
+   "status": "ready",
+   "jev_decisions": 32,
+   "executed_actions": 4,
+   "elapsed_ms": 15253,
+   "wall_seconds": 17.61,
+   "executed": [
+    "CLICK 도착지 도시, 공항 검색 p=0.85",
+    "CLICK 제주 p=0.63",
+    "CLICK 편도 p=0.82",
+    "CLICK 가는 날 p=0.92"
+   ],
+   "verification": {
+    "passed": false,
+    "checks": {
+     "results_url": false,
+     "route": false,
+     "date": false,
+     "one_way": true,
+     "results_visible": true
+    }
+   },
+   "note": "화면 1280x1500. Jev는 10/20(‘20 3.4만’)을 0.60으로 골랐지만 최저가가 계속 채워져 클릭이 매번 취소됨"
+  },
+  {
+   "run": "naver-run7",
+   "status": "ready",
+   "jev_decisions": 120,
+   "executed_actions": 4,
+   "elapsed_ms": 52010,
+   "wall_seconds": 53.47,
+   "executed": [
+    "CLICK 도착지 도시, 공항 검색 p=0.81",
+    "CLICK 제주 p=0.61",
+    "CLICK 편도 p=0.78",
+    "CLICK 가는 날 p=0.93"
+   ],
+   "verification": {
+    "passed": false,
+    "checks": {
+     "results_url": false,
+     "route": false,
+     "date": false,
+     "one_way": true,
+     "results_visible": true
+    }
+   },
+   "note": "날짜 버튼 이름 보강(2026년 10월 20일) → Jev 0.71. 그러나 판단 120회 중 실행 4회(화면 계속 변함)"
+  },
+  {
+   "run": "naver-run8",
+   "status": "ready",
+   "jev_decisions": 120,
+   "executed_actions": 4,
+   "elapsed_ms": 55746,
+   "wall_seconds": 58.19,
+   "executed": [
+    "CLICK 도착지 도시, 공항 검색 p=0.85",
+    "CLICK 제주 p=0.55",
+    "CLICK 편도 p=0.82",
+    "CLICK 가는 날 p=0.91"
+   ],
+   "verification": {
+    "passed": false,
+    "checks": {
+     "results_url": false,
+     "route": false,
+     "date": false,
+     "one_way": true,
+     "results_visible": true
+    }
+   },
+   "note": "동작 뒤 DOM 정지 대기 추가. 효과 없음(막힌 곳은 재관찰 경로)"
+  },
+  {
+   "run": "naver-run9",
+   "status": "ready",
+   "jev_decisions": 120,
+   "executed_actions": 4,
+   "elapsed_ms": 94311,
+   "wall_seconds": 97.12,
+   "executed": [
+    "CLICK 도착지 도시, 공항 검색 p=0.83",
+    "CLICK 제주 p=0.58",
+    "CLICK 편도 p=0.81",
+    "CLICK 가는 날 p=0.91"
+   ],
+   "verification": {
+    "passed": false,
+    "checks": {
+     "results_url": false,
+     "route": false,
+     "date": false,
+     "one_way": true,
+     "results_visible": true
+    }
+   },
+   "note": "관찰 직전 DOM 정지 대기. 여전히 판단 120회 중 실행 4회"
+  }
+ ],
+ "_isolated_reruns": {
+  "naver-mobile (녹화)": "격리 Chrome, 동작 6·판단 74(첫 화면 이벤트 팝업·녹화로 지연), DONE 0.96, 검증 5/5",
+  "naver-mobile-timing": "격리 Chrome, 8.5초, 동작 6·판단 11, DONE 0.94, 검증 5/5"
+ }
+}

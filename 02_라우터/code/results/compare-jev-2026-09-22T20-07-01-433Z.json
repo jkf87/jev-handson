@@ -1,0 +1,1659 @@
+{
+ "summary": {
+  "engine": "jev",
+  "model": "jev-1.13.0",
+  "n": 40,
+  "actionAcc": 0.925,
+  "routeAcc": 0.975,
+  "formatErrors": 0,
+  "fenced": 0,
+  "p50ms": 247,
+  "p95ms": 559,
+  "avgInputTokens": 829,
+  "avgOutputTokens": 117,
+  "totalCostUsd": 0.0013923420000000002,
+  "costPer1kUsd": 0.03480855000000001
+ },
+ "out": [
+  {
+   "id": "m01",
+   "expected": "reply",
+   "got": "reply",
+   "routeGot": "chat",
+   "formatError": false,
+   "latencyMs": 596,
+   "inputTokens": 827,
+   "outputTokens": 116,
+   "costUsd": 0.000034734,
+   "model": "jev-1.13.0",
+   "raw": {
+    "route": {
+     "type": "choice",
+     "choice": "chat",
+     "confidence": 1,
+     "probabilities": {
+      "spam": 0,
+      "task": 0,
+      "chat": 1,
+      "unclear": 0
+     }
+    },
+    "target": {
+     "type": "choice",
+     "choice": "none",
+     "confidence": 1,
+     "probabilities": {
+      "gpu_worker": 0,
+      "scheduler": 0,
+      "none": 1,
+      "codex": 0,
+      "claude_code": 0
+     }
+    },
+    "confirm": {
+     "type": "noul",
+     "noul": 0.03
+    }
+   }
+  },
+  {
+   "id": "m02",
+   "expected": "reply",
+   "got": "reply",
+   "routeGot": "chat",
+   "formatError": false,
+   "latencyMs": 559,
+   "inputTokens": 819,
+   "outputTokens": 116,
+   "costUsd": 0.000034398000000000005,
+   "model": "jev-1.13.0",
+   "raw": {
+    "route": {
+     "type": "choice",
+     "choice": "chat",
+     "confidence": 1,
+     "probabilities": {
+      "unclear": 0,
+      "chat": 1,
+      "spam": 0,
+      "task": 0
+     }
+    },
+    "target": {
+     "type": "choice",
+     "choice": "none",
+     "confidence": 1,
+     "probabilities": {
+      "claude_code": 0,
+      "codex": 0,
+      "scheduler": 0,
+      "none": 1,
+      "gpu_worker": 0
+     }
+    },
+    "confirm": {
+     "type": "noul",
+     "noul": 0.02
+    }
+   }
+  },
+  {
+   "id": "m03",
+   "expected": "reply",
+   "got": "reply",
+   "routeGot": "chat",
+   "formatError": false,
+   "latencyMs": 220,
+   "inputTokens": 828,
+   "outputTokens": 116,
+   "costUsd": 0.000034776,
+   "model": "jev-1.13.0",
+   "raw": {
+    "route": {
+     "type": "choice",
+     "choice": "chat",
+     "confidence": 1,
+     "probabilities": {
+      "spam": 0,
+      "chat": 1,
+      "unclear": 0,
+      "task": 0
+     }
+    },
+    "target": {
+     "type": "choice",
+     "choice": "none",
+     "confidence": 0.51,
+     "probabilities": {
+      "scheduler": 0,
+      "codex": 0,
+      "gpu_worker": 0,
+      "none": 0.61,
+      "claude_code": 0.39
+     }
+    },
+    "confirm": {
+     "type": "noul",
+     "noul": 0.02
+    }
+   }
+  },
+  {
+   "id": "m04",
+   "expected": "reply",
+   "got": "reply",
+   "routeGot": "chat",
+   "formatError": false,
+   "latencyMs": 288,
+   "inputTokens": 820,
+   "outputTokens": 116,
+   "costUsd": 0.00003444,
+   "model": "jev-1.13.0",
+   "raw": {
+    "route": {
+     "type": "choice",
+     "choice": "chat",
+     "confidence": 1,
+     "probabilities": {
+      "chat": 1,
+      "task": 0,
+      "unclear": 0,
+      "spam": 0
+     }
+    },
+    "target": {
+     "type": "choice",
+     "choice": "none",
+     "confidence": 1,
+     "probabilities": {
+      "scheduler": 0,
+      "gpu_worker": 0,
+      "none": 1,
+      "claude_code": 0,
+      "codex": 0
+     }
+    },
+    "confirm": {
+     "type": "noul",
+     "noul": 0.03
+    }
+   }
+  },
+  {
+   "id": "m05",
+   "expected": "reply",
+   "got": "reply",
+   "routeGot": "chat",
+   "formatError": false,
+   "latencyMs": 219,
+   "inputTokens": 827,
+   "outputTokens": 116,
+   "costUsd": 0.000034734,
+   "model": "jev-1.13.0",
+   "raw": {
+    "route": {
+     "type": "choice",
+     "choice": "chat",
+     "confidence": 1,
+     "probabilities": {
+      "chat": 1,
+      "unclear": 0,
+      "task": 0,
+      "spam": 0
+     }
+    },
+    "target": {
+     "type": "choice",
+     "choice": "none",
+     "confidence": 0.65,
+     "probabilities": {
+      "gpu_worker": 0,
+      "none": 0.72,
+      "codex": 0.04,
+      "claude_code": 0.24,
+      "scheduler": 0
+     }
+    },
+    "confirm": {
+     "type": "noul",
+     "noul": 0.02
+    }
+   }
+  },
+  {
+   "id": "m06",
+   "expected": "reply",
+   "got": "reply",
+   "routeGot": "chat",
+   "formatError": false,
+   "latencyMs": 225,
+   "inputTokens": 818,
+   "outputTokens": 116,
+   "costUsd": 0.000034356,
+   "model": "jev-1.13.0",
+   "raw": {
+    "route": {
+     "type": "choice",
+     "choice": "chat",
+     "confidence": 1,
+     "probabilities": {
+      "unclear": 0,
+      "spam": 0,
+      "chat": 1,
+      "task": 0
+     }
+    },
+    "target": {
+     "type": "choice",
+     "choice": "none",
+     "confidence": 1,
+     "probabilities": {
+      "scheduler": 0,
+      "claude_code": 0,
+      "gpu_worker": 0,
+      "none": 1,
+      "codex": 0
+     }
+    },
+    "confirm": {
+     "type": "noul",
+     "noul": 0.03
+    }
+   }
+  },
+  {
+   "id": "m07",
+   "expected": "reply",
+   "got": "reply",
+   "routeGot": "chat",
+   "formatError": false,
+   "latencyMs": 249,
+   "inputTokens": 827,
+   "outputTokens": 116,
+   "costUsd": 0.000034734,
+   "model": "jev-1.13.0",
+   "raw": {
+    "route": {
+     "type": "choice",
+     "choice": "chat",
+     "confidence": 1,
+     "probabilities": {
+      "chat": 1,
+      "unclear": 0,
+      "spam": 0,
+      "task": 0
+     }
+    },
+    "target": {
+     "type": "choice",
+     "choice": "none",
+     "confidence": 1,
+     "probabilities": {
+      "none": 1,
+      "gpu_worker": 0,
+      "codex": 0,
+      "claude_code": 0,
+      "scheduler": 0
+     }
+    },
+    "confirm": {
+     "type": "noul",
+     "noul": 0.03
+    }
+   }
+  },
+  {
+   "id": "m08",
+   "expected": "reply",
+   "got": "reply",
+   "routeGot": "chat",
+   "formatError": false,
+   "latencyMs": 233,
+   "inputTokens": 841,
+   "outputTokens": 116,
+   "costUsd": 0.000035322000000000005,
+   "model": "jev-1.13.0",
+   "raw": {
+    "route": {
+     "type": "choice",
+     "choice": "chat",
+     "confidence": 1,
+     "probabilities": {
+      "spam": 0,
+      "chat": 1,
+      "task": 0,
+      "unclear": 0
+     }
+    },
+    "target": {
+     "type": "choice",
+     "choice": "none",
+     "confidence": 0.98,
+     "probabilities": {
+      "scheduler": 0,
+      "codex": 0,
+      "gpu_worker": 0,
+      "none": 0.99,
+      "claude_code": 0.01
+     }
+    },
+    "confirm": {
+     "type": "noul",
+     "noul": 0.03
+    }
+   }
+  },
+  {
+   "id": "m09",
+   "expected": "reply",
+   "got": "reply",
+   "routeGot": "chat",
+   "formatError": false,
+   "latencyMs": 222,
+   "inputTokens": 820,
+   "outputTokens": 116,
+   "costUsd": 0.00003444,
+   "model": "jev-1.13.0",
+   "raw": {
+    "route": {
+     "type": "choice",
+     "choice": "chat",
+     "confidence": 1,
+     "probabilities": {
+      "task": 0,
+      "chat": 1,
+      "unclear": 0,
+      "spam": 0
+     }
+    },
+    "target": {
+     "type": "choice",
+     "choice": "none",
+     "confidence": 1,
+     "probabilities": {
+      "scheduler": 0,
+      "gpu_worker": 0,
+      "none": 1,
+      "claude_code": 0,
+      "codex": 0
+     }
+    },
+    "confirm": {
+     "type": "noul",
+     "noul": 0.03
+    }
+   }
+  },
+  {
+   "id": "m10",
+   "expected": "reply",
+   "got": "reply",
+   "routeGot": "chat",
+   "formatError": false,
+   "latencyMs": 212,
+   "inputTokens": 822,
+   "outputTokens": 116,
+   "costUsd": 0.000034524000000000004,
+   "model": "jev-1.13.0",
+   "raw": {
+    "route": {
+     "type": "choice",
+     "choice": "chat",
+     "confidence": 0.99,
+     "probabilities": {
+      "unclear": 0,
+      "spam": 0,
+      "chat": 1,
+      "task": 0
+     }
+    },
+    "target": {
+     "type": "choice",
+     "choice": "none",
+     "confidence": 0.81,
+     "probabilities": {
+      "scheduler": 0.15,
+      "claude_code": 0.01,
+      "gpu_worker": 0,
+      "none": 0.84,
+      "codex": 0
+     }
+    },
+    "confirm": {
+     "type": "noul",
+     "noul": 0.03
+    }
+   }
+  },
+  {
+   "id": "m11",
+   "expected": "reply",
+   "got": "reply",
+   "routeGot": "chat",
+   "formatError": false,
+   "latencyMs": 285,
+   "inputTokens": 829,
+   "outputTokens": 116,
+   "costUsd": 0.000034818000000000004,
+   "model": "jev-1.13.0",
+   "raw": {
+    "route": {
+     "type": "choice",
+     "choice": "chat",
+     "confidence": 1,
+     "probabilities": {
+      "unclear": 0,
+      "spam": 0,
+      "chat": 1,
+      "task": 0
+     }
+    },
+    "target": {
+     "type": "choice",
+     "choice": "none",
+     "confidence": 0.75,
+     "probabilities": {
+      "scheduler": 0,
+      "claude_code": 0.18,
+      "gpu_worker": 0,
+      "none": 0.79,
+      "codex": 0.03
+     }
+    },
+    "confirm": {
+     "type": "noul",
+     "noul": 0.01
+    }
+   }
+  },
+  {
+   "id": "m12",
+   "expected": "reply",
+   "got": "reply",
+   "routeGot": "chat",
+   "formatError": false,
+   "latencyMs": 243,
+   "inputTokens": 825,
+   "outputTokens": 116,
+   "costUsd": 0.00003465000000000001,
+   "model": "jev-1.13.0",
+   "raw": {
+    "route": {
+     "type": "choice",
+     "choice": "chat",
+     "confidence": 1,
+     "probabilities": {
+      "unclear": 0,
+      "task": 0,
+      "chat": 1,
+      "spam": 0
+     }
+    },
+    "target": {
+     "type": "choice",
+     "choice": "none",
+     "confidence": 1,
+     "probabilities": {
+      "scheduler": 0,
+      "codex": 0,
+      "claude_code": 0,
+      "gpu_worker": 0,
+      "none": 1
+     }
+    },
+    "confirm": {
+     "type": "noul",
+     "noul": 0.04
+    }
+   }
+  },
+  {
+   "id": "m13",
+   "expected": "dispatch:codex",
+   "got": "dispatch:codex",
+   "routeGot": "task",
+   "formatError": false,
+   "latencyMs": 220,
+   "inputTokens": 831,
+   "outputTokens": 117,
+   "costUsd": 0.000034902,
+   "model": "jev-1.13.0",
+   "raw": {
+    "route": {
+     "type": "choice",
+     "choice": "task",
+     "confidence": 0.92,
+     "probabilities": {
+      "unclear": 0.04,
+      "task": 0.94,
+      "chat": 0.02,
+      "spam": 0
+     }
+    },
+    "target": {
+     "type": "choice",
+     "choice": "codex",
+     "confidence": 0.87,
+     "probabilities": {
+      "scheduler": 0,
+      "codex": 0.9,
+      "claude_code": 0,
+      "gpu_worker": 0,
+      "none": 0.1
+     }
+    },
+    "confirm": {
+     "type": "noul",
+     "noul": 0.1
+    }
+   }
+  },
+  {
+   "id": "m14",
+   "expected": "dispatch:claude_code",
+   "got": "dispatch:claude_code",
+   "routeGot": "task",
+   "formatError": false,
+   "latencyMs": 222,
+   "inputTokens": 830,
+   "outputTokens": 118,
+   "costUsd": 0.00003486,
+   "model": "jev-1.13.0",
+   "raw": {
+    "route": {
+     "type": "choice",
+     "choice": "task",
+     "confidence": 0.72,
+     "probabilities": {
+      "spam": 0,
+      "task": 0.79,
+      "chat": 0.02,
+      "unclear": 0.19
+     }
+    },
+    "target": {
+     "type": "choice",
+     "choice": "claude_code",
+     "confidence": 0.8,
+     "probabilities": {
+      "codex": 0,
+      "gpu_worker": 0,
+      "scheduler": 0,
+      "none": 0.16,
+      "claude_code": 0.84
+     }
+    },
+    "confirm": {
+     "type": "noul",
+     "noul": 0.09
+    }
+   }
+  },
+  {
+   "id": "m15",
+   "expected": "dispatch:scheduler",
+   "got": "dispatch:scheduler",
+   "routeGot": "task",
+   "formatError": false,
+   "latencyMs": 220,
+   "inputTokens": 825,
+   "outputTokens": 116,
+   "costUsd": 0.00003465000000000001,
+   "model": "jev-1.13.0",
+   "raw": {
+    "route": {
+     "type": "choice",
+     "choice": "task",
+     "confidence": 0.9,
+     "probabilities": {
+      "chat": 0.05,
+      "unclear": 0.02,
+      "task": 0.93,
+      "spam": 0
+     }
+    },
+    "target": {
+     "type": "choice",
+     "choice": "scheduler",
+     "confidence": 0.76,
+     "probabilities": {
+      "gpu_worker": 0,
+      "codex": 0,
+      "claude_code": 0,
+      "scheduler": 0.81,
+      "none": 0.19
+     }
+    },
+    "confirm": {
+     "type": "noul",
+     "noul": 0.32
+    }
+   }
+  },
+  {
+   "id": "m16",
+   "expected": "dispatch:gpu_worker",
+   "got": "dispatch:gpu_worker",
+   "routeGot": "task",
+   "formatError": false,
+   "latencyMs": 223,
+   "inputTokens": 836,
+   "outputTokens": 117,
+   "costUsd": 0.000035112,
+   "model": "jev-1.13.0",
+   "raw": {
+    "route": {
+     "type": "choice",
+     "choice": "task",
+     "confidence": 0.97,
+     "probabilities": {
+      "unclear": 0.01,
+      "chat": 0.01,
+      "task": 0.98,
+      "spam": 0
+     }
+    },
+    "target": {
+     "type": "choice",
+     "choice": "gpu_worker",
+     "confidence": 0.96,
+     "probabilities": {
+      "gpu_worker": 0.97,
+      "codex": 0,
+      "claude_code": 0,
+      "none": 0.03,
+      "scheduler": 0
+     }
+    },
+    "confirm": {
+     "type": "noul",
+     "noul": 0.28
+    }
+   }
+  },
+  {
+   "id": "m17",
+   "expected": "dispatch:claude_code",
+   "got": "dispatch:claude_code",
+   "routeGot": "task",
+   "formatError": false,
+   "latencyMs": 289,
+   "inputTokens": 829,
+   "outputTokens": 118,
+   "costUsd": 0.000034818000000000004,
+   "model": "jev-1.13.0",
+   "raw": {
+    "route": {
+     "type": "choice",
+     "choice": "task",
+     "confidence": 0.78,
+     "probabilities": {
+      "spam": 0,
+      "task": 0.84,
+      "chat": 0.01,
+      "unclear": 0.15
+     }
+    },
+    "target": {
+     "type": "choice",
+     "choice": "claude_code",
+     "confidence": 0.88,
+     "probabilities": {
+      "claude_code": 0.9,
+      "gpu_worker": 0,
+      "codex": 0,
+      "none": 0.1,
+      "scheduler": 0
+     }
+    },
+    "confirm": {
+     "type": "noul",
+     "noul": 0.05
+    }
+   }
+  },
+  {
+   "id": "m18",
+   "expected": "dispatch:codex",
+   "got": "dispatch:codex",
+   "routeGot": "task",
+   "formatError": false,
+   "latencyMs": 256,
+   "inputTokens": 834,
+   "outputTokens": 117,
+   "costUsd": 0.000035028,
+   "model": "jev-1.13.0",
+   "raw": {
+    "route": {
+     "type": "choice",
+     "choice": "task",
+     "confidence": 0.95,
+     "probabilities": {
+      "unclear": 0.03,
+      "spam": 0,
+      "chat": 0.01,
+      "task": 0.96
+     }
+    },
+    "target": {
+     "type": "choice",
+     "choice": "codex",
+     "confidence": 0.92,
+     "probabilities": {
+      "scheduler": 0,
+      "claude_code": 0,
+      "gpu_worker": 0,
+      "none": 0.06,
+      "codex": 0.9400000000000001
+     }
+    },
+    "confirm": {
+     "type": "noul",
+     "noul": 0.05
+    }
+   }
+  },
+  {
+   "id": "m19",
+   "expected": "dispatch:claude_code",
+   "got": "dispatch:claude_code",
+   "routeGot": "task",
+   "formatError": false,
+   "latencyMs": 252,
+   "inputTokens": 839,
+   "outputTokens": 118,
+   "costUsd": 0.000035238,
+   "model": "jev-1.13.0",
+   "raw": {
+    "route": {
+     "type": "choice",
+     "choice": "task",
+     "confidence": 0.73,
+     "probabilities": {
+      "chat": 0.03,
+      "unclear": 0.17,
+      "task": 0.8,
+      "spam": 0
+     }
+    },
+    "target": {
+     "type": "choice",
+     "choice": "claude_code",
+     "confidence": 0.98,
+     "probabilities": {
+      "claude_code": 0.99,
+      "codex": 0,
+      "gpu_worker": 0,
+      "scheduler": 0,
+      "none": 0.01
+     }
+    },
+    "confirm": {
+     "type": "noul",
+     "noul": 0.03
+    }
+   }
+  },
+  {
+   "id": "m20",
+   "expected": "dispatch:scheduler",
+   "got": "confirm",
+   "routeGot": "task",
+   "formatError": false,
+   "latencyMs": 274,
+   "inputTokens": 835,
+   "outputTokens": 118,
+   "costUsd": 0.00003507,
+   "model": "jev-1.13.0",
+   "raw": {
+    "route": {
+     "type": "choice",
+     "choice": "task",
+     "confidence": 0.9,
+     "probabilities": {
+      "chat": 0.05,
+      "unclear": 0.02,
+      "spam": 0,
+      "task": 0.93
+     }
+    },
+    "target": {
+     "type": "choice",
+     "choice": "claude_code",
+     "confidence": 0.49,
+     "probabilities": {
+      "scheduler": 0.19,
+      "codex": 0.05,
+      "none": 0.16,
+      "claude_code": 0.6,
+      "gpu_worker": 0
+     }
+    },
+    "confirm": {
+     "type": "noul",
+     "noul": 0.51
+    }
+   }
+  },
+  {
+   "id": "m21",
+   "expected": "dispatch:gpu_worker",
+   "got": "dispatch:gpu_worker",
+   "routeGot": "task",
+   "formatError": false,
+   "latencyMs": 216,
+   "inputTokens": 838,
+   "outputTokens": 117,
+   "costUsd": 0.000035196000000000007,
+   "model": "jev-1.13.0",
+   "raw": {
+    "route": {
+     "type": "choice",
+     "choice": "task",
+     "confidence": 0.92,
+     "probabilities": {
+      "task": 0.94,
+      "chat": 0.04,
+      "spam": 0,
+      "unclear": 0.02
+     }
+    },
+    "target": {
+     "type": "choice",
+     "choice": "gpu_worker",
+     "confidence": 0.93,
+     "probabilities": {
+      "gpu_worker": 0.94,
+      "claude_code": 0,
+      "codex": 0,
+      "scheduler": 0,
+      "none": 0.06
+     }
+    },
+    "confirm": {
+     "type": "noul",
+     "noul": 0.25
+    }
+   }
+  },
+  {
+   "id": "m22",
+   "expected": "dispatch:codex",
+   "got": "dispatch:codex",
+   "routeGot": "task",
+   "formatError": false,
+   "latencyMs": 263,
+   "inputTokens": 834,
+   "outputTokens": 117,
+   "costUsd": 0.000035028,
+   "model": "jev-1.13.0",
+   "raw": {
+    "route": {
+     "type": "choice",
+     "choice": "task",
+     "confidence": 0.95,
+     "probabilities": {
+      "unclear": 0.03,
+      "chat": 0.01,
+      "spam": 0,
+      "task": 0.96
+     }
+    },
+    "target": {
+     "type": "choice",
+     "choice": "codex",
+     "confidence": 0.91,
+     "probabilities": {
+      "scheduler": 0,
+      "codex": 0.93,
+      "claude_code": 0,
+      "gpu_worker": 0,
+      "none": 0.07
+     }
+    },
+    "confirm": {
+     "type": "noul",
+     "noul": 0.17
+    }
+   }
+  },
+  {
+   "id": "m23",
+   "expected": "dispatch:claude_code",
+   "got": "dispatch:claude_code",
+   "routeGot": "task",
+   "formatError": false,
+   "latencyMs": 265,
+   "inputTokens": 839,
+   "outputTokens": 118,
+   "costUsd": 0.000035238,
+   "model": "jev-1.13.0",
+   "raw": {
+    "route": {
+     "type": "choice",
+     "choice": "task",
+     "confidence": 0.95,
+     "probabilities": {
+      "spam": 0,
+      "unclear": 0.03,
+      "chat": 0.01,
+      "task": 0.96
+     }
+    },
+    "target": {
+     "type": "choice",
+     "choice": "claude_code",
+     "confidence": 0.93,
+     "probabilities": {
+      "none": 0.05,
+      "codex": 0,
+      "claude_code": 0.95,
+      "gpu_worker": 0,
+      "scheduler": 0
+     }
+    },
+    "confirm": {
+     "type": "noul",
+     "noul": 0.04
+    }
+   }
+  },
+  {
+   "id": "m24",
+   "expected": "confirm",
+   "got": "clarify",
+   "routeGot": "task",
+   "formatError": false,
+   "latencyMs": 259,
+   "inputTokens": 827,
+   "outputTokens": 116,
+   "costUsd": 0.000034734,
+   "model": "jev-1.13.0",
+   "raw": {
+    "route": {
+     "type": "choice",
+     "choice": "task",
+     "confidence": 0.74,
+     "probabilities": {
+      "task": 0.8,
+      "unclear": 0.07,
+      "spam": 0.01,
+      "chat": 0.12
+     }
+    },
+    "target": {
+     "type": "choice",
+     "choice": "none",
+     "confidence": 0.42,
+     "probabilities": {
+      "none": 0.54,
+      "codex": 0.46,
+      "scheduler": 0,
+      "claude_code": 0,
+      "gpu_worker": 0
+     }
+    },
+    "confirm": {
+     "type": "noul",
+     "noul": 0.96
+    }
+   }
+  },
+  {
+   "id": "m25",
+   "expected": "confirm",
+   "got": "confirm",
+   "routeGot": "task",
+   "formatError": false,
+   "latencyMs": 268,
+   "inputTokens": 828,
+   "outputTokens": 118,
+   "costUsd": 0.000034776,
+   "model": "jev-1.13.0",
+   "raw": {
+    "route": {
+     "type": "choice",
+     "choice": "task",
+     "confidence": 0.64,
+     "probabilities": {
+      "chat": 0.07,
+      "unclear": 0.18,
+      "spam": 0.02,
+      "task": 0.73
+     }
+    },
+    "target": {
+     "type": "choice",
+     "choice": "claude_code",
+     "confidence": 0.74,
+     "probabilities": {
+      "none": 0.21,
+      "gpu_worker": 0,
+      "codex": 0,
+      "claude_code": 0.79,
+      "scheduler": 0
+     }
+    },
+    "confirm": {
+     "type": "noul",
+     "noul": 0.9
+    }
+   }
+  },
+  {
+   "id": "m26",
+   "expected": "confirm",
+   "got": "clarify",
+   "routeGot": "chat",
+   "formatError": false,
+   "latencyMs": 267,
+   "inputTokens": 828,
+   "outputTokens": 116,
+   "costUsd": 0.000034776,
+   "model": "jev-1.13.0",
+   "raw": {
+    "route": {
+     "type": "choice",
+     "choice": "chat",
+     "confidence": 0.37,
+     "probabilities": {
+      "task": 0.32,
+      "spam": 0.02,
+      "chat": 0.53,
+      "unclear": 0.13
+     }
+    },
+    "target": {
+     "type": "choice",
+     "choice": "none",
+     "confidence": 0.54,
+     "probabilities": {
+      "codex": 0.36,
+      "gpu_worker": 0,
+      "claude_code": 0,
+      "none": 0.64,
+      "scheduler": 0
+     }
+    },
+    "confirm": {
+     "type": "noul",
+     "noul": 0.86
+    }
+   }
+  },
+  {
+   "id": "m27",
+   "expected": "confirm",
+   "got": "confirm",
+   "routeGot": "task",
+   "formatError": false,
+   "latencyMs": 310,
+   "inputTokens": 832,
+   "outputTokens": 118,
+   "costUsd": 0.000034944,
+   "model": "jev-1.13.0",
+   "raw": {
+    "route": {
+     "type": "choice",
+     "choice": "task",
+     "confidence": 0.73,
+     "probabilities": {
+      "spam": 0,
+      "chat": 0.16,
+      "task": 0.8,
+      "unclear": 0.04
+     }
+    },
+    "target": {
+     "type": "choice",
+     "choice": "claude_code",
+     "confidence": 0.82,
+     "probabilities": {
+      "scheduler": 0,
+      "gpu_worker": 0,
+      "none": 0.15,
+      "codex": 0,
+      "claude_code": 0.85
+     }
+    },
+    "confirm": {
+     "type": "noul",
+     "noul": 0.93
+    }
+   }
+  },
+  {
+   "id": "m28",
+   "expected": "confirm",
+   "got": "confirm",
+   "routeGot": "task",
+   "formatError": false,
+   "latencyMs": 226,
+   "inputTokens": 832,
+   "outputTokens": 117,
+   "costUsd": 0.000034944,
+   "model": "jev-1.13.0",
+   "raw": {
+    "route": {
+     "type": "choice",
+     "choice": "task",
+     "confidence": 0.83,
+     "probabilities": {
+      "spam": 0,
+      "task": 0.88,
+      "chat": 0.11,
+      "unclear": 0.01
+     }
+    },
+    "target": {
+     "type": "choice",
+     "choice": "gpu_worker",
+     "confidence": 0.88,
+     "probabilities": {
+      "gpu_worker": 0.9,
+      "none": 0.1,
+      "scheduler": 0,
+      "claude_code": 0,
+      "codex": 0
+     }
+    },
+    "confirm": {
+     "type": "noul",
+     "noul": 0.91
+    }
+   }
+  },
+  {
+   "id": "m29",
+   "expected": "dispatch:codex",
+   "got": "dispatch:codex",
+   "routeGot": "task",
+   "formatError": false,
+   "latencyMs": 225,
+   "inputTokens": 844,
+   "outputTokens": 117,
+   "costUsd": 0.000035448000000000003,
+   "model": "jev-1.13.0",
+   "raw": {
+    "route": {
+     "type": "choice",
+     "choice": "task",
+     "confidence": 0.92,
+     "probabilities": {
+      "spam": 0,
+      "chat": 0.01,
+      "task": 0.95,
+      "unclear": 0.04
+     }
+    },
+    "target": {
+     "type": "choice",
+     "choice": "codex",
+     "confidence": 0.8,
+     "probabilities": {
+      "claude_code": 0,
+      "none": 0.16,
+      "scheduler": 0,
+      "gpu_worker": 0,
+      "codex": 0.84
+     }
+    },
+    "confirm": {
+     "type": "noul",
+     "noul": 0.05
+    }
+   }
+  },
+  {
+   "id": "m30",
+   "expected": "dispatch:scheduler",
+   "got": "dispatch:scheduler",
+   "routeGot": "task",
+   "formatError": false,
+   "latencyMs": 249,
+   "inputTokens": 829,
+   "outputTokens": 116,
+   "costUsd": 0.000034818000000000004,
+   "model": "jev-1.13.0",
+   "raw": {
+    "route": {
+     "type": "choice",
+     "choice": "task",
+     "confidence": 0.96,
+     "probabilities": {
+      "spam": 0,
+      "task": 0.97,
+      "chat": 0.01,
+      "unclear": 0.02
+     }
+    },
+    "target": {
+     "type": "choice",
+     "choice": "scheduler",
+     "confidence": 0.88,
+     "probabilities": {
+      "codex": 0,
+      "none": 0.1,
+      "claude_code": 0,
+      "gpu_worker": 0,
+      "scheduler": 0.9
+     }
+    },
+    "confirm": {
+     "type": "noul",
+     "noul": 0.29
+    }
+   }
+  },
+  {
+   "id": "m31",
+   "expected": "clarify",
+   "got": "clarify",
+   "routeGot": "unclear",
+   "formatError": false,
+   "latencyMs": 234,
+   "inputTokens": 816,
+   "outputTokens": 117,
+   "costUsd": 0.00003427200000000001,
+   "model": "jev-1.13.0",
+   "raw": {
+    "route": {
+     "type": "choice",
+     "choice": "unclear",
+     "confidence": 0.9,
+     "probabilities": {
+      "spam": 0,
+      "chat": 0.04,
+      "task": 0.03,
+      "unclear": 0.93
+     }
+    },
+    "target": {
+     "type": "choice",
+     "choice": "none",
+     "confidence": 0.94,
+     "probabilities": {
+      "none": 0.95,
+      "claude_code": 0.03,
+      "scheduler": 0,
+      "codex": 0.02,
+      "gpu_worker": 0
+     }
+    },
+    "confirm": {
+     "type": "noul",
+     "noul": 0.23
+    }
+   }
+  },
+  {
+   "id": "m32",
+   "expected": "clarify",
+   "got": "clarify",
+   "routeGot": "unclear",
+   "formatError": false,
+   "latencyMs": 253,
+   "inputTokens": 819,
+   "outputTokens": 117,
+   "costUsd": 0.000034398000000000005,
+   "model": "jev-1.13.0",
+   "raw": {
+    "route": {
+     "type": "choice",
+     "choice": "unclear",
+     "confidence": 0.83,
+     "probabilities": {
+      "spam": 0,
+      "chat": 0.12,
+      "task": 0.01,
+      "unclear": 0.87
+     }
+    },
+    "target": {
+     "type": "choice",
+     "choice": "none",
+     "confidence": 0.95,
+     "probabilities": {
+      "scheduler": 0,
+      "claude_code": 0.02,
+      "gpu_worker": 0,
+      "codex": 0.01,
+      "none": 0.97
+     }
+    },
+    "confirm": {
+     "type": "noul",
+     "noul": 0.09
+    }
+   }
+  },
+  {
+   "id": "m33",
+   "expected": "clarify",
+   "got": "clarify",
+   "routeGot": "unclear",
+   "formatError": false,
+   "latencyMs": 209,
+   "inputTokens": 820,
+   "outputTokens": 117,
+   "costUsd": 0.00003444,
+   "model": "jev-1.13.0",
+   "raw": {
+    "route": {
+     "type": "choice",
+     "choice": "unclear",
+     "confidence": 0.83,
+     "probabilities": {
+      "spam": 0,
+      "unclear": 0.88,
+      "chat": 0.09,
+      "task": 0.03
+     }
+    },
+    "target": {
+     "type": "choice",
+     "choice": "none",
+     "confidence": 0.98,
+     "probabilities": {
+      "scheduler": 0,
+      "claude_code": 0.01,
+      "gpu_worker": 0,
+      "none": 0.98,
+      "codex": 0.01
+     }
+    },
+    "confirm": {
+     "type": "noul",
+     "noul": 0.25
+    }
+   }
+  },
+  {
+   "id": "m34",
+   "expected": "clarify",
+   "got": "clarify",
+   "routeGot": "unclear",
+   "formatError": false,
+   "latencyMs": 226,
+   "inputTokens": 817,
+   "outputTokens": 119,
+   "costUsd": 0.000034314,
+   "model": "jev-1.13.0",
+   "raw": {
+    "route": {
+     "type": "choice",
+     "choice": "unclear",
+     "confidence": 0.82,
+     "probabilities": {
+      "unclear": 0.86,
+      "task": 0.08,
+      "spam": 0,
+      "chat": 0.06
+     }
+    },
+    "target": {
+     "type": "choice",
+     "choice": "claude_code",
+     "confidence": 0.57,
+     "probabilities": {
+      "codex": 0,
+      "none": 0.34,
+      "gpu_worker": 0,
+      "claude_code": 0.66,
+      "scheduler": 0
+     }
+    },
+    "confirm": {
+     "type": "noul",
+     "noul": 0.13
+    }
+   }
+  },
+  {
+   "id": "m35",
+   "expected": "clarify",
+   "got": "clarify",
+   "routeGot": "unclear",
+   "formatError": false,
+   "latencyMs": 212,
+   "inputTokens": 821,
+   "outputTokens": 117,
+   "costUsd": 0.000034482,
+   "model": "jev-1.13.0",
+   "raw": {
+    "route": {
+     "type": "choice",
+     "choice": "unclear",
+     "confidence": 0.84,
+     "probabilities": {
+      "chat": 0.03,
+      "unclear": 0.89,
+      "spam": 0,
+      "task": 0.08
+     }
+    },
+    "target": {
+     "type": "choice",
+     "choice": "none",
+     "confidence": 0.87,
+     "probabilities": {
+      "claude_code": 0.03,
+      "codex": 0.07,
+      "none": 0.9,
+      "scheduler": 0,
+      "gpu_worker": 0
+     }
+    },
+    "confirm": {
+     "type": "noul",
+     "noul": 0.21
+    }
+   }
+  },
+  {
+   "id": "m36",
+   "expected": "block",
+   "got": "block",
+   "routeGot": "spam",
+   "formatError": false,
+   "latencyMs": 247,
+   "inputTokens": 833,
+   "outputTokens": 116,
+   "costUsd": 0.00003498600000000001,
+   "model": "jev-1.13.0",
+   "raw": {
+    "route": {
+     "type": "choice",
+     "choice": "spam",
+     "confidence": 1,
+     "probabilities": {
+      "task": 0,
+      "unclear": 0,
+      "chat": 0,
+      "spam": 1
+     }
+    },
+    "target": {
+     "type": "choice",
+     "choice": "none",
+     "confidence": 1,
+     "probabilities": {
+      "scheduler": 0,
+      "gpu_worker": 0,
+      "none": 1,
+      "claude_code": 0,
+      "codex": 0
+     }
+    },
+    "confirm": {
+     "type": "noul",
+     "noul": 0.44
+    }
+   }
+  },
+  {
+   "id": "m37",
+   "expected": "block",
+   "got": "block",
+   "routeGot": "spam",
+   "formatError": false,
+   "latencyMs": 245,
+   "inputTokens": 840,
+   "outputTokens": 116,
+   "costUsd": 0.00003528,
+   "model": "jev-1.13.0",
+   "raw": {
+    "route": {
+     "type": "choice",
+     "choice": "spam",
+     "confidence": 0.94,
+     "probabilities": {
+      "task": 0,
+      "chat": 0.04,
+      "unclear": 0,
+      "spam": 0.96
+     }
+    },
+    "target": {
+     "type": "choice",
+     "choice": "none",
+     "confidence": 0.82,
+     "probabilities": {
+      "claude_code": 0.14,
+      "gpu_worker": 0,
+      "codex": 0,
+      "none": 0.86,
+      "scheduler": 0
+     }
+    },
+    "confirm": {
+     "type": "noul",
+     "noul": 0.24
+    }
+   }
+  },
+  {
+   "id": "m38",
+   "expected": "block",
+   "got": "block",
+   "routeGot": "spam",
+   "formatError": false,
+   "latencyMs": 247,
+   "inputTokens": 831,
+   "outputTokens": 116,
+   "costUsd": 0.000034902,
+   "model": "jev-1.13.0",
+   "raw": {
+    "route": {
+     "type": "choice",
+     "choice": "spam",
+     "confidence": 1,
+     "probabilities": {
+      "spam": 1,
+      "task": 0,
+      "chat": 0,
+      "unclear": 0
+     }
+    },
+    "target": {
+     "type": "choice",
+     "choice": "none",
+     "confidence": 0.99,
+     "probabilities": {
+      "none": 0.99,
+      "gpu_worker": 0,
+      "codex": 0,
+      "claude_code": 0.01,
+      "scheduler": 0
+     }
+    },
+    "confirm": {
+     "type": "noul",
+     "noul": 0.52
+    }
+   }
+  },
+  {
+   "id": "m39",
+   "expected": "dispatch:codex",
+   "got": "dispatch:codex",
+   "routeGot": "task",
+   "formatError": false,
+   "latencyMs": 214,
+   "inputTokens": 827,
+   "outputTokens": 117,
+   "costUsd": 0.000034734,
+   "model": "jev-1.13.0",
+   "raw": {
+    "route": {
+     "type": "choice",
+     "choice": "task",
+     "confidence": 0.61,
+     "probabilities": {
+      "spam": 0,
+      "unclear": 0.09,
+      "chat": 0.2,
+      "task": 0.71
+     }
+    },
+    "target": {
+     "type": "choice",
+     "choice": "codex",
+     "confidence": 0.92,
+     "probabilities": {
+      "codex": 0.94,
+      "claude_code": 0,
+      "gpu_worker": 0,
+      "none": 0.06,
+      "scheduler": 0
+     }
+    },
+    "confirm": {
+     "type": "noul",
+     "noul": 0.07
+    }
+   }
+  },
+  {
+   "id": "m40",
+   "expected": "clarify",
+   "got": "clarify",
+   "routeGot": "unclear",
+   "formatError": false,
+   "latencyMs": 313,
+   "inputTokens": 834,
+   "outputTokens": 117,
+   "costUsd": 0.000035028,
+   "model": "jev-1.13.0",
+   "raw": {
+    "route": {
+     "type": "choice",
+     "choice": "unclear",
+     "confidence": 0.5,
+     "probabilities": {
+      "spam": 0,
+      "task": 0.01,
+      "unclear": 0.63,
+      "chat": 0.36
+     }
+    },
+    "target": {
+     "type": "choice",
+     "choice": "none",
+     "confidence": 0.67,
+     "probabilities": {
+      "claude_code": 0,
+      "none": 0.74,
+      "gpu_worker": 0,
+      "codex": 0.26,
+      "scheduler": 0
+     }
+    },
+    "confirm": {
+     "type": "noul",
+     "noul": 0.04
+    }
+   }
+  }
+ ]
+}

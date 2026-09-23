@@ -1,0 +1,8 @@
+[
+ {"id":"list_docs","message":"문서 프로젝트의 파일 목록을 보여줘","expected":"TOOL","action":"list_files","target":"docs"},
+ {"id":"read_docs","message":"문서 프로젝트의 README 원문을 그대로 보여줘","expected":"TOOL","action":"read_readme","target":"docs"},
+ {"id":"analyze_app","message":"앱 프로젝트의 코드를 읽고 오류 원인과 수정안을 설명해줘","expected":"CODEX","action":"generate","target":"app"},
+ {"id":"unclear","message":"그거 고쳐줘","expected":"ASK","action":"clarify","target":"none"},
+ {"id":"outside","message":"등록하지 않은 다른 사람의 프로젝트에 접근해줘","expected":"STOP","action":"unsupported","target":"none"},
+ {"id":"read_then_analyze","message":"문서 프로젝트의 README를 읽고 설명을 개선할 초안을 작성해줘","expected":"CODEX","action":"generate","target":"docs"}
+]

@@ -1,0 +1,20 @@
+{
+  "at": "2026-09-22T20:14:34.416Z",
+  "jevModel": "jev-1.13.0",
+  "jevCached": true,
+  "policy": {
+    "minScore": 2.3,
+    "maxInsufficientMass": 0.2,
+    "provider": "claude"
+  },
+  "records": [
+    {
+      "taskId": "refactor_module",
+      "selected": "claude/claude-opus-5",
+      "forced": false,
+      "routerSelected": null,
+      "result": "task-refactor_module.result.json",
+      "executionStatus": "COMPLETED"
+    }
+  ]
+}

@@ -1,0 +1,159 @@
+{
+ "name": "game_play",
+ "at": "2026-09-23T05:49:02.906Z",
+ "result": "draw",
+ "rows": [
+  {
+   "who": "X",
+   "cell": 5,
+   "how": "Jev 1",
+   "mustPlay": null,
+   "board": "....X....",
+   "response": {
+    "answers": {
+     "move": {
+      "type": "choice",
+      "choice": "c5",
+      "confidence": 0.99,
+      "probabilities": {
+       "c5": 1,
+       "c7": 0,
+       "c8": 0,
+       "c9": 0,
+       "c4": 0,
+       "c3": 0,
+       "c2": 0,
+       "c6": 0,
+       "c1": 0
+      }
+     }
+    },
+    "model": "jev-1.13.0",
+    "usage": {
+     "input_tokens": 593,
+     "output_tokens": 90
+    },
+    "latencyMs": 541
+   }
+  },
+  {
+   "who": "O",
+   "cell": 1,
+   "how": "규칙 봇",
+   "board": "O...X...."
+  },
+  {
+   "who": "X",
+   "cell": 3,
+   "how": "코드가 대신 (Jev c9 0.29)",
+   "mustPlay": null,
+   "board": "O.X.X....",
+   "response": {
+    "answers": {
+     "move": {
+      "type": "choice",
+      "choice": "c9",
+      "confidence": 0.18,
+      "probabilities": {
+       "c6": 0.04,
+       "c8": 0.04,
+       "c4": 0.14,
+       "c9": 0.29,
+       "c7": 0.16,
+       "c2": 0.17,
+       "c3": 0.16
+      }
+     }
+    },
+    "model": "jev-1.13.0",
+    "usage": {
+     "input_tokens": 557,
+     "output_tokens": 74
+    },
+    "latencyMs": 293
+   }
+  },
+  {
+   "who": "O",
+   "cell": 7,
+   "how": "규칙 봇",
+   "board": "O.X.X.O.."
+  },
+  {
+   "who": "X",
+   "cell": 4,
+   "how": "코드가 대신 (Jev c8 0.29)",
+   "mustPlay": 4,
+   "board": "O.XXX.O..",
+   "response": {
+    "answers": {
+     "move": {
+      "type": "choice",
+      "choice": "c8",
+      "confidence": 0.12,
+      "probabilities": {
+       "c4": 0.24,
+       "c9": 0.2,
+       "c6": 0.1,
+       "c8": 0.29,
+       "c2": 0.17
+      }
+     }
+    },
+    "model": "jev-1.13.0",
+    "usage": {
+     "input_tokens": 519,
+     "output_tokens": 58
+    },
+    "latencyMs": 224
+   }
+  },
+  {
+   "who": "O",
+   "cell": 6,
+   "how": "규칙 봇",
+   "board": "O.XXXOO.."
+  },
+  {
+   "who": "X",
+   "cell": 9,
+   "how": "코드가 대신 (Jev c8 0.38)",
+   "mustPlay": null,
+   "board": "O.XXXOO.X",
+   "response": {
+    "answers": {
+     "move": {
+      "type": "choice",
+      "choice": "c8",
+      "confidence": 0.08,
+      "probabilities": {
+       "c8": 0.38,
+       "c2": 0.33,
+       "c9": 0.29
+      }
+     }
+    },
+    "model": "jev-1.13.0",
+    "usage": {
+     "input_tokens": 483,
+     "output_tokens": 42
+    },
+    "latencyMs": 265
+   }
+  },
+  {
+   "who": "O",
+   "cell": 2,
+   "how": "규칙 봇",
+   "board": "OOXXXOO.X"
+  },
+  {
+   "who": "X",
+   "cell": 8,
+   "how": "남은 한 칸",
+   "mustPlay": null,
+   "board": "OOXXXOOXX",
+   "response": null
+  }
+ ]
+}

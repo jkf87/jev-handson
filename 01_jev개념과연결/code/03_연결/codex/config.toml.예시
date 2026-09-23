@@ -1,0 +1,20 @@
+# 방법 A: 명령 한 줄로 등록 (키는 명령행 환경변수로)
+#   codex mcp add jev --env TYPESAFE_API_KEY=$TYPESAFE_API_KEY -- python3 /절대경로/jev_mcp_server.py
+#   등록한 뒤 아래 default_tools_approval_mode 한 줄을 ~/.codex/config.toml의 [mcp_servers.jev]에 추가한다.
+#
+# 방법 B: ~/.codex/config.toml 에 직접
+[mcp_servers.jev]
+command = "python3"
+args = ["/절대경로/jev특강/final/01_jev개념과연결/code/jev-mcp/jev_mcp_server.py"]
+env_vars = ["TYPESAFE_API_KEY"]            # 셸의 키를 MCP 서버로 넘긴다 (파일에 키를 적지 않음)
+default_tools_approval_mode = "approve"    # 없으면 codex exec(승인 정책 never)에서 MCP 호출이 막힌다
+                                           # 허용값: auto · prompt · writes · approve
+
+# 설정 파일을 건드리지 않고 한 번만 시험할 때 (2026-09-23 실측에 쓴 방식)
+#   codex exec -c 'mcp_servers.jev.command="python3"' \
+#              -c 'mcp_servers.jev.args=["/절대경로/jev_mcp_server.py"]' \
+#              -c 'mcp_servers.jev.env_vars=["TYPESAFE_API_KEY"]' \
+#              -c 'mcp_servers.jev.default_tools_approval_mode="approve"' "..." < /dev/null
+#
+# jev-judgment 스킬(jev.py)은 네트워크를 쓴다. workspace-write 샌드박스에서는 네트워크를 열어 준다:
+#   codex exec --sandbox workspace-write -c sandbox_workspace_write.network_access=true "..." < /dev/null

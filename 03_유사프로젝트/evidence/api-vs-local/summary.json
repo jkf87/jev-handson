@@ -1,0 +1,421 @@
+{
+ "table": [
+  {
+   "engine": "Jev API (TypeSafe)",
+   "where": "클라우드",
+   "model": "jev-1.13.0",
+   "n": 40,
+   "actionAcc": 0.925,
+   "routeAcc": 0.975,
+   "p50ms": 247,
+   "p95ms": 559,
+   "costPer1k": 0.03480855
+  },
+  {
+   "engine": "decider-2b (A4000 CUDA)",
+   "where": "내 GPU 서버",
+   "model": "decider-v10",
+   "n": 40,
+   "actionAcc": 0.725,
+   "routeAcc": 0.775,
+   "p50ms": 214,
+   "p95ms": 224,
+   "costPer1k": 0
+  },
+  {
+   "engine": "decider-2b (Mac MPS)",
+   "where": "내 노트북",
+   "model": "decider-v10",
+   "n": 40,
+   "actionAcc": 0.725,
+   "routeAcc": 0.775,
+   "p50ms": 1880,
+   "p95ms": 2314,
+   "costPer1k": 0
+  },
+  {
+   "engine": "OpenJev Qwen3.5-4B (A4000)",
+   "where": "내 GPU 서버",
+   "model": "Qwen/Qwen3.5-4B direct readout",
+   "n": 40,
+   "actionAcc": 0.675,
+   "routeAcc": 0.775,
+   "p50ms": 572,
+   "p95ms": 608,
+   "costPer1k": 0
+  },
+  {
+   "engine": "Qwen3.5-4B 생성(JSON) (Mac Ollama)",
+   "where": "내 노트북",
+   "model": "qwen3.5:4b",
+   "n": 40,
+   "actionAcc": 0.925,
+   "routeAcc": 1,
+   "p50ms": 4219,
+   "p95ms": 4852,
+   "costPer1k": 0
+  }
+ ],
+ "perItem": {
+  "m01": {
+   "id": "m01",
+   "expected": "reply",
+   "Jev API (TypeSafe)": "reply",
+   "decider-2b (A4000 CUDA)": "reply",
+   "decider-2b (Mac MPS)": "reply",
+   "OpenJev Qwen3.5-4B (A4000)": "reply",
+   "Qwen3.5-4B 생성(JSON) (Mac Ollama)": "reply"
+  },
+  "m02": {
+   "id": "m02",
+   "expected": "reply",
+   "Jev API (TypeSafe)": "reply",
+   "decider-2b (A4000 CUDA)": "reply",
+   "decider-2b (Mac MPS)": "reply",
+   "OpenJev Qwen3.5-4B (A4000)": "reply",
+   "Qwen3.5-4B 생성(JSON) (Mac Ollama)": "reply"
+  },
+  "m03": {
+   "id": "m03",
+   "expected": "reply",
+   "Jev API (TypeSafe)": "reply",
+   "decider-2b (A4000 CUDA)": "reply",
+   "decider-2b (Mac MPS)": "reply",
+   "OpenJev Qwen3.5-4B (A4000)": "reply",
+   "Qwen3.5-4B 생성(JSON) (Mac Ollama)": "reply"
+  },
+  "m04": {
+   "id": "m04",
+   "expected": "reply",
+   "Jev API (TypeSafe)": "reply",
+   "decider-2b (A4000 CUDA)": "reply",
+   "decider-2b (Mac MPS)": "reply",
+   "OpenJev Qwen3.5-4B (A4000)": "reply",
+   "Qwen3.5-4B 생성(JSON) (Mac Ollama)": "reply"
+  },
+  "m05": {
+   "id": "m05",
+   "expected": "reply",
+   "Jev API (TypeSafe)": "reply",
+   "decider-2b (A4000 CUDA)": "reply",
+   "decider-2b (Mac MPS)": "reply",
+   "OpenJev Qwen3.5-4B (A4000)": "reply",
+   "Qwen3.5-4B 생성(JSON) (Mac Ollama)": "reply"
+  },
+  "m06": {
+   "id": "m06",
+   "expected": "reply",
+   "Jev API (TypeSafe)": "reply",
+   "decider-2b (A4000 CUDA)": "reply",
+   "decider-2b (Mac MPS)": "reply",
+   "OpenJev Qwen3.5-4B (A4000)": "reply",
+   "Qwen3.5-4B 생성(JSON) (Mac Ollama)": "reply"
+  },
+  "m07": {
+   "id": "m07",
+   "expected": "reply",
+   "Jev API (TypeSafe)": "reply",
+   "decider-2b (A4000 CUDA)": "reply",
+   "decider-2b (Mac MPS)": "reply",
+   "OpenJev Qwen3.5-4B (A4000)": "reply",
+   "Qwen3.5-4B 생성(JSON) (Mac Ollama)": "reply"
+  },
+  "m08": {
+   "id": "m08",
+   "expected": "reply",
+   "Jev API (TypeSafe)": "reply",
+   "decider-2b (A4000 CUDA)": "reply",
+   "decider-2b (Mac MPS)": "reply",
+   "OpenJev Qwen3.5-4B (A4000)": "reply",
+   "Qwen3.5-4B 생성(JSON) (Mac Ollama)": "reply"
+  },
+  "m09": {
+   "id": "m09",
+   "expected": "reply",
+   "Jev API (TypeSafe)": "reply",
+   "decider-2b (A4000 CUDA)": "reply",
+   "decider-2b (Mac MPS)": "reply",
+   "OpenJev Qwen3.5-4B (A4000)": "reply",
+   "Qwen3.5-4B 생성(JSON) (Mac Ollama)": "reply"
+  },
+  "m10": {
+   "id": "m10",
+   "expected": "reply",
+   "Jev API (TypeSafe)": "reply",
+   "decider-2b (A4000 CUDA)": "reply",
+   "decider-2b (Mac MPS)": "reply",
+   "OpenJev Qwen3.5-4B (A4000)": "reply",
+   "Qwen3.5-4B 생성(JSON) (Mac Ollama)": "reply"
+  },
+  "m11": {
+   "id": "m11",
+   "expected": "reply",
+   "Jev API (TypeSafe)": "reply",
+   "decider-2b (A4000 CUDA)": "reply",
+   "decider-2b (Mac MPS)": "reply",
+   "OpenJev Qwen3.5-4B (A4000)": "reply",
+   "Qwen3.5-4B 생성(JSON) (Mac Ollama)": "reply"
+  },
+  "m12": {
+   "id": "m12",
+   "expected": "reply",
+   "Jev API (TypeSafe)": "reply",
+   "decider-2b (A4000 CUDA)": "reply",
+   "decider-2b (Mac MPS)": "reply",
+   "OpenJev Qwen3.5-4B (A4000)": "reply",
+   "Qwen3.5-4B 생성(JSON) (Mac Ollama)": "reply"
+  },
+  "m13": {
+   "id": "m13",
+   "expected": "dispatch:codex",
+   "Jev API (TypeSafe)": "dispatch:codex",
+   "decider-2b (A4000 CUDA)": "dispatch:codex",
+   "decider-2b (Mac MPS)": "dispatch:codex",
+   "OpenJev Qwen3.5-4B (A4000)": "dispatch:codex",
+   "Qwen3.5-4B 생성(JSON) (Mac Ollama)": "dispatch:codex"
+  },
+  "m14": {
+   "id": "m14",
+   "expected": "dispatch:claude_code",
+   "Jev API (TypeSafe)": "dispatch:claude_code",
+   "decider-2b (A4000 CUDA)": "dispatch:claude_code",
+   "decider-2b (Mac MPS)": "dispatch:claude_code",
+   "OpenJev Qwen3.5-4B (A4000)": "dispatch:claude_code",
+   "Qwen3.5-4B 생성(JSON) (Mac Ollama)": "dispatch:claude_code"
+  },
+  "m15": {
+   "id": "m15",
+   "expected": "dispatch:scheduler",
+   "Jev API (TypeSafe)": "dispatch:scheduler",
+   "decider-2b (A4000 CUDA)": "dispatch:scheduler",
+   "decider-2b (Mac MPS)": "dispatch:scheduler",
+   "OpenJev Qwen3.5-4B (A4000)": "dispatch:scheduler",
+   "Qwen3.5-4B 생성(JSON) (Mac Ollama)": "dispatch:scheduler"
+  },
+  "m16": {
+   "id": "m16",
+   "expected": "dispatch:gpu_worker",
+   "Jev API (TypeSafe)": "dispatch:gpu_worker",
+   "decider-2b (A4000 CUDA)": "dispatch:gpu_worker",
+   "decider-2b (Mac MPS)": "dispatch:gpu_worker",
+   "OpenJev Qwen3.5-4B (A4000)": "dispatch:gpu_worker",
+   "Qwen3.5-4B 생성(JSON) (Mac Ollama)": "confirm"
+  },
+  "m17": {
+   "id": "m17",
+   "expected": "dispatch:claude_code",
+   "Jev API (TypeSafe)": "dispatch:claude_code",
+   "decider-2b (A4000 CUDA)": "dispatch:claude_code",
+   "decider-2b (Mac MPS)": "dispatch:claude_code",
+   "OpenJev Qwen3.5-4B (A4000)": "dispatch:claude_code",
+   "Qwen3.5-4B 생성(JSON) (Mac Ollama)": "dispatch:claude_code"
+  },
+  "m18": {
+   "id": "m18",
+   "expected": "dispatch:codex",
+   "Jev API (TypeSafe)": "dispatch:codex",
+   "decider-2b (A4000 CUDA)": "dispatch:codex",
+   "decider-2b (Mac MPS)": "dispatch:codex",
+   "OpenJev Qwen3.5-4B (A4000)": "dispatch:codex",
+   "Qwen3.5-4B 생성(JSON) (Mac Ollama)": "dispatch:codex"
+  },
+  "m19": {
+   "id": "m19",
+   "expected": "dispatch:claude_code",
+   "Jev API (TypeSafe)": "dispatch:claude_code",
+   "decider-2b (A4000 CUDA)": "reply",
+   "decider-2b (Mac MPS)": "reply",
+   "OpenJev Qwen3.5-4B (A4000)": "reply",
+   "Qwen3.5-4B 생성(JSON) (Mac Ollama)": "dispatch:claude_code"
+  },
+  "m20": {
+   "id": "m20",
+   "expected": "dispatch:scheduler",
+   "Jev API (TypeSafe)": "confirm",
+   "decider-2b (A4000 CUDA)": "clarify",
+   "decider-2b (Mac MPS)": "clarify",
+   "OpenJev Qwen3.5-4B (A4000)": "clarify",
+   "Qwen3.5-4B 생성(JSON) (Mac Ollama)": "dispatch:scheduler"
+  },
+  "m21": {
+   "id": "m21",
+   "expected": "dispatch:gpu_worker",
+   "Jev API (TypeSafe)": "dispatch:gpu_worker",
+   "decider-2b (A4000 CUDA)": "clarify",
+   "decider-2b (Mac MPS)": "clarify",
+   "OpenJev Qwen3.5-4B (A4000)": "clarify",
+   "Qwen3.5-4B 생성(JSON) (Mac Ollama)": "confirm"
+  },
+  "m22": {
+   "id": "m22",
+   "expected": "dispatch:codex",
+   "Jev API (TypeSafe)": "dispatch:codex",
+   "decider-2b (A4000 CUDA)": "dispatch:codex",
+   "decider-2b (Mac MPS)": "dispatch:codex",
+   "OpenJev Qwen3.5-4B (A4000)": "dispatch:codex",
+   "Qwen3.5-4B 생성(JSON) (Mac Ollama)": "dispatch:codex"
+  },
+  "m23": {
+   "id": "m23",
+   "expected": "dispatch:claude_code",
+   "Jev API (TypeSafe)": "dispatch:claude_code",
+   "decider-2b (A4000 CUDA)": "dispatch:claude_code",
+   "decider-2b (Mac MPS)": "dispatch:claude_code",
+   "OpenJev Qwen3.5-4B (A4000)": "dispatch:claude_code",
+   "Qwen3.5-4B 생성(JSON) (Mac Ollama)": "dispatch:claude_code"
+  },
+  "m24": {
+   "id": "m24",
+   "expected": "confirm",
+   "Jev API (TypeSafe)": "clarify",
+   "decider-2b (A4000 CUDA)": "clarify",
+   "decider-2b (Mac MPS)": "clarify",
+   "OpenJev Qwen3.5-4B (A4000)": "confirm",
+   "Qwen3.5-4B 생성(JSON) (Mac Ollama)": "confirm"
+  },
+  "m25": {
+   "id": "m25",
+   "expected": "confirm",
+   "Jev API (TypeSafe)": "confirm",
+   "decider-2b (A4000 CUDA)": "dispatch:claude_code",
+   "decider-2b (Mac MPS)": "dispatch:claude_code",
+   "OpenJev Qwen3.5-4B (A4000)": "clarify",
+   "Qwen3.5-4B 생성(JSON) (Mac Ollama)": "dispatch:claude_code"
+  },
+  "m26": {
+   "id": "m26",
+   "expected": "confirm",
+   "Jev API (TypeSafe)": "clarify",
+   "decider-2b (A4000 CUDA)": "clarify",
+   "decider-2b (Mac MPS)": "clarify",
+   "OpenJev Qwen3.5-4B (A4000)": "clarify",
+   "Qwen3.5-4B 생성(JSON) (Mac Ollama)": "confirm"
+  },
+  "m27": {
+   "id": "m27",
+   "expected": "confirm",
+   "Jev API (TypeSafe)": "confirm",
+   "decider-2b (A4000 CUDA)": "clarify",
+   "decider-2b (Mac MPS)": "clarify",
+   "OpenJev Qwen3.5-4B (A4000)": "clarify",
+   "Qwen3.5-4B 생성(JSON) (Mac Ollama)": "confirm"
+  },
+  "m28": {
+   "id": "m28",
+   "expected": "confirm",
+   "Jev API (TypeSafe)": "confirm",
+   "decider-2b (A4000 CUDA)": "dispatch:gpu_worker",
+   "decider-2b (Mac MPS)": "dispatch:gpu_worker",
+   "OpenJev Qwen3.5-4B (A4000)": "confirm",
+   "Qwen3.5-4B 생성(JSON) (Mac Ollama)": "confirm"
+  },
+  "m29": {
+   "id": "m29",
+   "expected": "dispatch:codex",
+   "Jev API (TypeSafe)": "dispatch:codex",
+   "decider-2b (A4000 CUDA)": "dispatch:codex",
+   "decider-2b (Mac MPS)": "dispatch:codex",
+   "OpenJev Qwen3.5-4B (A4000)": "dispatch:codex",
+   "Qwen3.5-4B 생성(JSON) (Mac Ollama)": "dispatch:codex"
+  },
+  "m30": {
+   "id": "m30",
+   "expected": "dispatch:scheduler",
+   "Jev API (TypeSafe)": "dispatch:scheduler",
+   "decider-2b (A4000 CUDA)": "dispatch:scheduler",
+   "decider-2b (Mac MPS)": "dispatch:scheduler",
+   "OpenJev Qwen3.5-4B (A4000)": "dispatch:scheduler",
+   "Qwen3.5-4B 생성(JSON) (Mac Ollama)": "dispatch:scheduler"
+  },
+  "m31": {
+   "id": "m31",
+   "expected": "clarify",
+   "Jev API (TypeSafe)": "clarify",
+   "decider-2b (A4000 CUDA)": "clarify",
+   "decider-2b (Mac MPS)": "clarify",
+   "OpenJev Qwen3.5-4B (A4000)": "reply",
+   "Qwen3.5-4B 생성(JSON) (Mac Ollama)": "clarify"
+  },
+  "m32": {
+   "id": "m32",
+   "expected": "clarify",
+   "Jev API (TypeSafe)": "clarify",
+   "decider-2b (A4000 CUDA)": "reply",
+   "decider-2b (Mac MPS)": "reply",
+   "OpenJev Qwen3.5-4B (A4000)": "reply",
+   "Qwen3.5-4B 생성(JSON) (Mac Ollama)": "clarify"
+  },
+  "m33": {
+   "id": "m33",
+   "expected": "clarify",
+   "Jev API (TypeSafe)": "clarify",
+   "decider-2b (A4000 CUDA)": "clarify",
+   "decider-2b (Mac MPS)": "clarify",
+   "OpenJev Qwen3.5-4B (A4000)": "reply",
+   "Qwen3.5-4B 생성(JSON) (Mac Ollama)": "clarify"
+  },
+  "m34": {
+   "id": "m34",
+   "expected": "clarify",
+   "Jev API (TypeSafe)": "clarify",
+   "decider-2b (A4000 CUDA)": "clarify",
+   "decider-2b (Mac MPS)": "clarify",
+   "OpenJev Qwen3.5-4B (A4000)": "reply",
+   "Qwen3.5-4B 생성(JSON) (Mac Ollama)": "clarify"
+  },
+  "m35": {
+   "id": "m35",
+   "expected": "clarify",
+   "Jev API (TypeSafe)": "clarify",
+   "decider-2b (A4000 CUDA)": "clarify",
+   "decider-2b (Mac MPS)": "clarify",
+   "OpenJev Qwen3.5-4B (A4000)": "clarify",
+   "Qwen3.5-4B 생성(JSON) (Mac Ollama)": "clarify"
+  },
+  "m36": {
+   "id": "m36",
+   "expected": "block",
+   "Jev API (TypeSafe)": "block",
+   "decider-2b (A4000 CUDA)": "block",
+   "decider-2b (Mac MPS)": "block",
+   "OpenJev Qwen3.5-4B (A4000)": "block",
+   "Qwen3.5-4B 생성(JSON) (Mac Ollama)": "block"
+  },
+  "m37": {
+   "id": "m37",
+   "expected": "block",
+   "Jev API (TypeSafe)": "block",
+   "decider-2b (A4000 CUDA)": "clarify",
+   "decider-2b (Mac MPS)": "clarify",
+   "OpenJev Qwen3.5-4B (A4000)": "clarify",
+   "Qwen3.5-4B 생성(JSON) (Mac Ollama)": "block"
+  },
+  "m38": {
+   "id": "m38",
+   "expected": "block",
+   "Jev API (TypeSafe)": "block",
+   "decider-2b (A4000 CUDA)": "block",
+   "decider-2b (Mac MPS)": "block",
+   "OpenJev Qwen3.5-4B (A4000)": "block",
+   "Qwen3.5-4B 생성(JSON) (Mac Ollama)": "block"
+  },
+  "m39": {
+   "id": "m39",
+   "expected": "dispatch:codex",
+   "Jev API (TypeSafe)": "dispatch:codex",
+   "decider-2b (A4000 CUDA)": "clarify",
+   "decider-2b (Mac MPS)": "clarify",
+   "OpenJev Qwen3.5-4B (A4000)": "reply",
+   "Qwen3.5-4B 생성(JSON) (Mac Ollama)": "dispatch:codex"
+  },
+  "m40": {
+   "id": "m40",
+   "expected": "clarify",
+   "Jev API (TypeSafe)": "clarify",
+   "decider-2b (A4000 CUDA)": "clarify",
+   "decider-2b (Mac MPS)": "clarify",
+   "OpenJev Qwen3.5-4B (A4000)": "reply",
+   "Qwen3.5-4B 생성(JSON) (Mac Ollama)": "clarify"
+  }
+ }
+}

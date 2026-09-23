@@ -1,0 +1,13 @@
+{
+  "name": "jev-handson",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "start": "node example.js",
+    "examples": "node three-examples.js"
+  },
+  "dependencies": {
+    "@openrouter/sdk": "latest"
+  }
+}

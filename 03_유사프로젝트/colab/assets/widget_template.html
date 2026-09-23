@@ -1,0 +1,581 @@
+<div id="__UID__" class="jx" tabindex="0" aria-label="Jev 닮은 판단 한 케이스 뜯어보기">
+<style>
+#__UID__ { --ink:#19272D; --green:#466A62; --orange:#AA5238; --light:#F0F5F2; --line:#D6DED9; --muted:#5E6E68; --faint:#8A9691; --surface:#FFFFFF;
+  --r-template:#E4E8E6; --r-system:#F1EEE2; --r-json:transparent; --r-evidence:#D9EAE3; --r-criterion:#F6E0D5; --r-letter:#466A62; --r-option:#E0E7F0; --r-gen:#FBF0C8;
+  font-family:"Noto Sans KR","Noto Sans CJK KR","Apple SD Gothic Neo","Malgun Gothic","Nanum Gothic",system-ui,-apple-system,"Segoe UI",sans-serif;
+  color:var(--ink); background:var(--surface); border:1px solid var(--line); border-radius:12px; padding:18px 18px 14px; max-width:1060px; box-sizing:border-box; outline:none; font-size:14px; line-height:1.55; }
+#__UID__ * { box-sizing:border-box; }
+#__UID__ button { font-family:inherit; }
+#__UID__ .jx-head { display:flex; flex-wrap:wrap; gap:6px 16px; align-items:baseline; justify-content:space-between; margin-bottom:10px; }
+#__UID__ .jx-title { font-size:18px; font-weight:700; }
+#__UID__ .jx-title small { font-size:13px; font-weight:400; color:var(--muted); margin-left:8px; }
+#__UID__ .jx-src { font-size:12px; color:var(--muted); background:var(--light); border-radius:999px; padding:3px 10px; }
+#__UID__ .jx-cases { display:flex; flex-wrap:wrap; gap:6px; margin-bottom:12px; }
+#__UID__ .jx-case { border:1px solid var(--line); background:var(--surface); color:var(--ink); border-radius:999px; padding:5px 12px; font-size:13px; cursor:pointer; }
+#__UID__ .jx-case[aria-pressed="true"] { background:var(--ink); color:#fff; border-color:var(--ink); }
+#__UID__ .jx-case:hover { border-color:var(--green); }
+#__UID__ .jx-flow { display:grid; grid-template-columns:repeat(7, minmax(0,1fr)); gap:6px; margin-bottom:12px; }
+#__UID__ .jx-node { position:relative; border:1px solid var(--line); border-radius:10px; padding:7px 8px 6px; background:var(--surface); cursor:pointer; text-align:left; min-height:58px; }
+#__UID__ .jx-node:not(:last-child)::after { content:"›"; position:absolute; right:-7px; top:50%; transform:translateY(-55%); color:var(--faint); font-size:15px; z-index:1; }
+#__UID__ .jx-node .n { font-size:11px; color:var(--muted); }
+#__UID__ .jx-node .t { font-size:13px; font-weight:700; display:block; line-height:1.25; }
+#__UID__ .jx-node .s { font-size:12px; color:var(--green); display:block; margin-top:2px; white-space:nowrap; overflow:hidden; text-overflow:ellipsis; }
+#__UID__ .jx-node[aria-current="step"] { border-color:var(--green); box-shadow:0 0 0 2px var(--green) inset; background:#F6FAF8; }
+#__UID__ .jx-node.done .n::after { content:" ✓"; color:var(--green); }
+#__UID__ .jx-panel { border:1px solid var(--line); border-radius:10px; padding:14px 16px; min-height:430px; background:var(--surface); }
+#__UID__ .jx-panel h4 { margin:0 0 4px; font-size:16px; }
+#__UID__ .jx-lead { color:var(--muted); margin:0 0 12px; font-size:13px; }
+#__UID__ .jx-grid2 { display:grid; grid-template-columns:1fr 1fr; gap:12px; }
+#__UID__ .jx-card { background:var(--light); border-radius:8px; padding:10px 12px; }
+#__UID__ .jx-lab { font-size:12px; color:var(--muted); font-weight:700; margin:2px 0 4px; }
+#__UID__ .jx-card ul { margin:4px 0 0; padding-left:0; list-style:none; }
+#__UID__ .jx-card li { margin:3px 0; }
+#__UID__ code, #__UID__ .mono { font-family:"SFMono-Regular",Menlo,Consolas,"D2Coding",monospace; font-size:12.5px; }
+#__UID__ .jx-chip { display:inline-block; font-family:"SFMono-Regular",Menlo,Consolas,monospace; font-size:12px; border-radius:5px; padding:0 6px; background:var(--surface); border:1px solid var(--line); }
+#__UID__ .jx-note { font-size:12.5px; color:var(--muted); margin-top:10px; }
+#__UID__ .jx-note b { color:var(--ink); }
+#__UID__ pre.jx-code { background:#F7F9F8; border:1px solid var(--line); border-radius:8px; padding:10px 12px; margin:8px 0 0; overflow-x:auto; font-family:"SFMono-Regular",Menlo,Consolas,monospace; font-size:12.5px; line-height:1.6; white-space:pre; }
+#__UID__ pre.jx-code .hl { background:#FBF0C8; display:inline-block; min-width:100%; }
+#__UID__ pre.jx-code .cm { color:var(--faint); }
+#__UID__ .jx-prompt { font-family:"SFMono-Regular",Menlo,Consolas,monospace; font-size:12.5px; line-height:1.75; white-space:pre-wrap; word-break:break-word; background:#FAFBFA; border:1px solid var(--line); border-radius:8px; padding:10px 12px; max-height:300px; overflow:auto; }
+#__UID__ .r-template { background:var(--r-template); color:var(--muted); }
+#__UID__ .r-system { background:var(--r-system); }
+#__UID__ .r-json { color:var(--faint); }
+#__UID__ .r-evidence { background:var(--r-evidence); }
+#__UID__ .r-criterion { background:var(--r-criterion); }
+#__UID__ .r-letter { background:var(--r-letter); color:#fff; font-weight:700; }
+#__UID__ .r-option { background:var(--r-option); }
+#__UID__ .r-gen { background:var(--r-gen); }
+#__UID__ .jx-legend { display:flex; flex-wrap:wrap; gap:4px 12px; font-size:12px; color:var(--muted); margin:8px 0 0; }
+#__UID__ .jx-legend span i { display:inline-block; width:12px; height:12px; border-radius:3px; margin-right:4px; vertical-align:-2px; border:1px solid var(--line); }
+#__UID__ .jx-toks { display:flex; flex-wrap:wrap; gap:3px; max-height:250px; overflow:auto; padding:8px; border:1px solid var(--line); border-radius:8px; background:#FAFBFA; }
+#__UID__ .jx-tok { font-family:"SFMono-Regular",Menlo,Consolas,monospace; font-size:12px; border-radius:4px; padding:1px 4px; border:1px solid rgba(25,39,45,.08); cursor:default; white-space:pre; }
+#__UID__ .jx-tok .ws { color:var(--faint); }
+#__UID__ .jx-tok.r-letter .ws { color:#DDE8E3; }
+#__UID__ .jx-tok.is-last { outline:2px solid var(--orange); outline-offset:1px; }
+#__UID__ .jx-tok.is-hot { outline:2px solid var(--ink); outline-offset:1px; }
+#__UID__ .jx-tokinfo { font-size:12.5px; min-height:22px; margin-top:6px; color:var(--ink); }
+#__UID__ .jx-stack { display:flex; height:14px; border-radius:4px; overflow:hidden; margin-top:8px; gap:2px; background:var(--surface); }
+#__UID__ .jx-stack div { height:100%; }
+#__UID__ .jx-row { display:flex; flex-wrap:wrap; gap:14px; align-items:flex-start; }
+#__UID__ .jx-row > .grow { flex:1 1 360px; min-width:0; }
+#__UID__ .jx-row > .side { flex:0 1 300px; min-width:240px; }
+#__UID__ .jx-stat { background:var(--light); border-radius:8px; padding:10px 12px; margin-bottom:10px; }
+#__UID__ .jx-stat .v { font-size:26px; font-weight:700; line-height:1.2; }
+#__UID__ .jx-stat .l { font-size:12px; color:var(--muted); }
+#__UID__ table.jx-tbl { border-collapse:collapse; width:100%; font-size:13px; }
+#__UID__ table.jx-tbl th, #__UID__ table.jx-tbl td { border-bottom:1px solid var(--line); padding:4px 6px; text-align:left; font-variant-numeric:tabular-nums; }
+#__UID__ table.jx-tbl td.num, #__UID__ table.jx-tbl th.num { text-align:right; }
+#__UID__ table.jx-tbl tr.best td { font-weight:700; }
+#__UID__ .jx-ctrl { display:flex; flex-wrap:wrap; align-items:center; gap:8px 12px; background:var(--light); border-radius:8px; padding:8px 12px; margin-bottom:10px; }
+#__UID__ .jx-ctrl label { font-size:13px; font-weight:700; }
+#__UID__ .jx-ctrl input[type=range] { width:220px; accent-color:var(--green); }
+#__UID__ .jx-ctrl .val { font-family:"SFMono-Regular",Menlo,Consolas,monospace; font-size:14px; font-weight:700; min-width:64px; }
+#__UID__ .jx-btn { border:1px solid var(--line); background:var(--surface); border-radius:6px; padding:3px 10px; font-size:12.5px; cursor:pointer; color:var(--ink); }
+#__UID__ .jx-btn:hover { border-color:var(--green); }
+#__UID__ .jx-btn[aria-pressed="true"] { background:var(--green); color:#fff; border-color:var(--green); }
+#__UID__ .jx-perms { display:flex; flex-wrap:wrap; gap:4px; margin:6px 0 8px; }
+#__UID__ .jx-perms .jx-btn { font-family:"SFMono-Regular",Menlo,Consolas,monospace; font-size:11.5px; padding:2px 7px; }
+#__UID__ .jx-decision { display:inline-block; font-size:18px; font-weight:700; border-radius:8px; padding:6px 14px; margin:4px 0 8px; }
+#__UID__ .jx-decision.act { background:#DCEBE5; color:var(--ink); border:1px solid var(--green); }
+#__UID__ .jx-decision.ask { background:#F6E0D5; color:var(--ink); border:1px solid var(--orange); }
+#__UID__ .jx-nav { display:flex; justify-content:space-between; align-items:center; margin-top:10px; gap:8px; }
+#__UID__ .jx-foot { font-size:12.5px; color:var(--muted); }
+#__UID__ .jx-foot b { color:var(--ink); }
+#__UID__ svg text { font-family:inherit; }
+#__UID__ .jx-tip { position:absolute; pointer-events:none; background:var(--ink); color:#fff; font-size:12px; border-radius:6px; padding:5px 8px; white-space:nowrap; transform:translate(-50%, -110%); opacity:0; transition:opacity .08s; z-index:5; }
+#__UID__ .jx-chart { position:relative; }
+#__UID__ details { margin-top:8px; font-size:12.5px; }
+#__UID__ details summary { cursor:pointer; color:var(--muted); }
+#__UID__ .jx-static { font-size:13px; color:var(--muted); }
+@media (max-width:760px) {
+  #__UID__ .jx-flow { grid-template-columns:repeat(4, minmax(0,1fr)); }
+  #__UID__ .jx-grid2 { grid-template-columns:1fr; }
+}
+</style>
+<div class="jx-static">__STATIC__</div>
+</div>
+<script>
+(function () {
+  "use strict";
+  var root = document.getElementById("__UID__");
+  if (!root || root.dataset.ready) return;
+  root.dataset.ready = "1";
+  var DATA = __DATA__;
+  var NS = "http://www.w3.org/2000/svg";
+  var C = { ink: "#19272D", green: "#466A62", orange: "#AA5238", light: "#F0F5F2", line: "#D6DED9", muted: "#5E6E68", faint: "#8A9691", gray: "#B7C2BD" };
+  var ROLE = DATA.roles;
+  var ROLE_ORDER = ["template", "system", "json", "evidence", "criterion", "letter", "option", "gen"];
+  var STEPS = [
+    { name: "입력", lead: "상황·질문·보기 세 가지가 전부예요." },
+    { name: "프롬프트 조립", lead: "SemIf가 세 가지를 채팅 프롬프트 한 장으로 바꿔요." },
+    { name: "토큰", lead: "모델은 글자가 아니라 토큰 번호를 읽어요." },
+    { name: "모델 1번 통과", lead: "토큰 전체가 32층을 한 번 지나가요. 글을 쓰지 않으니 반복이 없어요." },
+    { name: "글자 점수", lead: "마지막 자리에서 '다음 토큰' 점수 중 보기 글자 것만 골라요." },
+    { name: "확률", lead: "점수를 softmax로 확률로 바꿔요. 온도 T를 바꿔 보세요." },
+    { name: "코드의 판단", lead: "확률을 행동으로 바꾸는 건 모델이 아니라 내 코드예요." }
+  ];
+  var S = { ci: Math.max(0, DATA.cases.findIndex(function (c) { return c.id === DATA.defaultCase; })), step: 0, T: 1, tau: 0.7, perm: 0, permOn: false };
+
+  // ── 작은 도구들 ──
+  function el(tag, attrs) {
+    var n = document.createElement(tag);
+    if (attrs) for (var k in attrs) {
+      if (k === "text") n.textContent = attrs[k];
+      else if (k === "html") n.innerHTML = attrs[k];
+      else if (k.slice(0, 2) === "on") n.addEventListener(k.slice(2), attrs[k]);
+      else if (attrs[k] !== null && attrs[k] !== undefined) n.setAttribute(k, attrs[k]);
+    }
+    for (var i = 2; i < arguments.length; i++) {
+      var ch = arguments[i];
+      if (ch === null || ch === undefined) continue;
+      n.appendChild(typeof ch === "string" ? document.createTextNode(ch) : ch);
+    }
+    return n;
+  }
+  function sv(tag, attrs) {
+    var n = document.createElementNS(NS, tag);
+    if (attrs) for (var k in attrs) { if (k === "text") n.textContent = attrs[k]; else n.setAttribute(k, attrs[k]); }
+    for (var i = 2; i < arguments.length; i++) if (arguments[i]) n.appendChild(arguments[i]);
+    return n;
+  }
+  function esc(s) { return String(s).replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;"); }
+  function softmax(z, T) {
+    T = T || 1; var m = -Infinity, i;
+    for (i = 0; i < z.length; i++) m = Math.max(m, z[i] / T);
+    var e = z.map(function (v) { return Math.exp(v / T - m); }), s = e.reduce(function (a, b) { return a + b; }, 0);
+    return e.map(function (v) { return v / s; });
+  }
+  function argmax(a) { var b = 0; for (var i = 1; i < a.length; i++) if (a[i] > a[b]) b = i; return b; }
+  function f2(p) { return p.toFixed(2); }
+  function pct(p) {
+    if (p >= 0.995) return (p * 100).toFixed(2) + "%";
+    if (p >= 0.1) return (p * 100).toFixed(1) + "%";
+    if (p >= 0.001) return (p * 100).toFixed(2) + "%";
+    if (p >= 0.00001) return (p * 100).toFixed(4) + "%";
+    return "<0.001%";
+  }
+  function showWs(t) { return t.replace(/ /g, "␣").replace(/\n/g, "↵").replace(/\t/g, "⇥"); }
+  function tokLabel(t) { var m = t.match(/^(\s*)([\s\S]*?)(\s*)$/); return showWs(m[1]) + m[2] + showWs(m[3]); }
+  function letters(c) { return c.slots.map(function (s) { return s[0]; }); }
+  function cur() { return DATA.cases[S.ci]; }
+  function desc(c, oid) { var o = c.row.options.find(function (x) { return x.id === oid; }); return o ? o.description : ""; }
+  function probsNow(c) { return softmax(c.logits, S.T); }
+  function decisionOf(c) {
+    var p = probsNow(c), b = argmax(p);
+    return { best: c.option_ids[b], p: p[b], act: p[b] >= S.tau, probs: p };
+  }
+  function tipHost(host) {
+    var tip = el("div", { class: "jx-tip" });
+    host.appendChild(tip);
+    return {
+      show: function (x, y, html) { tip.innerHTML = html; tip.style.left = x + "px"; tip.style.top = y + "px"; tip.style.opacity = 1; },
+      hide: function () { tip.style.opacity = 0; }
+    };
+  }
+
+  // ── 가로 막대 (값 표시 + 기준선/참고 눈금 선택) ──
+  function hbars(rows, opt) {
+    opt = opt || {};
+    var W = opt.width || 560, lab = opt.labelWidth || 190, rowH = 30, bar = 16, pad = 70;
+    var H = rows.length * rowH + (opt.axis ? 22 : 6);
+    var max = opt.max || 1, plotW = W - lab - pad;
+    var svg = sv("svg", { viewBox: "0 0 " + W + " " + H, width: "100%", role: "img", "aria-label": opt.aria || "막대 그래프", style: "max-width:" + W + "px;display:block" });
+    if (opt.axis) {
+      [0, 0.25, 0.5, 0.75, 1].forEach(function (t) {
+        var x = lab + plotW * t / max;
+        svg.appendChild(sv("line", { x1: x, x2: x, y1: 0, y2: H - 18, stroke: C.line, "stroke-width": 1 }));
+        svg.appendChild(sv("text", { x: x, y: H - 4, "text-anchor": "middle", "font-size": 11, fill: C.muted, text: t.toFixed(2) }));
+      });
+    }
+    rows.forEach(function (r, i) {
+      var y = i * rowH + (rowH - bar) / 2;
+      var w = Math.max(plotW * Math.min(r.v, max) / max, r.v > 0 ? 1.5 : 0);
+      var g = sv("g");
+      g.appendChild(sv("text", { x: lab - 8, y: y + bar / 2 + 4, "text-anchor": "end", "font-size": 12.5, fill: C.ink, "font-weight": r.bold ? 700 : 400, text: r.label }));
+      var path = "M" + lab + "," + y + " h" + Math.max(w - 4, 0) + " a4,4 0 0 1 4,4 v" + (bar - 8) + " a4,4 0 0 1 -4,4 h" + (-Math.max(w - 4, 0)) + " z";
+      if (w < 5) path = "M" + lab + "," + y + " h" + w + " v" + bar + " h" + (-w) + " z";
+      g.appendChild(sv("path", { d: path, fill: r.color || C.gray }));
+      g.appendChild(sv("text", { x: lab + w + 6, y: y + bar / 2 + 4, "font-size": 12.5, fill: C.ink, "font-weight": r.bold ? 700 : 400, text: r.valueText || f2(r.v) }));
+      if (r.ref !== undefined && r.ref !== null) {
+        var rx = lab + plotW * Math.min(r.ref, max) / max;
+        g.appendChild(sv("line", { x1: rx, x2: rx, y1: y - 4, y2: y + bar + 4, stroke: C.ink, "stroke-width": 2 }));
+      }
+      g.appendChild(sv("title", { text: r.title || (r.label + ": " + (r.valueText || f2(r.v))) }));
+      svg.appendChild(g);
+    });
+    if (opt.threshold !== undefined) {
+      var tx = lab + plotW * opt.threshold / max;
+      svg.appendChild(sv("line", { x1: tx, x2: tx, y1: 0, y2: rows.length * rowH, stroke: C.orange, "stroke-width": 2 }));
+      svg.appendChild(sv("text", { x: tx + 4, y: 11, "font-size": 11, fill: C.orange, text: "기준 " + f2(opt.threshold) }));
+    }
+    return svg;
+  }
+
+  // ── 흐름(7단계) ──
+  function nodeSub(i, c) {
+    var L = letters(c), d = decisionOf(c), b = argmax(c.logits);
+    switch (i) {
+      case 0: return "보기 " + c.option_ids.length + "개";
+      case 1: return "글자 A~" + L[L.length - 1] + " 붙이기";
+      case 2: return c.tokens.length + "토큰";
+      case 3: return c.layer_types.length + "층 · 1번";
+      case 4: return L[b] + " 점수 " + c.logits[b].toFixed(2);
+      case 5: return d.best + " " + f2(d.p);
+      case 6: return d.act ? d.best + "(으)로" : "되묻기";
+    }
+  }
+
+  function renderCases() {
+    var box = root.querySelector(".jx-cases"); box.innerHTML = "";
+    DATA.cases.forEach(function (c, i) {
+      box.appendChild(el("button", { class: "jx-case", "aria-pressed": i === S.ci ? "true" : "false", title: c.id,
+        onclick: function () { S.ci = i; S.perm = 0; render(); } }, c.title));
+    });
+  }
+  function renderFlow() {
+    var box = root.querySelector(".jx-flow"); box.innerHTML = ""; var c = cur();
+    STEPS.forEach(function (st, i) {
+      var b = el("button", { class: "jx-node" + (i < S.step ? " done" : ""), "aria-current": i === S.step ? "step" : null,
+        onclick: function () { S.step = i; render(); } },
+        el("span", { class: "n", text: "①②③④⑤⑥⑦".charAt(i) }), el("span", { class: "t", text: st.name }), el("span", { class: "s", text: nodeSub(i, c) }));
+      box.appendChild(b);
+    });
+  }
+
+  // ① 입력
+  function step0(c, P) {
+    var g = el("div", { class: "jx-grid2" });
+    g.appendChild(el("div", { class: "jx-card" }, el("div", { class: "jx-lab", text: "상황 (state)" }), el("div", { text: typeof c.row.state === "string" ? c.row.state : JSON.stringify(c.row.state) })));
+    var ul = el("ul");
+    c.row.options.forEach(function (o, i) { ul.appendChild(el("li", null, el("span", { class: "jx-chip", text: o.id }), " ", o.description)); });
+    g.appendChild(el("div", { class: "jx-card" }, el("div", { class: "jx-lab", text: "질문 (question)" }), el("div", { text: c.row.question }), el("div", { class: "jx-lab", style: "margin-top:8px", text: "보기 (options) — id와 설명" }), ul));
+    P.appendChild(g);
+    var call = "row = {\n  \"id\": " + JSON.stringify(c.row.id) + ",\n  \"state\": \"…\",      # 위 왼쪽\n  \"question\": \"…\",   # 위 오른쪽\n  \"options\": [" + c.row.options.map(function (o) { return "{\"id\": " + JSON.stringify(o.id) + ", …}"; }).join(", ") + "],\n}\nscore(model, tokenizer, row, metadata)   # SemIf: 보기마다 확률을 돌려줘요";
+    P.appendChild(el("pre", { class: "jx-code", text: call }));
+    P.appendChild(el("div", { class: "jx-note", html: "Jev의 <b>CHOICE</b> 질문과 같은 모양이에요. 보기는 2~16개까지 되고, 모델이 새 글을 쓰지 않으니 답은 반드시 이 보기 중 하나예요." }));
+  }
+
+  // ② 프롬프트 조립
+  function promptView(c, cls) {
+    var pre = el("div", { class: cls || "jx-prompt" }), cursor = 0, prev = null, buf = "";
+    function flush() { if (buf) { pre.appendChild(el("span", { class: "r-" + prev, title: ROLE[prev] }, buf)); buf = ""; } }
+    c.tokens.forEach(function (t) {
+      var s = t[1], e = t[2], role = t[3];
+      if (e <= cursor) return;
+      var text = c.prompt.slice(Math.max(s, cursor), e); cursor = e;
+      if (role !== prev) { flush(); prev = role; }
+      buf += text;
+    });
+    flush();
+    return pre;
+  }
+  function legend(counts) {
+    var lg = el("div", { class: "jx-legend" });
+    ROLE_ORDER.forEach(function (r) {
+      var sw = el("i", { class: "r-" + r }); if (r === "json") sw.style.background = "#fff";
+      lg.appendChild(el("span", null, sw, ROLE[r] + (counts ? " " + (counts[r] || 0) : "")));
+    });
+    return lg;
+  }
+  function step1(c, P) {
+    P.appendChild(promptView(c));
+    P.appendChild(legend());
+    var L = letters(c);
+    var notes = el("div", { class: "jx-note" });
+    notes.innerHTML = "• <b>지시문</b>: 보기 글자 하나로만 답하라고 해요. &nbsp;• <b>JSON</b>: 상황은 <code>evidence</code>, 질문은 <code>criterion</code>, 보기는 <code>letter</code>+<code>description</code>으로 들어가요.<br>" +
+      "• 보기 id(<code>" + c.option_ids.map(esc).join("</code>, <code>") + "</code>)는 프롬프트에 없어요. 모델은 글자 <b>" + L.join(", ") + "</b>만 보고, 코드가 글자를 다시 id로 바꿔요.<br>" +
+      "• 맨 끝 <span class='r-gen'>&lt;think&gt; &lt;/think&gt;</span>는 생각 모드를 끈 빈 칸이에요. 그 바로 뒤가 답(글자 하나)이 올 자리예요.";
+    P.appendChild(notes);
+    var sha = el("div", { class: "jx-note mono", style: "margin-top:6px" });
+    sha.textContent = "프롬프트 지문(SHA-256) " + c.sha.slice(0, 16) + "…" + (c.ref && c.ref.sha ? (c.ref.sha === c.sha ? "  ✓ " + c.ref.label + "과 같은 프롬프트" : "  ✗ " + c.ref.label + "과 다름") : "");
+    P.appendChild(sha);
+  }
+
+  // ③ 토큰
+  function step2(c, P) {
+    var counts = {}, info = el("div", { class: "jx-tokinfo", text: "토큰에 마우스를 올려 보세요." });
+    var box = el("div", { class: "jx-toks" });
+    var slotIds = {}; c.slots.forEach(function (s) { slotIds[s[1]] = s[0]; });
+    c.tokens.forEach(function (t, i) {
+      counts[t[3]] = (counts[t[3]] || 0) + 1;
+      var raw = c.prompt.slice(t[1], t[2]);
+      var chip = el("span", { class: "jx-tok r-" + t[3] + (i === c.tokens.length - 1 ? " is-last" : "") + (slotIds[t[0]] && t[3] === "letter" ? " is-hot" : ""), tabindex: "-1" });
+      var shown = raw.length ? raw : "·";
+      var m = shown.match(/^(\s*)([\s\S]*?)(\s*)$/);
+      if (m[1]) chip.appendChild(el("span", { class: "ws", text: showWs(m[1]) }));
+      if (m[2]) chip.appendChild(document.createTextNode(m[2]));
+      if (m[3]) chip.appendChild(el("span", { class: "ws", text: showWs(m[3]) }));
+      var msg = "#" + (i + 1) + " · 토큰 id " + t[0] + " · " + JSON.stringify(raw) + " · " + ROLE[t[3]] + (i === c.tokens.length - 1 ? " · ← 여기서 다음 토큰 점수를 읽어요" : "");
+      chip.title = msg;
+      chip.addEventListener("mouseenter", function () { info.textContent = msg; });
+      box.appendChild(chip);
+    });
+    P.appendChild(box);
+    P.appendChild(info);
+    var stack = el("div", { class: "jx-stack", role: "img", "aria-label": "역할별 토큰 수" });
+    ROLE_ORDER.forEach(function (r) {
+      if (!counts[r]) return;
+      var d = el("div", { class: "r-" + r, title: ROLE[r] + " " + counts[r] + "개" });
+      d.style.flex = String(counts[r]); if (r === "json") d.style.background = "#E9EEEC";
+      stack.appendChild(d);
+    });
+    P.appendChild(stack);
+    P.appendChild(legend(counts));
+    var L = c.slots.map(function (s) { return s[0] + " = id " + s[1]; }).join(", ");
+    P.appendChild(el("div", { class: "jx-note", html: "총 <b>" + c.tokens.length + "토큰</b>. 보기 글자는 각각 토큰 하나예요(<code>" + L + "</code>). SemIf는 글자가 토큰 하나로 딱 떨어지는지 먼저 검사해요. 주황 테두리가 마지막 토큰 — 이 자리에서 '다음에 올 토큰'의 점수를 읽어요." }));
+  }
+
+  // ④ 모델 1번 통과: 층 띠 + 로짓 렌즈
+  function step3(c, P) {
+    var types = c.layer_types, n = types.length, W = 720, H = 250, l = 44, r = 150, t = 16, b = 34;
+    var strip = sv("svg", { viewBox: "0 0 " + W + " 40", width: "100%", style: "max-width:" + W + "px;display:block", role: "img", "aria-label": "32개 층의 종류" });
+    var cw = (W - l - r) / n, full = 0;
+    types.forEach(function (ty, i) {
+      var isFull = ty === "full_attention"; if (isFull) full++;
+      var rect = sv("rect", { x: l + i * cw + 1, y: 6, width: cw - 2, height: 18, rx: 3, fill: isFull ? C.ink : "#CFE0D9" });
+      rect.appendChild(sv("title", { text: (i + 1) + "층 · " + (isFull ? "전체 어텐션" : "선형 어텐션") }));
+      strip.appendChild(rect);
+      if ((i + 1) % 4 === 0 || i === 0) strip.appendChild(sv("text", { x: l + i * cw + cw / 2, y: 37, "text-anchor": "middle", "font-size": 10, fill: C.muted, text: String(i + 1) }));
+    });
+    strip.appendChild(sv("text", { x: l + n * cw + 8, y: 19, "font-size": 11.5, fill: C.muted, text: "▮ 전체 " + full + " · ▯ 선형 " + (n - full) }));
+    P.appendChild(strip);
+
+    var host = el("div", { class: "jx-chart" }), tip = tipHost(host);
+    var svg = sv("svg", { viewBox: "0 0 " + W + " " + H, width: "100%", style: "max-width:" + W + "px;display:block", role: "img", "aria-label": "층마다 읽어 본 보기 확률" });
+    var pw = W - l - r, ph = H - t - b;
+    function X(i) { return l + (i - 1) * pw / (n - 1); }
+    function Y(p) { return t + (1 - p) * ph; }
+    [0, 0.5, 1].forEach(function (v) {
+      svg.appendChild(sv("line", { x1: l, x2: l + pw, y1: Y(v), y2: Y(v), stroke: C.line, "stroke-width": 1 }));
+      svg.appendChild(sv("text", { x: l - 6, y: Y(v) + 4, "text-anchor": "end", "font-size": 11, fill: C.muted, text: v.toFixed(1) }));
+    });
+    types.forEach(function (ty, i) { if (ty === "full_attention") svg.appendChild(sv("line", { x1: X(i + 1), x2: X(i + 1), y1: t + ph, y2: t + ph + 5, stroke: C.ink, "stroke-width": 1.5 })); });
+    [1, 8, 16, 24, 32].forEach(function (k) { svg.appendChild(sv("text", { x: X(k), y: H - 12, "text-anchor": "middle", "font-size": 11, fill: C.muted, text: k + "층" })); });
+    var lens = c.lens.slice(1).map(function (z) { return softmax(z, 1); });  // 0번(임베딩)은 뺐어요
+    var fin = argmax(c.logits);
+    var order = c.option_ids.map(function (_, j) { return j; }).sort(function (a, bb) { return (a === fin) - (bb === fin); });
+    var ends = [];
+    order.forEach(function (j) {
+      var d = lens.map(function (p, i) { return (i ? "L" : "M") + X(i + 1).toFixed(1) + "," + Y(p[j]).toFixed(1); }).join(" ");
+      svg.appendChild(sv("path", { d: d, fill: "none", stroke: j === fin ? C.green : C.gray, "stroke-width": j === fin ? 2.5 : 1.8, "stroke-linejoin": "round", "stroke-linecap": "round" }));
+      var last = lens[lens.length - 1][j];
+      svg.appendChild(sv("circle", { cx: X(n), cy: Y(last), r: 4, fill: j === fin ? C.green : C.gray, stroke: "#fff", "stroke-width": 2 }));
+      ends.push({ j: j, y: Y(last) });
+    });
+    ends.sort(function (a, bb) { return a.y - bb.y; });
+    for (var k = 1; k < ends.length; k++) if (ends[k].y - ends[k - 1].y < 14) ends[k].y = ends[k - 1].y + 14;
+    ends.forEach(function (e) {
+      svg.appendChild(sv("text", { x: X(n) + 10, y: e.y + 4, "font-size": 12, fill: C.ink, "font-weight": e.j === fin ? 700 : 400, text: letters(c)[e.j] + " " + c.option_ids[e.j] + " " + f2(lens[lens.length - 1][e.j]) }));
+    });
+    var cross = sv("line", { x1: 0, x2: 0, y1: t, y2: t + ph, stroke: C.ink, "stroke-width": 1, opacity: 0 });
+    svg.appendChild(cross);
+    var hit = sv("rect", { x: l, y: t, width: pw, height: ph, fill: "transparent" });
+    hit.addEventListener("mousemove", function (ev) {
+      var box = svg.getBoundingClientRect(), sx = (ev.clientX - box.left) * W / box.width;
+      var i = Math.max(1, Math.min(n, Math.round((sx - l) / pw * (n - 1)) + 1));
+      cross.setAttribute("x1", X(i)); cross.setAttribute("x2", X(i)); cross.setAttribute("opacity", 0.35);
+      var p = lens[i - 1], html = "<b>" + i + "층</b> (" + (types[i - 1] === "full_attention" ? "전체 어텐션" : "선형 어텐션") + ")<br>" +
+        c.option_ids.map(function (o, j) { return letters(c)[j] + " " + esc(o) + " " + f2(p[j]); }).join("<br>");
+      tip.show((X(i) / W) * box.width, (Y(Math.max.apply(null, p)) / H) * box.height, html);
+    });
+    hit.addEventListener("mouseleave", function () { cross.setAttribute("opacity", 0); tip.hide(); });
+    svg.appendChild(hit);
+    host.appendChild(svg);
+    P.appendChild(host);
+    var ms = c.ms ? " 이 케이스 한 번 통과: <b>" + Math.round(c.ms) + "ms</b> (" + esc(DATA.deviceLabel) + ")." : "";
+    P.appendChild(el("div", { class: "jx-note", html: "Qwen3.5-4B는 <b>선형 어텐션 층 3개 + 전체 어텐션 층 1개</b>를 8번 쌓았어요." + ms +
+      "<br>선은 '로짓 렌즈'예요: 각 층을 지난 마지막 토큰 상태에 모델의 마지막 정규화와 출력층을 바로 붙여, 그 층에서 멈췄다면 보기 글자 확률이 어땠을지 본 <b>분석용 근사</b>예요. SemIf 판정은 32층 끝에서 한 번만 읽어요. 초록 선이 최종 선택이에요." }));
+  }
+
+  // ⑤ 글자 점수
+  function step4(c, P) {
+    var row = el("div", { class: "jx-row" }), left = el("div", { class: "grow" }), right = el("div", { class: "side" });
+    var slotSet = {}; c.slots.forEach(function (s) { slotSet[s[1]] = s[0]; });
+    left.appendChild(el("div", { class: "jx-lab", text: "마지막 자리에서 모델이 다음에 쓰고 싶은 토큰 상위 " + c.top.length + "개 (어휘 " + (DATA.vocabSize ? DATA.vocabSize.toLocaleString() : "전체") + "개 기준)" }));
+    left.appendChild(hbars(c.top.map(function (t) {
+      var isSlot = slotSet[t[0]] !== undefined;
+      return { label: tokLabel(t[1]) + (isSlot ? "  (보기 " + slotSet[t[0]] + ")" : ""), v: t[2], valueText: pct(t[2]), color: isSlot ? C.green : C.gray, bold: isSlot };
+    }), { width: 520, labelWidth: 170, aria: "전체 어휘 상위 토큰 확률" }));
+    row.appendChild(left);
+    right.appendChild(el("div", { class: "jx-stat" }, el("div", { class: "v", text: pct(c.mass) }), el("div", { class: "l", text: "보기 글자 " + letters(c).join("·") + "에 모인 확률 (나머지는 '<think>' 같은 다른 토큰)" })));
+    var tbl = el("table", { class: "jx-tbl" }), b = argmax(c.logits);
+    tbl.appendChild(el("tr", null, el("th", { text: "글자" }), el("th", { text: "보기 id" }), el("th", { class: "num", text: "점수(logit)" })));
+    c.option_ids.forEach(function (o, j) {
+      tbl.appendChild(el("tr", { class: j === b ? "best" : null }, el("td", { text: letters(c)[j] }), el("td", { text: o }), el("td", { class: "num", text: c.logits[j].toFixed(3) })));
+    });
+    right.appendChild(tbl);
+    row.appendChild(right);
+    P.appendChild(row);
+    P.appendChild(el("div", { class: "jx-note", html: "SemIf는 전체 어휘 점수 중 <b>보기 글자 토큰의 점수만</b> 골라요. 그래서 보기 밖 답이 나올 수 없어요. 점수(logit)는 크기 비교용 숫자이고, 아직 확률이 아니에요." }));
+  }
+
+  // ⑥ 확률 + 온도 + 순서 바꾸기
+  // 슬라이더를 끌 때는 아래 그림만 다시 그려요(슬라이더 자체를 새로 만들면 끌기가 끊겨요).
+  function tempCtrl(P, redraw) {
+    var ctrl = el("div", { class: "jx-ctrl" });
+    var val = el("span", { class: "val", text: "T = " + S.T.toFixed(2) });
+    var rng = el("input", { type: "range", min: "-2", max: "2", step: "0.05", value: String(Math.log2(S.T)), "aria-label": "온도 T" });
+    rng.addEventListener("input", function () { S.T = Math.pow(2, parseFloat(rng.value)); val.textContent = "T = " + S.T.toFixed(2); redraw(); renderFlow(); renderFoot(); });
+    ctrl.appendChild(el("label", { text: "온도" })); ctrl.appendChild(rng); ctrl.appendChild(val);
+    ctrl.appendChild(el("button", { class: "jx-btn", text: "T=1 (원래 값)", onclick: function () {
+      S.T = 1; rng.value = "0"; val.textContent = "T = 1.00"; redraw(); renderFlow(); renderFoot(); } }));
+    ctrl.appendChild(el("span", { class: "jx-foot", text: "p = softmax(점수 ÷ T)" }));
+    P.appendChild(ctrl);
+  }
+  function step5(c, P) {
+    var body = el("div");
+    function redraw() {
+      body.innerHTML = "";
+      var L = letters(c), rows;
+      var pmode = S.permOn && c.perms && c.perms.length > 1;
+      if (!pmode) {
+        var p = probsNow(c), b = argmax(p);
+        rows = c.option_ids.map(function (o, j) {
+          return { label: L[j] + " · " + o, v: p[j], bold: j === b, color: j === b ? C.green : C.gray, ref: c.ref && c.ref.probs ? c.ref.probs[o] : null,
+            title: L[j] + " · " + o + " (" + desc(c, o) + "): " + f2(p[j]) + (c.ref && c.ref.probs ? " · " + c.ref.label + " " + f2(c.ref.probs[o]) : "") };
+        });
+        body.appendChild(hbars(rows, { width: 640, labelWidth: 200, axis: true, aria: "보기 확률" }));
+        if (c.ref && c.ref.probs) body.appendChild(el("div", { class: "jx-legend" },
+          el("span", { html: "<i style='background:" + C.green + "'></i>이번 숫자 (T=" + S.T.toFixed(2) + ")" }),
+          el("span", { html: "<b style='color:" + C.ink + "'>│</b> " + esc(c.ref.label) + " (T=1)" })));
+      } else {
+        var pm = c.perms[S.perm], z = pm.order.map(function (o) { return pm.logits[o]; }), pp = softmax(z, S.T), bb = argmax(pp);
+        rows = pm.order.map(function (o, j) { return { label: L[j] + " · " + o, v: pp[j], bold: j === bb, color: j === bb ? C.green : C.gray }; });
+        body.appendChild(el("div", { class: "jx-lab", text: "지금 순서: " + pm.order.map(function (o, j) { return L[j] + "=" + o; }).join(", ") }));
+        body.appendChild(hbars(rows, { width: 640, labelWidth: 200, axis: true, aria: "순서를 바꾼 보기 확률" }));
+      }
+      if (c.perms && c.perms.length > 1) {
+        var bar = el("div", { class: "jx-ctrl", style: "margin-top:10px" });
+        bar.appendChild(el("button", { class: "jx-btn", "aria-pressed": S.permOn ? "true" : "false",
+          onclick: function () { S.permOn = !S.permOn; redraw(); renderFoot(); },
+          text: S.permOn ? "보기 순서 바꾸기 끄기" : "보기 순서 바꿔 보기 (" + c.perms.length + "가지)" }));
+        bar.appendChild(el("span", { class: "jx-foot", text: "보기 내용은 그대로, 글자 A·B…만 다른 보기에 붙여 SemIf를 다시 돌린 결과예요." }));
+        body.appendChild(bar);
+        if (S.permOn) {
+          var pb = el("div", { class: "jx-perms" });
+          c.perms.forEach(function (pm2, k) {
+            pb.appendChild(el("button", { class: "jx-btn", "aria-pressed": k === S.perm ? "true" : "false", title: pm2.order.join(" · "),
+              onclick: function () { S.perm = k; redraw(); renderFoot(); }, text: pm2.order.map(function (o) { return o.slice(0, 6); }).join("·") }));
+          });
+          body.appendChild(pb);
+        }
+        body.appendChild(spread(c));
+      }
+    }
+    tempCtrl(P, redraw);
+    P.appendChild(body);
+    redraw();
+    P.appendChild(el("div", { class: "jx-note", html: "SemIf가 돌려주는 원래 확률은 <b>T=1</b>이에요. T를 키우면 고르게, 줄이면 뾰족해지지만 <b>1등은 바뀌지 않아요</b>. 내 데이터로 T를 맞추는 게 1강의 보정(온도 조절)이에요 — SemIf 저장소에도 작업별 온도 보정 기능이 있어요. 이 숫자는 '보기끼리 비교한 점수'이지, 맞을 확률로 보정된 값이 아니에요." }));
+  }
+  function spread(c) {
+    var W = 640, lab = 200, rowH = 26, H = c.option_ids.length * rowH + 30, pw = W - lab - 70;
+    var L = letters(c);
+    var box = el("div", { style: "margin-top:4px" });
+    box.appendChild(el("div", { class: "jx-lab", text: "순서에 따른 흔들림: 보기마다 " + c.perms.length + "가지 순서의 확률 범위 (T=1)" }));
+    var svg = sv("svg", { viewBox: "0 0 " + W + " " + H, width: "100%", style: "max-width:" + W + "px;display:block", role: "img", "aria-label": "순서에 따른 확률 범위" });
+    [0, 0.5, 1].forEach(function (v) {
+      svg.appendChild(sv("line", { x1: lab + pw * v, x2: lab + pw * v, y1: 0, y2: H - 18, stroke: C.line, "stroke-width": 1 }));
+      svg.appendChild(sv("text", { x: lab + pw * v, y: H - 4, "text-anchor": "middle", "font-size": 11, fill: C.muted, text: v.toFixed(1) }));
+    });
+    var words = [];
+    c.option_ids.forEach(function (o, j) {
+      var vals = c.perms.map(function (pm) { return softmax(pm.order.map(function (x) { return pm.logits[x]; }), 1)[pm.order.indexOf(o)]; });
+      var kmin = 0, kmax = 0;
+      vals.forEach(function (v, k) { if (v < vals[kmin]) kmin = k; if (v > vals[kmax]) kmax = k; });
+      var lo = vals[kmin], hi = vals[kmax], y = j * rowH + 12;
+      svg.appendChild(sv("text", { x: lab - 8, y: y + 4, "text-anchor": "end", "font-size": 12.5, fill: C.ink, text: o }));
+      svg.appendChild(sv("line", { x1: lab + pw * lo, x2: lab + pw * hi, y1: y, y2: y, stroke: C.gray, "stroke-width": 6, "stroke-linecap": "round" }));
+      vals.forEach(function (v, k) {
+        var on = S.permOn && k === S.perm;
+        var cc = sv("circle", { cx: lab + pw * v, cy: y, r: on ? 5 : 3.2, fill: on ? C.orange : C.green, stroke: "#fff", "stroke-width": 1.5 });
+        cc.appendChild(sv("title", { text: c.perms[k].order.map(function (x, i) { return L[i] + "=" + x; }).join(", ") + " → " + o + " " + f2(v) }));
+        svg.appendChild(cc);
+      });
+      svg.appendChild(sv("text", { x: lab + pw * hi + 10, y: y + 4, "font-size": 12, fill: C.ink, text: f2(lo) + " ~ " + f2(hi) }));
+      words.push({ o: o, lo: lo, hi: hi, atHi: L[c.perms[kmax].order.indexOf(o)], atLo: L[c.perms[kmin].order.indexOf(o)] });
+    });
+    box.appendChild(svg);
+    var w = words.sort(function (a, b) { return (b.hi - b.lo) - (a.hi - a.lo); })[0];
+    var msg = "순서만 바꿨는데 <b>" + esc(w.o) + "</b>는 <b>" + f2(w.lo) + " ~ " + f2(w.hi) + "</b> 사이를 오가요 (" + w.atHi + " 자리일 때 " + f2(w.hi) + ", " + w.atLo + " 자리일 때 " + f2(w.lo) + ").";
+    msg += (w.hi - w.lo) >= 0.1 ? " 보기 순서도 입력의 일부라서, 작은 모델은 자리(글자)에 따라 쏠려요 — 1강에서 본 '예시 순서·흔한 라벨 쪽 쏠림'과 같은 현상이에요." : " 이 케이스는 순서에 거의 흔들리지 않아요.";
+    box.appendChild(el("div", { class: "jx-note", html: msg }));
+    return box;
+  }
+
+  // ⑦ 코드의 판단
+  function step6(c, P) {
+    var body = el("div");
+    function redraw() {
+      body.innerHTML = "";
+      var d = decisionOf(c);
+      body.appendChild(el("div", { class: "jx-decision " + (d.act ? "act" : "ask"), text: d.act ? "→ " + d.best + " (으)로 진행  (" + f2(d.p) + " ≥ " + f2(S.tau) + ")" : "→ 사람에게 되묻기  (" + f2(d.p) + " < " + f2(S.tau) + ")" }));
+      var pj = "{" + c.option_ids.map(function (o, j) { return JSON.stringify(o) + ": " + f2(d.probs[j]); }).join(", ") + "}";
+      var lines = [
+        ["p = " + pj, "# ⑥에서 나온 확률 (T=" + S.T.toFixed(2) + ")"],
+        ["best = max(p, key=p.get)", "# " + JSON.stringify(d.best)],
+        ["if p[best] >= " + f2(S.tau) + ":", "# 코드의 기준"],
+        ["    act(best)", d.act ? "# ← 이번엔 여기" : ""],
+        ["else:", ""],
+        ["    ask_user()", d.act ? "" : "# ← 이번엔 여기"]
+      ];
+      var pre = el("pre", { class: "jx-code" });
+      lines.forEach(function (ln, i) {
+        var on = (d.act && i === 3) || (!d.act && i === 5);
+        var span = el("span", { class: on ? "hl" : null });
+        span.appendChild(document.createTextNode(ln[0]));
+        if (ln[1]) { var pad = Math.max(2, 34 - ln[0].length); span.appendChild(el("span", { class: "cm", text: " ".repeat(pad) + ln[1] })); }
+        pre.appendChild(span); pre.appendChild(document.createTextNode("\n"));
+      });
+      body.appendChild(pre);
+      var L = letters(c), chart = el("div", { style: "margin-top:12px" });
+      chart.appendChild(hbars(c.option_ids.map(function (o, j) { return { label: L[j] + " · " + o, v: d.probs[j], bold: o === d.best, color: o === d.best ? (d.act ? C.green : C.orange) : C.gray }; }), { width: 640, labelWidth: 200, axis: true, threshold: S.tau, aria: "기준선과 보기 확률" }));
+      body.appendChild(chart);
+    }
+    var ctrl = el("div", { class: "jx-ctrl" });
+    var val = el("span", { class: "val", text: f2(S.tau) });
+    var rng = el("input", { type: "range", min: "0.5", max: "0.99", step: "0.01", value: String(S.tau), "aria-label": "기준" });
+    rng.addEventListener("input", function () { S.tau = parseFloat(rng.value); val.textContent = f2(S.tau); redraw(); renderFlow(); renderFoot(); });
+    ctrl.appendChild(el("label", { text: "코드의 기준 τ" })); ctrl.appendChild(rng); ctrl.appendChild(val);
+    ctrl.appendChild(el("span", { class: "jx-foot", text: "온도 T = " + S.T.toFixed(2) + " (⑥에서 바꿀 수 있어요)" }));
+    P.appendChild(ctrl);
+    P.appendChild(body);
+    redraw();
+    P.appendChild(el("div", { class: "jx-note", html: "모델은 확률만 줘요. 얼마 이상이면 믿고 움직일지는 <b>코드가</b> 정해요. 이 기준은 7장의 보정 결과와 내 데이터로 정해야 해요 — 보정 전 점수에 0.9를 걸면 '0.9라더니 틀린' 일이 생겨요." }));
+  }
+
+  function renderPanel() {
+    var P = root.querySelector(".jx-panel"); P.innerHTML = ""; var c = cur();
+    P.appendChild(el("h4", { text: "①②③④⑤⑥⑦".charAt(S.step) + " " + STEPS[S.step].name }));
+    P.appendChild(el("p", { class: "jx-lead", text: STEPS[S.step].lead }));
+    [step0, step1, step2, step3, step4, step5, step6][S.step](c, P);
+    var nav = el("div", { class: "jx-nav" });
+    nav.appendChild(el("button", { class: "jx-btn", disabled: S.step === 0 ? "disabled" : null, onclick: function () { S.step = Math.max(0, S.step - 1); render(); }, text: "◀ 이전" }));
+    nav.appendChild(el("span", { class: "jx-foot", text: "← → 키로도 움직여요" }));
+    nav.appendChild(el("button", { class: "jx-btn", disabled: S.step === 6 ? "disabled" : null, onclick: function () { S.step = Math.min(6, S.step + 1); render(); }, text: "다음 ▶" }));
+    P.appendChild(nav);
+  }
+  function renderFoot() {
+    var c = cur(), d = decisionOf(c), f = root.querySelector(".jx-foot-line");
+    f.innerHTML = "케이스 <b>" + esc(c.id) + "</b> · 온도 T <b>" + S.T.toFixed(2) + "</b> · 기준 τ <b>" + f2(S.tau) + "</b> · 1등 <b>" + esc(d.best) + " " + f2(d.p) + "</b> → <b>" + (d.act ? "진행" : "되묻기") + "</b>" + (S.permOn ? " · 순서 바꾸기 켜짐(⑥)" : "");
+  }
+  function render() { renderCases(); renderFlow(); renderPanel(); renderFoot(); }
+
+  // 뼈대
+  var stat = root.querySelector(".jx-static"); if (stat) stat.remove();
+  root.appendChild(el("div", { class: "jx-head" },
+    el("div", { class: "jx-title" }, "한 케이스 뜯어보기", el("small", { text: "Jev 닮은 판단(SemIf 방식)이 계산되는 길" })),
+    el("div", { class: "jx-src", text: DATA.sourceLabel })));
+  root.appendChild(el("div", { class: "jx-cases", role: "group", "aria-label": "케이스 고르기" }));
+  root.appendChild(el("div", { class: "jx-flow" }));
+  root.appendChild(el("div", { class: "jx-panel" }));
+  root.appendChild(el("div", { class: "jx-foot jx-foot-line", style: "margin-top:8px" }));
+  root.addEventListener("keydown", function (ev) {
+    if (ev.target && ev.target.tagName === "INPUT") return;
+    if (ev.key === "ArrowRight") { S.step = Math.min(6, S.step + 1); render(); ev.preventDefault(); }
+    if (ev.key === "ArrowLeft") { S.step = Math.max(0, S.step - 1); render(); ev.preventDefault(); }
+  });
+  render();
+  try { if (window.google && google.colab && google.colab.output && google.colab.output.setIframeHeight) google.colab.output.setIframeHeight(0, true, { maxHeight: 5000 }); } catch (e) {}
+})();
+</script>

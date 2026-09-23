@@ -1,0 +1,1382 @@
+{
+ "_about": "노트북이 그리는 미리 잰 숫자. 모든 값은 source에 적힌 파일에서 읽었어요.",
+ "_collected_at": "2026-09-24 06:22",
+ "parallel_decision": {
+  "source": [
+   "~/jev특강/output/parallel-decision-rlcd-20260922/summary.json",
+   "~/jev특강/output/parallel-decision-rlcd-20260922/timings.csv",
+   "~/jev특강/output/parallel-decision-rlcd-20260922/README.md",
+   "~/jev특강/output/parallel-decision-rlcd-20260922/dense9b-a4000/summary.json"
+  ],
+  "setup": "llama.cpp parallel-decision(14d04e7) · 같은 Qwen2.5-1.5B-Instruct GGUF Q4_K_M, Mac M5(Metal) / RTX A4000(CUDA). RLCD는 장치마다 모델 빌드가 달라요(Mac MLX 4bit / A4000 PyTorch BF16). 일반 JSON은 프롬프트로만 요청(형식 강제 아님).",
+  "timing": "첫 호출 뒤 3회 중앙값(ms). 모델 로딩 제외.",
+  "rows": [
+   {
+    "device": "mac",
+    "project": "llama",
+    "preset": "code_security",
+    "fields": 28,
+    "parallel_ms": 611.44,
+    "parallel_min_ms": 328.81,
+    "parallel_max_ms": 1364.07,
+    "json_ms": 7479.74,
+    "speedup": 12.23,
+    "parallel_schema_valid": true,
+    "json_schema_valid": false,
+    "json_missing_fields": 1
+   },
+   {
+    "device": "mac",
+    "project": "llama",
+    "preset": "fintech_fraud",
+    "fields": 28,
+    "parallel_ms": 414.43,
+    "parallel_min_ms": 397.38,
+    "parallel_max_ms": 432.57,
+    "json_ms": 7061.14,
+    "speedup": 17.04,
+    "parallel_schema_valid": true,
+    "json_schema_valid": false,
+    "json_missing_fields": 1
+   },
+   {
+    "device": "mac",
+    "project": "llama",
+    "preset": "high_cardinality_255",
+    "fields": 4,
+    "parallel_ms": 582.2,
+    "parallel_min_ms": 502.61,
+    "parallel_max_ms": 613.46,
+    "json_ms": 5422.56,
+    "speedup": 9.31,
+    "parallel_schema_valid": true,
+    "json_schema_valid": false,
+    "json_missing_fields": 0
+   },
+   {
+    "device": "mac",
+    "project": "llama",
+    "preset": "support_triage",
+    "fields": 28,
+    "parallel_ms": 416.79,
+    "parallel_min_ms": 399.72,
+    "parallel_max_ms": 453.29,
+    "json_ms": 6493.28,
+    "speedup": 15.58,
+    "parallel_schema_valid": true,
+    "json_schema_valid": false,
+    "json_missing_fields": 2
+   },
+   {
+    "device": "mac",
+    "project": "rlcd",
+    "preset": "code_security",
+    "fields": 28,
+    "parallel_ms": 856.62,
+    "parallel_min_ms": 432.66,
+    "parallel_max_ms": 1789.33,
+    "json_ms": 6283.9,
+    "speedup": 7.34,
+    "parallel_schema_valid": true,
+    "json_schema_valid": false,
+    "json_missing_fields": 1
+   },
+   {
+    "device": "mac",
+    "project": "rlcd",
+    "preset": "fintech_fraud",
+    "fields": 28,
+    "parallel_ms": 756.17,
+    "parallel_min_ms": 740.95,
+    "parallel_max_ms": 757.69,
+    "json_ms": 7942.01,
+    "speedup": 10.5,
+    "parallel_schema_valid": true,
+    "json_schema_valid": false,
+    "json_missing_fields": 1
+   },
+   {
+    "device": "mac",
+    "project": "rlcd",
+    "preset": "high_cardinality_255",
+    "fields": 4,
+    "parallel_ms": 276.33,
+    "parallel_min_ms": 274.01,
+    "parallel_max_ms": 285.57,
+    "json_ms": 1713.63,
+    "speedup": 6.2,
+    "parallel_schema_valid": true,
+    "json_schema_valid": true,
+    "json_missing_fields": 0
+   },
+   {
+    "device": "mac",
+    "project": "rlcd",
+    "preset": "support_triage",
+    "fields": 28,
+    "parallel_ms": 784.38,
+    "parallel_min_ms": 761.76,
+    "parallel_max_ms": 951.02,
+    "json_ms": 8211.8,
+    "speedup": 10.47,
+    "parallel_schema_valid": true,
+    "json_schema_valid": false,
+    "json_missing_fields": 1
+   },
+   {
+    "device": "a4000",
+    "project": "llama",
+    "preset": "code_security",
+    "fields": 28,
+    "parallel_ms": 107.42,
+    "parallel_min_ms": 99.23,
+    "parallel_max_ms": 110.24,
+    "json_ms": 2281.23,
+    "speedup": 21.24,
+    "parallel_schema_valid": true,
+    "json_schema_valid": false,
+    "json_missing_fields": 1
+   },
+   {
+    "device": "a4000",
+    "project": "llama",
+    "preset": "fintech_fraud",
+    "fields": 28,
+    "parallel_ms": 95.28,
+    "parallel_min_ms": 94.46,
+    "parallel_max_ms": 104.06,
+    "json_ms": 2142.39,
+    "speedup": 22.48,
+    "parallel_schema_valid": true,
+    "json_schema_valid": false,
+    "json_missing_fields": 1
+   },
+   {
+    "device": "a4000",
+    "project": "llama",
+    "preset": "high_cardinality_255",
+    "fields": 4,
+    "parallel_ms": 104.35,
+    "parallel_min_ms": 99.98,
+    "parallel_max_ms": 105.53,
+    "json_ms": 1129.62,
+    "speedup": 10.83,
+    "parallel_schema_valid": true,
+    "json_schema_valid": false,
+    "json_missing_fields": 0
+   },
+   {
+    "device": "a4000",
+    "project": "llama",
+    "preset": "support_triage",
+    "fields": 28,
+    "parallel_ms": 126.01,
+    "parallel_min_ms": 110.44,
+    "parallel_max_ms": 139.5,
+    "json_ms": 2074.67,
+    "speedup": 16.46,
+    "parallel_schema_valid": true,
+    "json_schema_valid": false,
+    "json_missing_fields": 2
+   },
+   {
+    "device": "a4000",
+    "project": "rlcd",
+    "preset": "code_security",
+    "fields": 28,
+    "parallel_ms": 174.19,
+    "parallel_min_ms": 168.34,
+    "parallel_max_ms": 181.91,
+    "json_ms": 13759.11,
+    "speedup": 78.99,
+    "parallel_schema_valid": true,
+    "json_schema_valid": false,
+    "json_missing_fields": 28
+   },
+   {
+    "device": "a4000",
+    "project": "rlcd",
+    "preset": "fintech_fraud",
+    "fields": 28,
+    "parallel_ms": 175.73,
+    "parallel_min_ms": 169.44,
+    "parallel_max_ms": 179.36,
+    "json_ms": 12657.31,
+    "speedup": 72.03,
+    "parallel_schema_valid": true,
+    "json_schema_valid": false,
+    "json_missing_fields": 28
+   },
+   {
+    "device": "a4000",
+    "project": "rlcd",
+    "preset": "high_cardinality_255",
+    "fields": 4,
+    "parallel_ms": 116.5,
+    "parallel_min_ms": 115.92,
+    "parallel_max_ms": 117.51,
+    "json_ms": 2231.19,
+    "speedup": 19.15,
+    "parallel_schema_valid": true,
+    "json_schema_valid": false,
+    "json_missing_fields": 4
+   },
+   {
+    "device": "a4000",
+    "project": "rlcd",
+    "preset": "support_triage",
+    "fields": 28,
+    "parallel_ms": 181.08,
+    "parallel_min_ms": 180.96,
+    "parallel_max_ms": 189.13,
+    "json_ms": 12517.9,
+    "speedup": 69.13,
+    "parallel_schema_valid": true,
+    "json_schema_valid": false,
+    "json_missing_fields": 28
+   }
+  ],
+  "a4000_small_accuracy": [
+   {
+    "model": "Qwen2.5 1.5B",
+    "parallel_ms": 103.7611000938341,
+    "json_ms": 2244.396800058894,
+    "schema_json_ms": 2364.031699951738,
+    "parallel_exact": 6,
+    "json_exact": 5,
+    "cases": 8
+   },
+   {
+    "model": "Qwen3.5 9B",
+    "parallel_ms": 734.5522000687197,
+    "json_ms": 8901.274500065483,
+    "schema_json_ms": 8846.948000020348,
+    "parallel_exact": 8,
+    "json_exact": 8,
+    "cases": 8
+   }
+  ],
+  "a4000_small_accuracy_note": "문의 8건 × 3필드를 모두 맞혀야 정답. 28필드 속도 프리셋에는 정답 라벨이 없어요."
+ },
+ "colab14b": {
+  "source": [
+   "~/Downloads/20260922-043237-7fa17c (1)/visualization/comparison_all.json",
+   "~/Downloads/20260922-043237-7fa17c (1)/results.json"
+  ],
+  "gpu": "Tesla T4",
+  "model": "Qwen/Qwen2.5-14B-Instruct",
+  "chunk_size": 2,
+  "rows": [
+   {
+    "key": "torch_semif_shared",
+    "method": "SemIf parallel",
+    "engine": "PyTorch",
+    "quantization": "NF4 / FP16",
+    "median_seconds": 24.169244087000152,
+    "min_seconds": 24.039318276999893,
+    "max_seconds": 24.252677056000266,
+    "measured_repeats": 3,
+    "warmups_excluded": 1,
+    "speed_fields": 28,
+    "correct_cases": 8,
+    "total_cases": 8,
+    "correct_fields": 24,
+    "total_fields": 24,
+    "valid_speed_runs": 3,
+    "scheduling": "chunk=2; fresh prefill per chunk"
+   },
+   {
+    "key": "torch_rlcd_parallel",
+    "method": "RLCD parallel",
+    "engine": "PyTorch",
+    "quantization": "NF4 / FP16",
+    "median_seconds": 31.73189418999982,
+    "min_seconds": 31.450114038000265,
+    "max_seconds": 32.06007517199987,
+    "measured_repeats": 3,
+    "warmups_excluded": 1,
+    "speed_fields": 28,
+    "correct_cases": 8,
+    "total_cases": 8,
+    "correct_fields": 24,
+    "total_fields": 24,
+    "valid_speed_runs": 3,
+    "scheduling": "chunk=2; fresh prefill per chunk"
+   },
+   {
+    "key": "torch_json_generate",
+    "method": "JSON generation",
+    "engine": "PyTorch",
+    "quantization": "NF4 / FP16",
+    "median_seconds": 44.50349178100033,
+    "min_seconds": 44.31593759999988,
+    "max_seconds": 44.524087418999905,
+    "measured_repeats": 3,
+    "warmups_excluded": 1,
+    "speed_fields": 28,
+    "correct_cases": 8,
+    "total_cases": 8,
+    "correct_fields": 24,
+    "total_fields": 24,
+    "valid_speed_runs": 3,
+    "scheduling": "prompt-only JSON; sequential generation"
+   },
+   {
+    "key": "llama14b_parallel",
+    "method": "llama.cpp parallel",
+    "engine": "llama.cpp",
+    "quantization": "Q4_K_M",
+    "median_seconds": 1.3948822470001687,
+    "min_seconds": 1.3514913700000761,
+    "max_seconds": 1.4150161659999867,
+    "measured_repeats": 3,
+    "warmups_excluded": 1,
+    "speed_fields": 28,
+    "correct_cases": 8,
+    "total_cases": 8,
+    "correct_fields": 24,
+    "total_fields": 24,
+    "valid_speed_runs": 3,
+    "scheduling": "server decision scheduler; shared/static prefix reuse"
+   },
+   {
+    "key": "llama14b_json",
+    "method": "llama.cpp JSON",
+    "engine": "llama.cpp",
+    "quantization": "Q4_K_M",
+    "median_seconds": 27.00526188799995,
+    "min_seconds": 26.434224511999673,
+    "max_seconds": 29.178289202000087,
+    "measured_repeats": 3,
+    "warmups_excluded": 0,
+    "speed_fields": 28,
+    "correct_cases": 8,
+    "total_cases": 8,
+    "correct_fields": 24,
+    "total_fields": 24,
+    "valid_speed_runs": 3,
+    "scheduling": "prompt-only JSON; cache_prompt=False"
+   },
+   {
+    "key": "llama14b-structured_json",
+    "method": "llama.cpp schema JSON",
+    "engine": "llama.cpp",
+    "quantization": "Q4_K_M",
+    "median_seconds": 26.950729208000666,
+    "min_seconds": 25.98589425800037,
+    "max_seconds": 27.153982791999624,
+    "measured_repeats": 3,
+    "warmups_excluded": 1,
+    "speed_fields": 28,
+    "correct_cases": null,
+    "total_cases": null,
+    "correct_fields": null,
+    "total_fields": null,
+    "valid_speed_runs": 3,
+    "scheduling": "grammar-constrained JSON; no labeled-case evaluation in this artifact"
+   }
+  ],
+  "caveats": [
+   "28-field speed fixture is unlabeled; accuracy uses separate labeled support cases.",
+   "NF4 and GGUF use different weights/quantization, kernels, prompts and cache schedules: system-level comparison only.",
+   "Schema-constrained llama.cpp JSON has no labeled accuracy run here; N/A does not mean zero.",
+   "Warmups are excluded when flagged. Original llama.cpp ordinary JSON has no explicit warmup flag."
+  ],
+  "notebook": "Colab_Local_16GB_Qwen14B.ipynb (14B NF4/FP16, 선택 llama.cpp CUDA 빌드)"
+ },
+ "semif_a4000": {
+  "source": [
+   "~/jev특강/output/parallel-decision-rlcd-20260922/semif-a4000/comparison.csv",
+   "~/jev특강/output/parallel-decision-rlcd-20260922/semif-a4000/README.md"
+  ],
+  "setup": "RTX A4000, NF4/FP16, 같은 프로세스·같은 가중치, 28항목 속도 + 문의 8건 정답",
+  "rows": [
+   {
+    "model": "qwen9b",
+    "method": "semif_shared",
+    "median_ms": 2656.879899906926,
+    "min_ms": 2647.473999997601,
+    "max_ms": 2701.755999936722,
+    "correct_cases": 8,
+    "correct_fields": 24,
+    "peak_allocated_mib": 10344.13671875
+   },
+   {
+    "model": "qwen9b",
+    "method": "rlcd",
+    "median_ms": 1198.560000048019,
+    "min_ms": 1188.2332999957725,
+    "max_ms": 1254.3155000312254,
+    "correct_cases": 8,
+    "correct_fields": 24,
+    "peak_allocated_mib": 10449.8701171875
+   },
+   {
+    "model": "qwen9b",
+    "method": "semif_direct",
+    "median_ms": 10182.889200048521,
+    "min_ms": 10115.760099957697,
+    "max_ms": 10279.522700002417,
+    "correct_cases": 8,
+    "correct_fields": 24,
+    "peak_allocated_mib": 7667.09716796875
+   },
+   {
+    "model": "qwen1p5b",
+    "method": "semif_shared",
+    "median_ms": 520.9729000926018,
+    "min_ms": 509.6441999776289,
+    "max_ms": 523.1482000090182,
+    "correct_cases": 7,
+    "correct_fields": 23,
+    "peak_allocated_mib": 1595.447265625
+   },
+   {
+    "model": "qwen1p5b",
+    "method": "rlcd",
+    "median_ms": 232.21719998400658,
+    "min_ms": 222.85480005666614,
+    "max_ms": 232.43550001643598,
+    "correct_cases": 5,
+    "correct_fields": 20,
+    "peak_allocated_mib": 1939.93017578125
+   },
+   {
+    "model": "qwen1p5b",
+    "method": "semif_direct",
+    "median_ms": 2155.3123000776395,
+    "min_ms": 2153.5570999840274,
+    "max_ms": 2194.0032000420615,
+    "correct_cases": 7,
+    "correct_fields": 23,
+    "peak_allocated_mib": 1154.86767578125
+   }
+  ]
+ },
+ "rlcr_vs_rlcd": {
+  "source": [
+   "~/jev특강/output/parallel-decision-rlcd-20260922/rlcr-vs-rlcd-a4000/summary.json",
+   "~/jev특강/output/parallel-decision-rlcd-20260922/rlcr-vs-rlcd-a4000/predictions.csv",
+   "~/jev특강/output/parallel-decision-rlcd-20260922/rlcr-vs-rlcd-a4000/README.md"
+  ],
+  "setup": "같은 RLCR 7B 가중치(NF4/FP16), 문의 8건 × 3필드, RTX A4000",
+  "rlcr": {
+   "field_correct": 24,
+   "field_total": 24,
+   "case_correct": 8,
+   "case_total": 8,
+   "median_case_ms": 11850.885450025089
+  },
+  "rlcd": {
+   "field_correct": 22,
+   "field_total": 24,
+   "case_correct": 6,
+   "case_total": 8,
+   "median_case_ms": 178.32930001895875
+  },
+  "rlcd_wrong": [
+   {
+    "case": "case-3",
+    "field": "category",
+    "expected": "cancellation",
+    "rlcd_prediction": "billing",
+    "rlcd_confidence": 0.9599,
+    "rlcr_prediction": "cancellation",
+    "rlcr_confidence": 0.7
+   },
+   {
+    "case": "case-7",
+    "field": "category",
+    "expected": "cancellation",
+    "rlcd_prediction": "billing",
+    "rlcd_confidence": 0.8325,
+    "rlcr_prediction": "cancellation",
+    "rlcr_confidence": 0.8
+   }
+  ]
+ },
+ "api_vs_local": {
+  "source": [
+   "~/jev특강/final/03_유사프로젝트/evidence/api-vs-local/summary.json",
+   "~/jev특강/final/03_유사프로젝트/evidence/api-vs-local/summary.md",
+   "~/jev특강/final/03_유사프로젝트/code/evaluate.mjs",
+   "~/jev특강/final/03_유사프로젝트/code/data/routing_bodies.jsonl",
+   "~/jev특강/final/02_라우터/code/results/router-jev-2026-09-22T20-05-42-399Z.json",
+   "~/jev특강/final/03_유사프로젝트/evidence/api-vs-local/out_decider.jsonl",
+   "~/jev특강/final/03_유사프로젝트/evidence/api-vs-local/out_openjev.jsonl"
+  ],
+  "setup": "2강 라우터 메시지 40건, 같은 정책 코드(policy.mjs)로 채점. 행동 일치 = 정책이 고른 행동이 정답과 같은 비율",
+  "table": [
+   {
+    "engine": "Jev API (TypeSafe)",
+    "where": "클라우드",
+    "model": "jev-1.13.0",
+    "n": 40,
+    "actionAcc": 0.925,
+    "routeAcc": 0.975,
+    "p50ms": 247,
+    "p95ms": 559,
+    "costPer1k": 0.03480855
+   },
+   {
+    "engine": "decider-2b (A4000 CUDA)",
+    "where": "내 GPU 서버",
+    "model": "decider-v10",
+    "n": 40,
+    "actionAcc": 0.725,
+    "routeAcc": 0.775,
+    "p50ms": 214,
+    "p95ms": 224,
+    "costPer1k": 0
+   },
+   {
+    "engine": "decider-2b (Mac MPS)",
+    "where": "내 노트북",
+    "model": "decider-v10",
+    "n": 40,
+    "actionAcc": 0.725,
+    "routeAcc": 0.775,
+    "p50ms": 1880,
+    "p95ms": 2314,
+    "costPer1k": 0
+   },
+   {
+    "engine": "OpenJev Qwen3.5-4B (A4000)",
+    "where": "내 GPU 서버",
+    "model": "Qwen/Qwen3.5-4B direct readout",
+    "n": 40,
+    "actionAcc": 0.675,
+    "routeAcc": 0.775,
+    "p50ms": 572,
+    "p95ms": 608,
+    "costPer1k": 0
+   },
+   {
+    "engine": "Qwen3.5-4B 생성(JSON) (Mac Ollama)",
+    "where": "내 노트북",
+    "model": "qwen3.5:4b",
+    "n": 40,
+    "actionAcc": 0.925,
+    "routeAcc": 1,
+    "p50ms": 4219,
+    "p95ms": 4852,
+    "costPer1k": 0
+   }
+  ],
+  "route_calibration": {
+   "Jev API (TypeSafe)": [
+    [
+     1,
+     true
+    ],
+    [
+     1,
+     true
+    ],
+    [
+     1,
+     true
+    ],
+    [
+     1,
+     true
+    ],
+    [
+     1,
+     true
+    ],
+    [
+     1,
+     true
+    ],
+    [
+     1,
+     true
+    ],
+    [
+     1,
+     true
+    ],
+    [
+     1,
+     true
+    ],
+    [
+     1,
+     true
+    ],
+    [
+     1,
+     true
+    ],
+    [
+     1,
+     true
+    ],
+    [
+     0.94,
+     true
+    ],
+    [
+     0.79,
+     true
+    ],
+    [
+     0.93,
+     true
+    ],
+    [
+     0.98,
+     true
+    ],
+    [
+     0.84,
+     true
+    ],
+    [
+     0.96,
+     true
+    ],
+    [
+     0.8,
+     true
+    ],
+    [
+     0.93,
+     true
+    ],
+    [
+     0.94,
+     true
+    ],
+    [
+     0.96,
+     true
+    ],
+    [
+     0.96,
+     true
+    ],
+    [
+     0.8,
+     true
+    ],
+    [
+     0.73,
+     true
+    ],
+    [
+     0.53,
+     false
+    ],
+    [
+     0.8,
+     true
+    ],
+    [
+     0.88,
+     true
+    ],
+    [
+     0.95,
+     true
+    ],
+    [
+     0.97,
+     true
+    ],
+    [
+     0.93,
+     true
+    ],
+    [
+     0.87,
+     true
+    ],
+    [
+     0.88,
+     true
+    ],
+    [
+     0.86,
+     true
+    ],
+    [
+     0.89,
+     true
+    ],
+    [
+     1,
+     true
+    ],
+    [
+     0.96,
+     true
+    ],
+    [
+     1,
+     true
+    ],
+    [
+     0.71,
+     true
+    ],
+    [
+     0.63,
+     true
+    ]
+   ],
+   "decider-2b (A4000 CUDA)": [
+    [
+     0.9864,
+     true
+    ],
+    [
+     0.9687,
+     true
+    ],
+    [
+     0.9277,
+     true
+    ],
+    [
+     0.9883,
+     true
+    ],
+    [
+     0.8221,
+     true
+    ],
+    [
+     0.9948,
+     true
+    ],
+    [
+     0.9573,
+     true
+    ],
+    [
+     0.8676,
+     true
+    ],
+    [
+     0.9731,
+     true
+    ],
+    [
+     0.9062,
+     true
+    ],
+    [
+     0.8755,
+     true
+    ],
+    [
+     0.9157,
+     true
+    ],
+    [
+     0.9169,
+     true
+    ],
+    [
+     0.8173,
+     true
+    ],
+    [
+     0.8667,
+     true
+    ],
+    [
+     0.8138,
+     true
+    ],
+    [
+     0.81,
+     true
+    ],
+    [
+     0.8647,
+     true
+    ],
+    [
+     0.7123,
+     false
+    ],
+    [
+     0.4402,
+     true
+    ],
+    [
+     0.4176,
+     false
+    ],
+    [
+     0.6761,
+     true
+    ],
+    [
+     0.6712,
+     true
+    ],
+    [
+     0.7429,
+     true
+    ],
+    [
+     0.7149,
+     true
+    ],
+    [
+     0.4549,
+     false
+    ],
+    [
+     0.4954,
+     false
+    ],
+    [
+     0.8026,
+     true
+    ],
+    [
+     0.9072,
+     true
+    ],
+    [
+     0.882,
+     true
+    ],
+    [
+     0.5407,
+     true
+    ],
+    [
+     0.6287,
+     false
+    ],
+    [
+     0.5288,
+     false
+    ],
+    [
+     0.6603,
+     true
+    ],
+    [
+     0.7065,
+     true
+    ],
+    [
+     0.9627,
+     true
+    ],
+    [
+     0.4641,
+     false
+    ],
+    [
+     0.9545,
+     true
+    ],
+    [
+     0.7298,
+     false
+    ],
+    [
+     0.5544,
+     false
+    ]
+   ],
+   "decider-2b (Mac MPS)": [
+    [
+     0.9874,
+     true
+    ],
+    [
+     0.9672,
+     true
+    ],
+    [
+     0.9272,
+     true
+    ],
+    [
+     0.9885,
+     true
+    ],
+    [
+     0.8157,
+     true
+    ],
+    [
+     0.9948,
+     true
+    ],
+    [
+     0.9584,
+     true
+    ],
+    [
+     0.8722,
+     true
+    ],
+    [
+     0.9727,
+     true
+    ],
+    [
+     0.9047,
+     true
+    ],
+    [
+     0.8798,
+     true
+    ],
+    [
+     0.9178,
+     true
+    ],
+    [
+     0.9127,
+     true
+    ],
+    [
+     0.8137,
+     true
+    ],
+    [
+     0.875,
+     true
+    ],
+    [
+     0.8132,
+     true
+    ],
+    [
+     0.7995,
+     true
+    ],
+    [
+     0.8724,
+     true
+    ],
+    [
+     0.7213,
+     false
+    ],
+    [
+     0.4328,
+     true
+    ],
+    [
+     0.3856,
+     false
+    ],
+    [
+     0.6904,
+     true
+    ],
+    [
+     0.6578,
+     true
+    ],
+    [
+     0.7484,
+     true
+    ],
+    [
+     0.7053,
+     true
+    ],
+    [
+     0.4647,
+     false
+    ],
+    [
+     0.496,
+     false
+    ],
+    [
+     0.8283,
+     true
+    ],
+    [
+     0.9082,
+     true
+    ],
+    [
+     0.885,
+     true
+    ],
+    [
+     0.5372,
+     true
+    ],
+    [
+     0.6248,
+     false
+    ],
+    [
+     0.5237,
+     false
+    ],
+    [
+     0.6679,
+     true
+    ],
+    [
+     0.7168,
+     true
+    ],
+    [
+     0.9631,
+     true
+    ],
+    [
+     0.4713,
+     false
+    ],
+    [
+     0.958,
+     true
+    ],
+    [
+     0.7332,
+     false
+    ],
+    [
+     0.566,
+     false
+    ]
+   ],
+   "OpenJev Qwen3.5-4B (A4000)": [
+    [
+     0.999,
+     true
+    ],
+    [
+     0.9988,
+     true
+    ],
+    [
+     0.9547,
+     true
+    ],
+    [
+     0.9971,
+     true
+    ],
+    [
+     0.8736,
+     true
+    ],
+    [
+     0.9992,
+     true
+    ],
+    [
+     0.9613,
+     true
+    ],
+    [
+     0.9972,
+     true
+    ],
+    [
+     0.9536,
+     true
+    ],
+    [
+     0.9984,
+     true
+    ],
+    [
+     0.9656,
+     true
+    ],
+    [
+     0.9943,
+     true
+    ],
+    [
+     0.7434,
+     true
+    ],
+    [
+     0.8065,
+     true
+    ],
+    [
+     0.8823,
+     true
+    ],
+    [
+     0.8747,
+     true
+    ],
+    [
+     0.974,
+     true
+    ],
+    [
+     0.9017,
+     true
+    ],
+    [
+     0.9175,
+     false
+    ],
+    [
+     0.5601,
+     true
+    ],
+    [
+     0.8048,
+     true
+    ],
+    [
+     0.9108,
+     true
+    ],
+    [
+     0.8613,
+     true
+    ],
+    [
+     0.8806,
+     true
+    ],
+    [
+     0.5682,
+     true
+    ],
+    [
+     0.5497,
+     false
+    ],
+    [
+     0.5785,
+     true
+    ],
+    [
+     0.8457,
+     true
+    ],
+    [
+     0.7091,
+     true
+    ],
+    [
+     0.7758,
+     true
+    ],
+    [
+     0.7716,
+     false
+    ],
+    [
+     0.9516,
+     false
+    ],
+    [
+     0.7552,
+     false
+    ],
+    [
+     0.7533,
+     false
+    ],
+    [
+     0.5352,
+     false
+    ],
+    [
+     0.9937,
+     true
+    ],
+    [
+     0.5557,
+     true
+    ],
+    [
+     0.9883,
+     true
+    ],
+    [
+     0.8524,
+     false
+    ],
+    [
+     0.9689,
+     false
+    ]
+   ]
+  },
+  "route_calibration_note": "route 질문(chat/task/unclear/spam) 하나만: [고른 답의 확률, 정답 여부]. 40건이라 참고용"
+ },
+ "jev_omni": {
+  "source": [
+   "https://huggingface.co/akhilaaa3/Jev-Omni (README.md, unified/verification_unified.json, jev_omni.py, load_model.py)",
+   "HfApi.list_repo_tree / model_info (메타데이터만, 가중치 받지 않음)"
+  ],
+  "fetched_at": "2026-09-24",
+  "repo_sha": "c050d51354147985d13286cf4acf90f562f2c631",
+  "license": "apache-2.0",
+  "base_model": "google/gemma-4-12B-it",
+  "files_bytes": {
+   "기타 작은 파일": 32232425,
+   "assets": 20394094,
+   "backbone": 47629527966,
+   "head.pt": 3966079,
+   "unified": 23951748446
+  },
+  "repo_total_bytes": 71637869010,
+  "gemma_total_bytes": 23951776979,
+  "gemma_gated": false,
+  "readme_claims": {
+   "decisionbench_medium_accuracy": 0.8757,
+   "decisionbench_medium_ece": 0.04,
+   "jevbench_matched_accuracy": 0.8615,
+   "h200_text_ms": 83,
+   "fp32_weights_gb": 50,
+   "max_options_tested": 20
+  },
+  "verification_cases": [
+   {
+    "state": "The meeting starts at 10 AM. It is now 9 AM.",
+    "question": "Has the meeting started?",
+    "options": [
+     "Yes",
+     "No"
+    ],
+    "probabilities": [
+     0.0001,
+     0.9999
+    ]
+   },
+   {
+    "state": "Customer: I was charged twice.\nAgent: I've refunded $29 to your card.\nCustomer: Got it. All sorted, thanks!",
+    "question": "Was the issue actually resolved?",
+    "options": [
+     "Yes",
+     "No"
+    ],
+    "probabilities": [
+     0.9399,
+     0.0601
+    ]
+   },
+   {
+    "state": "A fair six-sided die is rolled once.",
+    "question": "Which number comes up?",
+    "options": [
+     "1",
+     "2",
+     "3",
+     "4",
+     "5",
+     "6"
+    ],
+    "probabilities": [
+     0.2341,
+     0.0929,
+     0.0437,
+     0.089,
+     0.0811,
+     0.4592
+    ]
+   },
+   {
+    "state": "An urn holds one blue, one yellow, one red and one green marble. One is drawn without looking.",
+    "question": "Which marble is drawn?",
+    "options": [
+     "Blue",
+     "Yellow",
+     "Red",
+     "Green"
+    ],
+    "probabilities": [
+     0.413,
+     0.1262,
+     0.0793,
+     0.3816
+    ]
+   }
+  ],
+  "verification_worst_abs_diff": 0.01936584711074829
+ },
+ "mac_fp16_check": {
+  "source": "assets/measure_local.py --dtype float16 (강사 Mac M5, MPS, 2.13.0)",
+  "results": {
+   "route-gpu": {
+    "option_ids": [
+     "a4000",
+     "main"
+    ],
+    "probabilities": [
+     0.9944,
+     0.0056
+    ]
+   },
+   "route-vague": {
+    "option_ids": [
+     "a4000",
+     "main"
+    ],
+    "probabilities": [
+     0.3961,
+     0.6039
+    ]
+   },
+   "classify-fail": {
+    "option_ids": [
+     "transient",
+     "code",
+     "permission",
+     "unknown"
+    ],
+    "probabilities": [
+     0.0243,
+     0.0029,
+     0.0026,
+     0.9701
+    ]
+   },
+   "route-mail": {
+    "option_ids": [
+     "a4000",
+     "todobot",
+     "main"
+    ],
+    "probabilities": [
+     0.0024,
+     0.9973,
+     0.0003
+    ]
+   },
+   "gate-danger": {
+    "option_ids": [
+     "proceed",
+     "ask"
+    ],
+    "probabilities": [
+     0.0038,
+     0.9962
+    ]
+   },
+   "my-test": {
+    "option_ids": [
+     "shipping",
+     "refund",
+     "sales"
+    ],
+    "probabilities": [
+     0.003,
+     0.996,
+     0.0009
+    ]
+   }
+  }
+ }
+}

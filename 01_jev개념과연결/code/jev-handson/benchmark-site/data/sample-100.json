@@ -1,0 +1,918 @@
+{
+  "metadata": {
+    "dataset": "nayohan/korean-hate-speech",
+    "split": "train",
+    "seed": 20260923,
+    "strategy": "deterministic-stratified",
+    "sourceRowCount": 7896,
+    "sampleCount": 100,
+    "labelCounts": {
+      "hate": 34,
+      "offensive": 33,
+      "none": 33
+    },
+    "generatedAt": "2026-09-23T07:30:18.979Z"
+  },
+  "samples": [
+    {
+      "id": "train-5855",
+      "rowIndex": 5855,
+      "comments": "이쁘니깐 괜찮아",
+      "contain_gender_bias": true,
+      "bias": "gender",
+      "hate": "none",
+      "news_title": "\"[종합] \"\"열심히 할게요\"\"…'해투4' 조윤희, MC 데뷔전도 성공(ft.♥이동건)\""
+    },
+    {
+      "id": "train-3441",
+      "rowIndex": 3441,
+      "comments": "설탕 마법사",
+      "contain_gender_bias": false,
+      "bias": "none",
+      "hate": "offensive",
+      "news_title": "\"'커프' 백종원, 이런 알바는 없었다..설거지에 요리도 척척 [★밤TV]\""
+    },
+    {
+      "id": "train-7785",
+      "rowIndex": 7785,
+      "comments": "홈쇼핑 좀 안나오셨음 좋겠어요",
+      "contain_gender_bias": false,
+      "bias": "none",
+      "hate": "none",
+      "news_title": "\"\"\"저 아니에요\"\"…최은경, 신종 코로나 확진자 루머→직접 해명 (전문)[종합]\""
+    },
+    {
+      "id": "train-3595",
+      "rowIndex": 3595,
+      "comments": "솔직히 살 빼도 기본 비주얼은 어쩔 수가 없네",
+      "contain_gender_bias": false,
+      "bias": "others",
+      "hate": "offensive",
+      "news_title": "\"'K팝스타' 예림, 20㎏ 감량 후 '열두달' 데뷔 \"\"양현석 대표님, 데뷔했어요\"\"\""
+    },
+    {
+      "id": "train-4093",
+      "rowIndex": 4093,
+      "comments": "아이들이 엄마 닮아서 다 귀여워요~ +_+",
+      "contain_gender_bias": false,
+      "bias": "none",
+      "hate": "none",
+      "news_title": "\"백종원♥소유진, 15살 나이차 잊게 한 삼남매 부모(종합)\""
+    },
+    {
+      "id": "train-5463",
+      "rowIndex": 5463,
+      "comments": "유재석이는 징징되면서 억지로할거같음. 가식세끼",
+      "contain_gender_bias": false,
+      "bias": "none",
+      "hate": "hate",
+      "news_title": "'무한도전' 조세호X양세형 '웃음잭팟'…12.7% 토요예능 1위"
+    },
+    {
+      "id": "train-1860",
+      "rowIndex": 1860,
+      "comments": "니보다 더 할까?",
+      "contain_gender_bias": false,
+      "bias": "none",
+      "hate": "offensive",
+      "news_title": "\"김용호, 서장훈 사생활 폭로 예고…서장훈 측 \"\"사실 확인 중\"\"\""
+    },
+    {
+      "id": "train-5594",
+      "rowIndex": 5594,
+      "comments": "이 더운데 모자는 왜 쓰지아가들은 귀여워 나이가 드니까 내 자식 다 키우니까 모든아기들이 천사같아요 슈돌에외국아기는 너무 이쁘고 이영애 쌍둥이중 딸이 참 이쁘고정시아 딸도 예쁘든데,,,,,",
+      "contain_gender_bias": false,
+      "bias": "none",
+      "hate": "none",
+      "news_title": "\"\"\"진짜 엄마 미소\"\" 소이현♥둘째딸 동반 광고 '딸바보'\""
+    },
+    {
+      "id": "train-7372",
+      "rowIndex": 7372,
+      "comments": "파이란나올때 여신미모 장백지 팬이였는데 ~~항상응원합니다 ~~행복하시길",
+      "contain_gender_bias": false,
+      "bias": "none",
+      "hate": "none",
+      "news_title": "\"싱글맘 장백지, 셋째 출산 인정…아빠는 대체 누구?[룩@차이나]\""
+    },
+    {
+      "id": "train-3613",
+      "rowIndex": 3613,
+      "comments": "솔직히 이만하면 준비 오래한 거 맞잖아. 아빠를 부탁해 방송 끝난지가 언젠데 아직도 방송빨이라고 박박 우길래? 과도 연영과 나왔는데 평생 늬들 시선 때문에 연기랑은 동떨어진 인생 살아야되냐.",
+      "contain_gender_bias": false,
+      "bias": "none",
+      "hate": "offensive",
+      "news_title": "\"[공식입장] 이경규 딸 이예림, 본격 배우 활동 시작…박보영과 한솥밥\""
+    },
+    {
+      "id": "train-3431",
+      "rowIndex": 3431,
+      "comments": "설마 임신중에 짧은치마 입고다니겠어? 기레기낙시 ㅡㅡㅋ",
+      "contain_gender_bias": true,
+      "bias": "gender",
+      "hate": "hate",
+      "news_title": "\"‘임신 8개월차’ 차예련, 무보정 마네킹 각선미\""
+    },
+    {
+      "id": "train-5977",
+      "rowIndex": 5977,
+      "comments": "이제 꿈에서 깨어나시고 현실로.. 기레기들도 기사 그만 애청자들도 관심 그만",
+      "contain_gender_bias": false,
+      "bias": "none",
+      "hate": "offensive",
+      "news_title": "\"\"\"신혼이라 살쪄요\"\"..'컬투쇼' 이필모가 밝힌 ♥서수연과 필연커플 [종합]\""
+    },
+    {
+      "id": "train-6745",
+      "rowIndex": 6745,
+      "comments": "조재현 쓰레기인건 맞지만 때는이때다 싶어서 달라드는 머리에 우동만찬년들 ㅋㅋ",
+      "contain_gender_bias": true,
+      "bias": "gender",
+      "hate": "hate",
+      "news_title": "\"[SC이슈]조재현 미투는 ing…\"\"17세 때 성폭행\"\" vs \"\"공소시효 만료\"\"(종합)\""
+    },
+    {
+      "id": "train-0388",
+      "rowIndex": 388,
+      "comments": "강호동도 이제 실타~!!!!~????",
+      "contain_gender_bias": false,
+      "bias": "none",
+      "hate": "offensive",
+      "news_title": "\"'아는 형님' 강호동, 이만기 등장에 긴장…\"\"안 일어나느냐\"\" 호통\""
+    },
+    {
+      "id": "train-0074",
+      "rowIndex": 74,
+      "comments": "40-50대로 가야지..할매를 부르면 우야노",
+      "contain_gender_bias": true,
+      "bias": "gender",
+      "hate": "hate",
+      "news_title": "[종합] '불타는 청춘' 대선배 이경진 등장에 '바짝 긴장'"
+    },
+    {
+      "id": "train-5853",
+      "rowIndex": 5853,
+      "comments": "이쁘네 ㅋㅋㅋ 오크먜갈년들 또 심통난거냐 ? 왜 ㅂㄷㅂㄷ 욕하고난리냐 ㅋㅋㅋ 하긴 니네면상은 견적이안나오니 ㅋㅋㅋㅋ",
+      "contain_gender_bias": true,
+      "bias": "gender",
+      "hate": "hate",
+      "news_title": "\"구하라, 안검하수 반박 해프닝...\"\"당당하다\"\"vs\"\"그렇게까지\"\" 설전 [종합]\""
+    },
+    {
+      "id": "train-5060",
+      "rowIndex": 5060,
+      "comments": "오늘 집사부 하이라이트 승기 사랑했지만 ^^",
+      "contain_gender_bias": false,
+      "bias": "none",
+      "hate": "none",
+      "news_title": "\"[종합]\"\"가문의 영광\"\" '집사부' 양세형, 이선희 '듀엣 파트너'로 낙점\""
+    },
+    {
+      "id": "train-2967",
+      "rowIndex": 2967,
+      "comments": "백종원 베이비 필터 사진 넘 귀여워요 많이 많이 마구마구 올려주세요 봐도 봐도 웃김~~~",
+      "contain_gender_bias": false,
+      "bias": "none",
+      "hate": "none",
+      "news_title": "\"소유진, `♥백종원` 자상한 모습 자랑 \"\"요리해주는 아빠\"\"\""
+    },
+    {
+      "id": "train-5228",
+      "rowIndex": 5228,
+      "comments": "왜 이러시나요?암에 걸려 생사가 불명한 사람들도 살아내려고 애쓰는데 이리 허망하게 가시다니ᆢ삼가고인의 명복을 빕니다",
+      "contain_gender_bias": false,
+      "bias": "none",
+      "hate": "offensive",
+      "news_title": "\"故전미선, 3일째 추모물결…빈소엔 밤샘 조문 \"\"편히 쉬어요, 예쁜 사람\"\"[종합]\""
+    },
+    {
+      "id": "train-1419",
+      "rowIndex": 1419,
+      "comments": "나혼자 산다 보는사람 특) 약속없어서 혼자 방구석에서 나혼자 산다 보면서 낄낄대는 찐따 or 아싸",
+      "contain_gender_bias": false,
+      "bias": "others",
+      "hate": "hate",
+      "news_title": "'나혼자산다' 이시언의 엉망진창 집들이…'청결 황태자' 황민현[종합]"
+    },
+    {
+      "id": "train-7326",
+      "rowIndex": 7326,
+      "comments": "테이프로 봄여름가을겨울을 듣고 또 들었던 사람입니다아픔없는곳에서 편히 쉬세요",
+      "contain_gender_bias": false,
+      "bias": "none",
+      "hate": "none",
+      "news_title": "\"봄여름가을겨울 전태관, 암 투병 끝에 별세\""
+    },
+    {
+      "id": "train-1898",
+      "rowIndex": 1898,
+      "comments": "다른 멤버들은 뭔 죄냐 ㅋㅋ",
+      "contain_gender_bias": false,
+      "bias": "none",
+      "hate": "none",
+      "news_title": "\"한서희, 셔누 불륜 폭로→몬스타엑스 측 \"\"해당 여성 결혼한줄 몰라\"\" 해명 (종합)\""
+    },
+    {
+      "id": "train-7266",
+      "rowIndex": 7266,
+      "comments": "크고 입꼬리 올라간 조커스타일의 입모양이 시름 ㅋㅋㅋ",
+      "contain_gender_bias": false,
+      "bias": "none",
+      "hate": "offensive",
+      "news_title": "\"'미우새' 김영광, 2살 연상 홍진영에 \"\"엄청 좋다\"\" 관심\""
+    },
+    {
+      "id": "train-4303",
+      "rowIndex": 4303,
+      "comments": "야 다들 오바 좀 하지마라",
+      "contain_gender_bias": false,
+      "bias": "none",
+      "hate": "none",
+      "news_title": "'정글의 법칙' 멸종 위기종 취식→태국서 고발…이열음 낭패 [종합]"
+    },
+    {
+      "id": "train-3701",
+      "rowIndex": 3701,
+      "comments": "수지씨가 잘못된게 불쌍한 사람 도와주려한것 뿐인데 참 인생 세상 아름답지 않군요 ㅜ 내 딸 나이인데 큰 마음의 상처 남기겠네요 세상이 깨끗하지 않습니다 수지씨 마음처럼ㅠ 수지씨 잘 해결되길 응원하겠습니다",
+      "contain_gender_bias": false,
+      "bias": "none",
+      "hate": "none",
+      "news_title": "\"[Oh!쎈 이슈] 원스픽쳐 \"\"피해·고소\"\"vs수지 \"\"사과한다\"\"..논란의 5일 타임라인(종합)\""
+    },
+    {
+      "id": "train-0668",
+      "rowIndex": 668,
+      "comments": "구혜선 sns할 동안 안재현 마녀사냥 당하던거 기억나게 만드는군.",
+      "contain_gender_bias": false,
+      "bias": "none",
+      "hate": "offensive",
+      "news_title": "\"크리스탈, 오열 속 3일간 설리 빈소 지켰다…f(x) 전원 발인 참석(종합)\""
+    },
+    {
+      "id": "train-5078",
+      "rowIndex": 5078,
+      "comments": "오랫동안 기다려준남편,시댁어른들.. 진짜 대단하다",
+      "contain_gender_bias": false,
+      "bias": "none",
+      "hate": "none",
+      "news_title": "\"연정훈♥한가인, 귀요미 둘째 발 사진..앙증맞고 깜찍해\""
+    },
+    {
+      "id": "train-5328",
+      "rowIndex": 5328,
+      "comments": "우리 가인이는 인기가 많아라~",
+      "contain_gender_bias": false,
+      "bias": "none",
+      "hate": "none",
+      "news_title": "\"송가인, 행사비 ‘껑충’…축제 관계자 “너무 비싸”\""
+    },
+    {
+      "id": "train-4713",
+      "rowIndex": 4713,
+      "comments": "여자는 어려야 함 연애는 막하고 장가갈때는 최대한 어린친구로 ㄱ ㄱ ㄱ 여자나이 30이상은 비추",
+      "contain_gender_bias": true,
+      "bias": "gender",
+      "hate": "offensive",
+      "news_title": "\"[종합] \"\"부모님 스트레스多\"\"…'편스토랑' 이혜성, ♥전현무와 공개 열애 고충 고백\""
+    },
+    {
+      "id": "train-5916",
+      "rowIndex": 5916,
+      "comments": "이승기 텃세 작작좀",
+      "contain_gender_bias": false,
+      "bias": "none",
+      "hate": "none",
+      "news_title": "\"[종합]\"\"가문의 영광\"\" '집사부' 양세형, 이선희 '듀엣 파트너'로 낙점\""
+    },
+    {
+      "id": "train-4333",
+      "rowIndex": 4333,
+      "comments": "양다리든 쓰리 다리든 뭐가 문제지? 사람 여럿 경험하는 게 나쁜건가? 없다고 하면서 속인게 잘못이라면 몰라도..결혼한 것도 아니고, 웃기셔..",
+      "contain_gender_bias": false,
+      "bias": "none",
+      "hate": "offensive",
+      "news_title": "\"양다리 폭로→사과→자필 사과문…남태현-장재인, 47일의 '사랑과 전쟁'[종합]\""
+    },
+    {
+      "id": "train-7633",
+      "rowIndex": 7633,
+      "comments": "한혜진편 개꿀잼...모델이니까 가능한 출사다 정말",
+      "contain_gender_bias": false,
+      "bias": "none",
+      "hate": "none",
+      "news_title": "\"[리뷰IS]'나 혼자 산다' 두 여자의 겨울나기 \"\"힐링과 재미\"\"\""
+    },
+    {
+      "id": "train-4836",
+      "rowIndex": 4836,
+      "comments": "역시 여자는 나이가 깡패구나",
+      "contain_gender_bias": true,
+      "bias": "gender",
+      "hate": "hate",
+      "news_title": "\"구혜선, 성형·임신 NO..달라진 모습..\"\"10kg 살쪄서\"\"\""
+    },
+    {
+      "id": "train-6258",
+      "rowIndex": 6258,
+      "comments": "잘못된 선택해서 이렇게 밑바닥까지 추락한 사람 이미 힘들텐데 굳이 이렇게까지 해야되나요? 오히려 더 악한 범죄를 저지른 승리나 버닝썬 관계자들은 조용히 묻히고 있는데 기자면 그거 파헤칠 생각이나 하세요 그게 정의입니다",
+      "contain_gender_bias": false,
+      "bias": "none",
+      "hate": "none",
+      "news_title": "\"[POP이슈]박유천, 마약 혐의 시인→추가자백→\"\"가족 보기 괴로워..풀려나고파\"\"[종합]\""
+    },
+    {
+      "id": "train-2667",
+      "rowIndex": 2667,
+      "comments": "뭐가 그케 고마울까 이딴거 쓰지말고 미세먼지 예방법이나 써주삼~",
+      "contain_gender_bias": false,
+      "bias": "none",
+      "hate": "offensive",
+      "news_title": "\"'슈돌' 서언-서준, 첫만남부터 이별까지 6년‥\"\"그동안 고마웠어\"\"\""
+    },
+    {
+      "id": "train-2507",
+      "rowIndex": 2507,
+      "comments": "명치 브이넥 실화냐고ㅋㅋㅋ 개토쏠리네씌5발",
+      "contain_gender_bias": false,
+      "bias": "none",
+      "hate": "hate",
+      "news_title": "\"'전세계 600만 동시 시청' 방탄소년단 지민, 역시 \"\"클래스가 달라\"\"…생방송 글로벌 핫반응\""
+    },
+    {
+      "id": "train-3457",
+      "rowIndex": 3457,
+      "comments": "성매매자 딸...ㅠㅠ 불쌍하다...",
+      "contain_gender_bias": false,
+      "bias": "none",
+      "hate": "hate",
+      "news_title": "\"엄태웅♥윤혜진 딸 엄지온, 벌써 초등학생 \"\"징그럽게 커버렸네\"\" [★해시태그]\""
+    },
+    {
+      "id": "train-0619",
+      "rowIndex": 619,
+      "comments": "과연 신동욱이 힘든과거 딛고 재기하는 이 시기에 이런기사가 나오게 행동 했을까? 진실은 밝혀져야 하는 일이지만 조부 언론플레이가 손자를 망치고 있다는건 나만의 생각?",
+      "contain_gender_bias": false,
+      "bias": "others",
+      "hate": "offensive",
+      "news_title": "신동욱 측 “조부와 소송 진행 중…허위 주장 법적대응” [공식입장 전문]"
+    },
+    {
+      "id": "train-0603",
+      "rowIndex": 603,
+      "comments": "공산당의 무서움을 알겠냐?!중국이 이정도인데 북한은 오죽하긋냐!!미국, 박정희가 없었다면 우리나라 저꼴일수도 있다는걸 알아라!!",
+      "contain_gender_bias": false,
+      "bias": "others",
+      "hate": "offensive",
+      "news_title": "\"[룩@차이나] 中관계자 \"\"판빙빙, 조사받고 귀가한 지 한참 됐다\"\"\""
+    },
+    {
+      "id": "train-1973",
+      "rowIndex": 1973,
+      "comments": "대박 미모다 낼모레 오십아냐?!!",
+      "contain_gender_bias": false,
+      "bias": "none",
+      "hate": "none",
+      "news_title": "\"‘장동건♥’ 고소영, 생일 꽃다발 받고 환한 미소 “여신 미모”\""
+    },
+    {
+      "id": "train-3808",
+      "rowIndex": 3808,
+      "comments": "신랑 부모 입장에서는 참...",
+      "contain_gender_bias": false,
+      "bias": "none",
+      "hate": "none",
+      "news_title": "\"[공식] 이정현, 예비신랑 3살 연하 정형외과 전문의 \"\"1년 교제\"\"\""
+    },
+    {
+      "id": "train-5283",
+      "rowIndex": 5283,
+      "comments": "요즘 가장 행복한사람은 오창석일거야 이채은 바라보는데 눈에서 하트가 뿅뿅 행복해하는 모습이보여 누가봐도 이채은 사랑스럽고 예쁘더라",
+      "contain_gender_bias": false,
+      "bias": "none",
+      "hate": "none",
+      "news_title": "\"[단독] ’연애의 맛2’ 오창석♥이채은, 야구장서 정식 커플선언\""
+    },
+    {
+      "id": "train-2122",
+      "rowIndex": 2122,
+      "comments": "동시간대에 JTBC에서 비긴어게인2도 같이함 ㅋㅋ",
+      "contain_gender_bias": false,
+      "bias": "none",
+      "hate": "none",
+      "news_title": "\"[DA:투데이] “반백살 이서진 또…”, ‘꽃할배 리턴즈’ 오늘 첫방 (ft.김용건) (종합)\""
+    },
+    {
+      "id": "train-0174",
+      "rowIndex": 174,
+      "comments": "♨ 그래도 반성 한거 같은데 그냥 넘어가든가 ..",
+      "contain_gender_bias": false,
+      "bias": "none",
+      "hate": "none",
+      "news_title": "\"[SC초점]정준영 재판 참석, `감형 가능성`에 초점… \"\"몰카·성폭행 병합 요청\"\"(종합)\""
+    },
+    {
+      "id": "train-6800",
+      "rowIndex": 6800,
+      "comments": "좌빨들 악플 다는 것 봐라 ㅋㅋ",
+      "contain_gender_bias": false,
+      "bias": "others",
+      "hate": "hate",
+      "news_title": "\"\"\"신혼이라 살쪄요\"\"..'컬투쇼' 이필모가 밝힌 ♥서수연과 필연커플 [종합]\""
+    },
+    {
+      "id": "train-4805",
+      "rowIndex": 4805,
+      "comments": "역병에 국경도 초월한 시대인 데 참 인정머리.없는.사람들... 우한교포들 왜 입국시키냐며 반대시위하는 이들과 다를.바 없다.",
+      "contain_gender_bias": false,
+      "bias": "none",
+      "hate": "none",
+      "news_title": "\"[종합]\"\"세계의 재앙 vs 인류애\"\"..송혜교X유아인 'Love For 우한' 응원 논란\""
+    },
+    {
+      "id": "train-0255",
+      "rowIndex": 255,
+      "comments": "ㅋㅋㅋㅋ또 신고하겟다는 기사올라오겟네 ㅋㅋㅋㅋㅋ법적대응한다고 ㅋㅋㅋㅋ",
+      "contain_gender_bias": false,
+      "bias": "none",
+      "hate": "none",
+      "news_title": "\"\"\"비키니는, 포기못해\"\"…신재은, 다리 부상에도 압도적 S라인\""
+    },
+    {
+      "id": "train-0190",
+      "rowIndex": 190,
+      "comments": "ㅇㄴ 씨뱅 마약한것도 성추행한것도 아닌데 무안줫다고 존ㄴ 지ㄹㅏㄹ하네ㅋㅋㅋㅋㅋㅋㅋ 여자연예인이 감히 생글거리지 않았다고 기사 헤드라인까지 비꼬기시전",
+      "contain_gender_bias": true,
+      "bias": "gender",
+      "hate": "hate",
+      "news_title": "\"[SC초점] 하연수씨, 그림 그리시는 거 미처 몰라서 죄송합니다(ft.500번)(종합)\""
+    },
+    {
+      "id": "train-6719",
+      "rowIndex": 6719,
+      "comments": "조세호는 승무원도 하고 군대도 가고 바쁘네",
+      "contain_gender_bias": false,
+      "bias": "none",
+      "hate": "none",
+      "news_title": "\"[★SHOT!] ‘무한도전’ 양세형X조세호, 승무원·기상캐스터 변신\""
+    },
+    {
+      "id": "train-1626",
+      "rowIndex": 1626,
+      "comments": "내기바둑 내기당구 다잡아가지 그래? 이런 기사는 왜쓰고 견찰은 왜 흘리는거야 ㅂㅅㄷ",
+      "contain_gender_bias": false,
+      "bias": "others",
+      "hate": "hate",
+      "news_title": "\"차태현·김준호, 내기 골프 의혹…'1박2일'에 이어지는 날벼락[종합]\""
+    },
+    {
+      "id": "train-2937",
+      "rowIndex": 2937,
+      "comments": "배드신도 대역이 있나? 배드신은 욕망해소가 안되서 하는건지... 아무나 만지고.. 인간은 다 본능적으로 느껴질수밖에 없는 신체를 가졌는데 본능적인 감정은 연기가 아니잖아?",
+      "contain_gender_bias": true,
+      "bias": "gender",
+      "hate": "hate",
+      "news_title": "\"[인터뷰①] 수애 \"\"노출·베드신多 장르, 부담보다 도전이라 생각했다\"\"\""
+    },
+    {
+      "id": "train-2400",
+      "rowIndex": 2400,
+      "comments": "막돼먹은영애씨 진짜 판박이!",
+      "contain_gender_bias": false,
+      "bias": "none",
+      "hate": "none",
+      "news_title": "\"이혜원, 딸 리원과 달달한 하교길...\"\" 행복은 성적순이 아니야\"\"\""
+    },
+    {
+      "id": "train-7449",
+      "rowIndex": 7449,
+      "comments": "피해자는 생각 안하시나? 입장을 바꿔 보면 못 그랬을꺼 같은뎅..",
+      "contain_gender_bias": false,
+      "bias": "none",
+      "hate": "none",
+      "news_title": "\"[종합] 故 조민기 아내, 생일 축하 게시글에 갑론을박…\"\"가족\"\"VS\"\"경솔\"\"\""
+    },
+    {
+      "id": "train-2554",
+      "rowIndex": 2554,
+      "comments": "못 생겨서 별로다",
+      "contain_gender_bias": false,
+      "bias": "none",
+      "hate": "offensive",
+      "news_title": "\"'집사부일체' 김민지 \"\"박지성 무릎꿇고 프러포즈, 비현실적인 느낌\"\"\""
+    },
+    {
+      "id": "train-4698",
+      "rowIndex": 4698,
+      "comments": "여자가 술쳐먹고 방송 나오는 게 좋나? ㅉㅉ",
+      "contain_gender_bias": true,
+      "bias": "gender",
+      "hate": "offensive",
+      "news_title": "\"'너는 내 운명' 음주 후 '전사' 신다은, 모닝 숙취 민낯 공개 '최고의 1분'\""
+    },
+    {
+      "id": "train-4874",
+      "rowIndex": 4874,
+      "comments": "연기는 다 잘하네 이병헌 유연석 김민정 변요한 통역관은 잘하는데 김태리는 글쎄.. 사극같은 배경에 안어울리는 느낌",
+      "contain_gender_bias": false,
+      "bias": "none",
+      "hate": "none",
+      "news_title": "\"‘미스터션샤인’ 김태리, 유연석 만났다 “내 눈에 백정 아닌 백성”\""
+    },
+    {
+      "id": "train-3397",
+      "rowIndex": 3397,
+      "comments": "서태지 천재",
+      "contain_gender_bias": false,
+      "bias": "none",
+      "hate": "none",
+      "news_title": "\"[단독] 서태지♥이은성 부부, ‘무한도전’ 평창동 주택 내놨다 “최근 이사”\""
+    },
+    {
+      "id": "train-5684",
+      "rowIndex": 5684,
+      "comments": "이게 빠진 몸매여?",
+      "contain_gender_bias": false,
+      "bias": "others",
+      "hate": "offensive",
+      "news_title": "\"[HI★뭐하세요?] 이국주, 다이어트 후 근황…한결 날씬해진 몸매 라인\""
+    },
+    {
+      "id": "train-7461",
+      "rowIndex": 7461,
+      "comments": "하긴 지코가 워낙 독보적이긴 하지",
+      "contain_gender_bias": false,
+      "bias": "none",
+      "hate": "none",
+      "news_title": "\"블락비 박경 \"\"너 왜 혼자있냐\"\"…지코 재계약 불발에 간접 언급\""
+    },
+    {
+      "id": "train-6131",
+      "rowIndex": 6131,
+      "comments": "일본인인줄 알고 진짜 따로 찾아볼 정도였네요 연기 매우 인상깊었어요!",
+      "contain_gender_bias": false,
+      "bias": "none",
+      "hate": "none",
+      "news_title": "‘미스터션샤인’ 김남희 “일본어 연기 스트레스로 강제 다이어트” [인터뷰]"
+    },
+    {
+      "id": "train-6201",
+      "rowIndex": 6201,
+      "comments": "자살 언제하냐?",
+      "contain_gender_bias": false,
+      "bias": "none",
+      "hate": "hate",
+      "news_title": "\"[종합]승리, 심경고백→YG 세무조사→또 의혹…\"\"코카인 투약VS대질조사\"\"\""
+    },
+    {
+      "id": "train-5234",
+      "rowIndex": 5234,
+      "comments": "왜 참나 애나잘키워라 한심하다",
+      "contain_gender_bias": false,
+      "bias": "none",
+      "hate": "offensive",
+      "news_title": "'슈돌' 엄마 소율 등장..잼잼이 발달 상태는?"
+    },
+    {
+      "id": "train-0684",
+      "rowIndex": 684,
+      "comments": "구혜선씨!!항상 응원합니다!!지금처럼 애기들 잘 돌봐시구요믿어요..당신을...힘내세요!!",
+      "contain_gender_bias": false,
+      "bias": "none",
+      "hate": "none",
+      "news_title": "\"[종합]\"\"이혼 NO\"\" 구혜선, 안재현과 불화→활동 중단→복학+예술활동 전념\""
+    },
+    {
+      "id": "train-5465",
+      "rowIndex": 5465,
+      "comments": "유지보단 안해준단거죠 유책배우자가 좋아서 글겠습니까 이혼해줌 돌씽이라고 지만 신나서 다닐껀데 왜 당한사람이 쿨하게 보내줍니까 그럴이유도 없는거지",
+      "contain_gender_bias": false,
+      "bias": "none",
+      "hate": "none",
+      "news_title": "\"[종합]\"\"이혼 NO\"\" 구혜선, 안재현과 불화→활동 중단→복학+예술활동 전념\""
+    },
+    {
+      "id": "train-3949",
+      "rowIndex": 3949,
+      "comments": "아니 4명으로도 충분한데 게스트 왜 불러? 벌써부터 입맛떨어진다 ㅠㅠ",
+      "contain_gender_bias": false,
+      "bias": "none",
+      "hate": "none",
+      "news_title": "\"[단독]공효진·김래원·강기영, '맛있는 녀석들' 출연(종합)\""
+    },
+    {
+      "id": "train-6009",
+      "rowIndex": 6009,
+      "comments": "이젠 자식팔이에서 매니저팔이 방송까지하네 ㅋㅋㅋㅋ",
+      "contain_gender_bias": false,
+      "bias": "none",
+      "hate": "offensive",
+      "news_title": "\"'전지적 참견 시점' 박성광, 매니저 발언으로 '귀염상' 등극\""
+    },
+    {
+      "id": "train-0047",
+      "rowIndex": 47,
+      "comments": "20살차?? ㅉㅉ",
+      "contain_gender_bias": false,
+      "bias": "others",
+      "hate": "offensive",
+      "news_title": "이영애 ‘집사부일체’ 출연에 남편 정호영도 관심...‘20살 나이차’"
+    },
+    {
+      "id": "train-4639",
+      "rowIndex": 4639,
+      "comments": "여기 타가수팬들 들어와서 알바하나봐요 참불쌍타~~자기 가수욕먹이는 행동인줄모르고 그럴시간 있으면 자기 가수 기사댓글이나 더 달고 음악 스밍이나 더하겠네~",
+      "contain_gender_bias": false,
+      "bias": "others",
+      "hate": "offensive",
+      "news_title": "[종합] “YMC→스윙엔터테인먼트” 워너원 소속사 변경 왜? (전문)"
+    },
+    {
+      "id": "train-7261",
+      "rowIndex": 7261,
+      "comments": "큐브. 뭐여 현아가 벌어다준돈이얼만데 피끓는 청춘억 연예도못함? 범죄를저지른것도아닌데",
+      "contain_gender_bias": false,
+      "bias": "others",
+      "hate": "offensive",
+      "news_title": "\"[SC이슈]\"\"소속사서 퇴출\"\"…현아♥이던, 열애 인정이 불러온 '후폭풍'(종합)\""
+    },
+    {
+      "id": "train-5941",
+      "rowIndex": 5941,
+      "comments": "이영자 스케일전액 기부도 모자라서 뿌라스까지날씬하고 이쁜것들아 쫌 배워라",
+      "contain_gender_bias": false,
+      "bias": "others",
+      "hate": "offensive",
+      "news_title": "\"'전참시' 이영자X매니저, 동반 CF 출연+먹방…대세는 ing[종합]\""
+    },
+    {
+      "id": "train-2779",
+      "rowIndex": 2779,
+      "comments": "믿보...김혜숙... 우ㄱㄱㅣㄱㄱㅣ섬 ㄴㅏㄹㅏ 지구상서 ㅇㅏㅇㅖ없어졌으면...역ㄱㅕ운 ㅇㅏㅂㅔ... 오늘 축구도 ㄱㅐ망하고 어른 짐 ㅅㅅㅏ 돌대가리들 ㅇㅏ ㅈㅐ섭ㅇㅓ",
+      "contain_gender_bias": false,
+      "bias": "others",
+      "hate": "hate",
+      "news_title": "\"'섹션TV' 김해숙 \"\"'허스토리' 촬영 후 우울증 얻었다\"\"\""
+    },
+    {
+      "id": "train-7554",
+      "rowIndex": 7554,
+      "comments": "한남들 정신나갔네. 지딸들도 저렇게 술먹이고 모텔가도 꽃뱀이라고 할건지. 한남들 적나라한 성 인식 수준 여기 댓에 다 드러나네. 걍 원나잇과 성폭행을 분간 못하고 저 난리 ㅉㅉ",
+      "contain_gender_bias": true,
+      "bias": "gender",
+      "hate": "hate",
+      "news_title": "\"[단독] 김흥국 \"\"성폭행 사실무근, 오늘 변호사 선임\"\" 전면 부인\""
+    },
+    {
+      "id": "train-4448",
+      "rowIndex": 4448,
+      "comments": "어이고..비호감 나오셨네 김지민하고 러브라인 타고 뒤에선 다른여자랑 꽁냥대니 좋았니 ㅋㅋㅋㅋ",
+      "contain_gender_bias": false,
+      "bias": "none",
+      "hate": "hate",
+      "news_title": "\"[단독] 조우종, 프리 4년만에 친정 KBS 복귀 'FM대행진' 새DJ 됐다(종합)\""
+    },
+    {
+      "id": "train-0690",
+      "rowIndex": 690,
+      "comments": "국내에서는 일간 1위 하나조차 없는 그사세",
+      "contain_gender_bias": false,
+      "bias": "none",
+      "hate": "offensive",
+      "news_title": "\"[SW이슈] 월드와이드 방탄소년단, 대기록의 시작\""
+    },
+    {
+      "id": "train-3636",
+      "rowIndex": 3636,
+      "comments": "송강호: 아이고 미선아 ㅠㅠ 넌 죽을 계획이 다있구나?",
+      "contain_gender_bias": false,
+      "bias": "none",
+      "hate": "offensive",
+      "news_title": "\"밤새 조문 행렬…故 전미선, 동료들이 그리워하는 따뜻한 배우 [종합]\""
+    },
+    {
+      "id": "train-0588",
+      "rowIndex": 588,
+      "comments": "골목식당 폐지해라",
+      "contain_gender_bias": false,
+      "bias": "none",
+      "hate": "offensive",
+      "news_title": "\"\"\"현금 유도+1인 1라면?\"\"…'골목식당' 백종원, 초심 잃은 도시락집에 '경악' [종합]\""
+    },
+    {
+      "id": "train-7274",
+      "rowIndex": 7274,
+      "comments": "큰 부상도 아니고 3500 이면 개꿀이네. 배달기사분 같은데 막상 욕은 해도 저 금액이면 보통 다 합의 하겠지.. 현실과 타협하느라 역시 정의구현은 힘들다",
+      "contain_gender_bias": false,
+      "bias": "others",
+      "hate": "hate",
+      "news_title": "\"[종합] '장제원子' 노엘, 음주운전사고 3500만원 합의…운전자 바꿔치기 인정\""
+    },
+    {
+      "id": "train-5438",
+      "rowIndex": 5438,
+      "comments": "유시민 한테 부탁해봐 무슨궤변 늘어놓나보게",
+      "contain_gender_bias": false,
+      "bias": "none",
+      "hate": "offensive",
+      "news_title": "\"김건모, 사실상 방송 퇴출…경찰 수사 착수[종합]\""
+    },
+    {
+      "id": "train-1513",
+      "rowIndex": 1513,
+      "comments": "남들 다가는 군대~~~~~~",
+      "contain_gender_bias": false,
+      "bias": "others",
+      "hate": "offensive",
+      "news_title": "\"'입대 D-11' 서은광의 슬픈 멜로디..비투비, 눈물의 첫 체조경기장[콘서트 종합]\""
+    },
+    {
+      "id": "train-1600",
+      "rowIndex": 1600,
+      "comments": "남편이라는 놈이 상태 안좋은놈이지....돈있는 놈이 미 . 쳤 ...다고 화류계 인간을...ㅋㅋㅋㅋ",
+      "contain_gender_bias": true,
+      "bias": "gender",
+      "hate": "hate",
+      "news_title": "\"[Oh!쎈 이슈] 이태임, 은퇴→포털 프로필 삭제까지 3개월..“잘 살길vs굳이”(종합)\""
+    },
+    {
+      "id": "train-4141",
+      "rowIndex": 4141,
+      "comments": "아진짜 방탄이 한번 사과비슷한거 해주니까 지라를 하고있네.더 해봐.진짜 일본 곧 망하려나보다~",
+      "contain_gender_bias": false,
+      "bias": "none",
+      "hate": "offensive",
+      "news_title": "\"[종합]\"\"BTS→트와이스\"\"…日, 다현 '위안부 셔츠'에 \"\"반일활동가\"\" 비난\""
+    },
+    {
+      "id": "train-1855",
+      "rowIndex": 1855,
+      "comments": "니놈이 실력이 있냐 외모가 출중하냐 호감형이길 하냐 키라도 크냐 천운으로 이름 좀 날렸다마는 부모 죄가 없어도 넌 연예계에 발 오래 못붙일 놈이었어 나혼자산다서 24시간이 모자라게 쳐먹는놈 띄워주는거 보고 박나래도 싫어질려고 하더라",
+      "contain_gender_bias": false,
+      "bias": "others",
+      "hate": "offensive",
+      "news_title": "\"마이크로닷X산체스 부모, 오늘(8일) 입국..제천경찰서 압송[종합]\""
+    },
+    {
+      "id": "train-2146",
+      "rowIndex": 2146,
+      "comments": "두둔하는건 아닌데 전문보니 당한애도 정상은 아닌듯",
+      "contain_gender_bias": false,
+      "bias": "none",
+      "hate": "offensive",
+      "news_title": "\"\"\"잔나비 멤버에 학교폭력 당했다\"\" 주장 제기…잔나비 측 \"\"확인중\"\"[종합]\""
+    },
+    {
+      "id": "train-2136",
+      "rowIndex": 2136,
+      "comments": "됐고 이상화 허벅지 보니까 내 아랫도리가 후덜덜하다",
+      "contain_gender_bias": true,
+      "bias": "gender",
+      "hate": "hate",
+      "news_title": "\"'정글의 법칙' 문가비 걸크러시 폭발...\"\"뱀 안무서워\"\"(종합)\""
+    },
+    {
+      "id": "train-5326",
+      "rowIndex": 5326,
+      "comments": "우ㅡ웩 토나와ㅏㅏㅏ",
+      "contain_gender_bias": false,
+      "bias": "none",
+      "hate": "hate",
+      "news_title": "\"하리수 \"\"전성기에 하루 1억씩 벌어, 앞으로 10년은 거뜬\"\" 수입 고백\""
+    },
+    {
+      "id": "train-0068",
+      "rowIndex": 68,
+      "comments": "38살 되도록 시집못갔으면 뭔가 문제있는 여자 아닌가?? 건모형 그냥 거르세요...상대할 필요도 없어요...",
+      "contain_gender_bias": true,
+      "bias": "gender",
+      "hate": "hate",
+      "news_title": "\"[단독] 김태욱 \"\"김건모 맞선녀가 우리 직원? 저도 방송 보고 놀라\"\"\""
+    },
+    {
+      "id": "train-4747",
+      "rowIndex": 4747,
+      "comments": "여자들이 죽인 유니. 진짜 한국여자들 설리 구하라도 죽이더니 예쁘고 몸매좋은여자들만보면 못물어뜯어서 안달남. 대단해",
+      "contain_gender_bias": true,
+      "bias": "gender",
+      "hate": "hate",
+      "news_title": "\"악플이 만든 안타까운 죽음…故 유니, 스물여섯에 멈춰 있는 여리고 이쁜 별[종합]\""
+    },
+    {
+      "id": "train-7423",
+      "rowIndex": 7423,
+      "comments": "표정.하는행동 보는 사람도 불편해요. 저러케 불편해 할꺼면 모하러 왔나요~??",
+      "contain_gender_bias": false,
+      "bias": "none",
+      "hate": "offensive",
+      "news_title": "\"'불청' 이기찬, 41세 新막내 등장 \"\"조하나 만나고 싶었다\"\" (ft.최민용 타령) [종합]\""
+    },
+    {
+      "id": "train-0033",
+      "rowIndex": 33,
+      "comments": "2,30대 골빈여자들은 이 기사에 다 모이는건가ㅋㅋㅋㅋ 이래서 여자는 투표권 주면 안된다. 엠넷사전투표나 하고 살아야지 계집들은",
+      "contain_gender_bias": true,
+      "bias": "gender",
+      "hate": "hate",
+      "news_title": "\"“8년째 연애 중”…‘인생술집’ 블락비 유권♥전선혜, 4살차 연상연하 커플\""
+    },
+    {
+      "id": "train-3495",
+      "rowIndex": 3495,
+      "comments": "세상에 이미 죽은 사람에게 상을 주다니 이게 말이 되냐?",
+      "contain_gender_bias": false,
+      "bias": "others",
+      "hate": "offensive",
+      "news_title": "\"[55th 대종상] '독전' 故 김주혁·진서연, 남녀조연상 수상\""
+    },
+    {
+      "id": "train-0161",
+      "rowIndex": 161,
+      "comments": "ubd 안마 제이튠 주식 먹튀 ㅆㄹㄱ",
+      "contain_gender_bias": false,
+      "bias": "none",
+      "hate": "hate",
+      "news_title": "\"'김태희♥' 정지훈, 추석 나들이 근황 공개…곧 둘째 출산\""
+    },
+    {
+      "id": "train-4164",
+      "rowIndex": 4164,
+      "comments": "악플 잡고 보면 90% 한녀들임 ㅋㅋ",
+      "contain_gender_bias": true,
+      "bias": "gender",
+      "hate": "hate",
+      "news_title": "박지민 '성추행' 메시지 남긴 악플러에 일침"
+    },
+    {
+      "id": "train-4319",
+      "rowIndex": 4319,
+      "comments": "야한게 아니라 더럽던데. 치킨 먹다 입맛떨어짐",
+      "contain_gender_bias": false,
+      "bias": "none",
+      "hate": "hate",
+      "news_title": "\"[단독인터뷰] 이필모 “샤워 이후 행동, 그렇게 야할 줄이야 하하하”\""
+    },
+    {
+      "id": "train-1770",
+      "rowIndex": 1770,
+      "comments": "누구? 씨엔블루? 사기꾼정용화가 잇는?",
+      "contain_gender_bias": false,
+      "bias": "none",
+      "hate": "hate",
+      "news_title": "\"이종현 \"\"BJ 박민정 DM 논란 죄송…씨엔블루 탈퇴 결정\"\" [전문]\""
+    },
+    {
+      "id": "train-5689",
+      "rowIndex": 5689,
+      "comments": "이게 왜 욕을 먹는거야? 하여간 남 잘되는 꼴 못보는 한국인 종특 ㅋㅋ",
+      "contain_gender_bias": false,
+      "bias": "others",
+      "hate": "hate",
+      "news_title": "\"‘예비엄마’ 혜박, 남편 외제차 선물에 활짝...“고마워 서방”\""
+    },
+    {
+      "id": "train-3631",
+      "rowIndex": 3631,
+      "comments": "솔찍히 룸안가는남자가 어뎃노 ㅋㅋ",
+      "contain_gender_bias": true,
+      "bias": "gender",
+      "hate": "hate",
+      "news_title": "\"[단독] 김건모, 성폭행 의혹에도 콘서트ing..'미우새'는 \"\"방송여부 확인 중\"\"(종합)\""
+    },
+    {
+      "id": "train-7379",
+      "rowIndex": 7379,
+      "comments": "팩트 : 남자들은 설리가 찌찌를 보이던 말던 이쁘니까 좋아함. 여자들은 설리가 마치 끼부린다 생각하면서 여적여를 시전함.",
+      "contain_gender_bias": true,
+      "bias": "gender",
+      "hate": "hate",
+      "news_title": "\"딘, 설리 피처링 논란 반박 \"\"신곡 '하루살이'에 제일 잘 어울려\"\" [종합]\""
+    },
+    {
+      "id": "train-3847",
+      "rowIndex": 3847,
+      "comments": "실검에서 좀 내려라 이 잡것들 조작 ㅈㄴ 하네",
+      "contain_gender_bias": false,
+      "bias": "others",
+      "hate": "hate",
+      "news_title": "\"개그맨 김경진, 모델 전수민과 6월27일 결혼(공식)\""
+    },
+    {
+      "id": "train-4889",
+      "rowIndex": 4889,
+      "comments": "연기빨에 군대 얼른 가야지 워낙 특이해서 가도 힘들어 낳오지 않을까가만히 일상에서 봐도 범상치 않은 행동하는게 참",
+      "contain_gender_bias": false,
+      "bias": "others",
+      "hate": "hate",
+      "news_title": "\"송혜교, 유아인 '버닝' 응원..\"\"유배우\"\"\""
+    },
+    {
+      "id": "train-6302",
+      "rowIndex": 6302,
+      "comments": "장동윤 ㅅㅅ 잘 할 것 같음",
+      "contain_gender_bias": true,
+      "bias": "gender",
+      "hate": "hate",
+      "news_title": "이대 라멘집부터 포방터 돈까스..백종원X김성주X조보아가 꼽은 '힐링식당'"
+    }
+  ]
+}

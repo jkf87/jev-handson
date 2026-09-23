@@ -1,0 +1,28 @@
+{
+  "runAt": "2026-09-23",
+  "conditions": {
+    "samples": 100,
+    "batchSize": 10,
+    "concurrency": 1,
+    "agyModel": "gemini-3.8-flash-low",
+    "jevModel": "~typesafe/jev-latest"
+  },
+  "agy": {
+    "completed": 100,
+    "elapsedMs": 110522.1653,
+    "avgMsPerItem": 1105.221653,
+    "itemsPerSecond": 0.9047958817,
+    "accuracy": 0.62,
+    "macroF1": 0.6190043753,
+    "routeCounts": { "allow": 40, "review": 41, "block": 19, "error": 0 }
+  },
+  "jev": {
+    "completed": 100,
+    "elapsedMs": 3146.5187,
+    "avgMsPerItem": 31.465187,
+    "itemsPerSecond": 31.7811554719,
+    "accuracy": 0.61,
+    "macroF1": 0.6128872641,
+    "routeCounts": { "allow": 26, "review": 57, "block": 17, "error": 0 }
+  }
+}

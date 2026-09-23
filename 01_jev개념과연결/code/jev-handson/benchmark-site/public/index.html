@@ -1,0 +1,151 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="AGY LLM과 JEV의 한국어 악플 분류 속도 및 라우팅 품질 비교" />
+    <title>RouteLab — 악플 분류 벤치마크</title>
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23091016'/%3E%3Cpath d='M15 18h19c9 0 15 5 15 14S43 46 34 46H15V18Zm10 8v12h8c4 0 6-2 6-6s-2-6-6-6h-8Z' fill='%2348e0c4'/%3E%3C/svg%3E" />
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <header class="topbar">
+      <a class="brand" href="#top" aria-label="RouteLab 홈">
+        <span class="brand-mark">R</span>
+        <span>RouteLab</span>
+      </a>
+      <div class="topbar-meta">
+        <span class="live-dot" aria-hidden="true"></span>
+        <span id="system-status">백엔드 확인 중</span>
+      </div>
+    </header>
+
+    <main id="top">
+      <section class="workspace" aria-labelledby="page-title">
+        <div class="intro">
+          <p class="eyebrow">BACKEND ROUTING BENCHMARK / KO-HATE-100</p>
+          <h1 id="page-title">어떤 분류기가 운영 경로를 더 빠르게 결정하는가?</h1>
+          <p>동일한 한국어 댓글 100개를 AGY 기반 일반 LLM과 JEV에 보내 처리 속도와 라우팅 품질을 비교합니다.</p>
+        </div>
+
+        <aside class="dataset-card" aria-label="데이터셋 정보">
+          <div><span>DATASET</span><strong>nayohan/korean-hate-speech</strong></div>
+          <div><span>SAMPLE</span><strong>100 / train</strong></div>
+          <div><span>LABELS</span><strong>34 hate · 33 offensive · 33 none</strong></div>
+          <div><span>ROUTING</span><strong>block · review · allow</strong></div>
+        </aside>
+
+        <section class="control-deck" aria-label="벤치마크 설정">
+          <label>
+            <span>AGY model</span>
+            <select id="agy-model" aria-label="AGY 모델"></select>
+          </label>
+          <label>
+            <span>Batch size</span>
+            <select id="batch-size" aria-label="배치 크기">
+              <option value="5">5</option>
+              <option value="10" selected>10</option>
+              <option value="20">20</option>
+            </select>
+          </label>
+          <label>
+            <span>Concurrency</span>
+            <select id="concurrency" aria-label="동시 실행 수">
+              <option value="1" selected>1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+            </select>
+          </label>
+          <div class="run-actions">
+            <button class="button button-primary" id="run-both">두 방식 순차 실행</button>
+            <button class="button" id="run-agy">AGY만 실행</button>
+            <button class="button" id="run-jev">JEV만 실행</button>
+          </div>
+        </section>
+
+        <p class="method-note">순차 실행은 리소스 경합을 피합니다. 측정 시간에는 각 방식의 호출·추론·응답 파싱 시간이 모두 포함됩니다.</p>
+      </section>
+
+      <section class="scoreboard" aria-label="비교 결과">
+        <article class="method-card" data-method="agy">
+          <div class="method-head">
+            <div>
+              <p class="method-index">01 / GENERAL LLM</p>
+              <h2>AGY <span>—P</span></h2>
+            </div>
+            <span class="status-pill" id="agy-status">대기</span>
+          </div>
+          <div class="progress-track"><span id="agy-progress"></span></div>
+          <div class="metric-grid">
+            <div><span>총 시간</span><strong id="agy-time">—</strong></div>
+            <div><span>처리량</span><strong id="agy-throughput">—</strong></div>
+            <div><span>정확도</span><strong id="agy-accuracy">—</strong></div>
+            <div><span>Macro-F1</span><strong id="agy-f1">—</strong></div>
+          </div>
+          <div class="route-strip" id="agy-routes">
+            <span class="allow">allow —</span><span class="review">review —</span><span class="block">block —</span>
+          </div>
+        </article>
+
+        <article class="method-card method-card-jev" data-method="jev">
+          <div class="method-head">
+            <div>
+              <p class="method-index">02 / TYPED DECISION</p>
+              <h2>JEV <span>choice</span></h2>
+            </div>
+            <span class="status-pill" id="jev-status">대기</span>
+          </div>
+          <div class="progress-track"><span id="jev-progress"></span></div>
+          <div class="metric-grid">
+            <div><span>총 시간</span><strong id="jev-time">—</strong></div>
+            <div><span>처리량</span><strong id="jev-throughput">—</strong></div>
+            <div><span>정확도</span><strong id="jev-accuracy">—</strong></div>
+            <div><span>Macro-F1</span><strong id="jev-f1">—</strong></div>
+          </div>
+          <div class="route-strip" id="jev-routes">
+            <span class="allow">allow —</span><span class="review">review —</span><span class="block">block —</span>
+          </div>
+        </article>
+
+        <aside class="comparison-banner" id="comparison-banner" aria-live="polite">
+          <span>LAST VERIFIED RUN</span>
+          <strong>기준 실행 결과를 불러오는 중입니다.</strong>
+        </aside>
+      </section>
+
+      <section class="results-panel" aria-labelledby="results-title">
+        <div class="panel-head">
+          <div>
+            <p class="eyebrow">LIVE DECISIONS</p>
+            <h2 id="results-title">분류 결과</h2>
+          </div>
+          <div class="legend" aria-label="라우팅 범례">
+            <span class="legend-allow">ALLOW</span>
+            <span class="legend-review">REVIEW</span>
+            <span class="legend-block">BLOCK</span>
+          </div>
+        </div>
+
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr>
+                <th>샘플</th>
+                <th>댓글</th>
+                <th>정답</th>
+                <th>AGY</th>
+                <th>JEV</th>
+                <th>라우팅</th>
+              </tr>
+            </thead>
+            <tbody id="results-body"></tbody>
+          </table>
+        </div>
+      </section>
+    </main>
+
+    <div class="toast" id="toast" role="status" aria-live="polite"></div>
+    <script type="module" src="/app.js"></script>
+  </body>
+</html>

@@ -33,6 +33,7 @@ SOFTWARE.
 ## korean-hate-speech (CC BY-SA 4.0)
 
 - 파일: `01_jev개념과연결/code/04_악플탐지/data/valid.jsonl` — 검증 세트 471건을 JSON Lines로 옮긴 것(열 이름만 바꿈)
+- 파일: `01_jev개념과연결/code/jev-handson/benchmark-site/data/sample-100.json` — train에서 고정 시드로 뽑은 100건(hate 34 · offensive 33 · none 33, 1강 녹화 때 에이전트가 만든 표본)
 - 출처: https://huggingface.co/datasets/nayohan/korean-hate-speech · 원본 https://github.com/kocohub/korean-hate-speech
 - 논문: Jihyung Moon, Won Ik Cho, Junbum Lee. BEEP! Korean Corpus of Online News Comments for Toxic Speech Detection. SocialNLP 2020
 - 라이선스: Creative Commons Attribution-ShareAlike 4.0 International (https://creativecommons.org/licenses/by-sa/4.0/) — 이 파일도 같은 라이선스를 따릅니다

@@ -30,6 +30,14 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 ```
 
+## korean-hate-speech (CC BY-SA 4.0)
+
+- 파일: `01_jev개념과연결/code/04_악플탐지/data/valid.jsonl` — 검증 세트 471건을 JSON Lines로 옮긴 것(열 이름만 바꿈)
+- 출처: https://huggingface.co/datasets/nayohan/korean-hate-speech · 원본 https://github.com/kocohub/korean-hate-speech
+- 논문: Jihyung Moon, Won Ik Cho, Junbum Lee. BEEP! Korean Corpus of Online News Comments for Toxic Speech Detection. SocialNLP 2020
+- 라이선스: Creative Commons Attribution-ShareAlike 4.0 International (https://creativecommons.org/licenses/by-sa/4.0/) — 이 파일도 같은 라이선스를 따릅니다
+- 실제 악플(욕설·혐오 표현)이 들어 있습니다
+
 ## 참고한 문서
 
 - `02_라우터/routers/claude-code/`는 TypeSafe 문서의 [Skill suggestion 쿡북](https://docs.typesafe.ai/cookbooks/skill_suggestion) 구조(2요청 · 게이트 · 재검증)를 Node로 옮긴 것입니다. 코드는 새로 썼고, 게이트 질문 문구는 쿡북을 따랐습니다.

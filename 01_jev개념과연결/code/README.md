@@ -1,8 +1,9 @@
-# 1강 실습 — API 키 발급, 스킬 설치, 세 에이전트에 Jev 연결
+# 1강 실습 — 키 발급 · 스킬 설치 · 악플 탐지로 LLM과 Jev 비교
 
 순서대로 따라 하면 됩니다. 결과 예시는 `../evidence/`에 전부 남아 있습니다(2026-09-23 실측).
 
-**프롬프트로 따라 하기**: 명령을 직접 치지 않고 에이전트에게 시키는 버전이 `../프롬프트.md`에 있어요(슬라이드 「프롬프트 ①~⑤」와 같은 번호).
+**프롬프트로 따라 하기**: 명령을 직접 치지 않고 에이전트에게 시키는 버전이 `../프롬프트.md`에 있어요(슬라이드 「프롬프트 ①~④」와 같은 번호).
+강의 흐름: 0 키 → 1 첫 호출 → 2 스킬 설치 → 3 연결 확인 → **4 악플 탐지(LLM vs Jev)**. 훅 · Codex · MCP는 맨 뒤 「더 해 보기」(강의에서는 다루지 않음).
 9/23에 Claude Code(`claude -p`)·Codex로 프롬프트를 그대로 돌린 기록: `../evidence/prompts/`. 아래 명령은 직접 칠 때 쓰는 버전이에요.
 
 ## 0. 키 준비 (5분)
@@ -42,7 +43,20 @@ bash /경로/02_스킬설치/install_skills.sh        # 프로젝트 설치 (전
 | OpenClaw | gjc 에이전트: force push에 exfiltration 0.86·beyond_scope 0.90 → 중단 | `../evidence/openclaw/02_gjc에이전트_forcepush판정.json` |
 | Codex | 스킬 이름을 부르면 jev.py 호출 → destructive 0.97 · impact 1.73 (스킬 설명 예산 초과 경고에도) | `../evidence/codex/02_명시호출_성공.jsonl` |
 
-## 4. '쓸 수 있음'과 '반드시 씀'은 다르다 (15분)
+## 4. 악플 탐지: 같은 댓글을 LLM과 Jev로 (30분) — `04_악플탐지/`
+뉴스 댓글 악플 데이터 [korean-hate-speech](https://huggingface.co/datasets/nayohan/korean-hate-speech)(CC BY-SA 4.0) 471건을 LLM과 Jev에 같은 정의로 넣고 두 출력을 비교해요. **실제 악플이 들어 있는 데이터예요.**
+```bash
+python3 04_악플탐지/jev_filter.py --limit 50     # Jev: 댓글마다 choice 질문 하나 → 세 라벨의 확률
+python3 04_악플탐지/llm_filter.py --limit 50     # LLM: claude CLI(Claude Haiku) → 라벨 하나
+python3 04_악플탐지/compare.py                   # 정확도·정밀도·재현율·지연·비용, 갈린 댓글, Jev 기준 바꾸기
+```
+자세한 설명과 9/23 실측: `04_악플탐지/README.md`
+
+---
+
+## 더 해 보기 (강의에서는 다루지 않음): '쓸 수 있음'과 '반드시 씀'은 다르다 — 훅 · Codex · MCP
+프롬프트는 `../프롬프트.md` 맨 뒤 「더 해 보기」(훅.1~3 · codex.1~2 · mcp.1~2)에 있어요.
+
 - 스킬만 깔았을 때: "`.git` 지우고 다시 해 줘" → Claude Code가 스킬을 **안 부르고** 바로 `rm -rf` 시도 (`02_자연어요청_스킬미사용.jsonl`)
 - 강제로 거는 법: `03_연결/claude-code/.claude/` 를 프로젝트에 복사 → **PreToolUse 훅**이 모든 Bash 명령 앞에서 Jev에 묻는다
   - 훅 없음: `rm -rf src` 실행됨 / 훅 있음: beyond_scope 0.91로 멈춤 (`../evidence/hook/`)
@@ -72,8 +86,9 @@ bash /경로/02_스킬설치/install_skills.sh        # 프로젝트 설치 (전
 |---|---|
 | `01_첫호출/` | `first_call.sh`(curl), `first_call.py`(파이썬 예제), `jev.py`(jev-judgment 스킬 스크립트, 표준 라이브러리만), 요청 본문 |
 | `02_스킬설치/` | 설치 스크립트, 연결 확인 프롬프트와 막히는 곳, `protocol2_예시.json`(에이전트가 보내는 Protocol 2 요청) |
-| `03_연결/claude-code/` | 훅(`jev_guard.py`), `settings.json`, `test_guard.py`(에이전트 없이 훅 판정만 시험), `CLAUDE.md` 규칙, MCP 설정 |
+| `03_연결/claude-code/` | (더 해 보기) 훅(`jev_guard.py`), `settings.json`, `test_guard.py`(에이전트 없이 훅 판정만 시험), `CLAUDE.md` 규칙, MCP 설정 |
 | `03_연결/codex/` | `AGENTS.md` 규칙, `.codex/hooks.json`(deny), MCP 설정 예시(`config.toml.예시`) |
 | `03_연결/openclaw/` | 허용목록·키·시험 명령 |
-| `jev-mcp/` | MCP 서버 (표준 라이브러리만) |
+| `jev-mcp/` | (더 해 보기) MCP 서버 (표준 라이브러리만) |
 | `demo-project/` | 연결 실험용 빈 프로젝트 (pnpm 잠금 파일 포함) |
+| `04_악플탐지/` | 악플 탐지: 데이터(korean-hate-speech 471건) · `jev_filter.py` · `llm_filter.py` · `compare.py` |

@@ -1,6 +1,6 @@
-# 1강 · Jev 개념과 에이전트 연결
+# 1강 · Jev 개념 · 설치 · 악플 탐지
 
-- 에이전트에게 시킬 때: [`프롬프트.md`](프롬프트.md) ①~⑤ (첫 호출 → 스킬 설치 → 훅 → Codex → MCP)
+- 에이전트에게 시킬 때: [`프롬프트.md`](프롬프트.md) ①~④ (첫 호출 → 스킬 설치 → Jev로 악플 거르기 → LLM으로 걸러서 두 출력 비교)
 - 직접 칠 때: [`code/README.md`](code/README.md)
 - 키: `code/.env.example` → `code/.env`
 
@@ -8,10 +8,8 @@
 |---|---|
 | `code/01_첫호출/` | curl · 파이썬 표준 라이브러리 · `jev.py`(jev-judgment 스킬 스크립트)로 첫 호출. noul · choice · score 질문을 한 요청에 |
 | `code/02_스킬설치/` | 공식 `typesafe-ai` + 커뮤니티 `jev-judgment` 스킬 설치 스크립트, 연결 확인 프롬프트 |
-| `code/03_연결/claude-code/` | PreToolUse 훅 `jev_guard.py`(위험 명령 앞에서 Jev에 묻기) · 훅만 시험하는 `test_guard.py` · CLAUDE.md · MCP 설정 |
-| `code/03_연결/codex/` | 같은 훅의 Codex 판(`.codex/hooks.json`) · AGENTS.md 규칙 · `config.toml` 예시 |
-| `code/03_연결/openclaw/` | OpenClaw 연결 방법 |
-| `code/jev-mcp/` | Jev MCP 서버(도구 `jev_decide` · `jev_ask`) |
-| `code/demo-project/` | 훅 실습용 작은 프로젝트 |
+| `code/04_악플탐지/` | 뉴스 댓글 악플 데이터(korean-hate-speech 471건, CC BY-SA 4.0) · `jev_filter.py`(Jev) · `llm_filter.py`(Claude CLI · Ollama) · `compare.py`(두 출력 비교 · 기준 바꾸기) |
+| `code/demo-project/` | 스킬 설치 실습용 작은 프로젝트 |
+| `code/03_연결/` · `code/jev-mcp/` | 더 해 보기(강의에서는 안 다룸): Claude Code/Codex 훅 `jev_guard.py` · OpenClaw 연결 · Jev MCP 서버 |
 
-9/23 실측 요약: 첫 호출 0.57초 · `model` 빠지면 HTTP 422 · 파이썬 기본 User-Agent는 HTTP 403(헤더 넣어 둠) · Codex 훅은 ask가 아니라 deny여야 막힘.
+9/23 실측 요약: 첫 호출 0.57초 · 악플 거르기는 Jev F1 0.883 · Claude Haiku 0.875로 비슷, 지연 0.36초 vs 8.1초, 1,000건 $0.023 vs $3.62. Jev는 기준(악플 확률)을 코드로 바꿔 자동 숨김 · 사람 검토 구간을 나눌 수 있음.

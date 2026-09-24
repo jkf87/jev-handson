@@ -2,7 +2,8 @@
 
 - 에이전트에게 시킬 때: [`프롬프트.md`](프롬프트.md) ①~⑥ — `code/`에서 (키: `cp ../../02_라우터/실습/.env code/.env`)
 - 직접 칠 때: [`code/README.md`](code/README.md)
-- **Colab 노트북**: [`colab/3강_Jev닮은모델_Colab.ipynb`](colab/3강_Jev닮은모델_Colab.ipynb) · [Colab에서 열기](https://colab.research.google.com/github/jkf87/jev-handson/blob/main/03_%EC%9C%A0%EC%82%AC%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8/colab/3%EA%B0%95_Jev%EB%8B%AE%EC%9D%80%EB%AA%A8%EB%8D%B8_Colab.ipynb) — 무료 T4로 openjev(SemIf · Qwen3.5-4B) 판단 한 번을 7단계 위젯으로 뜯어보고, 병렬 판단 · API vs 로컬 · 보정 결과를 차트로 봐요. 무거운 14B · llama.cpp는 미리 잰 값으로, Jev-Omni는 80GB GPU 선택 셀로(`colab/README.md`)
+- **Colab 노트북 ①**: [`colab/3강_Jev닮은모델_Colab.ipynb`](colab/3강_Jev닮은모델_Colab.ipynb) · [Colab에서 열기](https://colab.research.google.com/github/jkf87/jev-handson/blob/main/03_%EC%9C%A0%EC%82%AC%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8/colab/3%EA%B0%95_Jev%EB%8B%AE%EC%9D%80%EB%AA%A8%EB%8D%B8_Colab.ipynb) — 무료 T4로 openjev(SemIf · Qwen3.5-4B) 판단 한 번을 7단계 위젯으로 뜯어보고, 병렬 판단 · API vs 로컬 · 보정 결과를 차트로 봐요. 무거운 14B · llama.cpp는 미리 잰 값으로, Jev-Omni는 80GB GPU 선택 셀로(`colab/README.md`)
+- **Colab 노트북 ②**: [`colab/3강_악플분류_4종비교_Colab.ipynb`](colab/3강_악플분류_4종비교_Colab.ipynb) · [Colab에서 열기](https://colab.research.google.com/github/jkf87/jev-handson/blob/main/03_%EC%9C%A0%EC%82%AC%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8/colab/3%EA%B0%95_%EC%95%85%ED%94%8C%EB%B6%84%EB%A5%98_4%EC%A2%85%EB%B9%84%EA%B5%90_Colab.ipynb) — 같은 한국어 악플 댓글(korean-hate-speech valid)을 SemIf · decider · laya · TypeSafe Jev에 똑같이 묻고 정확도 · 보정 · 속도 · 비용을 한 번에 비교해요. 작은 모델(2B급)이라 무료 T4로 7~12분(예상). Jev 키가 없으면 9/23 기록으로 비교
 
 | 폴더 | 내용 |
 |---|---|

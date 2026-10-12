@@ -1,0 +1,47 @@
+{
+ "Rest_FallOnFloor": {
+  "sec": 30,
+  "frame_jpg": "f_0061.jpg",
+  "boxes": [
+   {
+    "xc": 195,
+    "yc": 121,
+    "w": 42,
+    "h": 47,
+    "role": "walker",
+    "situation": "inactive",
+    "movement": "inactive"
+   }
+  ]
+ },
+ "Fight_OneManDown": {
+  "sec": 11,
+  "frame_jpg": "f_0023.jpg",
+  "boxes": [
+   {
+    "xc": 230,
+    "yc": 151,
+    "w": 61,
+    "h": 79,
+    "role": "fighters",
+    "situation": "fighting",
+    "movement": ""
+   }
+  ]
+ },
+ "LeftBag": {
+  "sec": 46,
+  "frame_jpg": "f_0093.jpg",
+  "boxes": [
+   {
+    "xc": 310,
+    "yc": 112,
+    "w": 16,
+    "h": 22,
+    "role": "leaving object",
+    "situation": "inactive",
+    "movement": "inactive"
+   }
+  ]
+ }
+}

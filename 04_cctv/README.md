@@ -4,6 +4,7 @@
 
 | 파일 | 내용 |
 |---|---|
+| `scene_examples.json` | 장면 세 가지(쓰러짐 · 다툼 · 물건 방치)의 대표 프레임과 정답 박스(CAVIAR XML 좌표) |
 | `gt.json` | 13클립 정답 시간축(초). 싸움 · 가방 방치는 CAVIAR XML 라벨, 쓰러짐 구간은 강사가 눈으로 붙인 값 |
 | `results/cctv-0.8B.json` | 2026-10-12 RTX A4000 · OneJev-0.8B float16 · 13클립 전체(클립 판단 + 8초 창 194개) |
 | `results/cctv-4B.json` | 같은 날 OneJev-4B · 클립 판단 13개 + 4클립 시간축(4초 간격). GPU를 다른 프로그램과 나눠 써서 지연은 참고만 |

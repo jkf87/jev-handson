@@ -1,0 +1,185 @@
+{
+ "Browse1": {
+  "dur_s": 41.7,
+  "fight_s": [],
+  "left_s": [],
+  "down_s": [],
+  "clip_label": "lingering"
+ },
+ "Browse_WhileWaiting1": {
+  "dur_s": 31.6,
+  "fight_s": [],
+  "left_s": [],
+  "down_s": [],
+  "clip_label": "lingering"
+ },
+ "Fight_Chase": {
+  "dur_s": 17.2,
+  "fight_s": [
+   11,
+   12,
+   13,
+   14,
+   15,
+   16
+  ],
+  "left_s": [],
+  "down_s": [],
+  "clip_label": "fighting"
+ },
+ "Fight_OneManDown": {
+  "dur_s": 38.4,
+  "fight_s": [
+   7,
+   8,
+   9,
+   10,
+   11,
+   12,
+   13,
+   14
+  ],
+  "left_s": [],
+  "down_s": [
+   15,
+   16,
+   17,
+   18,
+   19
+  ],
+  "clip_label": "fighting"
+ },
+ "Fight_RunAway1": {
+  "dur_s": 22.0,
+  "fight_s": [
+   9,
+   10,
+   11,
+   12,
+   13,
+   14,
+   15,
+   16,
+   17
+  ],
+  "left_s": [],
+  "down_s": [],
+  "clip_label": "fighting"
+ },
+ "LeftBag": {
+  "dur_s": 57.6,
+  "fight_s": [],
+  "left_s": [
+   37,
+   38,
+   39,
+   40,
+   41,
+   42,
+   43,
+   44,
+   45,
+   46,
+   47,
+   48,
+   49,
+   50,
+   51,
+   52,
+   53,
+   54
+  ],
+  "down_s": [],
+  "clip_label": "left_object"
+ },
+ "LeftBag_PickedUp": {
+  "dur_s": 54.2,
+  "fight_s": [],
+  "left_s": [
+   20,
+   21,
+   22,
+   23,
+   24,
+   25,
+   26,
+   27,
+   28,
+   29,
+   30,
+   31,
+   32,
+   33,
+   34,
+   35,
+   36,
+   37,
+   38,
+   39,
+   40
+  ],
+  "down_s": [],
+  "clip_label": "left_object"
+ },
+ "Meet_Split_3rdGuy": {
+  "dur_s": 36.9,
+  "fight_s": [],
+  "left_s": [],
+  "down_s": [],
+  "clip_label": "meeting"
+ },
+ "Meet_WalkTogether1": {
+  "dur_s": 28.3,
+  "fight_s": [],
+  "left_s": [],
+  "down_s": [],
+  "clip_label": "meeting"
+ },
+ "Rest_FallOnFloor": {
+  "dur_s": 40.3,
+  "fight_s": [],
+  "left_s": [],
+  "down_s": [
+   27,
+   28,
+   29,
+   30,
+   31,
+   32,
+   33,
+   34
+  ],
+  "clip_label": "person_down"
+ },
+ "Rest_InChair": {
+  "dur_s": 40.3,
+  "fight_s": [],
+  "left_s": [],
+  "down_s": [],
+  "clip_label": "lingering"
+ },
+ "Rest_SlumpOnFloor": {
+  "dur_s": 36.4,
+  "fight_s": [],
+  "left_s": [],
+  "down_s": [
+   24,
+   25,
+   26,
+   27,
+   28,
+   29,
+   30,
+   31,
+   32
+  ],
+  "clip_label": "person_down"
+ },
+ "Walk1": {
+  "dur_s": 24.4,
+  "fight_s": [],
+  "left_s": [],
+  "down_s": [],
+  "clip_label": "passing"
+ }
+}

@@ -1,0 +1,868 @@
+{
+ "tag": "4B",
+ "questions": {
+  "scene": "Choice(instructions='What is happening in this CCTV video?', criteria={'passing': 'people walking or passing through normally', 'lingering': 'people standing, browsing, waiting or sitting calmly', 'meeting': 'people meeting and talking calmly in a group', 'person_down': 'a person has fallen down or is lying or slumped on the floor', 'fighting': 'people fighting, pushing each other, chasing, or running away from a fight', 'left_object': 'a bag or box is left behind on the floor without its owner', 'empty': 'no people are visible'})",
+  "down": "Noul(instructions='In this video, is any person lying or slumped on the floor?', criteria=None)",
+  "staff": "Noul(instructions='Should a staff member go to this place right now to check on people?', criteria=None)",
+  "urgency": "Score(instructions='How urgently should staff respond?', criteria=['no action needed', 'keep watching', 'check soon', 'respond immediately'])"
+ },
+ "clips": {
+  "Browse1": {
+   "ms": 3159,
+   "scene": "passing",
+   "scene_probs": {
+    "passing": 0.888375,
+    "lingering": 0.013819,
+    "meeting": 0.004664,
+    "person_down": 0.039204,
+    "fighting": 0.037519,
+    "left_object": 0.010965,
+    "empty": 0.005453
+   },
+   "down": 0.081567,
+   "staff": 0.412726,
+   "urgency": 1.247939
+  },
+  "Browse_WhileWaiting1": {
+   "ms": 3151,
+   "scene": "passing",
+   "scene_probs": {
+    "passing": 0.920406,
+    "lingering": 0.02173,
+    "meeting": 0.004632,
+    "person_down": 0.020344,
+    "fighting": 0.006294,
+    "left_object": 0.012952,
+    "empty": 0.013642
+   },
+   "down": 0.048447,
+   "staff": 0.439903,
+   "urgency": 1.206201
+  },
+  "Fight_Chase": {
+   "ms": 3173,
+   "scene": "fighting",
+   "scene_probs": {
+    "passing": 0.250681,
+    "lingering": 0.005665,
+    "meeting": 0.005591,
+    "person_down": 0.327419,
+    "fighting": 0.365995,
+    "left_object": 0.038239,
+    "empty": 0.006409
+   },
+   "down": 0.618457,
+   "staff": 0.565725,
+   "urgency": 1.770035
+  },
+  "Fight_OneManDown": {
+   "ms": 3196,
+   "scene": "person_down",
+   "scene_probs": {
+    "passing": 0.035778,
+    "lingering": 0.002754,
+    "meeting": 0.004186,
+    "person_down": 0.641671,
+    "fighting": 0.302718,
+    "left_object": 0.00788,
+    "empty": 0.005013
+   },
+   "down": 0.94843,
+   "staff": 0.561259,
+   "urgency": 1.79583
+  },
+  "Fight_RunAway1": {
+   "ms": 3225,
+   "scene": "passing",
+   "scene_probs": {
+    "passing": 0.701834,
+    "lingering": 0.012586,
+    "meeting": 0.006097,
+    "person_down": 0.01134,
+    "fighting": 0.253328,
+    "left_object": 0.008998,
+    "empty": 0.005817
+   },
+   "down": 0.08429,
+   "staff": 0.415771,
+   "urgency": 1.245399
+  },
+  "LeftBag": {
+   "ms": 3211,
+   "scene": "passing",
+   "scene_probs": {
+    "passing": 0.497025,
+    "lingering": 0.01012,
+    "meeting": 0.010094,
+    "person_down": 0.168299,
+    "fighting": 0.17408,
+    "left_object": 0.130309,
+    "empty": 0.010074
+   },
+   "down": 0.291789,
+   "staff": 0.49266,
+   "urgency": 1.869723
+  },
+  "LeftBag_PickedUp": {
+   "ms": 3121,
+   "scene": "passing",
+   "scene_probs": {
+    "passing": 0.590547,
+    "lingering": 0.044445,
+    "meeting": 0.009208,
+    "person_down": 0.051614,
+    "fighting": 0.178695,
+    "left_object": 0.102558,
+    "empty": 0.022933
+   },
+   "down": 0.100625,
+   "staff": 0.423344,
+   "urgency": 1.43635
+  },
+  "Meet_Split_3rdGuy": {
+   "ms": 3147,
+   "scene": "passing",
+   "scene_probs": {
+    "passing": 0.826211,
+    "lingering": 0.040154,
+    "meeting": 0.011564,
+    "person_down": 0.053322,
+    "fighting": 0.044484,
+    "left_object": 0.013321,
+    "empty": 0.010943
+   },
+   "down": 0.082821,
+   "staff": 0.45527,
+   "urgency": 1.228024
+  },
+  "Meet_WalkTogether1": {
+   "ms": 3066,
+   "scene": "passing",
+   "scene_probs": {
+    "passing": 0.866968,
+    "lingering": 0.017888,
+    "meeting": 0.00663,
+    "person_down": 0.006893,
+    "fighting": 0.081714,
+    "left_object": 0.006626,
+    "empty": 0.013282
+   },
+   "down": 0.031171,
+   "staff": 0.46944,
+   "urgency": 1.282106
+  },
+  "Rest_FallOnFloor": {
+   "ms": 3119,
+   "scene": "person_down",
+   "scene_probs": {
+    "passing": 0.103608,
+    "lingering": 0.00457,
+    "meeting": 0.005308,
+    "person_down": 0.661946,
+    "fighting": 0.19861,
+    "left_object": 0.01891,
+    "empty": 0.007047
+   },
+   "down": 0.776762,
+   "staff": 0.583736,
+   "urgency": 1.847147
+  },
+  "Rest_InChair": {
+   "ms": 3130,
+   "scene": "passing",
+   "scene_probs": {
+    "passing": 0.834849,
+    "lingering": 0.023737,
+    "meeting": 0.004842,
+    "person_down": 0.073832,
+    "fighting": 0.040168,
+    "left_object": 0.012093,
+    "empty": 0.010479
+   },
+   "down": 0.399686,
+   "staff": 0.447309,
+   "urgency": 1.178933
+  },
+  "Rest_SlumpOnFloor": {
+   "ms": 3119,
+   "scene": "passing",
+   "scene_probs": {
+    "passing": 0.66668,
+    "lingering": 0.00936,
+    "meeting": 0.006092,
+    "person_down": 0.155041,
+    "fighting": 0.142842,
+    "left_object": 0.014711,
+    "empty": 0.005273
+   },
+   "down": 0.439596,
+   "staff": 0.490413,
+   "urgency": 1.534353
+  },
+  "Walk1": {
+   "ms": 3157,
+   "scene": "passing",
+   "scene_probs": {
+    "passing": 0.736048,
+    "lingering": 0.006577,
+    "meeting": 0.005077,
+    "person_down": 0.113533,
+    "fighting": 0.107854,
+    "left_object": 0.017732,
+    "empty": 0.013179
+   },
+   "down": 0.200566,
+   "staff": 0.458005,
+   "urgency": 1.404454
+  }
+ },
+ "windows": {
+  "Browse1": [],
+  "Browse_WhileWaiting1": [],
+  "Fight_Chase": [],
+  "Fight_OneManDown": [
+   {
+    "ms": 2795,
+    "scene": "passing",
+    "scene_probs": {
+     "passing": 0.829448,
+     "lingering": 0.008808,
+     "meeting": 0.00464,
+     "person_down": 0.006475,
+     "fighting": 0.141815,
+     "left_object": 0.005308,
+     "empty": 0.003505
+    },
+    "down": 0.014511,
+    "staff": 0.4149,
+    "urgency": 1.297998,
+    "t0": 0,
+    "t1": 8
+   },
+   {
+    "ms": 2864,
+    "scene": "passing",
+    "scene_probs": {
+     "passing": 0.535272,
+     "lingering": 0.006817,
+     "meeting": 0.009128,
+     "person_down": 0.006272,
+     "fighting": 0.428909,
+     "left_object": 0.00755,
+     "empty": 0.006052
+    },
+    "down": 0.014758,
+    "staff": 0.501752,
+    "urgency": 1.780001,
+    "t0": 4,
+    "t1": 12
+   },
+   {
+    "ms": 2853,
+    "scene": "fighting",
+    "scene_probs": {
+     "passing": 0.014119,
+     "lingering": 0.001873,
+     "meeting": 0.003667,
+     "person_down": 0.162613,
+     "fighting": 0.806412,
+     "left_object": 0.006647,
+     "empty": 0.00467
+    },
+    "down": 0.846866,
+    "staff": 0.631378,
+    "urgency": 2.152684,
+    "t0": 8,
+    "t1": 16
+   },
+   {
+    "ms": 2833,
+    "scene": "person_down",
+    "scene_probs": {
+     "passing": 0.003477,
+     "lingering": 0.001514,
+     "meeting": 0.002758,
+     "person_down": 0.735712,
+     "fighting": 0.247781,
+     "left_object": 0.005811,
+     "empty": 0.002948
+    },
+    "down": 0.942661,
+    "staff": 0.665637,
+    "urgency": 1.988178,
+    "t0": 12,
+    "t1": 20
+   },
+   {
+    "ms": 2831,
+    "scene": "person_down",
+    "scene_probs": {
+     "passing": 0.051693,
+     "lingering": 0.004665,
+     "meeting": 0.003433,
+     "person_down": 0.913909,
+     "fighting": 0.012486,
+     "left_object": 0.011711,
+     "empty": 0.002103
+    },
+    "down": 0.907123,
+    "staff": 0.626414,
+    "urgency": 1.798485,
+    "t0": 16,
+    "t1": 24
+   },
+   {
+    "ms": 2843,
+    "scene": "passing",
+    "scene_probs": {
+     "passing": 0.906248,
+     "lingering": 0.02587,
+     "meeting": 0.004405,
+     "person_down": 0.026809,
+     "fighting": 0.025198,
+     "left_object": 0.009004,
+     "empty": 0.002467
+    },
+    "down": 0.093288,
+    "staff": 0.407455,
+    "urgency": 1.289033,
+    "t0": 20,
+    "t1": 28
+   },
+   {
+    "ms": 2853,
+    "scene": "passing",
+    "scene_probs": {
+     "passing": 0.738846,
+     "lingering": 0.010671,
+     "meeting": 0.005727,
+     "person_down": 0.026193,
+     "fighting": 0.206583,
+     "left_object": 0.007176,
+     "empty": 0.004803
+    },
+    "down": 0.076632,
+    "staff": 0.449656,
+    "urgency": 1.583017,
+    "t0": 24,
+    "t1": 32
+   },
+   {
+    "ms": 2846,
+    "scene": "passing",
+    "scene_probs": {
+     "passing": 0.587943,
+     "lingering": 0.007693,
+     "meeting": 0.006222,
+     "person_down": 0.143275,
+     "fighting": 0.223691,
+     "left_object": 0.019833,
+     "empty": 0.011342
+    },
+    "down": 0.085461,
+    "staff": 0.432208,
+    "urgency": 1.552578,
+    "t0": 28,
+    "t1": 36
+   }
+  ],
+  "Fight_RunAway1": [],
+  "LeftBag": [
+   {
+    "ms": 2872,
+    "scene": "passing",
+    "scene_probs": {
+     "passing": 0.44313,
+     "lingering": 0.020104,
+     "meeting": 0.020994,
+     "person_down": 0.246718,
+     "fighting": 0.240213,
+     "left_object": 0.015843,
+     "empty": 0.012997
+    },
+    "down": 0.115728,
+    "staff": 0.510075,
+    "urgency": 1.336659,
+    "t0": 0,
+    "t1": 8
+   },
+   {
+    "ms": 2768,
+    "scene": "passing",
+    "scene_probs": {
+     "passing": 0.740359,
+     "lingering": 0.010144,
+     "meeting": 0.008982,
+     "person_down": 0.029414,
+     "fighting": 0.198075,
+     "left_object": 0.007719,
+     "empty": 0.005306
+    },
+    "down": 0.047236,
+    "staff": 0.497056,
+    "urgency": 1.342666,
+    "t0": 4,
+    "t1": 12
+   },
+   {
+    "ms": 2836,
+    "scene": "passing",
+    "scene_probs": {
+     "passing": 0.942352,
+     "lingering": 0.012596,
+     "meeting": 0.006339,
+     "person_down": 0.003874,
+     "fighting": 0.02616,
+     "left_object": 0.005972,
+     "empty": 0.002707
+    },
+    "down": 0.012731,
+    "staff": 0.446877,
+    "urgency": 1.206873,
+    "t0": 8,
+    "t1": 16
+   },
+   {
+    "ms": 2817,
+    "scene": "passing",
+    "scene_probs": {
+     "passing": 0.893037,
+     "lingering": 0.021497,
+     "meeting": 0.008885,
+     "person_down": 0.007347,
+     "fighting": 0.020208,
+     "left_object": 0.04452,
+     "empty": 0.004505
+    },
+    "down": 0.011981,
+    "staff": 0.416606,
+    "urgency": 1.230403,
+    "t0": 12,
+    "t1": 20
+   },
+   {
+    "ms": 2825,
+    "scene": "passing",
+    "scene_probs": {
+     "passing": 0.818019,
+     "lingering": 0.008646,
+     "meeting": 0.005193,
+     "person_down": 0.010892,
+     "fighting": 0.009447,
+     "left_object": 0.140635,
+     "empty": 0.007168
+    },
+    "down": 0.011719,
+    "staff": 0.347425,
+    "urgency": 1.127791,
+    "t0": 16,
+    "t1": 24
+   },
+   {
+    "ms": 2881,
+    "scene": "passing",
+    "scene_probs": {
+     "passing": 0.477596,
+     "lingering": 0.052389,
+     "meeting": 0.004999,
+     "person_down": 0.01209,
+     "fighting": 0.004883,
+     "left_object": 0.013613,
+     "empty": 0.434429
+    },
+    "down": 0.033216,
+    "staff": 0.329859,
+    "urgency": 0.860224,
+    "t0": 20,
+    "t1": 28
+   },
+   {
+    "ms": 2864,
+    "scene": "empty",
+    "scene_probs": {
+     "passing": 0.049571,
+     "lingering": 0.038797,
+     "meeting": 0.001488,
+     "person_down": 0.002519,
+     "fighting": 0.001016,
+     "left_object": 0.005337,
+     "empty": 0.901273
+    },
+    "down": 0.034414,
+    "staff": 0.267696,
+    "urgency": 0.556367,
+    "t0": 24,
+    "t1": 32
+   },
+   {
+    "ms": 2828,
+    "scene": "passing",
+    "scene_probs": {
+     "passing": 0.837901,
+     "lingering": 0.022488,
+     "meeting": 0.007213,
+     "person_down": 0.01412,
+     "fighting": 0.007647,
+     "left_object": 0.034012,
+     "empty": 0.076619
+    },
+    "down": 0.01326,
+    "staff": 0.414142,
+    "urgency": 1.281094,
+    "t0": 28,
+    "t1": 36
+   },
+   {
+    "ms": 2818,
+    "scene": "passing",
+    "scene_probs": {
+     "passing": 0.824305,
+     "lingering": 0.012165,
+     "meeting": 0.00729,
+     "person_down": 0.01203,
+     "fighting": 0.008662,
+     "left_object": 0.122485,
+     "empty": 0.013064
+    },
+    "down": 0.00978,
+    "staff": 0.342623,
+    "urgency": 1.177513,
+    "t0": 32,
+    "t1": 40
+   },
+   {
+    "ms": 2796,
+    "scene": "passing",
+    "scene_probs": {
+     "passing": 0.71313,
+     "lingering": 0.011607,
+     "meeting": 0.007273,
+     "person_down": 0.013036,
+     "fighting": 0.01971,
+     "left_object": 0.221985,
+     "empty": 0.01326
+    },
+    "down": 0.01114,
+    "staff": 0.434858,
+    "urgency": 1.376508,
+    "t0": 36,
+    "t1": 44
+   },
+   {
+    "ms": 2835,
+    "scene": "passing",
+    "scene_probs": {
+     "passing": 0.753546,
+     "lingering": 0.060185,
+     "meeting": 0.006278,
+     "person_down": 0.021977,
+     "fighting": 0.008944,
+     "left_object": 0.029981,
+     "empty": 0.11909
+    },
+    "down": 0.025719,
+    "staff": 0.397487,
+    "urgency": 1.054812,
+    "t0": 40,
+    "t1": 48
+   },
+   {
+    "ms": 2843,
+    "scene": "passing",
+    "scene_probs": {
+     "passing": 0.834234,
+     "lingering": 0.026393,
+     "meeting": 0.005435,
+     "person_down": 0.007406,
+     "fighting": 0.00486,
+     "left_object": 0.016605,
+     "empty": 0.105067
+    },
+    "down": 0.012199,
+    "staff": 0.398797,
+    "urgency": 1.089574,
+    "t0": 44,
+    "t1": 52
+   },
+   {
+    "ms": 2849,
+    "scene": "passing",
+    "scene_probs": {
+     "passing": 0.72057,
+     "lingering": 0.019835,
+     "meeting": 0.012304,
+     "person_down": 0.036293,
+     "fighting": 0.056411,
+     "left_object": 0.134748,
+     "empty": 0.019839
+    },
+    "down": 0.01521,
+    "staff": 0.363153,
+    "urgency": 1.503208,
+    "t0": 48,
+    "t1": 56
+   }
+  ],
+  "LeftBag_PickedUp": [],
+  "Meet_Split_3rdGuy": [],
+  "Meet_WalkTogether1": [],
+  "Rest_FallOnFloor": [
+   {
+    "ms": 2782,
+    "scene": "person_down",
+    "scene_probs": {
+     "passing": 0.148156,
+     "lingering": 0.007439,
+     "meeting": 0.007661,
+     "person_down": 0.771067,
+     "fighting": 0.022985,
+     "left_object": 0.037825,
+     "empty": 0.004867
+    },
+    "down": 0.28009,
+    "staff": 0.501752,
+    "urgency": 1.74642,
+    "t0": 0,
+    "t1": 8
+   },
+   {
+    "ms": 2797,
+    "scene": "person_down",
+    "scene_probs": {
+     "passing": 0.428417,
+     "lingering": 0.014535,
+     "meeting": 0.012623,
+     "person_down": 0.429329,
+     "fighting": 0.089775,
+     "left_object": 0.016191,
+     "empty": 0.00913
+    },
+    "down": 0.369418,
+    "staff": 0.375823,
+    "urgency": 1.200179,
+    "t0": 4,
+    "t1": 12
+   },
+   {
+    "ms": 2821,
+    "scene": "passing",
+    "scene_probs": {
+     "passing": 0.967595,
+     "lingering": 0.005865,
+     "meeting": 0.002477,
+     "person_down": 0.0049,
+     "fighting": 0.004569,
+     "left_object": 0.007448,
+     "empty": 0.007145
+    },
+    "down": 0.010693,
+    "staff": 0.324033,
+    "urgency": 0.949673,
+    "t0": 8,
+    "t1": 16
+   },
+   {
+    "ms": 2804,
+    "scene": "empty",
+    "scene_probs": {
+     "passing": 0.044739,
+     "lingering": 0.039456,
+     "meeting": 0.001441,
+     "person_down": 0.001876,
+     "fighting": 0.00087,
+     "left_object": 0.004978,
+     "empty": 0.90664
+    },
+    "down": 0.032165,
+    "staff": 0.249805,
+    "urgency": 0.514645,
+    "t0": 12,
+    "t1": 20
+   },
+   {
+    "ms": 2842,
+    "scene": "empty",
+    "scene_probs": {
+     "passing": 0.232719,
+     "lingering": 0.089366,
+     "meeting": 0.003933,
+     "person_down": 0.006139,
+     "fighting": 0.003125,
+     "left_object": 0.012157,
+     "empty": 0.652561
+    },
+    "down": 0.026932,
+    "staff": 0.346646,
+    "urgency": 0.859043,
+    "t0": 16,
+    "t1": 24
+   },
+   {
+    "ms": 2858,
+    "scene": "passing",
+    "scene_probs": {
+     "passing": 0.816907,
+     "lingering": 0.017753,
+     "meeting": 0.007762,
+     "person_down": 0.088923,
+     "fighting": 0.014905,
+     "left_object": 0.019328,
+     "empty": 0.034423
+    },
+    "down": 0.019707,
+    "staff": 0.412697,
+    "urgency": 1.279233,
+    "t0": 20,
+    "t1": 28
+   },
+   {
+    "ms": 2825,
+    "scene": "person_down",
+    "scene_probs": {
+     "passing": 0.007611,
+     "lingering": 0.00075,
+     "meeting": 0.000723,
+     "person_down": 0.985784,
+     "fighting": 0.001784,
+     "left_object": 0.002701,
+     "empty": 0.000647
+    },
+    "down": 0.909029,
+    "staff": 0.651324,
+    "urgency": 1.923879,
+    "t0": 24,
+    "t1": 32
+   },
+   {
+    "ms": 2814,
+    "scene": "person_down",
+    "scene_probs": {
+     "passing": 0.004479,
+     "lingering": 0.005203,
+     "meeting": 0.000795,
+     "person_down": 0.981591,
+     "fighting": 0.001056,
+     "left_object": 0.005726,
+     "empty": 0.001149
+    },
+    "down": 0.917901,
+    "staff": 0.626298,
+    "urgency": 1.695976,
+    "t0": 28,
+    "t1": 36
+   },
+   {
+    "ms": 2815,
+    "scene": "person_down",
+    "scene_probs": {
+     "passing": 0.114867,
+     "lingering": 0.016093,
+     "meeting": 0.004453,
+     "person_down": 0.835213,
+     "fighting": 0.008305,
+     "left_object": 0.018459,
+     "empty": 0.00261
+    },
+    "down": 0.823801,
+    "staff": 0.465738,
+    "urgency": 1.530904,
+    "t0": 32,
+    "t1": 40
+   }
+  ],
+  "Rest_InChair": [],
+  "Rest_SlumpOnFloor": [],
+  "Walk1": [
+   {
+    "ms": 2795,
+    "scene": "passing",
+    "scene_probs": {
+     "passing": 0.500028,
+     "lingering": 0.008398,
+     "meeting": 0.009555,
+     "person_down": 0.390591,
+     "fighting": 0.060218,
+     "left_object": 0.018732,
+     "empty": 0.012478
+    },
+    "down": 0.206194,
+    "staff": 0.380558,
+    "urgency": 1.828725,
+    "t0": 0,
+    "t1": 8
+   },
+   {
+    "ms": 2800,
+    "scene": "passing",
+    "scene_probs": {
+     "passing": 0.567323,
+     "lingering": 0.008759,
+     "meeting": 0.008289,
+     "person_down": 0.333627,
+     "fighting": 0.046724,
+     "left_object": 0.021615,
+     "empty": 0.013664
+    },
+    "down": 0.338485,
+    "staff": 0.434062,
+    "urgency": 1.478027,
+    "t0": 4,
+    "t1": 12
+   },
+   {
+    "ms": 2824,
+    "scene": "passing",
+    "scene_probs": {
+     "passing": 0.94331,
+     "lingering": 0.008608,
+     "meeting": 0.004057,
+     "person_down": 0.006898,
+     "fighting": 0.022916,
+     "left_object": 0.005003,
+     "empty": 0.009207
+    },
+    "down": 0.011373,
+    "staff": 0.413072,
+    "urgency": 1.1505,
+    "t0": 8,
+    "t1": 16
+   },
+   {
+    "ms": 2800,
+    "scene": "passing",
+    "scene_probs": {
+     "passing": 0.921235,
+     "lingering": 0.00774,
+     "meeting": 0.004111,
+     "person_down": 0.011025,
+     "fighting": 0.010658,
+     "left_object": 0.033664,
+     "empty": 0.011566
+    },
+    "down": 0.016863,
+    "staff": 0.380143,
+    "urgency": 1.102041,
+    "t0": 12,
+    "t1": 20
+   },
+   {
+    "ms": 2775,
+    "scene": "passing",
+    "scene_probs": {
+     "passing": 0.579188,
+     "lingering": 0.064861,
+     "meeting": 0.005293,
+     "person_down": 0.008249,
+     "fighting": 0.004878,
+     "left_object": 0.010594,
+     "empty": 0.326938
+    },
+    "down": 0.024739,
+    "staff": 0.361633,
+    "urgency": 0.851237,
+    "t0": 16,
+    "t1": 24
+   }
+  ]
+ }
+}

@@ -8,6 +8,7 @@ TypeSafe **Jev**(글을 쓰지 않고 선택지의 확률을 돌려주는 판단
 | 1강 · Jev 개념 · 이론 · 녹화 실습 | [`01_jev개념과연결/`](01_jev개념과연결/) | **녹화 실습** `jev-handson/`: OpenRouter로 Jev 호출 · noul · choice · score · 악플 댓글 100개로 일반 LLM vs Jev 비교 사이트(RouteLab) · 더 해 보기: TypeSafe 직접 호출 · 471건 LLM 비교 · 스킬 · 훅 · MCP |
 | 2강 · 라우터와 LLM 호출 비용 | [`02_라우터/`](02_라우터/) | 빈 시작 폴더 · 메시지 라우터 완성본(40건 채점 · 서비스 · 두뇌 비교 · 비용 계산) · **에이전트별 라우터 3개**(OpenClaw 플러그인 · Codex 앞단 · Claude Code 스킬 라우터 훅) · 모델 라우터 |
 | 3강 · Jev를 닮은 프로젝트들 | [`03_유사프로젝트/`](03_유사프로젝트/) | jev-ultrafast 실행 스크립트(구글 · 네이버 항공권) · 로컬 decider 서버 · API vs 로컬 채점 · 활용 사례 예제(컴퓨터 유즈 · 게임 · 로봇) · **Colab 노트북**(openjev 판단 뜯어보기 · [Colab에서 열기](https://colab.research.google.com/github/jkf87/jev-handson/blob/main/03_%EC%9C%A0%EC%82%AC%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8/colab/3%EA%B0%95_Jev%EB%8B%AE%EC%9D%80%EB%AA%A8%EB%8D%B8_Colab.ipynb)) |
+| 특강 추가 · CCTV 영상 상태 판단 | [`04_cctv/`](04_cctv/) | 동영상을 받는 오픈 판단 모델 OneJev로 CAVIAR CCTV 13클립 판단(쓰러짐 · 다툼 · 물건 방치) · 강사 A4000 실측 기록 · **Colab 노트북** `04_CCTV상태판단.ipynb`(T4 · 기록 재생 · [Colab에서 열기](https://colab.research.google.com/github/jkf87/jev-handson/blob/main/04_CCTV%EC%83%81%ED%83%9C%ED%8C%90%EB%8B%A8.ipynb)) |
 
 ## 실습은 프롬프트로
 
